@@ -65,13 +65,15 @@ local options = {
   signcolumn = "yes",
   -- display lines as one long line
   wrap = true,
-  -- is one of my fav
+  -- is one of my fav - cursor never <8 from bottom/top
   scrolloff = 8,
   -- sidescrolloff = 8,
   -- the font used in graphical neovim applications
   guifont = "monospace:h17",
   -- don't redraw macros (improves performance)
   lazyredraw = true,
+  -- single status line if multiple splits open
+  laststatus = 3,
 }
 
 vim.opt.shortmess:append "c"
