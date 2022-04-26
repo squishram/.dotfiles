@@ -1,0 +1,101 @@
+local opts = { noremap = true, silent = true }
+
+local term_opts = { silent = true }
+
+-- Shorten function name
+local keymap = vim.api.nvim_set_keymap
+
+--Remap space as leader key
+keymap("", "<Space>", "<Nop>", opts)
+vim.g.mapleader = " "
+vim.g.maplocalleader = " "
+
+-- Modes
+--   normal_mode = "n",
+--   insert_mode = "i",
+--   visual_mode = "v",
+--   visual_block_mode = "x",
+--   term_mode = "t",
+--   command_mode = "c",
+
+-- Normal --
+-- navigate splits with CTRL-[hjkl]
+keymap("n", "<C-h>", "<C-w>h", opts)
+keymap("n", "<C-j>", "<C-w>j", opts)
+keymap("n", "<C-k>", "<C-w>k", opts)
+keymap("n", "<C-l>", "<C-w>l", opts)
+-- quit split with CTRL-q
+keymap("n", "<C-q>", "<C-w>q", opts)
+
+-- keymap("n", "<leader>e", ":Lex 30<cr>", opts)
+
+-- edit your neovim config shortcut
+keymap("n", "<leader>nv", ":edit ~/.config/nvim/init.lua<cr>", opts)
+keymap("n", "<leader>sv", ":source ~/.config/nvim/init.lua<cr>", opts)
+
+-- Resize with arrows
+keymap("n", "<C-Up>", ":resize +2<CR>", opts)
+keymap("n", "<C-Down>", ":resize -2<CR>", opts)
+keymap("n", "<C-Left>", ":vertical resize -2<CR>", opts)
+keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
+
+-- Insert --
+-- Press jk fast to enter
+keymap("i", "jk", "<ESC>", opts)
+keymap("i", "kj", "<ESC>", opts)
+
+-- Visual --
+-- Stay in indent mode
+keymap("v", "<", "<gv", opts)
+keymap("v", ">", ">gv", opts)
+
+-- Move text up and down
+keymap("n", "<leader>j", ":move .+1<CR>==", opts)
+keymap("n", "<leader>k", ":move .-2<CR>==", opts)
+
+keymap("v", "J", ":move '>+1<CR>gv-gv", opts)
+keymap("v", "K", ":move '>+1<CR>gv-gv", opts)
+keymap("v", "<S-j>", ":move .+1<CR>==", opts)
+keymap("v", "<S-k>", ":move .-2<CR>==", opts)
+keymap("v", "p", '"_dP', opts)
+
+keymap("x", "J", ":move '>+1<CR>gv-gv", opts)
+keymap("x", "K", ":move '<-2<CR>gv-gv", opts)
+keymap("x", "<S-j>", ":move '>+1<CR>gv-gv", opts)
+keymap("x", "<S-k>", ":move '<-2<CR>gv-gv", opts)
+
+-- Terminal --
+-- Better terminal navigation
+keymap("t", "<C-h>", "<C-\\><C-N><C-w>h", term_opts)
+keymap("t", "<C-j>", "<C-\\><C-N><C-w>j", term_opts)
+keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
+keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
+
+
+-- switch back to last text buffer
+keymap("n", "<leader>bb", "<C-^>", opts)
+-- delete buffers
+keymap("n", "<leader>bd", "<cmd>lua require('bufdelete').bufdelete(0)<CR>", opts)
+
+-- keep the cursor centred when scrolling through searches
+keymap("n", "n", "nzzzv", opts)
+keymap("n", "N", "Nzzzv", opts)
+-- keep the cursor centred when pulling up a line
+keymap("n", "J", "mzJ'z", opts)
+
+-- remap : to ; so you don't need to hold shift
+keymap("n", ";", ":", opts)
+
+-- break points for the undo function
+-- so it doesn't remove the whole damn thing you typed
+keymap("i", ",", ",<C-g>u", opts)
+keymap("i", ".", ".<C-g>u", opts)
+keymap("i", "!", "!<C-g>u", opts)
+keymap("i", "?", "?<C-g>u", opts)
+
+-- stick a comma/ semicolon at the end of the line
+keymap("i", ";;", "<Esc>A;<Esc>", opts)
+keymap("i", ",,", "<Esc>A,<Esc>",  opts)
+
+-- clear search highlights function
+keymap("n", "<leader><space>", ":noh<CR>", opts)

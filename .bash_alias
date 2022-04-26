@@ -1,0 +1,99 @@
+# ALIAS LIST
+# aliases have format
+# alias alias_name="command_to_run"
+
+# change the neofetch bit on the left to a to do list
+alias neofetch="/usr/bin/neofetch --ascii /home/mike/todo.txt"
+
+# go to all of your code
+alias cod="cd / && cd /mnt/linux_data/code"
+
+# go to HDD
+alias hdd="cd / && cd /mnt/linux_data"
+
+# go to SSD
+alias ssd="cd / && cd ~"
+
+# clear the terminal with c
+alias c='clear'
+
+# move all to the parent directory
+# (up = 'unpack' or 'move up')
+alias up='mv * ..'
+
+## Colorize the ls output ##
+alias sl='ls'
+## show hidden files; long list ##
+alias ll='ls -la --color=auto'
+## Show only directories; long list ##
+alias ld='ls -lad */ --color=auto'
+
+## get rid of command not found ##
+alias cd..='cd ..'
+alias ..='cd ..'
+
+## a quick way to get out of current directory ##
+alias ..='cd ..'
+alias ...='cd ../../../'
+alias ....='cd ../../../../'
+alias .....='cd ../../../../'
+alias .4='cd ../../../../'
+alias .5='cd ../../../../..'
+
+# opens calculator
+alias bc='bc -l'
+
+# handy short cuts #
+alias h='history'
+alias j='jobs -l'
+
+# tell me the path
+alias path='echo -e ${PATH//:/\\n}'
+# check date/time
+alias now='date +"%T"'
+alias nowtime=now
+alias nowdate='date +"%d-%m-%Y"'
+
+# I'm a vim boi now
+alias vi=vim
+alias vis='vim "+set si"'
+alias edit='vim'
+
+# update on one command
+alias update='sudo apt-get update && sudo apt-get upgrade'
+
+## pass options to free ##
+alias meminfo='free -m -l -t'
+
+## get top process eating memory
+alias psmem='ps auxf | sort -nr -k 4'
+alias psmem10='ps auxf | sort -nr -k 4 | head -10'
+
+## get top process eating cpu ##
+alias pscpu='ps auxf | sort -nr -k 3'
+alias pscpu10='ps auxf | sort -nr -k 3 | head -10'
+
+## Get server cpu info ##
+alias cpuinfo='lscpu'
+
+## get GPU ram on desktop / laptop##
+alias gpumeminfo='grep -i --color memory /var/log/Xorg.0.log'
+
+# reboot / halt / poweroff
+alias reboot='sudo /sbin/reboot'
+alias poweroff='sudo /sbin/poweroff'
+alias halt='sudo /sbin/halt'
+alias shutdown='sudo /sbin/shutdown'
+
+# make a new virtual environment/ activate it in but two keystrokes
+alias ve='pipenv shell'
+
+# What's yer network speed?
+alias speed='speedtest-cli --server 6513 --simple'
+
+# Get your local IP address
+# TODO: this doesn't work! ipconfig is not a command??
+alias ipi='ipconfig getifaddr en0'
+
+# Get your external IP address
+alias ipe='curl ipinfo.io/ip'
