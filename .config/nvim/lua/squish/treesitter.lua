@@ -33,8 +33,8 @@ parser_configs.norg_table = {
 
 configs.setup {
   -- one of "all", "maintained" (parsers with maintainers), or a list of languages
-  ensure_installed = "maintained",
-  -- ensure_installed = {"maintained", "norg", "norg_meta", "norg_table"},
+  ensure_installed = "all",
+  -- ensure_installed = {"all", "norg", "norg_meta", "norg_table"},
 
   -- install languages synchronously (only applied to `ensure_installed`)
   sync_install = false,
