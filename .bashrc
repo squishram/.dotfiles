@@ -142,4 +142,5 @@ eval "$(starship init bash)"
 # status for every terminal
 neofetch
 
-export EDITOR="vim"
+export EDITOR="neovim"
+export VISUAL="neovim"

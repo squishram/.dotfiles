@@ -55,9 +55,10 @@ alias nowtime=now
 alias nowdate='date +"%d-%m-%Y"'
 
 # I'm a vim boi now
-alias vi=vim
-alias vis='vim "+set si"'
-alias edit='vim'
+alias vi=nvim
+alias vim=nvim
+alias vis='nvim "+set si"'
+alias edit='nvim'
 
 # update on one command
 alias update='sudo apt-get update && sudo apt-get upgrade'
