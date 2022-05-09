@@ -9,10 +9,11 @@ set -q XDG_DATA_HOME
   or set -gx OMF_PATH "$HOME/.local/share/omf"
 
 # Load Oh My Fish configuration
-source $OMF_PATH/init.fish
+# source $OMF_PATH/init.fish
 
 # set -U fish_user_paths $fish_user_paths $HOME/.local/bin
-set -gx EDITOR '$HOME/nvim.appimage'
+# set -gx EDITOR '$HOME/nvim.appimage'
+set -gx EDITOR 'nvim'
 # set TERM "st"
 set PATH $HOME/.cargo/bin $PATH
 # export PATH="$HOME/.cargo/bin:$PATH"
@@ -40,6 +41,15 @@ end
 ###################
 # ALIAS LIST START #
 ###################
+# reboot / halt / poweroff
+alias reboot='sudo /sbin/reboot'
+alias pdown='systemctl poweroff'
+alias halt='sudo /sbin/halt'
+# boot up your display
+alias sx='startx'
+
+# launch ranger file manager
+alias rr='ranger'
 
 # reload the fish shell
 alias rl='source ~/.config/fish/conf.d/omf.fish'
@@ -106,13 +116,17 @@ alias nowtime=now
 alias nowdate='date +"%d-%m-%Y"'
 
 # I'm a vim boi now
-alias vim='$HOME/nvim.appimage'
-alias nvim='vim'
+# alias vim='$HOME/nvim.appimage'
+alias vim='nvim'
+# alias nvim='vim'
 alias vi='vim'
 alias edit='vim'
 
 # update on one command
-alias update='sudo apt-get update && sudo apt-get upgrade'
+# debian
+# alias update='sudo apt-get update && sudo apt-get upgrade'
+# arch
+alias update='sudo pacman -Syu'
 ## pass options to free ##
 alias meminfo='free -m -l -t'
 ## get top process eating memory
@@ -125,21 +139,15 @@ alias pscpu10='ps auxf | sort -nr -k 3 | head -10'
 alias cpuinfo='lscpu'
 ## get GPU ram on desktop / laptop##
 alias gpumeminfo='grep -i --color memory /var/log/Xorg.0.log'
-# reboot / halt / poweroff
-alias reboot='sudo /sbin/reboot'
-alias poweroff='sudo /sbin/poweroff'
-alias halt='sudo /sbin/halt'
-alias shutdown='sudo /sbin/shutdown'
 # make a new virtual environment/ activate it in but two keystrokes
 alias ve='pipenv shell'
 # What's yer network speed?
 alias speed='speedtest-cli --server 6513 --simple'
-# Get your local IP address
-# TODO: this doesn't work! ipconfig is not a command??
-alias ipi='ipconfig getifaddr en0'
-# Get your external IP address
-alias ipe='curl ipinfo.io/ip'
 
+# BLUETOOTH ALIASES
+# start bluetooth (hardware)
+alias bluon='sudo systemctl enable bluetooth && sudo systemctl start bluetooth'
+alias blustat='sudo systemctl status bluetooth'
 
 # TASKWARRIOR ALIASES
 # add a task
