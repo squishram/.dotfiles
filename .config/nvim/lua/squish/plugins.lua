@@ -166,6 +166,7 @@ return packer.startup(function(use)
 
 	-- vimtex for editing latex documents
 	use("lervag/vimtex")
+  use("frabjuous/knap")
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
