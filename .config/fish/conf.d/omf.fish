@@ -48,6 +48,7 @@ alias halt='sudo /sbin/halt'
 # boot up your display
 alias sx='startx'
 
+alias hdmi='/home/archan/documents/code/shell_scripts/flip_hdmi.sh'
 # launch ranger file manager
 alias rr='ranger'
 

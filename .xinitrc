@@ -66,8 +66,8 @@ picom &
 # start with random images in each workspace from .wallpapers folder
 feh --bg-max --randomize ~/.config/.wallpapers/* &
 # make bluetooth available
-sudo systemctl start bluetooth.service && sudo systemctl enable bluetooth.service
+# sudo systemctl start bluetooth.service && sudo systemctl enable bluetooth.service
 # make sure the cpu is monitoring & responding to its temperature
-sudo systemctl start bluetooth.service && sudo systemctl enable bluetooth.service
+# sudo systemctl start bluetooth.service && sudo systemctl enable bluetooth.service
 # open Qtile!
 qtile start
