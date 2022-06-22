@@ -47,13 +47,17 @@ alias pdown='systemctl poweroff'
 alias halt='sudo /sbin/halt'
 # boot up your display
 alias sx='startx'
+# reload the fish shell
+alias rl='source ~/.config/fish/conf.d/omf.fish'
 
+# check for an hdmi, if there is one plugged in, flip over to it
 alias hdmi='/home/archan/documents/code/shell_scripts/flip_hdmi.sh'
 # launch ranger file manager
 alias rr='ranger'
 
-# reload the fish shell
-alias rl='source ~/.config/fish/conf.d/omf.fish'
+# starting daemons:
+# spotifyd
+alias spot='systemctl --user stop spotifyd && systemctl --user start spotifyd'
 
 # directory contents
 alias ls='exa -al --color=always --group-directories-first'
@@ -70,9 +74,10 @@ alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 
 # 'go tos'
-alias cod="cd / && cd /mnt/linux_data/code"
+# alias cod="cd / && cd /mnt/linux_data/code"
+alias cod="~/documents/code"
 alias hdd="cd / && cd /mnt/linux_data"
-alias ssd="cd / && cd ~"
+alias ssd="cd ~"
 alias cd..='cd ..'
 alias ..='cd ..'
 alias ...='cd ../../../'
@@ -119,7 +124,6 @@ alias nowdate='date +"%d-%m-%Y"'
 # I'm a vim boi now
 # alias vim='$HOME/nvim.appimage'
 alias vim='nvim'
-# alias nvim='vim'
 alias vi='vim'
 alias edit='vim'
 
