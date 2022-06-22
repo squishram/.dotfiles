@@ -65,6 +65,8 @@ local options = {
   signcolumn = "yes",
   -- display lines as one long line
   wrap = true,
+  -- don't split words in half
+  linebreak = true,
   -- is one of my fav - cursor never <8 from bottom/top
   scrolloff = 8,
   -- sidescrolloff = 8,
@@ -74,12 +76,20 @@ local options = {
   lazyredraw = true,
   -- single status line if multiple splits open
   laststatus = 3,
+  -- set spelling
+  spell = false,
+  spelllang = "en_gb",
 }
 
 vim.opt.shortmess:append "c"
 
 for k, v in pairs(options) do
   vim.opt[k] = v
+end
+
+-- this doesn't work but it's supposed to enable syntax highlighting for ijm files as java
+if vim.bo.filetype == "ijm" then
+  vim.cmd [[set ft=java]]
 end
 
 -- the below commands are all written vimscript

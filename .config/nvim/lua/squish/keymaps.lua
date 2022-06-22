@@ -1,8 +1,5 @@
 local opts = { noremap = true, silent = true }
-
 local term_opts = { silent = true }
-
--- Shorten function name
 local keymap = vim.api.nvim_set_keymap
 
 --Remap space as leader key
@@ -75,7 +72,7 @@ keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 -- switch back to last text buffer
 keymap("n", "<leader>bb", "<C-^>", opts)
 -- delete buffers
-keymap("n", "<leader>bd", "<cmd>lua require('bufdelete').bufdelete(0)<CR>", opts)
+keymap("n", "<leader>w", "<cmd>lua require('bufdelete').bufdelete(0)<CR>", opts)
 
 -- keep the cursor centred when scrolling through searches
 keymap("n", "n", "nzzzv", opts)
@@ -99,3 +96,27 @@ keymap("i", ",,", "<Esc>A,<Esc>",  opts)
 
 -- clear search highlights function
 keymap("n", "<leader><space>", ":noh<CR>", opts)
+-- fix last spelling mistake
+keymap("i", "<C-p>", "<C-l> <c-g>u<Esc>[s1z=`]a<c-g>u", opts)
+
+-- toggle wrap for writing prose
+-- vim.keymap.set("n", "<leader>w",
+--   function()
+--   if vim.opt.wrap == true then
+--     vim.opt.linebreak = false
+--     vim.opt.wrap = false
+--     vim.keymap.del({"n", "v"}, "j", {noremap = true, silent = true, buffer = true})
+--     vim.keymap.del({"n", "v"}, "k", {noremap = true, silent = true, buffer = true})
+--     vim.keymap.del({"n", "v"}, "0", {noremap = true, silent = true, buffer = true})
+--     vim.keymap.del({"n", "v"}, "^", {noremap = true, silent = true, buffer = true})
+--     vim.keymap.del({"n", "v"}, "$", {noremap = true, silent = true, buffer = true})
+--   else
+--     vim.opt.linebreak = true
+--     vim.opt.wrap = true
+--     vim.keymap.set({"n", "v"}, "j", "gj", {noremap = true, silent = true, buffer = true})
+--     vim.keymap.set({"n", "v"}, "k", "gk", {noremap = true, silent = true, buffer = true})
+--     vim.keymap.set({"n", "v"}, "0", "g0", {noremap = true, silent = true, buffer = true})
+--     vim.keymap.set({"n", "v"}, "^", "g^", {noremap = true, silent = true, buffer = true})
+--     vim.keymap.set({"n", "v"}, "$", "g$", {noremap = true, silent = true, buffer = true})
+--   end
+-- end)

@@ -16,17 +16,16 @@ if fn.empty(fn.glob(install_path)) > 0 then
 end
 
 -- Autocommand that reloads neovim whenever you save the plugins.lua file
-vim.cmd([[
+vim.cmd [[
   augroup packer_user_config
     autocmd!
     autocmd BufWritePost plugins.lua source <afile> | PackerSync
   augroup end
-]])
+]]
 
 -- Use a protected call so we don't error out on first use
 local status_ok, packer = pcall(require, "packer")
 if not status_ok then
-	print("packer doesn't seem to be loading")
 	return
 end
 
@@ -53,6 +52,14 @@ return packer.startup(function(use)
 	use("nvim-lua/plenary.nvim")
 	-- icon support
 	use("kyazdani42/nvim-web-devicons")
+  -- better quickfix window
+  use "kevinhwang91/nvim-bqf"
+  -- better notifications display
+  use "rcarriga/nvim-notify"
+  -- UI for neovim
+  use("MunifTanjim/nui.nvim")
+  -- This is needed to fix lsp doc highlight
+  use "antoinemadec/FixCursorHold.nvim"
 
 	-- LSP
 	-- The LSP plugin itself
@@ -67,6 +74,10 @@ return packer.startup(function(use)
 		"filipdutescu/renamer.nvim",
 		branch = "master",
 	})
+  -- function explainer popup
+  use "ray-x/lsp_signature.nvim"
+  -- UI for LSP functionality
+  -- use "tami5/lspsaga.nvim"
 
 	-- Autocompletion
 	-- The completion plugin
@@ -79,6 +90,8 @@ return packer.startup(function(use)
 	use("hrsh7th/cmp-cmdline")
 	-- LSP autocompletion
 	use("hrsh7th/cmp-nvim-lsp")
+  -- lua autocompletion
+  use "hrsh7th/cmp-nvim-lua"
 	-- snippet completions
 	use("saadparwaiz1/cmp_luasnip")
 	-- snippet engine
@@ -86,8 +99,6 @@ return packer.startup(function(use)
 	-- a bunch of snippets to use
 	use("rafamadriz/friendly-snippets")
 
-	-- helps to remember shortcuts and keybinds
-	use("folke/which-key.nvim")
 	-- startup dashboard interface for vim
 	use("goolord/alpha-nvim")
 	-- speedy status bar
@@ -106,15 +117,23 @@ return packer.startup(function(use)
 	-- pullup a yank register with ""
 	use({ "AckslD/nvim-neoclip.lua" })
 
-	-- NAVIGATION:
 	-- Telescope
 	use("nvim-telescope/telescope.nvim")
-	-- filetree navigator
+	-- file navigator vmade for neovim
 	use("kyazdani42/nvim-tree.lua")
 	-- document navigation sidebar
 	use("stevearc/aerial.nvim")
+  -- telescope based file browser
+  use{"nvim-telescope/telescope-file-browser.nvim"}
+
+  -- peek lines when using :<line_number> before pressing enter
+  use "nacro90/numb.nvim"
+  -- spot unique characters on your current line more easily
+  use "unblevable/quick-scope"
 	-- quick on-screen navigation
 	use("ggandor/lightspeed.nvim")
+  -- advanced search & replace including globbing
+  use "windwp/nvim-spectre"
 	-- scrollbar with lsp diagnostics
 	use("petertriho/nvim-scrollbar")
 	-- smooth scrolling
@@ -122,7 +141,14 @@ return packer.startup(function(use)
 	-- underline words
 	use("yamatsum/nvim-cursorline")
 	-- remove trailing whitespace on save
-	use({ "McAuleyPenney/tidy.nvim", event = "BufWritePre" })
+	use({
+    "mcauley-penney/tidy.nvim",
+    config = function()
+        require("tidy").setup()
+    end
+  })
+  -- project management
+  use "ahmedkhalf/project.nvim"
 	-- escape with kj or jk without typing delays
 	use("max397574/better-escape.nvim")
 
@@ -136,6 +162,8 @@ return packer.startup(function(use)
 	use("numToStr/Comment.nvim")
 	-- toggle commas and semicolons at the end of the line
 	use("saifulapm/chartoggle.nvim")
+  -- advanced number incrementing
+  use "monaqa/dial.nvim"
 
 	-- syntax parsing functionalities
 	-- Treesitter
@@ -151,6 +179,8 @@ return packer.startup(function(use)
 	use("sunjon/shade.nvim")
 	-- indent guides
 	use("lukas-reineke/indent-blankline.nvim")
+  -- swap function arguments
+  use "mizlan/iswap.nvim"
 
 	-- colorschemes:
 	use("rebelot/kanagawa.nvim")
@@ -166,7 +196,6 @@ return packer.startup(function(use)
 
 	-- vimtex for editing latex documents
 	use("lervag/vimtex")
-  use("frabjuous/knap")
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
