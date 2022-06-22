@@ -3,8 +3,19 @@ if not status_ok then
 	return
 end
 
+vim.api.nvim_set_keymap(
+	"i",
+	"<F2>",
+	'<cmd>lua require("renamer").rename({empty = true})<cr>',
+	{ noremap = true, silent = true }
+)
+vim.api.nvim_set_keymap(
+	"n",
+	"<F2>",
+	'<cmd>lua require("renamer").rename({empty = true})<cr>',
+	{ noremap = true, silent = true }
+)
 local mappings_utils = require("renamer.mappings.utils")
-
 renamer.setup({
 	-- The popup title, shown if `border` is true
 	title = "Rename",
@@ -21,9 +32,6 @@ renamer.setup({
 	border_chars = { "─", "│", "─", "│", "╭", "╮", "╯", "╰" },
 	-- Whether or not to highlight the current word references through LSP
 	show_refs = true,
-  -- Whether or not to enter the new name through the UI or Neovim's `input`
-  -- prompt
-  with_popup = false,
 	-- The keymaps available while in the `renamer` buffer. The example below
 	-- overrides the default values, but you can add others as well.
 	mappings = {
@@ -36,11 +44,3 @@ renamer.setup({
 		["<c-r>"] = mappings_utils.redo,
 	},
 })
-
-
--- keymaps:
-local keymap = vim.api.nvim_set_keymap
-local opts = { noremap = true, silent = true }
-keymap('i', '<F2>', '<cmd>lua require("renamer").rename()<cr>', opts)
-keymap('n', '<leader>rn', '<cmd>lua require("renamer").rename()<cr>', opts)
-keymap('v', '<leader>rn', '<cmd>lua require("renamer").rename()<cr>', opts)

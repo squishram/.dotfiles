@@ -129,9 +129,9 @@ alias edit='vim'
 
 # update on one command
 # debian
-# alias update='sudo apt-get update && sudo apt-get upgrade'
+alias update='sudo apt-get update && sudo apt-get upgrade'
 # arch
-alias update='sudo pacman -Syu'
+# alias update='sudo pacman -Syu'
 ## pass options to free ##
 alias meminfo='free -m -l -t'
 ## get top process eating memory
