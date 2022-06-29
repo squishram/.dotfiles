@@ -54,8 +54,28 @@ keys = [
         desc='Launch Terminal'
         ),
     Key([mod, "shift"], "Return",
-        lazy.spawn("dmenu_run -p 'Run: '"),
-        desc='Run Launcher'
+        lazy.spawn("rofi -show drun"),
+        desc='run rofi program launcher'
+        ),
+    Key([mod, "mod1"], "Return",
+        lazy.spawn("rofi -show run"),
+        desc='run rofi program launcher'
+        ),
+    Key([mod, "shift"], "c",
+        lazy.spawn("rofi -show calc -modi calc -no-show-match -no-sort"),
+        desc='run rofi calculator'
+        ),
+    # Key([mod, "shift"], "q",
+    #     lazy.spawn("rofi -show calc -modi calc -no-show-match -no-sort"),
+    #     desc='rofi shutdown menu'
+    #     ),
+    # Key([mod, "shift"], "v",
+    #     lazy.spawn("rofi -show calc -modi calc -no-show-match -no-sort"),
+    #     desc='rofi clipboard menu'
+    #     ),
+    Key(["mod1"], "Tab",
+        lazy.spawn("rofi -show window"),
+        desc='run rofi window menu'
         ),
     Key([mod], "b",
         lazy.spawn(my_browser),
@@ -73,10 +93,10 @@ keys = [
         lazy.reload_config(),
         desc='Restart Qtile'
         ),
-    Key([mod, "shift"], "q",
-        lazy.shutdown(),
-        desc='Shutdown Qtile'
-        ),
+    # Key([mod, "shift"], "q",
+    #     lazy.shutdown(),
+    #     desc='Shutdown Qtile'
+    #     ),
 
     # Treetab controls
     Key([mod, "shift"], "h",
@@ -162,6 +182,11 @@ keys = [
         lazy.spawn("xbacklight -inc 10")),
     Key([], "XF86MonBrightnessDown",
         lazy.spawn("xbacklight -dec 10")),
+
+    # taking a screenshot with flameshot
+    Key([], "Print",
+        lazy.spawn("flameshot"),
+        desc="launch flameshot to take screenshots")
     # Dmenu scripts launched using the key chord SUPER+p followed by 'key'
     # KeyChord([mod], "p", [
     #     Key([], "e",
@@ -210,7 +235,7 @@ groups = [
     Group("4:RES", layout='monadtall'),
     Group("5:MISC", layout='monadtall'),
     Group("6:OTH", layout='monadtall'),
-    Group("7:NEW", layout='monadtall'),
+    Group("7:IMG", layout='monadtall'),
     Group("8:VID", layout='monadtall'),
     Group("9:MUS", layout='monadtall'),
     Group("0:SOC", layout='monadtall')
@@ -241,6 +266,7 @@ layouts = [
     layout.Max(**layout_theme),
     layout.Stack(num_stacks=2),
     layout.RatioTile(**layout_theme),
+    layout.Floating(**layout_theme)
     # layout.TreeTab(
     #      font="Firacode Nerd Font",
     #      fontsize=10,
@@ -426,7 +452,7 @@ screens = [
                     fontsize=46
                     ),
                 widget.Wallpaper(
-                    directory="~/.config/.wallpapers",
+                    directory="~/.config/wallpapers",
                     foreground=colours[1],
                     background=colours[9],
                     label="[=]"),
