@@ -8,7 +8,7 @@ local servers = {
   "cssmodules_ls",
   "emmet_ls",
   "html",
-  -- "jdtls",
+  "jdtls",
   "jsonls",
   "solc",
   "sumneko_lua",
@@ -18,19 +18,14 @@ local servers = {
   "yamlls",
   "bashls",
   "clangd",
+  "rust_analyzer",
+  "taplo",
 }
 
 local settings = {
   ensure_installed = servers,
-  -- automatic_installation = false,
   ui = {
     icons = {
-      -- server_installed = "◍",
-      -- server_pending = "◍",
-      -- server_uninstalled = "◍",
-      -- server_installed = "✓",
-      -- server_pending = "➜",
-      -- server_uninstalled = "✗",
     },
     keymaps = {
       toggle_server_expand = "<CR>",
@@ -44,8 +39,6 @@ local settings = {
   },
 
   log_level = vim.log.levels.INFO,
-  -- max_concurrent_installers = 4,
-  -- install_root_dir = path.concat { vim.fn.stdpath "data", "lsp_servers" },
 }
 
 lsp_installer.setup(settings)
@@ -68,20 +61,20 @@ for _, server in pairs(servers) do
   --   opts = vim.tbl_deep_extend("force", jsonls_opts, opts)
   -- end
 
+  if server == "yamlls" then
+    local yamlls_opts = require "squish.lsp.settings.yamlls"
+    opts = vim.tbl_deep_extend("force", yamlls_opts, opts)
+  end
+
   if server == "sumneko_lua" then
     local sumneko_opts = require "squish.lsp.settings.sumneko_lua"
     opts = vim.tbl_deep_extend("force", sumneko_opts, opts)
   end
 
-  -- if server == "pyright" then
-  --   local pyright_opts = require "squish.lsp.settings.pyright"
-  --   opts = vim.tbl_deep_extend("force", pyright_opts, opts)
-  -- end
-
-  -- if server == "solang" then
-  --   local solang_opts = require "squish.lsp.settings.solang"
-  --   opts = vim.tbl_deep_extend("force", solang_opts, opts)
-  -- end
+  if server == "pyright" then
+    local pyright_opts = require "squish.lsp.settings.pyright"
+    opts = vim.tbl_deep_extend("force", pyright_opts, opts)
+  end
 
   -- if server == "solc" then
   --   local solc_opts = require "squish.lsp.settings.solc"
@@ -93,5 +86,20 @@ for _, server in pairs(servers) do
   --   opts = vim.tbl_deep_extend("force", emmet_ls_opts, opts)
   -- end
 
+  -- if server == "jdtls" then
+  --   goto continue
+  -- end
+  --
+
+  -- if server == "rust_analyzer" then
+  --   local rust_opts = require "squish.lsp.settings.rust"
+  --   require("rust-tools").setup(rust_opts)
+  --   goto continue
+  -- end
+
   lspconfig[server].setup(opts)
+  ::continue::
 end
+
+-- TODO: add something to installer later
+-- require("lspconfig").motoko.setup {}

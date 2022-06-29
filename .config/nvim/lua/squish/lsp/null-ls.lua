@@ -12,6 +12,7 @@ null_ls.setup({
   debug = false,
   sources = {
     formatting.prettier.with {
+      extra_filetypes = { "toml", "solidity" },
       extra_args = { "--no-semi", "--single-quote", "--jsx-single-quote" },
     },
     -- formatters
