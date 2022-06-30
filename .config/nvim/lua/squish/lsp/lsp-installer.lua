@@ -19,7 +19,8 @@ local servers = {
   "bashls",
   "clangd",
   "rust_analyzer",
-  "taplo",
+  "texlab",
+  -- "taplo",
 }
 
 local settings = {
