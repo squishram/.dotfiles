@@ -11,6 +11,11 @@ set -q XDG_DATA_HOME
 # Load Oh My Fish configuration
 # source $OMF_PATH/init.fish
 
+# get powerline functionality for icons
+set fish_function_path $fish_function_path "/usr/share/powerline/bindings/fish"
+source /usr/share/powerline/bindings/fish/powerline-setup.fish
+powerline-setup
+
 # set -U fish_user_paths $fish_user_paths $HOME/.local/bin
 # set -gx EDITOR '$HOME/nvim.appimage'
 set -gx EDITOR 'nvim'
@@ -41,6 +46,18 @@ end
 ###################
 # ALIAS LIST START #
 ###################
+
+# rust fuzzy finder
+# ripgrep fuzzy finder
+alias skg="sk --ansi -i -c 'rga --color=always --line-number "{}" .'"
+alias skf="sk --ansi -i --color=always"
+
+# smart cd in Rust
+alias z='zoxide'
+alias zq='zoxide query'
+alias za='zoxide add'
+alias zr='zoxide remove'
+
 # reboot / halt / poweroff
 alias reboot='sudo /sbin/reboot'
 alias pdown='systemctl poweroff'
@@ -59,19 +76,24 @@ alias rr='ranger'
 # spotifyd
 alias spot='systemctl --user stop spotifyd && systemctl --user start spotifyd'
 
-# directory contents
+##############
+# CORE UTILS #
+##############
+
+# better find function in Rust
+alias fde='fd --extension'
+
+# directory contents in Rust
 alias ls='exa -al --color=always --group-directories-first'
 alias sl='exa -a --color=always --group-directories-first'
 alias ll='exa -l --color=always --group-directories-first'
 alias lt='exa -aT --color=always --group-directories-first'
 alias ld='exa -lad */ --color=always'
 
-# colourising
+# colorisation
 alias dir='dir --color=auto'
 alias vdir='vdir --color=auto'
-alias grep='grep --color=auto'
-alias fgrep='fgrep --color=auto'
-alias egrep='egrep --color=auto'
+alias grep ='grep --color=auto'
 
 # 'go tos'
 # alias cod="cd / && cd /mnt/linux_data/code"
@@ -80,9 +102,9 @@ alias hdd="cd / && cd /mnt/linux_data"
 alias ssd="cd ~"
 alias cd..='cd ..'
 alias ..='cd ..'
-alias ...='cd ../../../'
-alias ....='cd ../../../../'
-alias .....='cd ../../../../'
+alias ...='cd ../../'
+alias ....='cd ../../../'
+alias .....='cd ../../../'
 alias .2='cd ../../'
 alias .3='cd ../../../'
 alias .4='cd ../../../../'
@@ -124,14 +146,14 @@ alias nowdate='date +"%d-%m-%Y"'
 # I'm a vim boi now
 # alias vim='$HOME/nvim.appimage'
 alias vim='nvim'
-alias vi='vim'
-alias edit='vim'
+alias vi='nvim'
+alias edit='nvim'
 
 # update on one command
 # debian
-alias update='sudo apt-get update && sudo apt-get upgrade'
+# alias update='sudo apt-get update && sudo apt-get upgrade'
 # arch
-# alias update='sudo pacman -Syu'
+alias update='sudo pacman -Syu'
 ## pass options to free ##
 alias meminfo='free -m -l -t'
 ## get top process eating memory
@@ -209,6 +231,7 @@ alias vdirsyncer="~/vdirsyncer_env/bin/vdirsyncer"
 
 # starship is a nicer shell prompt
 starship init fish | source
-
+# zoxide is a smart cd command
+zoxide init fish | source
 # status for every terminal
 neofetch
