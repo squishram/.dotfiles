@@ -146,4 +146,4 @@ keymap("n", "<leader>fg", "<cmd>lua require('telescope.builtin').live_grep()<cr>
 keymap("n", "<leader>fb", "<cmd>lua require('telescope.builtin').buffers()<cr>", opts)
 keymap("n", "<leader>fh", "<cmd>lua require('telescope.builtin').help_tags()<cr>", opts)
 keymap("n", "<leader>fk", "<cmd>lua require('telescope.builtin').keymaps()<cr>", opts)
-keymap("n", "<leader>fc", "<cmd>lua require('telescope.builtin').colorschemes()<cr>", opts)
+keymap("n", "<leader>fc", "<cmd>lua require('telescope.builtin').colorscheme()<cr>", opts)

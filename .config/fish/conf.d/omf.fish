@@ -12,9 +12,9 @@ set -q XDG_DATA_HOME
 # source $OMF_PATH/init.fish
 
 # get powerline functionality for icons
-set fish_function_path $fish_function_path "/usr/share/powerline/bindings/fish"
-source /usr/share/powerline/bindings/fish/powerline-setup.fish
-powerline-setup
+# set fish_function_path $fish_function_path "/usr/share/powerline/bindings/fish"
+# source /usr/share/powerline/bindings/fish/powerline-setup.fish
+# powerline-setup
 
 # set -U fish_user_paths $fish_user_paths $HOME/.local/bin
 # set -gx EDITOR '$HOME/nvim.appimage'
@@ -46,6 +46,11 @@ end
 ###################
 # ALIAS LIST START #
 ###################
+
+alias cwd="pwd | xclip -selection clipboard"
+
+# improved find util in Rust
+alias fd="fdfind"
 
 # rust fuzzy finder
 # ripgrep fuzzy finder
@@ -96,8 +101,7 @@ alias vdir='vdir --color=auto'
 alias grep ='grep --color=auto'
 
 # 'go tos'
-# alias cod="cd / && cd /mnt/linux_data/code"
-alias cod="~/documents/code"
+alias cod="cd / && cd /mnt/linux_data/code"
 alias hdd="cd / && cd /mnt/linux_data"
 alias ssd="cd ~"
 alias cd..='cd ..'

@@ -4,20 +4,20 @@ if not status_ok then
 end
 
 local servers = {
-  "cssls",
-  "cssmodules_ls",
-  "emmet_ls",
+  -- "cssls",
+  -- "cssmodules_ls",
+  -- "emmet_ls",
   "html",
-  "jdtls",
-  "jsonls",
-  "solc",
+  -- "jdtls",
+  -- "jsonls",
+  -- "solc",
   "sumneko_lua",
-  "tflint",
-  "tsserver",
+  -- "tflint",
+  -- "tsserver",
   "pyright",
   "yamlls",
   "bashls",
-  "clangd",
+  -- "clangd",
   "rust_analyzer",
   "texlab",
   -- "taplo",
@@ -26,7 +26,15 @@ local servers = {
 local settings = {
   ensure_installed = servers,
   ui = {
+    check_outdated_servers_on_open = true,
+
+    -- The border to use for the UI window. Accepts same border values as |nvim_open_win()|.
+    border = "none",
+
     icons = {
+      server_installed = "✓",
+      server_pending = "➜",
+      server_uninstalled = "✗"
     },
     keymaps = {
       toggle_server_expand = "<CR>",
@@ -41,7 +49,6 @@ local settings = {
 
   log_level = vim.log.levels.INFO,
 }
-
 lsp_installer.setup(settings)
 
 local lspconfig_status_ok, lspconfig = pcall(require, "lspconfig")
@@ -98,9 +105,12 @@ for _, server in pairs(servers) do
   --   goto continue
   -- end
 
+
   lspconfig[server].setup(opts)
   ::continue::
 end
+
+require("lspconfig").pyright.setup({})
 
 -- TODO: add something to installer later
 -- require("lspconfig").motoko.setup {}

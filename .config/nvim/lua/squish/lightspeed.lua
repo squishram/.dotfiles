@@ -13,6 +13,7 @@ lightspeed.setup {
   jump_to_unique_chars = { safety_timeout = 800 },
   -- jump_on_partial_input_safety_timeout = 800,
   match_only_the_start_of_same_char_seqs = true,
+  force_beacons_into_match_width = false,
   substitute_chars = { ['\r'] = '¬' },
   -- Leaving the appropriate list empty effectively disables
   -- "smart" mode, and forces auto-jump to be on or off.
@@ -27,3 +28,9 @@ lightspeed.setup {
   limit_ft_matches = 4,
   repeat_ft_with_target_char = false,
 }
+
+-- make bidirectional
+
+-- local opts = { noremap = true, silent = true }
+--
+-- vim.keymap.set('n', 's', <Plug>Lightspeed_omni_s, opts)

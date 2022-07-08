@@ -40,24 +40,19 @@ packer.init({
 
 -- Install your plugins here
 return packer.startup(function(use)
+
 	-- makes neovim load faster
 	-- will be made redundant in future nvim release
 	use("lewis6991/impatient.nvim")
 
 	-- Have packer manage itself
 	use("wbthomason/packer.nvim")
-	-- An implementation of the Popup API from vim in Neovim
-	use("nvim-lua/popup.nvim")
 	-- Useful lua functions used ny lots of plugins
 	use("nvim-lua/plenary.nvim")
 	-- icon support
 	use("kyazdani42/nvim-web-devicons")
-  -- better quickfix window
-  use "kevinhwang91/nvim-bqf"
   -- better notifications display
   use "rcarriga/nvim-notify"
-  -- UI for neovim
-  use("MunifTanjim/nui.nvim")
   -- This is needed to fix lsp doc highlight
   use "antoinemadec/FixCursorHold.nvim"
 
@@ -66,8 +61,7 @@ return packer.startup(function(use)
 	use("neovim/nvim-lspconfig")
 	-- bootstrap client for installing language servers
 	use("williamboman/nvim-lsp-installer")
-	-- formatting plugin with diagnostics
-	-- works with linting and formatting software
+	-- formatting plugin with diagnostics, works with linting and formatting software
 	use("jose-elias-alvarez/null-ls.nvim")
 	-- variable renamer plugin
 	use({
@@ -112,10 +106,6 @@ return packer.startup(function(use)
 
 	-- git functionality in nvim
 	use("lewis6991/gitsigns.nvim")
-	-- subtitute with yanked word
-	use("gbprod/substitute.nvim")
-	-- pullup a yank register with ""
-	use({ "AckslD/nvim-neoclip.lua" })
 
 	-- Telescope
 	use("nvim-telescope/telescope.nvim")
@@ -130,8 +120,11 @@ return packer.startup(function(use)
   use "nacro90/numb.nvim"
   -- spot unique characters on your current line more easily
   use "unblevable/quick-scope"
+  -- f repeat with f instead of ;
+  use("rhysd/clever-f.vim")
 	-- quick on-screen navigation
-	use("ggandor/lightspeed.nvim")
+	-- use("ggandor/lightspeed.nvim")
+	use("ggandor/leap.nvim")
   -- advanced search & replace including globbing
   use "windwp/nvim-spectre"
 	-- scrollbar with lsp diagnostics
@@ -147,19 +140,24 @@ return packer.startup(function(use)
         require("tidy").setup()
     end
   })
-  -- project management
-  use "ahmedkhalf/project.nvim"
 	-- escape with kj or jk without typing delays
 	use("max397574/better-escape.nvim")
 
+	-- subtitute with yanked word
+	use("gbprod/substitute.nvim")
+	-- pullup a yank register with ""
+	use({ "AckslD/nvim-neoclip.lua" })
 	-- surrounding with brackets
 	use("ur4ltz/surround.nvim")
+  -- use("kylechui/nvim-surround")
 	-- autopairing brackets etc
 	use("windwp/nvim-autopairs")
 	-- autopairing tags for html
 	use("windwp/nvim-ts-autotag")
 	-- commenting!
 	use("numToStr/Comment.nvim")
+  -- generate comments intelligently with treesitter
+  use("danymat/neogen")
 	-- toggle commas and semicolons at the end of the line
 	use("saifulapm/chartoggle.nvim")
   -- advanced number incrementing
@@ -175,8 +173,6 @@ return packer.startup(function(use)
 	use("p00f/nvim-ts-rainbow")
 	-- keeps function and loop context displayed when off-screen
 	use("romgrk/nvim-treesitter-context")
-	-- shade out the unused split
-	use("sunjon/shade.nvim")
 	-- indent guides
 	use("lukas-reineke/indent-blankline.nvim")
   -- swap function arguments
@@ -185,11 +181,14 @@ return packer.startup(function(use)
 	-- colorschemes:
 	use("rebelot/kanagawa.nvim")
 	use({ "catppuccin/nvim", as = "catppuccin" })
-	use("sainnhe/everforest")
-	use("sainnhe/gruvbox-material")
 	use("rmehri01/onenord.nvim")
 	use("rose-pine/neovim")
 	use("rafamadriz/neon")
+	use("sainnhe/everforest")
+	use("sainnhe/gruvbox-material")
+	use("sainnhe/edge")
+	use("sainnhe/sonokai")
+  use("EdenEast/nightfox.nvim")
 
 	-- Neorg - organising & note-taking nvim feature
 	use("nvim-neorg/neorg")
