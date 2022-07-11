@@ -156,8 +156,6 @@ return packer.startup(function(use)
 	use("windwp/nvim-ts-autotag")
 	-- commenting!
 	use("numToStr/Comment.nvim")
-  -- generate comments intelligently with treesitter
-  use("danymat/neogen")
 	-- toggle commas and semicolons at the end of the line
 	use("saifulapm/chartoggle.nvim")
   -- advanced number incrementing
@@ -169,9 +167,11 @@ return packer.startup(function(use)
 		"nvim-treesitter/nvim-treesitter",
 		run = ":TSUpdate",
 	})
-	-- rainbow brackets
+  -- generate comments intelligently with treesitter
+  use("danymat/neogen")
+	-- rainbow brackets with treesitter
 	use("p00f/nvim-ts-rainbow")
-	-- keeps function and loop context displayed when off-screen
+	-- keeps function and loop context displayed when off-screen with treesitter
 	use("romgrk/nvim-treesitter-context")
 	-- indent guides
 	use("lukas-reineke/indent-blankline.nvim")
@@ -189,6 +189,18 @@ return packer.startup(function(use)
 	use("sainnhe/edge")
 	use("sainnhe/sonokai")
   use("EdenEast/nightfox.nvim")
+  use("marko-cerovac/material.nvim")
+  use("folke/tokyonight.nvim")
+  use({
+    'glepnir/zephyr-nvim',
+    requires = { 'nvim-treesitter/nvim-treesitter', opt = true },
+  })
+  use("theniceboy/nvim-deus")
+  use("Th3Whit3Wolf/one-nvim")
+  use("andersevenrud/nordic.nvim")
+  use("NTBBloodbath/doom-one.nvim")
+  use("luisiacc/gruvbox-baby")
+  use("cpea2506/one_monokai.nvim")
 
 	-- Neorg - organising & note-taking nvim feature
 	use("nvim-neorg/neorg")

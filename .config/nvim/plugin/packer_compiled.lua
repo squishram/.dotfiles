@@ -159,6 +159,11 @@ _G.packer_plugins = {
     path = "/home/ishan/.local/share/nvim/site/pack/packer/start/dial.nvim",
     url = "https://github.com/monaqa/dial.nvim"
   },
+  ["doom-one.nvim"] = {
+    loaded = true,
+    path = "/home/ishan/.local/share/nvim/site/pack/packer/start/doom-one.nvim",
+    url = "https://github.com/NTBBloodbath/doom-one.nvim"
+  },
   edge = {
     loaded = true,
     path = "/home/ishan/.local/share/nvim/site/pack/packer/start/edge",
@@ -178,6 +183,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/ishan/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
     url = "https://github.com/lewis6991/gitsigns.nvim"
+  },
+  ["gruvbox-baby"] = {
+    loaded = true,
+    path = "/home/ishan/.local/share/nvim/site/pack/packer/start/gruvbox-baby",
+    url = "https://github.com/luisiacc/gruvbox-baby"
   },
   ["gruvbox-material"] = {
     loaded = true,
@@ -219,6 +229,11 @@ _G.packer_plugins = {
     path = "/home/ishan/.local/share/nvim/site/pack/packer/start/lualine.nvim",
     url = "https://github.com/nvim-lualine/lualine.nvim"
   },
+  ["material.nvim"] = {
+    loaded = true,
+    path = "/home/ishan/.local/share/nvim/site/pack/packer/start/material.nvim",
+    url = "https://github.com/marko-cerovac/material.nvim"
+  },
   neogen = {
     loaded = true,
     path = "/home/ishan/.local/share/nvim/site/pack/packer/start/neogen",
@@ -249,6 +264,11 @@ _G.packer_plugins = {
     path = "/home/ishan/.local/share/nvim/site/pack/packer/start/nightfox.nvim",
     url = "https://github.com/EdenEast/nightfox.nvim"
   },
+  ["nordic.nvim"] = {
+    loaded = true,
+    path = "/home/ishan/.local/share/nvim/site/pack/packer/start/nordic.nvim",
+    url = "https://github.com/andersevenrud/nordic.nvim"
+  },
   ["null-ls.nvim"] = {
     loaded = true,
     path = "/home/ishan/.local/share/nvim/site/pack/packer/start/null-ls.nvim",
@@ -273,6 +293,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/ishan/.local/share/nvim/site/pack/packer/start/nvim-cursorline",
     url = "https://github.com/yamatsum/nvim-cursorline"
+  },
+  ["nvim-deus"] = {
+    loaded = true,
+    path = "/home/ishan/.local/share/nvim/site/pack/packer/start/nvim-deus",
+    url = "https://github.com/theniceboy/nvim-deus"
   },
   ["nvim-lsp-installer"] = {
     loaded = true,
@@ -333,6 +358,16 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/ishan/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
     url = "https://github.com/kyazdani42/nvim-web-devicons"
+  },
+  ["one-nvim"] = {
+    loaded = true,
+    path = "/home/ishan/.local/share/nvim/site/pack/packer/start/one-nvim",
+    url = "https://github.com/Th3Whit3Wolf/one-nvim"
+  },
+  ["one_monokai.nvim"] = {
+    loaded = true,
+    path = "/home/ishan/.local/share/nvim/site/pack/packer/start/one_monokai.nvim",
+    url = "https://github.com/cpea2506/one_monokai.nvim"
   },
   ["onenord.nvim"] = {
     loaded = true,
@@ -395,10 +430,20 @@ _G.packer_plugins = {
     path = "/home/ishan/.local/share/nvim/site/pack/packer/start/toggleterm.nvim",
     url = "https://github.com/akinsho/toggleterm.nvim"
   },
+  ["tokyonight.nvim"] = {
+    loaded = true,
+    path = "/home/ishan/.local/share/nvim/site/pack/packer/start/tokyonight.nvim",
+    url = "https://github.com/folke/tokyonight.nvim"
+  },
   vimtex = {
     loaded = true,
     path = "/home/ishan/.local/share/nvim/site/pack/packer/start/vimtex",
     url = "https://github.com/lervag/vimtex"
+  },
+  ["zephyr-nvim"] = {
+    loaded = true,
+    path = "/home/ishan/.local/share/nvim/site/pack/packer/start/zephyr-nvim",
+    url = "https://github.com/glepnir/zephyr-nvim"
   }
 }
 

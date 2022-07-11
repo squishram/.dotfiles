@@ -50,7 +50,7 @@ configs.setup {
     enable = true,
     -- list of language that will be disabled
     disable = { "" },
-    additional_vim_regex_highlighting = false,
+    additional_vim_regex_highlighting = true,
   },
 
   indent = { enable = true, disable = { "yaml" } },
