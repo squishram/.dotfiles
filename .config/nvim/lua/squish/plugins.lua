@@ -117,13 +117,12 @@ return packer.startup(function(use)
   use{"nvim-telescope/telescope-file-browser.nvim"}
 
   -- peek lines when using :<line_number> before pressing enter
-  use "nacro90/numb.nvim"
+  use("nacro90/numb.nvim")
   -- spot unique characters on your current line more easily
-  use "unblevable/quick-scope"
+  use("jinh0/eyeliner.nvim")
   -- f repeat with f instead of ;
   use("rhysd/clever-f.vim")
 	-- quick on-screen navigation
-	-- use("ggandor/lightspeed.nvim")
 	use("ggandor/leap.nvim")
   -- advanced search & replace including globbing
   use "windwp/nvim-spectre"
@@ -148,8 +147,7 @@ return packer.startup(function(use)
 	-- pullup a yank register with ""
 	use({ "AckslD/nvim-neoclip.lua" })
 	-- surrounding with brackets
-	use("ur4ltz/surround.nvim")
-  -- use("kylechui/nvim-surround")
+	use("kylechui/nvim-surround")
 	-- autopairing brackets etc
 	use("windwp/nvim-autopairs")
 	-- autopairing tags for html
@@ -159,7 +157,7 @@ return packer.startup(function(use)
 	-- toggle commas and semicolons at the end of the line
 	use("saifulapm/chartoggle.nvim")
   -- advanced number incrementing
-  use "monaqa/dial.nvim"
+  use("monaqa/dial.nvim")
 
 	-- syntax parsing functionalities
 	-- Treesitter
@@ -177,8 +175,17 @@ return packer.startup(function(use)
 	use("lukas-reineke/indent-blankline.nvim")
   -- swap function arguments
   use "mizlan/iswap.nvim"
+  -- better folding
+  use {"kevinhwang91/nvim-ufo", requires = "kevinhwang91/promise-async"}
 
-	-- colorschemes:
+  -- hex colouriser in text for colours
+  use("norcalli/nvim-colorizer.lua")
+  -- for looking at colourschemes in real time
+  use("rktjmp/lush.nvim")
+
+	-- colourschemes:
+  use("rktjmp/lush.nvim")
+  use("meliora-theme/neovim")
 	use("rebelot/kanagawa.nvim")
 	use({ "catppuccin/nvim", as = "catppuccin" })
 	use("rmehri01/onenord.nvim")

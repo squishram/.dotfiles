@@ -76,10 +76,12 @@ bufferline.setup {
     persist_buffer_sort = true,
     -- can also be a table containing 2 custom separators
     -- [focused and unfocused]. eg: { '|', '|' }
-    separator_style = "slant",
+    -- slant/ thick/ thin
+    separator_style = "thick",
     enforce_regular_tabs = true,
     always_show_bufferline = true,
-    sort_by = 'id',
+    -- insert_after_current, insert_at_end, id, extension, relative_directory
+    sort_by = 'insert_after_current',
   }
 }
 

@@ -75,7 +75,7 @@ alias rl='source ~/.config/fish/conf.d/omf.fish'
 # check for an hdmi, if there is one plugged in, flip over to it
 alias hdmi='/home/archan/documents/code/shell_scripts/flip_hdmi.sh'
 # launch ranger file manager
-alias rr='ranger'
+alias rr='env TERM=xterm-kitty ranger'
 
 # starting daemons:
 # spotifyd
