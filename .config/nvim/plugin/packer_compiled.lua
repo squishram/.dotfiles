@@ -109,11 +109,6 @@ _G.packer_plugins = {
     path = "/home/ishan/.local/share/nvim/site/pack/packer/start/bufferline.nvim",
     url = "https://github.com/akinsho/bufferline.nvim"
   },
-  catppuccin = {
-    loaded = true,
-    path = "/home/ishan/.local/share/nvim/site/pack/packer/start/catppuccin",
-    url = "https://github.com/catppuccin/nvim"
-  },
   ["chartoggle.nvim"] = {
     loaded = true,
     path = "/home/ishan/.local/share/nvim/site/pack/packer/start/chartoggle.nvim",
@@ -239,6 +234,16 @@ _G.packer_plugins = {
     path = "/home/ishan/.local/share/nvim/site/pack/packer/start/lush.nvim",
     url = "https://github.com/rktjmp/lush.nvim"
   },
+  ["mason-lspconfig.nvim"] = {
+    loaded = true,
+    path = "/home/ishan/.local/share/nvim/site/pack/packer/start/mason-lspconfig.nvim",
+    url = "https://github.com/williamboman/mason-lspconfig.nvim"
+  },
+  ["mason.nvim"] = {
+    loaded = true,
+    path = "/home/ishan/.local/share/nvim/site/pack/packer/start/mason.nvim",
+    url = "https://github.com/williamboman/mason.nvim"
+  },
   ["material.nvim"] = {
     loaded = true,
     path = "/home/ishan/.local/share/nvim/site/pack/packer/start/material.nvim",
@@ -279,11 +284,6 @@ _G.packer_plugins = {
     path = "/home/ishan/.local/share/nvim/site/pack/packer/start/nordic.nvim",
     url = "https://github.com/andersevenrud/nordic.nvim"
   },
-  ["null-ls.nvim"] = {
-    loaded = true,
-    path = "/home/ishan/.local/share/nvim/site/pack/packer/start/null-ls.nvim",
-    url = "https://github.com/jose-elias-alvarez/null-ls.nvim"
-  },
   ["numb.nvim"] = {
     loaded = true,
     path = "/home/ishan/.local/share/nvim/site/pack/packer/start/numb.nvim",
@@ -313,11 +313,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/ishan/.local/share/nvim/site/pack/packer/start/nvim-deus",
     url = "https://github.com/theniceboy/nvim-deus"
-  },
-  ["nvim-lsp-installer"] = {
-    loaded = true,
-    path = "/home/ishan/.local/share/nvim/site/pack/packer/start/nvim-lsp-installer",
-    url = "https://github.com/williamboman/nvim-lsp-installer"
   },
   ["nvim-lspconfig"] = {
     loaded = true,
@@ -445,6 +440,11 @@ _G.packer_plugins = {
     path = "/home/ishan/.local/share/nvim/site/pack/packer/start/tidy.nvim",
     url = "https://github.com/mcauley-penney/tidy.nvim"
   },
+  ["todo-comments.nvim"] = {
+    loaded = true,
+    path = "/home/ishan/.local/share/nvim/site/pack/packer/start/todo-comments.nvim",
+    url = "https://github.com/folke/todo-comments.nvim"
+  },
   ["toggleterm.nvim"] = {
     loaded = true,
     path = "/home/ishan/.local/share/nvim/site/pack/packer/start/toggleterm.nvim",
@@ -454,6 +454,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/ishan/.local/share/nvim/site/pack/packer/start/tokyonight.nvim",
     url = "https://github.com/folke/tokyonight.nvim"
+  },
+  ["trouble.nvim"] = {
+    loaded = true,
+    path = "/home/ishan/.local/share/nvim/site/pack/packer/start/trouble.nvim",
+    url = "https://github.com/folke/trouble.nvim"
   },
   vimtex = {
     loaded = true,

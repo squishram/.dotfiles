@@ -16,14 +16,16 @@ vim.g.indent_blankline_filetype_exclude = {
 
 vim.g.indentLine_enabled = 1
 -- vim.g.indent_blankline_char = "│"
-vim.g.indent_blankline_char = "▏"
--- vim.g.indent_blankline_char = "▎"
+vim.g.indent_blankline_char = "▎"
+-- vim.g.indent_blankline_char = "▏"
+vim.opt.termguicolors = true
 vim.g.indent_blankline_show_trailing_blankline_indent = false
 vim.g.indent_blankline_show_first_indent_level = true
 vim.g.indent_blankline_use_treesitter = true
 
 indentguides.setup {
-    -- for example, context is off by default, use this to turn it on
+    -- char = " ",
+    show_trailing_blankline_indent = true,
     show_current_context = true,
     show_current_context_start = true,
 }

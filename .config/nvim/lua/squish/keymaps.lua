@@ -30,6 +30,9 @@ keymap("n", "<C-q>", "<C-w>q", opts)
 keymap("n", "<leader>nv", ":edit ~/.config/nvim/init.lua<cr>", opts)
 keymap("n", "<leader>sv", ":source ~/.config/nvim/init.lua<cr>", opts)
 
+-- takes you to that wee menu boi (netrw)
+keymap("n", "<leader>pv", ":Ex<CR>", opts)
+
 -- Resize with arrows
 keymap("n", "<C-Up>", ":resize +2<CR>", opts)
 keymap("n", "<C-Down>", ":resize -2<CR>", opts)
@@ -68,11 +71,8 @@ keymap("t", "<C-j>", "<C-\\><C-N><C-w>j", term_opts)
 keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
 keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 
-
--- switch back to last text buffer
-keymap("n", "<leader>bb", "<C-^>", opts)
 -- delete buffers
-keymap("n", "<leader>w", "<cmd>lua require('bufdelete').bufdelete(0)<CR>", opts)
+keymap("n", "<C-w>", "<cmd>lua require('bufdelete').bufdelete(0)<CR>", opts)
 
 -- keep the cursor centred when scrolling through searches
 keymap("n", "n", "nzzzv", opts)
@@ -98,6 +98,7 @@ keymap("i", ",,", "<Esc>A,<Esc>",  opts)
 keymap("n", "<leader><space>", ":noh<CR>", opts)
 -- fix last spelling mistake
 keymap("i", "<C-p>", "<C-l> <c-g>u<Esc>[s1z=`]a<c-g>u", opts)
+
 
 -- toggle wrap for writing prose
 -- vim.keymap.set("n", "<leader>w",

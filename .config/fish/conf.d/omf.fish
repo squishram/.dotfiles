@@ -52,16 +52,19 @@ alias cwd="pwd | xclip -selection clipboard"
 # improved find util in Rust
 alias fd="fdfind"
 
+# improved cat util in Rust
+alias bat="batcat"
+
 # rust fuzzy finder
 # ripgrep fuzzy finder
 alias skg="sk --ansi -i -c 'rga --color=always --line-number "{}" .'"
 alias skf="sk --ansi -i --color=always"
 
 # smart cd in Rust
-alias z='zoxide'
-alias zq='zoxide query'
-alias za='zoxide add'
-alias zr='zoxide remove'
+# alias z='zoxide'
+# alias zq='zoxide query'
+# alias za='zoxide add'
+# alias zr='zoxide remove'
 
 # reboot / halt / poweroff
 alias reboot='sudo /sbin/reboot'
