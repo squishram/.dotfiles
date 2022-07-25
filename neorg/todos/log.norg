@@ -1,0 +1,54 @@
+@document.meta
+  title: log
+  description: log of done things
+  authors: ishan
+  categories: productivity
+  created: 2022-01-17
+  version: 0.0.9
+@end
+
+_*Log of Done Things*_
+
+* T210120 - 00
+** bought new antibodies for Lydia
+--- AF647-anti-rabbit
+--- CF568-anti-mouse
+--- CF568-anti-rabbit
+
+* T210119 - 07
+** taught python class 9:30 - 12:30
+** attended CV workshop 12:30 - 13:30
+
+* T210118 - 00
+** make sure that a ticket was opened about staff account
+** python gta pre-class meeting
+
+* M210117 - 00
+** set up Thunderbird
+--- struggled with Thunderbird version
+--- struggled with Thunderbird address book
+** pushed for 45 TCM
+** did experiment with Lydia
+--- bad samples
+--- microscope acting up, couldn't find beads
+
+* F220114 - 01
+** meetings
+** admin
+
+* T220113 - 04
+** admin
+
+* W220112 - 10
+ ** figured out how susan's load_cube() function works (she used super weird functions)
+    ~ created a bunch of flat images and fed them in to see what would happen
+    ~ couldn't figure out this CCDData business so replaced with PIL.image - I assume it does the same thing
+    ~ outputs (z, y, x) images that go straight into processing - uh oh, not pytorch standard
+** *new googly eyes rule*
+*** never record numbers higher than 10
+
+* T220111 - 09
+ ** made a working dataset creator that works with dataloader
+  - ensured that it creates datasets shape = (1, z, y, x)~
+    by generating a bunch of asymmetric data to test it on~
+    when put into dataloader, this sorts into minibatches shape = (batch_size, 1, z, y, x)

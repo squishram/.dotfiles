@@ -1,0 +1,23 @@
+@document.meta
+title: tv_shows
+description:
+authors: ishan
+categories:
+created: 2022-07-25
+version: 0.0.11
+@end
+
+* TV 2022
+  - [x] 10.0 - Succession S3
+  - [x] 10.0 - Atlanta S3
+  - [x] 09.5 - White Lotus
+  - [x] 09.0 - Time
+  - [x] 08.5 - Severance
+  - [x] 07.5 - Stranger Things S4
+  - [-] 10.0 - Better Call Saul S6
+  - [-] Solar Opposites S1
+  - [ ] Solar Opposites S2
+  - [ ] Solar Opposites S3
+  - [ ] Primal S2
+  - [ ] Tuca and Bertie S2
+  - [ ] Tuca and Bertie S3
