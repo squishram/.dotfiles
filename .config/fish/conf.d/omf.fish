@@ -54,16 +54,19 @@ alias cwd="pwd | xclip -selection clipboard"
 # improved find util in Rust
 alias fd="fdfind"
 
+# improved cat util in Rust
+alias bat="batcat"
+
 # rust fuzzy finder
 # ripgrep fuzzy finder
 alias skg="sk --ansi -i -c 'rga --color=always --line-number "{}" .'"
 alias skf="sk --ansi -i --color=always"
 
 # smart cd in Rust
-alias z='zoxide'
-alias zq='zoxide query'
-alias za='zoxide add'
-alias zr='zoxide remove'
+# alias z='zoxide'
+# alias zq='zoxide query'
+# alias za='zoxide add'
+# alias zr='zoxide remove'
 
 # reboot / halt / poweroff
 alias reboot='sudo /sbin/reboot'
@@ -77,7 +80,7 @@ alias rl='source ~/.config/fish/conf.d/omf.fish'
 # check for an hdmi, if there is one plugged in, flip over to it
 alias hdmi='/home/archan/documents/code/shell_scripts/flip_hdmi.sh'
 # launch ranger file manager
-alias rr='ranger'
+alias rr='env TERM=xterm-kitty ranger'
 
 # starting daemons:
 # spotifyd

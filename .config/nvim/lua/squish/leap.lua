@@ -25,12 +25,13 @@ leap.setup {
   },
 }
 
--- make leap bidirectional
+-- default keymaps
+leap.set_default_keymaps()
 
+-- bidirectional mapping for s instead of s/S forward/backward
 function leap_bidirectional()
-  leap.leap { ['target-windows'] = { vim.api.nvim_get_current_win() } }
+  local current_window = vim.api.nvim_get_current_win()
+  require'leap'.leap { target_windows = { current_window } }
 end
 
-local opts = { noremap = true, silent = true }
-
-vim.keymap.set('n', 's', leap_bidirectional, opts)
+vim.keymap.set('n', 's', leap_bidirectional, { silent = true })

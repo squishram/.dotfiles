@@ -109,11 +109,6 @@ _G.packer_plugins = {
     path = "/home/archan/.local/share/nvim/site/pack/packer/start/bufferline.nvim",
     url = "https://github.com/akinsho/bufferline.nvim"
   },
-  catppuccin = {
-    loaded = true,
-    path = "/home/archan/.local/share/nvim/site/pack/packer/start/catppuccin",
-    url = "https://github.com/catppuccin/nvim"
-  },
   ["chartoggle.nvim"] = {
     loaded = true,
     path = "/home/archan/.local/share/nvim/site/pack/packer/start/chartoggle.nvim",
@@ -174,6 +169,11 @@ _G.packer_plugins = {
     path = "/home/archan/.local/share/nvim/site/pack/packer/start/everforest",
     url = "https://github.com/sainnhe/everforest"
   },
+  ["eyeliner.nvim"] = {
+    loaded = true,
+    path = "/home/archan/.local/share/nvim/site/pack/packer/start/eyeliner.nvim",
+    url = "https://github.com/jinh0/eyeliner.nvim"
+  },
   ["friendly-snippets"] = {
     loaded = true,
     path = "/home/archan/.local/share/nvim/site/pack/packer/start/friendly-snippets",
@@ -229,6 +229,21 @@ _G.packer_plugins = {
     path = "/home/archan/.local/share/nvim/site/pack/packer/start/lualine.nvim",
     url = "https://github.com/nvim-lualine/lualine.nvim"
   },
+  ["lush.nvim"] = {
+    loaded = true,
+    path = "/home/archan/.local/share/nvim/site/pack/packer/start/lush.nvim",
+    url = "https://github.com/rktjmp/lush.nvim"
+  },
+  ["mason-lspconfig.nvim"] = {
+    loaded = true,
+    path = "/home/archan/.local/share/nvim/site/pack/packer/start/mason-lspconfig.nvim",
+    url = "https://github.com/williamboman/mason-lspconfig.nvim"
+  },
+  ["mason.nvim"] = {
+    loaded = true,
+    path = "/home/archan/.local/share/nvim/site/pack/packer/start/mason.nvim",
+    url = "https://github.com/williamboman/mason.nvim"
+  },
   ["material.nvim"] = {
     loaded = true,
     path = "/home/archan/.local/share/nvim/site/pack/packer/start/material.nvim",
@@ -257,7 +272,7 @@ _G.packer_plugins = {
   neovim = {
     loaded = true,
     path = "/home/archan/.local/share/nvim/site/pack/packer/start/neovim",
-    url = "https://github.com/rose-pine/neovim"
+    url = "https://github.com/meliora-theme/neovim"
   },
   ["nightfox.nvim"] = {
     loaded = true,
@@ -268,11 +283,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/archan/.local/share/nvim/site/pack/packer/start/nordic.nvim",
     url = "https://github.com/andersevenrud/nordic.nvim"
-  },
-  ["null-ls.nvim"] = {
-    loaded = true,
-    path = "/home/archan/.local/share/nvim/site/pack/packer/start/null-ls.nvim",
-    url = "https://github.com/jose-elias-alvarez/null-ls.nvim"
   },
   ["numb.nvim"] = {
     loaded = true,
@@ -289,6 +299,11 @@ _G.packer_plugins = {
     path = "/home/archan/.local/share/nvim/site/pack/packer/start/nvim-cmp",
     url = "https://github.com/hrsh7th/nvim-cmp"
   },
+  ["nvim-colorizer.lua"] = {
+    loaded = true,
+    path = "/home/archan/.local/share/nvim/site/pack/packer/start/nvim-colorizer.lua",
+    url = "https://github.com/norcalli/nvim-colorizer.lua"
+  },
   ["nvim-cursorline"] = {
     loaded = true,
     path = "/home/archan/.local/share/nvim/site/pack/packer/start/nvim-cursorline",
@@ -298,11 +313,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/archan/.local/share/nvim/site/pack/packer/start/nvim-deus",
     url = "https://github.com/theniceboy/nvim-deus"
-  },
-  ["nvim-lsp-installer"] = {
-    loaded = true,
-    path = "/home/archan/.local/share/nvim/site/pack/packer/start/nvim-lsp-installer",
-    url = "https://github.com/williamboman/nvim-lsp-installer"
   },
   ["nvim-lspconfig"] = {
     loaded = true,
@@ -329,6 +339,11 @@ _G.packer_plugins = {
     path = "/home/archan/.local/share/nvim/site/pack/packer/start/nvim-spectre",
     url = "https://github.com/windwp/nvim-spectre"
   },
+  ["nvim-surround"] = {
+    loaded = true,
+    path = "/home/archan/.local/share/nvim/site/pack/packer/start/nvim-surround",
+    url = "https://github.com/kylechui/nvim-surround"
+  },
   ["nvim-tree.lua"] = {
     loaded = true,
     path = "/home/archan/.local/share/nvim/site/pack/packer/start/nvim-tree.lua",
@@ -353,6 +368,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/archan/.local/share/nvim/site/pack/packer/start/nvim-ts-rainbow",
     url = "https://github.com/p00f/nvim-ts-rainbow"
+  },
+  ["nvim-ufo"] = {
+    loaded = true,
+    path = "/home/archan/.local/share/nvim/site/pack/packer/start/nvim-ufo",
+    url = "https://github.com/kevinhwang91/nvim-ufo"
   },
   ["nvim-web-devicons"] = {
     loaded = true,
@@ -384,10 +404,10 @@ _G.packer_plugins = {
     path = "/home/archan/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
-  ["quick-scope"] = {
+  ["promise-async"] = {
     loaded = true,
-    path = "/home/archan/.local/share/nvim/site/pack/packer/start/quick-scope",
-    url = "https://github.com/unblevable/quick-scope"
+    path = "/home/archan/.local/share/nvim/site/pack/packer/start/promise-async",
+    url = "https://github.com/kevinhwang91/promise-async"
   },
   ["renamer.nvim"] = {
     loaded = true,
@@ -403,11 +423,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/archan/.local/share/nvim/site/pack/packer/start/substitute.nvim",
     url = "https://github.com/gbprod/substitute.nvim"
-  },
-  ["surround.nvim"] = {
-    loaded = true,
-    path = "/home/archan/.local/share/nvim/site/pack/packer/start/surround.nvim",
-    url = "https://github.com/ur4ltz/surround.nvim"
   },
   ["telescope-file-browser.nvim"] = {
     loaded = true,
@@ -425,6 +440,11 @@ _G.packer_plugins = {
     path = "/home/archan/.local/share/nvim/site/pack/packer/start/tidy.nvim",
     url = "https://github.com/mcauley-penney/tidy.nvim"
   },
+  ["todo-comments.nvim"] = {
+    loaded = true,
+    path = "/home/archan/.local/share/nvim/site/pack/packer/start/todo-comments.nvim",
+    url = "https://github.com/folke/todo-comments.nvim"
+  },
   ["toggleterm.nvim"] = {
     loaded = true,
     path = "/home/archan/.local/share/nvim/site/pack/packer/start/toggleterm.nvim",
@@ -434,6 +454,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/archan/.local/share/nvim/site/pack/packer/start/tokyonight.nvim",
     url = "https://github.com/folke/tokyonight.nvim"
+  },
+  ["trouble.nvim"] = {
+    loaded = true,
+    path = "/home/archan/.local/share/nvim/site/pack/packer/start/trouble.nvim",
+    url = "https://github.com/folke/trouble.nvim"
   },
   vimtex = {
     loaded = true,

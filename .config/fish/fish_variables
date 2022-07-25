@@ -1,6 +1,11 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
+<<<<<<< HEAD
 SETUVAR __fish_initialized:3400
+=======
+SETUVAR --export TERM:screen\x2d256color\x2dbce\x1ekitty
+SETUVAR __fish_initialized:3100
+>>>>>>> 8af8ecca2d03295cc42c6f0e32340ad6e1df2568
 SETUVAR fish_color_autosuggestion:747369
 SETUVAR fish_color_cancel:\x2dr
 SETUVAR fish_color_command:99cc99
