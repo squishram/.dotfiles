@@ -24,6 +24,8 @@ set PATH $HOME/.cargo/bin $PATH
 # export PATH="$HOME/.cargo/bin:$PATH"
 # fish_add_path ~/.cargo/bin
 
+
+fish_add_path ~/.local/bin
 # texlive path-setting
 # set MANPATH "/usr/local/texlive/2021/texmf-dist/doc/man"
 # export MANPATH="/usr/local/texlive/2021/texmf-dist/doc/man"

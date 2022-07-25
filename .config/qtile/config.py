@@ -65,10 +65,10 @@ keys = [
         lazy.spawn("rofi -show calc -modi calc -no-show-match -no-sort"),
         desc='run rofi calculator'
         ),
-    # Key([mod, "shift"], "q",
-    #     lazy.spawn("rofi -show calc -modi calc -no-show-match -no-sort"),
-    #     desc='rofi shutdown menu'
-    #     ),
+    Key([mod, "shift"], "q",
+        lazy.spawn("rofi -show power-menu -modi power-menu:rofi-power-menu"),
+        desc='rofi shutdown menu'
+        ),
     # Key([mod, "shift"], "v",
     #     lazy.spawn("rofi -show calc -modi calc -no-show-match -no-sort"),
     #     desc='rofi clipboard menu'
