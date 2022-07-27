@@ -2,6 +2,7 @@ local fn = vim.fn
 
 -- Automatically install packer & keep it updated
 local install_path = fn.stdpath("data") .. "/site/pack/packer/start/packer.nvim"
+
 if fn.empty(fn.glob(install_path)) > 0 then
     PACKER_BOOTSTRAP = fn.system({
         "git",
@@ -46,34 +47,38 @@ return packer.startup(function(use)
 
     -- Have packer manage itself
     use("wbthomason/packer.nvim")
-    -- Useful lua functions used ny lots of plugins
+    -- Useful lua functions used by lots of plugins
     use("nvim-lua/plenary.nvim")
+    use("nvim-lua/popup.nvim")
     -- icon support
     use("kyazdani42/nvim-web-devicons")
     -- better notifications display
-    use "rcarriga/nvim-notify"
+    use("rcarriga/nvim-notify")
     -- This is needed to fix lsp doc highlight
-    use "antoinemadec/FixCursorHold.nvim"
+    use("antoinemadec/FixCursorHold.nvim")
+    use("stevearc/dressing.nvim")
 
     -- LSP
     -- The LSP plugin itself
     use("neovim/nvim-lspconfig")
-    -- use("williamboman/nvim-lsp-installer")
     -- bootstrap client for installing language servers
     use("williamboman/mason.nvim")
     use("williamboman/mason-lspconfig.nvim")
-    -- formatting plugin with diagnostics, works with linting and formatting software
-    -- use("jose-elias-alvarez/null-ls.nvim")
+    -- linter & formatter client
+    use("jose-elias-alvarez/null-ls.nvim")
     -- variable renamer plugin
     use({"filipdutescu/renamer.nvim", branch = "master"})
     -- function explainer popup
     use "ray-x/lsp_signature.nvim"
-    -- UI for LSP functionality
-    -- use "tami5/lspsaga.nvim"
+    -- inlay hints for lsp
+    use { "lvimuser/lsp-inlayhints.nvim", branch = "readme" }
+    -- nvim-lsp progress monitor
+    use("j-hui/fidget.nvim")
 
     -- Autocompletion
     -- The completion plugin
-    use("hrsh7th/nvim-cmp")
+    use("christianchiarulli/nvim-cmp")
+    -- use("hrsh7th/nvim-cmp")
     -- buffer completions
     use("hrsh7th/cmp-buffer")
     -- path completions
@@ -83,13 +88,17 @@ return packer.startup(function(use)
     -- LSP autocompletion
     use("hrsh7th/cmp-nvim-lsp")
     -- lua autocompletion
-    use "hrsh7th/cmp-nvim-lua"
+    use("hrsh7th/cmp-nvim-lua")
     -- snippet completions
     use("saadparwaiz1/cmp_luasnip")
     -- snippet engine
     use("L3MON4D3/LuaSnip")
     -- a bunch of snippets to use
     use("rafamadriz/friendly-snippets")
+
+    -- lang-specific
+    -- lua development plugin
+    use("folke/lua-dev.nvim")
 
     -- startup dashboard interface for vim
     use("goolord/alpha-nvim")
@@ -161,10 +170,7 @@ return packer.startup(function(use)
 
     -- syntax parsing functionalities
     -- Treesitter
-    use({
-        "nvim-treesitter/nvim-treesitter",
-        run = ":TSUpdate",
-    })
+    use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate"})
     -- generate comments intelligently with treesitter
     use("danymat/neogen")
     -- rainbow brackets with treesitter

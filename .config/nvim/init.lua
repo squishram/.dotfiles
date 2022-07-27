@@ -1,44 +1,49 @@
-require("squish.options")
-require("squish.keymaps")
-require("squish.plugins")
-require("squish.treesitter")
-require("squish.material_colourscheme")
-require("squish.colorscheme")
-require("squish.telescope")
-require("squish.autopairs")
-require("squish.neoscroll")
-require("squish.commentary")
-require("squish.neogen")
-require("squish.surround")
-require("squish.leap")
-require("squish.indentguides")
-require("squish.cmp")
-require("squish.lualine")
-require("squish.lsp")
-require("squish.devicons")
-require("squish.nvim-tree")
-require("squish.bufferline")
-require("squish.neorg")
-require("squish.alpha")
-require("squish.gitsigns")
-require("squish.impatient")
-require("squish.autocommands")
-require("squish.chartoggle")
-require("squish.substitute")
-require("squish.ts-context")
-require("squish.trouble")
-require("squish.toggleterm")
-require("squish.neoclip")
-require("squish.vimtex")
-require("squish.scrollbar")
-require("squish.winbar")
-require("squish.numb")
-require("squish.notify")
-require("squish.iswap")
-require("squish.dial")
-require("squish.spectre")
-require("squish.ufo")
-require("squish.todo_comments")
--- require("squish.project")
--- require("squish.whichkey")
--- require("squish.funcs_autocmds")
+require "squish.keymaps"
+require "squish.plugins"
+require "squish.autocommands"
+require "squish.options"
+require "squish.colorscheme"
+require "squish.material_colourscheme"
+require "squish.cmp"
+-- require "squish.lsp-inlayhints"
+require "squish.telescope"
+require "squish.treesitter"
+require "squish.autopairs"
+require "squish.neoscroll"
+require "squish.commentary"
+require "squish.neogen"
+require "squish.surround"
+require "squish.leap"
+require "squish.indentguides"
+require "squish.lualine"
+require "squish.lsp"
+require "squish.fidget"
+require "squish.dressing"
+require "squish.devicons"
+require "squish.nvim-tree"
+require "squish.bufferline"
+require "squish.neorg"
+require "squish.alpha"
+require "squish.gitsigns"
+require "squish.impatient"
+require "squish.chartoggle"
+require "squish.substitute"
+require "squish.ts-context"
+require "squish.trouble"
+require "squish.toggleterm"
+require "squish.neoclip"
+require "squish.vimtex"
+require "squish.scrollbar"
+require "squish.winbar"
+require "squish.numb"
+require "squish.notify"
+require "squish.iswap"
+require "squish.dial"
+require "squish.spectre"
+require "squish.ufo"
+require "squish.todo_comments"
+require "squish.aerial"
+require "squish.renamer"
+-- require "squish.project"
+-- require "squish.whichkey"
+-- require "squish.funcs_autocmds"

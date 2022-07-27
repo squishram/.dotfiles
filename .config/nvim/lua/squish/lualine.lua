@@ -3,7 +3,6 @@ if not status_ok then
   return
 end
 
--- Lualine status bar config
 lualine.setup {
   options = {
     icons_enabled = true,
