@@ -16,9 +16,9 @@ nvim_tree.setup {
   hijack_directories = {
     enable = false,
   },
-  -- update_to_buf_dir = {
-  --   enable = false,
-  -- },
+  update_to_buf_dir = {
+    enable = false,
+  },
   -- disable_netrw = true,
   -- hijack_netrw = true,
   -- open_on_setup = false,

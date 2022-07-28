@@ -63,22 +63,14 @@ vim.api.nvim_create_autocmd({ "BufEnter" }, {
 })
 
 vim.api.nvim_create_autocmd({ "FileType" }, {
-  pattern = { "gitcommit", "markdown" },
+  pattern = { "gitcommit", "markdown", "neorg", "txt" },
   callback = function()
     vim.opt_local.wrap = true
     vim.opt_local.spell = true
   end,
 })
 
-vim.api.nvim_create_autocmd({ "FileType" }, {
-  pattern = { "lir" },
-  callback = function()
-    vim.opt_local.number = false
-    vim.opt_local.relativenumber = false
-  end,
-})
-
-vim.cmd "autocmd BufEnter * ++nested if winnr('$') == 1 && bufname() == 'NvimTree_' . tabpagenr() | quit | endif"
+-- vim.cmd "autocmd BufEnter * ++nested if winnr('$') == 1 && bufname() == 'NvimTree_' . tabpagenr() | quit | endif"
 -- vim.api.nvim_create_autocmd({ "BufEnter" }, {
 --   callback = function()
 --     vim.cmd [[
@@ -111,7 +103,6 @@ if vim.fn.has "nvim-0.8" == 1 then
     }
   )
 end
--- require "squish.winbar"
 
 vim.api.nvim_create_autocmd({ "BufWinEnter" }, {
   callback = function()
@@ -155,14 +146,3 @@ vim.api.nvim_create_autocmd({ "CursorHold" }, {
     end
   end,
 })
-
--- vim.api.nvim_create_autocmd({ "ModeChanged" }, {
---   callback = function()
---     local luasnip = require "luasnip"
---     if luasnip.expand_or_jumpable() then
---       -- ask maintainer for option to make this silent
---       -- luasnip.unlink_current()
---       vim.cmd [[silent! lua require("luasnip").unlink_current()]]
---     end
---   end,
--- })
