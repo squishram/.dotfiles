@@ -1,0 +1,16 @@
+@document.meta
+title: artists_I_like
+description:
+authors: ishan
+categories:
+created: 2022-08-04
+version: 0.0.11
+@end
+
+* illustrators
+  - Al Hirshfeld
+
+* painters
+  - Lubiana Himid
+  - Lisa Brice
+  - Sophie von Hellerman
