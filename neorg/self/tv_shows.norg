@@ -1,4 +1,4 @@
-@document.meta
+document.meta
 title: tv_shows
 description:
 authors: ishan
@@ -14,10 +14,11 @@ version: 0.0.11
   - [x] 09.0 - Time
   - [x] 08.5 - Severance
   - [x] 07.5 - Stranger Things S4
-  - [-] 10.0 - Better Call Saul S6
-  - [-] Solar Opposites S1
+  - [x] Tuca and Bertie S2
+  - [x] Solar Opposites S1
+  - [x] Solar Opposites S2
+  - [x] Solar Opposites S3
+  - [x] 10.0 - Better Call Saul S6
   - [-] Primal S2
-  - [ ] Solar Opposites S2
-  - [ ] Solar Opposites S3
-  - [ ] Tuca and Bertie S2
   - [ ] Tuca and Bertie S3
+  - [ ] Slippin' Jimmy

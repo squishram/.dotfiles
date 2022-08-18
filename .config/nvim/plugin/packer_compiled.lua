@@ -159,6 +159,11 @@ _G.packer_plugins = {
     path = "/home/archan/.local/share/nvim/site/pack/packer/start/doom-one.nvim",
     url = "https://github.com/NTBBloodbath/doom-one.nvim"
   },
+  ["dressing.nvim"] = {
+    loaded = true,
+    path = "/home/ishan/.local/share/nvim/site/pack/packer/start/dressing.nvim",
+    url = "https://github.com/stevearc/dressing.nvim"
+  },
   edge = {
     loaded = true,
     path = "/home/archan/.local/share/nvim/site/pack/packer/start/edge",
@@ -173,6 +178,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/archan/.local/share/nvim/site/pack/packer/start/eyeliner.nvim",
     url = "https://github.com/jinh0/eyeliner.nvim"
+  },
+  ["fidget.nvim"] = {
+    loaded = true,
+    path = "/home/ishan/.local/share/nvim/site/pack/packer/start/fidget.nvim",
+    url = "https://github.com/j-hui/fidget.nvim"
   },
   ["friendly-snippets"] = {
     loaded = true,
@@ -219,10 +229,20 @@ _G.packer_plugins = {
     path = "/home/archan/.local/share/nvim/site/pack/packer/start/leap.nvim",
     url = "https://github.com/ggandor/leap.nvim"
   },
+  ["lsp-inlayhints.nvim"] = {
+    loaded = true,
+    path = "/home/ishan/.local/share/nvim/site/pack/packer/start/lsp-inlayhints.nvim",
+    url = "https://github.com/lvimuser/lsp-inlayhints.nvim"
+  },
   ["lsp_signature.nvim"] = {
     loaded = true,
     path = "/home/archan/.local/share/nvim/site/pack/packer/start/lsp_signature.nvim",
     url = "https://github.com/ray-x/lsp_signature.nvim"
+  },
+  ["lua-dev.nvim"] = {
+    loaded = true,
+    path = "/home/ishan/.local/share/nvim/site/pack/packer/start/lua-dev.nvim",
+    url = "https://github.com/folke/lua-dev.nvim"
   },
   ["lualine.nvim"] = {
     loaded = true,
@@ -284,6 +304,11 @@ _G.packer_plugins = {
     path = "/home/archan/.local/share/nvim/site/pack/packer/start/nordic.nvim",
     url = "https://github.com/andersevenrud/nordic.nvim"
   },
+  ["null-ls.nvim"] = {
+    loaded = true,
+    path = "/home/ishan/.local/share/nvim/site/pack/packer/start/null-ls.nvim",
+    url = "https://github.com/jose-elias-alvarez/null-ls.nvim"
+  },
   ["numb.nvim"] = {
     loaded = true,
     path = "/home/archan/.local/share/nvim/site/pack/packer/start/numb.nvim",
@@ -296,8 +321,13 @@ _G.packer_plugins = {
   },
   ["nvim-cmp"] = {
     loaded = true,
+<<<<<<< HEAD
     path = "/home/archan/.local/share/nvim/site/pack/packer/start/nvim-cmp",
     url = "https://github.com/hrsh7th/nvim-cmp"
+=======
+    path = "/home/ishan/.local/share/nvim/site/pack/packer/start/nvim-cmp",
+    url = "https://github.com/christianchiarulli/nvim-cmp"
+>>>>>>> fe4f204e47b401a626035ee7f635b4cbc7540c09
   },
   ["nvim-colorizer.lua"] = {
     loaded = true,
@@ -403,6 +433,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/archan/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
+  },
+  ["popup.nvim"] = {
+    loaded = true,
+    path = "/home/ishan/.local/share/nvim/site/pack/packer/start/popup.nvim",
+    url = "https://github.com/nvim-lua/popup.nvim"
   },
   ["promise-async"] = {
     loaded = true,

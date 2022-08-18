@@ -24,7 +24,7 @@ keymap("n", "<C-l>", "<C-w>l", opts)
 -- quit split with CTRL-q
 keymap("n", "<C-q>", "<C-w>q", opts)
 
--- keymap("n", "<leader>e", ":Lex 30<cr>", opts)
+keymap("n", "f", ";", opts)
 
 -- edit your neovim config shortcut
 keymap("n", "<leader>nv", ":edit ~/.config/nvim/init.lua<cr>", opts)
