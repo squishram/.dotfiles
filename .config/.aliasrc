@@ -7,7 +7,7 @@ alias cwd="pwd | xclip -selection clipboard"
 
 # RUST UTILS
 # improved find util in Rust
-alias fd="fdfind"
+# alias fd="fdfind"
 # improved cat util in Rust
 alias bat="batcat"
 # rust fuzzy finder
@@ -21,7 +21,8 @@ alias skf="sk --ansi -i --color=always"
 # alias zr='zoxide remove'
 
 # reboot / halt / poweroff
-alias reboot="sudo /sbin/reboot"
+# alias reboot="sudo /sbin/reboot"
+alias reboot="systemctl reboot"
 alias pdown="systemctl poweroff"
 alias halt="sudo /sbin/halt"
 # boot up your display

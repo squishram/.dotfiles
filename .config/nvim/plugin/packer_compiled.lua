@@ -161,7 +161,7 @@ _G.packer_plugins = {
   },
   ["dressing.nvim"] = {
     loaded = true,
-    path = "/home/ishan/.local/share/nvim/site/pack/packer/start/dressing.nvim",
+    path = "/home/archan/.local/share/nvim/site/pack/packer/start/dressing.nvim",
     url = "https://github.com/stevearc/dressing.nvim"
   },
   edge = {
@@ -181,7 +181,7 @@ _G.packer_plugins = {
   },
   ["fidget.nvim"] = {
     loaded = true,
-    path = "/home/ishan/.local/share/nvim/site/pack/packer/start/fidget.nvim",
+    path = "/home/archan/.local/share/nvim/site/pack/packer/start/fidget.nvim",
     url = "https://github.com/j-hui/fidget.nvim"
   },
   ["friendly-snippets"] = {
@@ -231,7 +231,7 @@ _G.packer_plugins = {
   },
   ["lsp-inlayhints.nvim"] = {
     loaded = true,
-    path = "/home/ishan/.local/share/nvim/site/pack/packer/start/lsp-inlayhints.nvim",
+    path = "/home/archan/.local/share/nvim/site/pack/packer/start/lsp-inlayhints.nvim",
     url = "https://github.com/lvimuser/lsp-inlayhints.nvim"
   },
   ["lsp_signature.nvim"] = {
@@ -241,7 +241,7 @@ _G.packer_plugins = {
   },
   ["lua-dev.nvim"] = {
     loaded = true,
-    path = "/home/ishan/.local/share/nvim/site/pack/packer/start/lua-dev.nvim",
+    path = "/home/archan/.local/share/nvim/site/pack/packer/start/lua-dev.nvim",
     url = "https://github.com/folke/lua-dev.nvim"
   },
   ["lualine.nvim"] = {
@@ -306,7 +306,7 @@ _G.packer_plugins = {
   },
   ["null-ls.nvim"] = {
     loaded = true,
-    path = "/home/ishan/.local/share/nvim/site/pack/packer/start/null-ls.nvim",
+    path = "/home/archan/.local/share/nvim/site/pack/packer/start/null-ls.nvim",
     url = "https://github.com/jose-elias-alvarez/null-ls.nvim"
   },
   ["numb.nvim"] = {
@@ -321,13 +321,8 @@ _G.packer_plugins = {
   },
   ["nvim-cmp"] = {
     loaded = true,
-<<<<<<< HEAD
     path = "/home/archan/.local/share/nvim/site/pack/packer/start/nvim-cmp",
-    url = "https://github.com/hrsh7th/nvim-cmp"
-=======
-    path = "/home/ishan/.local/share/nvim/site/pack/packer/start/nvim-cmp",
     url = "https://github.com/christianchiarulli/nvim-cmp"
->>>>>>> fe4f204e47b401a626035ee7f635b4cbc7540c09
   },
   ["nvim-colorizer.lua"] = {
     loaded = true,
@@ -436,7 +431,7 @@ _G.packer_plugins = {
   },
   ["popup.nvim"] = {
     loaded = true,
-    path = "/home/ishan/.local/share/nvim/site/pack/packer/start/popup.nvim",
+    path = "/home/archan/.local/share/nvim/site/pack/packer/start/popup.nvim",
     url = "https://github.com/nvim-lua/popup.nvim"
   },
   ["promise-async"] = {
