@@ -27,7 +27,7 @@ I'd achieved the unachievable. But a study investigating the effects of social i
 Participants took little tests - memory, decision-making, time-estimation, and the ability to learn new things were all examined.
 It was conducted on 342 people over 13 weeks, exams took place at 5 timepoints over this period.
 People were at their worst-performing on all of these tests in the most isolating conditions.
-A lot of people would call this predictable, but it tore at my little and dashed me into the plane engine.
+A lot of people would call this predictable, but it tore at my little cape and dashed me into the plane engine.
 
 Westival was the best festival experience of my life.
 

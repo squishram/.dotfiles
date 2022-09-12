@@ -9,7 +9,7 @@ alias cwd="pwd | xclip -selection clipboard"
 # improved find util in Rust
 # alias fd="fdfind"
 # improved cat util in Rust
-alias bat="batcat"
+# alias bat="batcat"
 # rust fuzzy finder
 # ripgrep fuzzy finder
 alias skg="sk --ansi -i -c 'rga --color=always --line-number "{}" .'"
