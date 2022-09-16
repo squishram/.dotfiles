@@ -10,6 +10,8 @@ HISTSIZE=1000
 SAVEHIST=1000
 HISTFILE=~/.cache/zsh/history
 
+# stop highlighting pasted text
+zle_highlight+=(paste:none)
 # tab complete
 autoload -U compinit
 zstyle ':completion:*' menu select
