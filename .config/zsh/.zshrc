@@ -32,6 +32,10 @@ unsetopt beep
 unsetopt nomatch
 # don't notify me of background processes
 unsetopt notify
+# disable ctrl-s to freeze terminal
+stty stop undef
+# don't highlight pasted in stuff
+zle_highlight=('paste:none')
 
 # use vim keybinds
 bindkey -v
