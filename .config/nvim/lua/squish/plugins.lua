@@ -69,9 +69,9 @@ return packer.startup(function(use)
     -- variable renamer plugin
     use({"filipdutescu/renamer.nvim", branch = "master"})
     -- function explainer popup
-    use "ray-x/lsp_signature.nvim"
+    use("ray-x/lsp_signature.nvim")
     -- inlay hints for lsp
-    use { "lvimuser/lsp-inlayhints.nvim", branch = "readme" }
+    use("lvimuser/lsp-inlayhints.nvim")
     -- nvim-lsp progress monitor
     use("j-hui/fidget.nvim")
 
@@ -131,8 +131,6 @@ return packer.startup(function(use)
     use("rhysd/clever-f.vim")
     -- quick on-screen navigation
     use("ggandor/leap.nvim")
-    -- advanced search & replace including globbing
-    use "windwp/nvim-spectre"
     -- scrollbar with lsp diagnostics
     use("petertriho/nvim-scrollbar")
     -- smooth scrolling
@@ -179,8 +177,6 @@ return packer.startup(function(use)
     use("romgrk/nvim-treesitter-context")
     -- indent guides
     use("lukas-reineke/indent-blankline.nvim")
-    -- swap function arguments
-    use "mizlan/iswap.nvim"
     -- better folding
     use {"kevinhwang91/nvim-ufo", requires = "kevinhwang91/promise-async"}
     -- todo comments highlighted
