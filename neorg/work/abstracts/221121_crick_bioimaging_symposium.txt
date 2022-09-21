@@ -1,11 +1,7 @@
-Augmenting z-resolution to isometry using a generative adversarial network
+Achieving isometric z-resolution using a generative adversarial network
 
-'Deep learning', a subset of machine learning techniques based on artificial neural networks, has found a range of uses in image analysis.
-Aside from those techniques that extract information from images, such as image segmentation, some deep learning methods seek to increase the amount of available information in the image by increasing the resolution.
-A problem with such techniques is that the training process for the algorithms biases the network to generate particular structures.
-Thus a good generative network for the augmentation of images will be trained in such a way as to maximise its impartiality to the specific presentation of structures in novel data.
-Here we present AFFIRM3D (AI For Forging Isotropic Resolution in 3D Micrographs), a generative network that increases the z-resolution of a 3D image to match its xy-resolution.
-To avoid bias, the network is primarily trained using a loss function that is calculated from the fourier transform of the signal distributions in x, y, and z.
-In this way, the network transforms the image so as to minimise the difference between the frequency distributions along each axis, rather than to generate structures of a specific shape.
-We have found that, after downsampling & convolution with an anisometric 3D gaussian kernel, anisometric 3D images which have been passed through the network closely resemble the original input image.
-In the case of simulated datasets, output from the network closely resembles the ground truth.
+The machine learning-based method of the generative adversarial network (GAN) is a powerful image processing approach and increasingly popular.
+The challenge posed by using adversarial systems for image augmentation is the lack of a direct link between the input image and the output image, meaning that the algorithms are particularly prone to hallucinating structure.
+On the other hand, generative CNNS tend to reproduce specific structures from input images, making it likely that frequently observed structures will be reproduced regardless of whether they are present.
+Here we present AFFIRM3D (AI For Forging Isotropic Resolution in 3D Micrographs), a transductive GAN which both uses an adversarial approach and also uses a direct loss, designed to constrain to the general properties of the image rather than reproduce specific structures.
+The result is a GAN that increases the z-resolution of a 3D fluorescence microscopy image to match its xy-resolution.

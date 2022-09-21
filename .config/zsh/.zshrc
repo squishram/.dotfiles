@@ -1,5 +1,5 @@
 # make sure you can use that tasty rust stuff
-export PATH="~/.cargo/bin:$PATH"
+# export PATH="~/.cargo/bin:$PATH"
 
 # enable colours fgs
 autoload -U colors
