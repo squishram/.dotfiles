@@ -254,11 +254,6 @@ _G.packer_plugins = {
     path = "/home/archan/.local/share/nvim/site/pack/packer/start/lush.nvim",
     url = "https://github.com/rktjmp/lush.nvim"
   },
-  markid = {
-    loaded = true,
-    path = "/home/archan/.local/share/nvim/site/pack/packer/start/markid",
-    url = "https://github.com/David-Kunz/markid"
-  },
   ["mason-lspconfig.nvim"] = {
     loaded = true,
     path = "/home/archan/.local/share/nvim/site/pack/packer/start/mason-lspconfig.nvim",

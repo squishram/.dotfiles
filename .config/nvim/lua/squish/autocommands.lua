@@ -1,18 +1,9 @@
--- vim.api.nvim_create_autocmd({ "User" }, {
---   pattern = { "AlphaReady" },
---   callback = function()
---     vim.cmd [[
---       set showtabline=0 | autocmd BufUnload <buffer> set showtabline=2
---     ]]
---   end,
--- })
-
 vim.api.nvim_create_autocmd({ "User" }, {
   pattern = { "AlphaReady" },
   callback = function()
     vim.cmd [[
       set laststatus=0 | autocmd BufUnload <buffer> set laststatus=3
-    ]]
+      ]]
   end,
 })
 
@@ -23,7 +14,7 @@ vim.api.nvim_create_autocmd({ "FileType" }, {
       nnoremap <silent> <buffer> q :close<CR>
       nnoremap <silent> <buffer> <esc> :close<CR>
       set nobuflisted
-    ]]
+      ]]
   end,
 })
 
@@ -34,7 +25,7 @@ vim.api.nvim_create_autocmd({ "FileType" }, {
       nnoremap <silent> <buffer> <m-r> :close<CR>
       " nnoremap <silent> <buffer> <m-r> <NOP>
       set nobuflisted
-    ]]
+      ]]
   end,
 })
 
@@ -48,7 +39,7 @@ vim.api.nvim_create_autocmd({ "BufEnter" }, {
       nnoremap <silent> <buffer> <c-j> j<CR>
       nnoremap <silent> <buffer> <c-k> k<CR>
       set nobuflisted
-    ]]
+      ]]
     end
   end,
 })
@@ -70,15 +61,6 @@ vim.api.nvim_create_autocmd({ "FileType" }, {
   end,
 })
 
--- vim.cmd "autocmd BufEnter * ++nested if winnr('$') == 1 && bufname() == 'NvimTree_' . tabpagenr() | quit | endif"
--- vim.api.nvim_create_autocmd({ "BufEnter" }, {
---   callback = function()
---     vim.cmd [[
---       if winnr('$') == 1 && bufname() == 'NvimTree_' . tabpagenr() | quit | endif
---     ]]
---   end,
--- })
-
 vim.api.nvim_create_autocmd({ "VimResized" }, {
   callback = function()
     vim.cmd "tabdo wincmd ="
@@ -90,8 +72,6 @@ vim.api.nvim_create_autocmd({ "CmdWinEnter" }, {
     vim.cmd "quit"
   end,
 })
-
--- require("squish.winbar").get_winbar()
 
 if vim.fn.has "nvim-0.8" == 1 then
   vim.api.nvim_create_autocmd(
@@ -112,7 +92,7 @@ vim.api.nvim_create_autocmd({ "BufWinEnter" }, {
 
 vim.api.nvim_create_autocmd({ "TextYankPost" }, {
   callback = function()
-    vim.highlight.on_yank { higroup = "Visual", timeout = 200 }
+    vim.highlight.on_yank { higroup = "Visual", timeout = 80 }
   end,
 })
 

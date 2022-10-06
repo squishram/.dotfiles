@@ -30,10 +30,12 @@ alias sx="startx"
 # reload the fish shell
 alias rl="source ~/.config/fish/conf.d/omf.fish"
 
-# check for an hdmi, if there is one plugged in, flip over to it
+# switch audiovisual output to/from hdmi
 alias hdmi="/home/archan/documents/code/shell_scripts/flip_hdmi.sh"
 # launch ranger file manager
 alias rr="env TERM=xterm-kitty ranger"
+# launch lazygit
+alias lg="lazygit"
 
 # starting daemons:
 # spotifyd
