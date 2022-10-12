@@ -12,28 +12,19 @@ version: 0.0.11
   -- [-] simulate some mitochondria with Richard's code
   - [-] MAIN WORK - 3D HAWK
   - [!] TCM emails
-  - [!] get back to Nick about the TILT3D
-  - [!] look into the names Susan gave me for people at my viva
+  - [!] download all of Richard's video files for the supplementary information
+  - [ ] draft the title and abstract
+  - [ ] do the RD1 task
   - [ ] ask Susan about the AFM thing and get back to Jody
   - [ ] ask Susan about contacting KCL payroll so I gets me damned money
-  - [ ] put ITaly in the work calendar
   - [ ] Apply to conferences:
-      - [ ] Methods and applications in fluorescence in Sweden in September
-      - [ ] Seeing is believing
-      - [ ] The one in January, image analysis
+  -- [!] !!!!!!!!!!!!!!!!!! Crick Bioimaging 2022 - DEADLINE IN A COUPLE OF DAYS DRAFT AN ABSTRACT ON THE CODE FOR TOMORROW
+  -- [!] Microscopy: Advances, Innovation, Impact 2022 - on the 29th, the Thursday after Italy
+  -- [ ] Methods and applications in fluorescence in Sweden in September
+  -- [ ] Seeing is believing
+  -- [ ] The one in January, image analysis
+  - [ ] make a notebook of the loss graphs for Susan
 
-
-* MEETING WITH SUSAN
-  - [x] 3d hawk paper
-  -- which figures are going in the main body
-  -- what data do we still need to get
-  - [x] code
-  -- it kind of works, it's not bad
-  -- patch-gan?
-  - [x] someone asking about AFM experiment
-  -- Saranne Mitchell
-  - [-] picking viva committee, beginning online task together
-  - [-] I need to pick the viva committee
 
 * ITALY WEDDING
   - [ ] London - Milan: Jamie on Thursday, George has booked us somewhere for Thursday
@@ -43,9 +34,9 @@ version: 0.0.11
   - [ ] Milan - London: Wednesday
 
 * NON-WORK
-  - [!] contact mum about the wall
-  - [!] contact neighbours about the wall
-  - [!] you paid 240 for an Ocado shop - split it fairly with J&L!
+  - [-] let Nathan know about Lu this Sunday
+  - [-] make a schedule for the week about how you're going to work
+  - [ ] you paid 240 for an Ocado shop - split it fairly with J&L!
   - [ ] call up the french language exam place
   - [ ] emails
 
@@ -67,3 +58,31 @@ version: 0.0.11
   - [ ] 'proper' shoes for weddings (padror? expensive)
   - [ ] muay thai boxing gloves
   - [ ] muay thai hand wraps
+  - [ ] jabra elite 7 active
+
+* Thesis committee people
+  - [x] Virginie Uhlmann - Cambridge
+  -- computer vision and stuff!
+  -- awesome
+  - [-] Professor Steven Lee - Cambridge
+  -- biophysical chemist
+  -- fluorophore development
+  -- very methodologically focussed: might be interested in my code, but he seems more chemistry/ hardware focussed?
+  - [-] Dylan Owen - Birmingham
+  -- likes his SMLM mainly does cluster analysis
+  -- does cluster analysis using machine learning!
+  - [-] Till Bretschneider - Warwick
+  -- cytoskeleton, cell motility
+  -- machine learning + molecule tracking
+  - [ ] Seamus Holden - Warwick
+  -- like his work and research interests
+  -- but I didn't get a great vibe off him at conferece - like why was he telling me I had to prove HAWK was better than DAOSTORM?
+  -- how can someone so young already be a dinosaur
+  -- maybe I'm being unfair
+  - [ ] Michelle Peckham - Leeds
+  -- very much a biologist and staining methodology person
+  - [ ] Richard Bowman - Cambridge
+  -- very much a hardware geezer
+  -- frighteningly young
+  - [ ] Professor Gail McConnell - Glasgow
+  -- more interested in the mesoscale than the single-molecule scale
