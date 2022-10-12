@@ -3,8 +3,8 @@ local options = {
     backup = false,
     -- allows neovim to access the system clipboard
     clipboard = "unnamedplus",
-    -- more space in the neovim command line for displaying messages
-    cmdheight = 2,
+    -- space in the neovim command line for displaying messages
+    cmdheight = 1,
     -- mostly just for cmp
     completeopt = { "menuone", "noselect" },
     -- so that `` is visible in markdown files

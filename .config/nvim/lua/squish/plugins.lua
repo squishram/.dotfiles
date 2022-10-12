@@ -54,6 +54,10 @@ return packer.startup(function(use)
     use("kyazdani42/nvim-web-devicons")
     -- better notifications display
     use("rcarriga/nvim-notify")
+    -- ui component library
+    -- use("MunifTanjim/nui.nvim")
+    -- complete ui overhaul (cmdline, notifications, etc)
+    -- use("folke/noice.nvim")
     -- This is needed to fix lsp doc highlight
     use("antoinemadec/FixCursorHold.nvim")
     use("stevearc/dressing.nvim")
@@ -122,6 +126,7 @@ return packer.startup(function(use)
     use("stevearc/aerial.nvim")
     -- telescope based file browser
     use{"nvim-telescope/telescope-file-browser.nvim"}
+
 
     -- peek lines when using :<line_number> before pressing enter
     use("nacro90/numb.nvim")
