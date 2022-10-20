@@ -12,7 +12,7 @@ version: 0.0.11
   - [x] 10.0 - Atlanta S3
   - [x] 09.5 - White Lotus
   - [x] 09.0 - Time
-  - [x] 08.5 - Severance
+  - [x] 08.5 - Severance S1
   - [x] 07.5 - Stranger Things S4
   - [x] 09.5 - Tuca and Bertie S2
   - [x] 07.0 - Solar Opposites S1
@@ -23,7 +23,9 @@ version: 0.0.11
   - [x] 09.0 - Tuca and Bertie S3
   - [x] 08.0 - Dave S1
   - [x] 08.0 - Dave S2
-  - [x] 09.5 - The Bear
-  - [-] 06.5 - The Rings of Power
+  - [x] 09.5 - The Bear S1
+  - [x] 06.5 - The Rings of Power S1
   - [-] Atlanta S4
+  - [-] Nathan Fielder: The Rehearsal S1
+  - [ ] House of Dragons S1
   - [ ] Slippin' Jimmy

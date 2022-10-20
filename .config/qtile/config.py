@@ -173,9 +173,9 @@ keys = [
     Key([], "XF86AudioMute",
         lazy.spawn("amixer -q set Master toggle")),
     Key([], "XF86AudioLowerVolume",
-        lazy.spawn("amixer -D default sset Master 1%- unmute")),
+        lazy.spawn("amixer -D default sset Master 10%- unmute")),
     Key([], "XF86AudioRaiseVolume",
-        lazy.spawn("amixer -D default sset Master 1%+ unmute")),
+        lazy.spawn("amixer -D default sset Master 10%+ unmute")),
 
     # brightness control
     Key([], "XF86MonBrightnessUp",

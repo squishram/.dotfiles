@@ -43,62 +43,33 @@ packer.init({
 return packer.startup(function(use)
   -- makes neovim load faster
   -- will be made redundant in future nvim release
-  use("lewis6991/impatient.nvim")
+  use {"lewis6991/impatient.nvim"}
 
-    -- Have packer manage itself
-    use("wbthomason/packer.nvim")
-    -- Useful lua functions used by lots of plugins
-    use("nvim-lua/plenary.nvim")
-    use("nvim-lua/popup.nvim")
-    -- icon support
-    use("kyazdani42/nvim-web-devicons")
-    -- better notifications display
-    use("rcarriga/nvim-notify")
-    -- ui component library
-    -- use("MunifTanjim/nui.nvim")
-    -- complete ui overhaul (cmdline, notifications, etc)
-    -- use("folke/noice.nvim")
-    -- This is needed to fix lsp doc highlight
-    use("antoinemadec/FixCursorHold.nvim")
-    use("stevearc/dressing.nvim")
-
-    -- LSP
-    -- The LSP plugin itself
-    use("neovim/nvim-lspconfig")
-    -- bootstrap client for installing language servers
-    use("williamboman/mason.nvim")
-    use("williamboman/mason-lspconfig.nvim")
-    -- linter & formatter client
-    use("jose-elias-alvarez/null-ls.nvim")
-    -- variable renamer plugin
-    use({"filipdutescu/renamer.nvim", branch = "master"})
-    -- function explainer popup
-    use("ray-x/lsp_signature.nvim")
-    -- inlay hints for lsp
-    use("lvimuser/lsp-inlayhints.nvim")
-    -- nvim-lsp progress monitor
-    use("j-hui/fidget.nvim")
   -- Have packer manage itself
-  use("wbthomason/packer.nvim")
+  use {"wbthomason/packer.nvim"}
   -- Useful lua functions used by lots of plugins
-  use("nvim-lua/plenary.nvim")
-  use("nvim-lua/popup.nvim")
+  use {"nvim-lua/plenary.nvim"}
+  use {"nvim-lua/popup.nvim"}
   -- icon support
-  use("kyazdani42/nvim-web-devicons")
+  use {"kyazdani42/nvim-web-devicons"}
   -- better notifications display
-  use("rcarriga/nvim-notify")
+  use {"rcarriga/nvim-notify"}
+  -- ui component library
+  -- use("MunifTanjim/nui.nvim")
+  -- complete ui overhaul (cmdline, notifications, etc)
+  -- use("folke/noice.nvim")
   -- This is needed to fix lsp doc highlight
   use("antoinemadec/FixCursorHold.nvim")
-  use("stevearc/dressing.nvim")
+  use {"stevearc/dressing.nvim"}
 
   -- LSP
   -- The LSP plugin itself
   use("neovim/nvim-lspconfig")
   -- bootstrap client for installing language servers
-  use("williamboman/mason.nvim")
+  use {"williamboman/mason.nvim"}
   use("williamboman/mason-lspconfig.nvim")
   -- linter & formatter client
-  use("jose-elias-alvarez/null-ls.nvim")
+  use {"jose-elias-alvarez/null-ls.nvim"}
   -- variable renamer plugin
   use({"filipdutescu/renamer.nvim", branch = "master"})
   -- function explainer popup
@@ -106,35 +77,35 @@ return packer.startup(function(use)
   -- inlay hints for lsp
   use{"lvimuser/lsp-inlayhints.nvim"}
   -- nvim-lsp progress monitor
-  use("j-hui/fidget.nvim")
+  use {"j-hui/fidget.nvim"}
 
   -- Autocompletion
   -- The completion plugin
   use("christianchiarulli/nvim-cmp")
-  -- use("hrsh7th/nvim-cmp")
+  -- use {"hrsh7th/nvim-cmp"}
   -- buffer completions
   use("hrsh7th/cmp-buffer")
   -- path completions
-  use("hrsh7th/cmp-path")
+  use {"hrsh7th/cmp-path"}
   -- cmdline completions
   use("hrsh7th/cmp-cmdline")
   -- LSP autocompletion
-  use("hrsh7th/cmp-nvim-lsp")
+  use {"hrsh7th/cmp-nvim-lsp"}
   -- lua autocompletion
   use("hrsh7th/cmp-nvim-lua")
   -- snippet completions
-  use("saadparwaiz1/cmp_luasnip")
+  use {"saadparwaiz1/cmp_luasnip"}
   -- snippet engine
   use("L3MON4D3/LuaSnip")
   -- a bunch of snippets to use
-  use("rafamadriz/friendly-snippets")
+  use {"rafamadriz/friendly-snippets"}
 
   -- lang-specific
   -- lua development plugin
-  use("folke/lua-dev.nvim")
+  use("folke/neodev.nvim")
 
   -- startup dashboard interface for vim
-  use("goolord/alpha-nvim")
+  use {"goolord/alpha-nvim"}
   -- speedy status bar
   use("nvim-lualine/lualine.nvim")
   -- speedy buffer bar
@@ -163,7 +134,7 @@ return packer.startup(function(use)
   -- f repeat with f instead of ;
   use("rhysd/clever-f.vim")
   -- quick on-screen navigation
-  use("ggandor/leap.nvim")
+  use({"ggandor/leap.nvim", commit = "e06b231"})
   -- smooth scrolling
   use("karb94/neoscroll.nvim")
   -- underline words
@@ -192,21 +163,21 @@ return packer.startup(function(use)
   -- advanced number incrementing
   use("monaqa/dial.nvim")
 
-    -- syntax parsing functionalities
-    -- Treesitter
-    use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate"})
-    -- generate comments intelligently with treesitter
-    use("danymat/neogen")
-    -- rainbow brackets with treesitter
-    use("p00f/nvim-ts-rainbow")
-    -- keeps function and loop context displayed when off-screen with treesitter
-    use("romgrk/nvim-treesitter-context")
-    -- indent guides
-    use("lukas-reineke/indent-blankline.nvim")
-    -- better folding
-    use {"kevinhwang91/nvim-ufo", requires = "kevinhwang91/promise-async"}
-    -- todo comments highlighted
-    use("folke/todo-comments.nvim")
+  -- syntax parsing functionalities
+  -- Treesitter
+  use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate"})
+  -- generate comments intelligently with treesitter
+  use("danymat/neogen")
+  -- rainbow brackets with treesitter
+  use("p00f/nvim-ts-rainbow")
+  -- keeps function and loop context displayed when off-screen with treesitter
+  use("romgrk/nvim-treesitter-context")
+  -- indent guides
+  use("lukas-reineke/indent-blankline.nvim")
+  -- better folding
+  use {"kevinhwang91/nvim-ufo", requires = "kevinhwang91/promise-async"}
+  -- todo comments highlighted
+  use("folke/todo-comments.nvim")
 
   -- Neorg - organising & note-taking nvim feature
   use("nvim-neorg/neorg")

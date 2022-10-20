@@ -129,7 +129,8 @@ alias cpuinfo="lscpu"
 ## get GPU ram on desktop / laptop##
 alias gpumeminfo="grep -i --color memory /var/log/Xorg.0.log"
 # make a new virtual environment/ activate it in but two keystrokes
-alias ve="pipenv shell"
+# alias ve="pipenv shell"
+alias ve="source venv/bin/activate"
 # What's yer network speed?
 alias speed="speedtest-cli --server 6513 --simple"
 

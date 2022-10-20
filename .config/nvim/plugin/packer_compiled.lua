@@ -239,11 +239,6 @@ _G.packer_plugins = {
     path = "/home/archan/.local/share/nvim/site/pack/packer/start/lsp_signature.nvim",
     url = "https://github.com/ray-x/lsp_signature.nvim"
   },
-  ["lua-dev.nvim"] = {
-    loaded = true,
-    path = "/home/archan/.local/share/nvim/site/pack/packer/start/lua-dev.nvim",
-    url = "https://github.com/folke/lua-dev.nvim"
-  },
   ["lualine.nvim"] = {
     loaded = true,
     path = "/home/archan/.local/share/nvim/site/pack/packer/start/lualine.nvim",
@@ -268,6 +263,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/archan/.local/share/nvim/site/pack/packer/start/material.nvim",
     url = "https://github.com/marko-cerovac/material.nvim"
+  },
+  ["neodev.nvim"] = {
+    loaded = true,
+    path = "/home/archan/.local/share/nvim/site/pack/packer/start/neodev.nvim",
+    url = "https://github.com/folke/neodev.nvim"
   },
   neogen = {
     loaded = true,

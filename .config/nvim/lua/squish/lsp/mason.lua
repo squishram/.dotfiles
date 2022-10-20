@@ -89,14 +89,14 @@ for _, server in pairs(servers) do
     end
 
     if server == "sumneko_lua" then
-        local l_status_ok, lua_dev = pcall(require, "lua-dev")
+        local l_status_ok, neodev = pcall(require, "neodev")
         if not l_status_ok then
             return
         end
         -- local sumneko_opts = require "squish.lsp.settings.sumneko_lua"
         -- opts = vim.tbl_deep_extend("force", sumneko_opts, opts)
         -- opts = vim.tbl_deep_extend("force", require("lua-dev").setup(), opts)
-        local luadev = lua_dev.setup {
+        local luadev = neodev.setup {
             --   -- add any options here, or leave empty to use the default settings
             -- lspconfig = opts,
             lspconfig = {
