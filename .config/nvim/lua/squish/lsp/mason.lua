@@ -96,7 +96,7 @@ for _, server in pairs(servers) do
         -- local sumneko_opts = require "squish.lsp.settings.sumneko_lua"
         -- opts = vim.tbl_deep_extend("force", sumneko_opts, opts)
         -- opts = vim.tbl_deep_extend("force", require("neodev").setup(), opts)
-        local luadev = lua_dev.setup {
+        local neodev = neodev.setup {
             --   -- add any options here, or leave empty to use the default settings
             -- lspconfig = opts,
             lspconfig = {
@@ -105,7 +105,7 @@ for _, server in pairs(servers) do
                 -- settings = opts.settings,
             },
         }
-        lspconfig.sumneko_lua.setup(luadev)
+        lspconfig.sumneko_lua.setup(neodev)
         goto continue
     end
 
