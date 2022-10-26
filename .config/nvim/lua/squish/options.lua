@@ -4,7 +4,7 @@ local options = {
     -- allows neovim to access the system clipboard
     clipboard = "unnamedplus",
     -- space in the neovim command line for displaying messages
-    cmdheight = 1,
+    cmdheight = 2,
     -- mostly just for cmp
     completeopt = { "menuone", "noselect" },
     -- so that `` is visible in markdown files
@@ -171,7 +171,7 @@ if vim.bo.filetype == "ijm" then
 end
 
 -- make the command line invisible unless you're typing something
-vim.o.ch = 0
+-- vim.o.ch = 0
 vim.opt.shortmess:append {c = true}
 -- vim.opt.whichwrap:append({<, >, [, ], h, l})
 -- -- treat hyphenated words as one word instead of two
