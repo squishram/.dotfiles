@@ -24,7 +24,8 @@ require('lualine').setup {
 lualine.setup {
   options = {
     icons_enabled = true,
-    theme = 'auto',
+    -- theme = 'auto',
+    theme = colorscheme,
     -- component_separators = '',
     component_separators = '|',
     section_separators = { left = '', right = '' },
