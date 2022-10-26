@@ -89,7 +89,7 @@ for _, server in pairs(servers) do
     end
 
     if server == "sumneko_lua" then
-        local l_status_ok, lua_dev = pcall(require, "neodev")
+        local l_status_ok, neodev = pcall(require, "neodev")
         if not l_status_ok then
             return
         end
