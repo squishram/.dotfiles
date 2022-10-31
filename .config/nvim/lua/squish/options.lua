@@ -47,10 +47,10 @@ local options = {
     -- convert tabs to spaces
     expandtab = true,
     -- the number of spaces inserted for each indentation
-    shiftwidth = 2,
+    shiftwidth = 4,
     -- insert 2 spaces for a tab
-    tabstop = 2,
-    softtabstop = 2,
+    tabstop = 4,
+    softtabstop = 4,
     -- highlight the current line
     cursorline = true,
     -- set numbered lines

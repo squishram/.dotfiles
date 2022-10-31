@@ -27,9 +27,6 @@
    ~ train network on them
    ~ pass some of my data through it and see what happens?
 
-* microscope
-  - Richard leaves end of August
-
 * Conferences - APPLY ASAP
   - Methods and applications in fluorescence in Sweden in September
   - Seeing is believing
@@ -41,3 +38,7 @@
   - microscope parts?
   -- a water objective???
   - conferences
+
+* neovim stuff
+  - configure lsp saga
+  - configure noice.nvim and nui.nvim

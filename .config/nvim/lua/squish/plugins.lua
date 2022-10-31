@@ -54,10 +54,15 @@ return packer.startup(function(use)
   use {"kyazdani42/nvim-web-devicons"}
   -- better notifications display
   use {"rcarriga/nvim-notify"}
-  -- ui component library
-  -- use("MunifTanjim/nui.nvim")
   -- complete ui overhaul (cmdline, notifications, etc)
-  -- use("folke/noice.nvim")
+  -- use({
+  --   "folke/noice.nvim",
+  --   event = "VimEnter",
+  --   requires = {
+  --     "MunifTanjim/nui.nvim",
+  --     "rcarriga/nvim-notify",
+  --   }
+  -- })
   -- This is needed to fix lsp doc highlight
   use("antoinemadec/FixCursorHold.nvim")
   use {"stevearc/dressing.nvim"}
@@ -135,6 +140,8 @@ return packer.startup(function(use)
   use("rhysd/clever-f.vim")
   -- quick on-screen navigation
   use({"ggandor/leap.nvim", commit = "e06b231"})
+  -- use({"ggandor/leap.nvim"})
+  use({"ggandor/leap-spooky.nvim"})
   -- smooth scrolling
   use("karb94/neoscroll.nvim")
   -- underline words
@@ -209,6 +216,7 @@ return packer.startup(function(use)
   use("NTBBloodbath/doom-one.nvim")
   use("cpea2506/one_monokai.nvim")
   use("sam4llis/nvim-tundra")
+  use("rose-pine/neovim")
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
