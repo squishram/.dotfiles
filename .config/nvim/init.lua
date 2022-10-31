@@ -3,8 +3,14 @@ require "squish.plugins"
 require "squish.autocommands"
 require "squish.options"
 require "squish.impatient"
+
+-- colorschemes
+require "squish.cc_material"
+require "squish.cc_tundra"
+require "squish.cc_catpuccin"
+require "squish.cc_gruvbox"
 require "squish.colorscheme"
-require "squish.material_colourscheme"
+
 require "squish.cmp"
 -- require "squish.lsp-inlayhints"
 require "squish.telescope"
