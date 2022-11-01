@@ -216,7 +216,7 @@ return packer.startup(function(use)
   use("NTBBloodbath/doom-one.nvim")
   use("cpea2506/one_monokai.nvim")
   use("sam4llis/nvim-tundra")
-  use("rose-pine/neovim")
+  use({"rose-pine/neovim", as = 'rose-pine'})
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins

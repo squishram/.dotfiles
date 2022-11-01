@@ -9,6 +9,7 @@ require "squish.cc_material"
 require "squish.cc_tundra"
 require "squish.cc_catpuccin"
 require "squish.cc_gruvbox"
+require "squish.cc_rosepine"
 require "squish.colorscheme"
 
 require "squish.cmp"

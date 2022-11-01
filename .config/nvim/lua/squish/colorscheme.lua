@@ -17,6 +17,7 @@ vim.g.italic_variables = true
 -- catppuccin
 -- zephyr
 -- gruvbox
+-- rose-pine
 local colorscheme = "everforest"
 
 local status_ok, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)
