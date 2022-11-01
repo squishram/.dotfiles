@@ -128,11 +128,15 @@ alias pscpu10="ps auxf | sort -nr -k 3 | head -10"
 alias cpuinfo="lscpu"
 ## get GPU ram on desktop / laptop##
 alias gpumeminfo="grep -i --color memory /var/log/Xorg.0.log"
-# make a new virtual environment/ activate it in but two keystrokes
-# alias ve="pipenv shell"
-alias ve="source venv/bin/activate"
 # What's yer network speed?
 alias speed="speedtest-cli --server 6513 --simple"
+
+# make a new virtual environment/ activate it in but two keystrokes
+# alias ve="pipenv shell"
+# activate a new virtual environment in but two keystrokes
+alias ve="source venv/bin/activate"
+# pip3 only
+alias pi="pip3 install $1"
 
 # BLUETOOTH ALIASES
 # start bluetooth (hardware)

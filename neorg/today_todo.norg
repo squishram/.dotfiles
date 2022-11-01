@@ -8,47 +8,49 @@ version: 0.0.11
 @end
 
 * WORK
-  - [-] MAIN WORK - ZRES GAN/ AFFIRM3D
-  -- [-] simulate some mitochondria with Richard's code
-  - [-] MAIN WORK - 3D HAWK
-  - [!] TCM emails
-  - [!] download all of Richard's video files for the supplementary information
-  - [ ] draft the title and abstract
-  - [ ] do the RD1 task
-  - [ ] ask Susan about the AFM thing and get back to Jody
-  - [ ] ask Susan about contacting KCL payroll so I gets me damned money
-  - [ ] Apply to conferences:
-  -- [!] !!!!!!!!!!!!!!!!!! Crick Bioimaging 2022 - DEADLINE IN A COUPLE OF DAYS DRAFT AN ABSTRACT ON THE CODE FOR TOMORROW
-  -- [!] Microscopy: Advances, Innovation, Impact 2022 - on the 29th, the Thursday after Italy
-  -- [ ] Methods and applications in fluorescence in Sweden in September
-  -- [ ] Seeing is believing
-  -- [ ] The one in January, image analysis
-  - [ ] make a notebook of the loss graphs for Susan
+** Thesis Writing
+   - [x] stop writing the introduction!
+   - [ ] write chapter 2 & chapter 3 - 2000 words per day
+   - [ ] make a weekly schedule about how to work
+   - [ ] read Dblink
+   - [ ] read Sian's papers that she sent on slack
+** AFFIRM3D
+   - [ ] use a seed to create the isotropic simulated data
+   - [ ] try getting rid of batchnorm??
+   - [ ] try residual learning - add U to G before doing everything else
+   - [ ] try Lanczos upsampling (in opencv) instead of trilinear upsampling
+   - [ ] try looking at what the gaussian z-blur actually does in Fiji (might not be much)
+   - [x] try making your code a bit more streamlined
+   - [x] look at your images with projections, not 3D-project
+   - [x] save the actual generated image not just the output one
+   - [x] try with only L1 loss
+   - [x] try with a little bit of adversarial loss
+** 3D HAWK
+   - [ ] download all of Richard's video files for the supplementary information
+** Crick Biosymposium
+   - [ ] you need to submit a poster
+   - [ ] you need to submit a flash talk
+** Conferences to Apply to
+   - [ ] Seeing is believing
+   - [ ] The one in January, image analysis
+   - [ ] make a notebook of the loss graphs for Susan
+** Misc
+   - [ ] ask Susan about the AFM thing and get back to Jody
+   - [ ] ask Susan about contacting KCL payroll so I gets me damned money
 
-* THESIS
- - 60000 word thesis
- - 500 words/ day
- - start HAWKMAN and 3D HAWK chapters now
-
-* ITALY WEDDING
-  - [ ] London - Milan: Jamie on Thursday, George has booked us somewhere for Thursday
-  -- George's flights:
-  --- Fri 23rd LGW 06:55-10:00 MXP
-  --- Mon 26th MXP 19:30-20:25 LGW
-  - [ ] Milan - London: Wednesday
+* figure out how to spend money (~15000?)
+  - virtual services to make things go faster?
+  - hard drive cloud backups?
+  - microscope parts?
+  -- a water objective???
+  - conferences
 
 * NON-WORK
-  - [!] you paid 240 for an Ocado shop - split it fairly with J&L!
-  - [-] let Nathan know about Lu this Sunday
-  - [-] make a schedule for the week about how you're going to work
-  - [ ] you paid 240 for an Ocado shop - split it fairly with J&L!
   - [ ] call up the french language exam place
-  - [ ] emails
 
 * EXTRA
   - [ ] diary entry
   - [ ] emails
-  - [ ] Italy accomodation and flights
   - [ ] autism diagnosis
   - [ ] book The Southbury Child
   - [ ] rust practice
@@ -59,10 +61,11 @@ version: 0.0.11
   - [ ] bands for band assisted pullups
   - [ ] harness for climbing
   - [ ] suit (informal)
-  - [ ] suit (formal)
-  - [ ] 'proper' shoes for weddings (padror? expensive)
+  - [ ] 'proper' shoes (padror? expensive)
   - [ ] muay thai boxing gloves
   - [ ] muay thai hand wraps
+  - [ ] climbing harness
+  - [ ] climbing chalk
   - [ ] jabra elite 7 active
 
 * Thesis committee people
@@ -73,21 +76,6 @@ version: 0.0.11
   -- biophysical chemist
   -- fluorophore development
   -- very methodologically focussed: might be interested in my code, but he seems more chemistry/ hardware focussed?
-  - [-] Dylan Owen - Birmingham
-  -- likes his SMLM mainly does cluster analysis
-  -- does cluster analysis using machine learning!
   - [-] Till Bretschneider - Warwick
   -- cytoskeleton, cell motility
   -- machine learning + molecule tracking
-  - [ ] Seamus Holden - Warwick
-  -- like his work and research interests
-  -- but I didn't get a great vibe off him at conferece - like why was he telling me I had to prove HAWK was better than DAOSTORM?
-  -- how can someone so young already be a dinosaur
-  -- maybe I'm being unfair
-  - [ ] Michelle Peckham - Leeds
-  -- very much a biologist and staining methodology person
-  - [ ] Richard Bowman - Cambridge
-  -- very much a hardware geezer
-  -- frighteningly young
-  - [ ] Professor Gail McConnell - Glasgow
-  -- more interested in the mesoscale than the single-molecule scale

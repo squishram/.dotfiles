@@ -77,7 +77,7 @@ local options = {
     -- single status line if multiple splits open
     laststatus = 3,
     -- set spelling
-    spell = false,
+    spell = true,
     spelllang = "en_gb",
 }
 
