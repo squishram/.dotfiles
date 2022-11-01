@@ -1,0 +1,44 @@
+@document.meta
+  title: todo
+  description: shit needs doing
+  authors: ishan
+  categories:
+  created: 2022-01-14
+  version: 0.0.9
+@end
+
+*TO DO*
+
+* write up the 3D paper
+  - [-] update with Richard's figures from slack
+  - [x] backup all my data into a windows+linux-compatible file format
+
+* There's a course for how to write your thesis - look at it!
+
+* code
+  - [ ] dealing with undersampled z
+  - [ ] training on simulated data seems like the best idea
+  - [ ] varying the size of the z-psf across simulated data
+  - [ ] but testing/verifying on real data is essential ofc
+  - [ ] figure out how to save trained network as object and then retrieve it
+  - [ ] 3D STORM tubulin - test a trained network on this data
+** TO DO TODAY
+   ~ simulate undersampled
+   ~ train network on them
+   ~ pass some of my data through it and see what happens?
+
+* Conferences - APPLY ASAP
+  - Methods and applications in fluorescence in Sweden in September
+  - Seeing is believing
+  - The one in January, image analysis
+
+* figure out how to spend money (~15000?)
+  - virtual services to make things go faster?
+  - hard drive cloud backups?
+  - microscope parts?
+  -- a water objective???
+  - conferences
+
+* neovim stuff
+  - configure lsp saga
+  - configure noice.nvim and nui.nvim
