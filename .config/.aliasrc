@@ -7,9 +7,14 @@ alias cwd="pwd | xclip -selection clipboard"
 
 # RUST UTILS
 # improved find util in Rust
-# alias fd="fdfind"
+alias fd="fdfind"
+alias find="fdfind"
 # improved cat util in Rust
-# alias bat="batcat"
+alias bat="batcat"
+# replace cat completely with alias
+alias cat="batcat"
+# replace grep completely with ripgrep
+alias grep ="rg"
 # rust fuzzy finder
 # ripgrep fuzzy finder
 alias skg="sk --ansi -i -c 'rga --color=always --line-number "{}" .'"
@@ -21,8 +26,7 @@ alias skf="sk --ansi -i --color=always"
 # alias zr='zoxide remove'
 
 # reboot / halt / poweroff
-# alias reboot="sudo /sbin/reboot"
-alias reboot="systemctl reboot"
+alias reboot="sudo /sbin/reboot"
 alias pdown="systemctl poweroff"
 alias halt="sudo /sbin/halt"
 # boot up your display
@@ -30,12 +34,10 @@ alias sx="startx"
 # reload the fish shell
 alias rl="source ~/.config/fish/conf.d/omf.fish"
 
-# switch audiovisual output to/from hdmi
+# check for an hdmi, if there is one plugged in, flip over to it
 alias hdmi="/home/archan/documents/code/shell_scripts/flip_hdmi.sh"
 # launch ranger file manager
 alias rr="env TERM=xterm-kitty ranger"
-# launch lazygit
-alias lg="lazygit"
 
 # starting daemons:
 # spotifyd
@@ -58,7 +60,6 @@ alias ld="exa -lad */ --color=always"
 # colorisation
 alias dir="dir --color=auto"
 alias vdir="vdir --color=auto"
-# alias grep ="grep --color=auto"
 
 # 'go tos'
 alias cod="cd / && cd /mnt/linux_data/code"
@@ -75,10 +76,7 @@ alias .4="cd ../../../../"
 alias .5="cd ../../../../.."
 
 # git stuff
-alias addall="git add ."
-alias branch="git branch"
-alias commit="git add commit -m"
-alias push="git push"
+alias lg="lazygit"
 
 # what runs at every new terminal?
 # alias neofetch='/usr/bin/neofetch --ascii /home/ishan/neorg/todo.norg'
@@ -108,10 +106,13 @@ alias nowtime="date +"%T""
 alias nowdate="date +"%d-%m-%Y""
 
 # I'm a vim boi now
-# alias vim='$HOME/nvim.appimage'
-alias vim="nvim"
-alias vi="nvim"
-alias edit="nvim"
+alias vim='$HOME/nvim.appimage'
+alias nvim='$HOME/nvim.appimage'
+alias vi='$HOME/nvim.appimage'
+alias edit='$HOME/nvim.appimage'
+# alias vim="nvim"
+# alias vi="nvim"
+# alias edit="nvim"
 
 # update on one command
 # debian
@@ -128,15 +129,11 @@ alias pscpu10="ps auxf | sort -nr -k 3 | head -10"
 alias cpuinfo="lscpu"
 ## get GPU ram on desktop / laptop##
 alias gpumeminfo="grep -i --color memory /var/log/Xorg.0.log"
+# activate your virtual environment
+# provided there is a venv_activate.sh executable in the project directory
+alias ve="source venv/bin/activate"
 # What's yer network speed?
 alias speed="speedtest-cli --server 6513 --simple"
-
-# make a new virtual environment/ activate it in but two keystrokes
-# alias ve="pipenv shell"
-# activate a new virtual environment in but two keystrokes
-alias ve="source venv/bin/activate"
-# pip3 only
-alias pi="pip3 install $1"
 
 # BLUETOOTH ALIASES
 # start bluetooth (hardware)
