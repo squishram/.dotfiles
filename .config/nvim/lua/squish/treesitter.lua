@@ -49,7 +49,7 @@ configs.setup {
     -- false will disable the whole extension
     enable = true,
     -- list of language that will be disabled
-    disable = { "" },
+    disable = { "latex", "tex" },
     additional_vim_regex_highlighting = true,
   },
 

@@ -107,7 +107,7 @@ return packer.startup(function(use)
 
   -- lang-specific
   -- lua development plugin
-  use("folke/neodev.nvim")
+  -- use("folke/neodev.nvim")
 
   -- startup dashboard interface for vim
   use {"goolord/alpha-nvim"}
@@ -206,6 +206,7 @@ return packer.startup(function(use)
   use("sainnhe/sonokai")
   use("sainnhe/gruvbox-material")
   use("luisiacc/gruvbox-baby")
+  use("ellisonleao/gruvbox.nvim")
   use("EdenEast/nightfox.nvim")
   use("marko-cerovac/material.nvim")
   use("folke/tokyonight.nvim")
