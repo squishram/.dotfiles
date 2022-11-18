@@ -156,6 +156,9 @@ alias tu="task undo"
 # leave contexts, see it all
 alias tn="task context none"
 
+# LATEX ALIASES
+alias texclean="rm *.aux *.bbl *.bcf *.blg *.fdb_latexmk *.fls *.lof *.log *.out *.run.xml *.synctex.gz *.toc"
+
 # make a new task and add it to a project
 # function tap --a task_name project
 #   task add $task_name project:$project
@@ -189,6 +192,7 @@ alias tn="task context none"
 # use vdirsyncer to sync khal calendar
 alias vdirsyncer="~/vdirsyncer_env/bin/vdirsyncer"
 
+# a stopwatch
 stopwatch() {
     start=$(date +%s)
     while true; do
@@ -197,6 +201,8 @@ stopwatch() {
         sleep 0.2
     done
 }
+
+swal="feh --bg-fill --randomize ~/.config/wallpapers/*"
 
 ##################
 # ALIAS LIST END #

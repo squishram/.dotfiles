@@ -269,11 +269,6 @@ _G.packer_plugins = {
     path = "/home/ishan/.local/share/nvim/site/pack/packer/start/material.nvim",
     url = "https://github.com/marko-cerovac/material.nvim"
   },
-  ["neodev.nvim"] = {
-    loaded = true,
-    path = "/home/ishan/.local/share/nvim/site/pack/packer/start/neodev.nvim",
-    url = "https://github.com/folke/neodev.nvim"
-  },
   neogen = {
     loaded = true,
     path = "/home/ishan/.local/share/nvim/site/pack/packer/start/neogen",
@@ -318,6 +313,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/ishan/.local/share/nvim/site/pack/packer/start/numb.nvim",
     url = "https://github.com/nacro90/numb.nvim"
+  },
+  nvim = {
+    loaded = true,
+    path = "/home/ishan/.local/share/nvim/site/pack/packer/start/nvim",
+    url = "https://github.com/catppuccin/nvim"
   },
   ["nvim-autopairs"] = {
     loaded = true,
@@ -378,6 +378,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/ishan/.local/share/nvim/site/pack/packer/start/nvim-treesitter-context",
     url = "https://github.com/romgrk/nvim-treesitter-context"
+  },
+  ["nvim-treesitter-textobjects"] = {
+    loaded = true,
+    path = "/home/ishan/.local/share/nvim/site/pack/packer/start/nvim-treesitter-textobjects",
+    url = "https://github.com/nvim-treesitter/nvim-treesitter-textobjects"
   },
   ["nvim-ts-autotag"] = {
     loaded = true,
@@ -453,6 +458,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/ishan/.local/share/nvim/site/pack/packer/start/sonokai",
     url = "https://github.com/sainnhe/sonokai"
+  },
+  ["styler.nvim"] = {
+    loaded = true,
+    path = "/home/ishan/.local/share/nvim/site/pack/packer/start/styler.nvim",
+    url = "https://github.com/folke/styler.nvim"
   },
   ["substitute.nvim"] = {
     loaded = true,

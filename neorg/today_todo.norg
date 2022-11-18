@@ -29,7 +29,7 @@ version: 0.0.11
    - [ ] download all of Richard's video files for the supplementary information
 ** Crick Biosymposium
    - [ ] you need to submit a poster
-   - [ ] you need to submit a flash talk
+   - [x] you need to submit a flash talk
 ** Conferences to Apply to
    - [ ] Seeing is believing
    - [ ] The one in January, image analysis

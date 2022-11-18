@@ -11,6 +11,7 @@ require "squish.cc_catpuccin"
 require "squish.cc_gruvbox"
 require "squish.cc_rosepine"
 require "squish.colorscheme"
+require "squish.styler"
 
 require "squish.cmp"
 -- require "squish.lsp-inlayhints"
