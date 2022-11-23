@@ -41,10 +41,12 @@ packer.init({
 
 -- Install your plugins here
 return packer.startup(function(use)
-    -- makes neovim load faster
-    -- will be made redundant in future nvim release
-    use {"lewis6991/impatient.nvim"}
 
+    -------------
+    -- bedrock --
+    -------------
+    -- makes neovim load faster (might be merged into main eventually)
+    use {"lewis6991/impatient.nvim"}
     -- Have packer manage itself
     use {"wbthomason/packer.nvim"}
     -- Useful lua functions used by lots of plugins
@@ -67,7 +69,9 @@ return packer.startup(function(use)
     use("antoinemadec/FixCursorHold.nvim")
     use {"stevearc/dressing.nvim"}
 
-    -- LSP
+    ---------
+    -- LSP --
+    ---------
     -- The LSP plugin itself
     use("neovim/nvim-lspconfig")
     -- bootstrap client for installing language servers
@@ -84,7 +88,9 @@ return packer.startup(function(use)
     -- nvim-lsp progress monitor
     use {"j-hui/fidget.nvim"}
 
-    -- Autocompletion
+    --------------------
+    -- autocompletion --
+    --------------------
     -- The completion plugin
     use("christianchiarulli/nvim-cmp")
     -- use {"hrsh7th/nvim-cmp"}
@@ -105,10 +111,15 @@ return packer.startup(function(use)
     -- a bunch of snippets to use
     use {"rafamadriz/friendly-snippets"}
 
-  -- lang-specific
-  -- lua development plugin
-  -- use("folke/neodev.nvim")
+    -------------------
+    -- lang-specific --
+    -------------------
+    -- lua development plugin
+    -- use("folke/neodev.nvim")
 
+    ---------------
+    -- INTERFACE --
+    ---------------
     -- startup dashboard interface for vim
     use {"goolord/alpha-nvim"}
     -- speedy status bar
@@ -119,9 +130,10 @@ return packer.startup(function(use)
     use("famiu/bufdelete.nvim")
     -- bring up a terminal
     use({ "akinsho/toggleterm.nvim", tag = "*" })
-
+    -- block out distractions
+    use("Pocco81/true-zen.nvim")
     -- git functionality in nvim
-    use("lewis6991/gitsigns.nvim")
+    -- use("lewis6991/gitsigns.nvim")
 
     -- Telescope
     use("nvim-telescope/telescope.nvim")
@@ -189,7 +201,7 @@ return packer.startup(function(use)
     use("folke/todo-comments.nvim")
 
     -- Neorg - organising & note-taking nvim feature
-    use("nvim-neorg/neorg")
+    use {"nvim-neorg/neorg", run = ":Neorg sync-parsers"}
     -- vimtex for editing latex documents
     use("lervag/vimtex")
 
@@ -220,6 +232,7 @@ return packer.startup(function(use)
     use("cpea2506/one_monokai.nvim")
     use("sam4llis/nvim-tundra")
     use("catppuccin/nvim")
+    use("ellisonleao/gruvbox.nvim")
     use({"rose-pine/neovim", as = 'rose-pine'})
 
     -- Automatically set up your configuration after cloning packer.nvim

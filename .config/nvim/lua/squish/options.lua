@@ -59,7 +59,7 @@ local options = {
     relativenumber = true,
     -- set ruler
     ruler = true,
-    -- set number column width to 2 {default 4}
+    -- set number column width {default 4}
     numberwidth = 4,
     -- always show the sign column, otherwise it would shift the text each time
     signcolumn = "yes",

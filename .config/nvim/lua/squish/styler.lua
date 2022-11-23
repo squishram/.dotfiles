@@ -7,9 +7,9 @@ end
 --     themes = {
 --         markdown = { colorscheme = "gruvbox" },
 --         latex = { colorscheme = "everforest" },
---         python = { colorscheme = "catppuccin" },
+--         python = { colorscheme = "kanagawa" },
 --         help = { colorscheme = "catppuccin" },
---         lua = { colorscheme = "carbonfox" },
+--         lua = { colorscheme = "gruvbox" },
 --         neorg = { colorscheme = "everforest" },
 --     },
 -- })

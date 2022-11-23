@@ -194,11 +194,6 @@ _G.packer_plugins = {
     path = "/home/archan/.local/share/nvim/site/pack/packer/start/friendly-snippets",
     url = "https://github.com/rafamadriz/friendly-snippets"
   },
-  ["gitsigns.nvim"] = {
-    loaded = true,
-    path = "/home/archan/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
-    url = "https://github.com/lewis6991/gitsigns.nvim"
-  },
   ["gruvbox-baby"] = {
     loaded = true,
     path = "/home/archan/.local/share/nvim/site/pack/packer/start/gruvbox-baby",
@@ -321,7 +316,7 @@ _G.packer_plugins = {
   },
   nvim = {
     loaded = true,
-    path = "/home/ishan/.local/share/nvim/site/pack/packer/start/nvim",
+    path = "/home/archan/.local/share/nvim/site/pack/packer/start/nvim",
     url = "https://github.com/catppuccin/nvim"
   },
   ["nvim-autopairs"] = {
@@ -386,7 +381,7 @@ _G.packer_plugins = {
   },
   ["nvim-treesitter-textobjects"] = {
     loaded = true,
-    path = "/home/ishan/.local/share/nvim/site/pack/packer/start/nvim-treesitter-textobjects",
+    path = "/home/archan/.local/share/nvim/site/pack/packer/start/nvim-treesitter-textobjects",
     url = "https://github.com/nvim-treesitter/nvim-treesitter-textobjects"
   },
   ["nvim-ts-autotag"] = {
@@ -466,7 +461,7 @@ _G.packer_plugins = {
   },
   ["styler.nvim"] = {
     loaded = true,
-    path = "/home/ishan/.local/share/nvim/site/pack/packer/start/styler.nvim",
+    path = "/home/archan/.local/share/nvim/site/pack/packer/start/styler.nvim",
     url = "https://github.com/folke/styler.nvim"
   },
   ["substitute.nvim"] = {
@@ -508,6 +503,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/archan/.local/share/nvim/site/pack/packer/start/trouble.nvim",
     url = "https://github.com/folke/trouble.nvim"
+  },
+  ["true-zen.nvim"] = {
+    loaded = true,
+    path = "/home/archan/.local/share/nvim/site/pack/packer/start/true-zen.nvim",
+    url = "https://github.com/Pocco81/true-zen.nvim"
   },
   vimtex = {
     loaded = true,

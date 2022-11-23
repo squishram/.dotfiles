@@ -7,8 +7,8 @@ alias cwd="pwd | xclip -selection clipboard"
 
 # RUST UTILS
 # improved find util in Rust
-alias fd="fdfind"
-alias find="fdfind"
+# alias fd="fdfind"
+# alias find="fdfind"
 # improved cat util in Rust
 alias bat="batcat"
 # replace cat completely with alias
