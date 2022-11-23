@@ -105,9 +105,9 @@ return packer.startup(function(use)
     -- a bunch of snippets to use
     use {"rafamadriz/friendly-snippets"}
 
-    -- lang-specific
-    -- lua development plugin
-    -- use("folke/neodev.nvim")
+  -- lang-specific
+  -- lua development plugin
+  -- use("folke/neodev.nvim")
 
     -- startup dashboard interface for vim
     use {"goolord/alpha-nvim"}
