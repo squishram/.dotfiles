@@ -73,7 +73,7 @@ local options = {
     -- the font used in graphical neovim applications
     guifont = "monospace:h17",
     -- don't redraw macros (improves performance)
-    lazyredraw = true,
+    lazyredraw = false,
     -- single status line if multiple splits open
     laststatus = 3,
     -- set spelling

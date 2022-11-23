@@ -18,8 +18,8 @@ vim.g.italic_variables = true
 -- zephyr
 -- gruvbox
 -- rose-pine
-local colorscheme = "everforest"
 
+local colorscheme = "everforest"
 local status_ok, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)
 if not status_ok then
     vim.notify("colorscheme " .. colorscheme .. " not found!")
