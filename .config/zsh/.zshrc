@@ -1,5 +1,7 @@
-# make sure you can use that tasty rust stuff
+# Rust
 export PATH="~/.cargo/bin:$PATH"
+# Julia
+export PATH="$PATH:/home/sammy/julia-1.8.1/bin"
 
 # enable colours fgs
 autoload -U colors
