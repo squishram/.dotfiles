@@ -53,8 +53,7 @@ return packer.startup(function(use)
 	use({ "nvim-lua/popup.nvim" })
 	-- icon support
 	use({ "kyazdani42/nvim-web-devicons" })
-	-- better notifications display
-	use({ "rcarriga/nvim-notify" })
+
 	-- complete ui overhaul (cmdline, notifications, etc)
 	use({
 		"folke/noice.nvim",
