@@ -59,7 +59,7 @@ local options = {
     relativenumber = true,
     -- set ruler
     ruler = true,
-    -- set number column width to 2 {default 4}
+    -- set number column width {default 4}
     numberwidth = 4,
     -- always show the sign column, otherwise it would shift the text each time
     signcolumn = "yes",
@@ -73,7 +73,7 @@ local options = {
     -- the font used in graphical neovim applications
     guifont = "monospace:h17",
     -- don't redraw macros (improves performance)
-    lazyredraw = true,
+    lazyredraw = false,
     -- single status line if multiple splits open
     laststatus = 3,
     -- set spelling

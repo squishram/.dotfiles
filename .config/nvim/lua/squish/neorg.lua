@@ -11,6 +11,20 @@ neorg.setup {
         -- Load all the default modules
         ["core.defaults"] = {},
 
+        -- load the treesitter module
+        ["core.integrations.treesitter"] = {
+            config = {
+                -- Configuration here (nothing I want in it yet)
+            }
+        },
+
+        -- load the journal module
+        ["core.norg.journal"] = {
+            config = {
+                -- Configuration here (nothing I want in it yet)
+            }
+        },
+
         -- Configure core.keybinds
         ["core.keybinds"] = {
             config = {
@@ -28,8 +42,7 @@ neorg.setup {
         ["core.norg.dirman"] = {
             config = {
                 workspaces = {
-                    ssd_workspace = "~/neorg/",
-                    hdd_workspace = "/mnt/linux_data/neorg/",
+                    neorg = "~/neorg/",
                 }
             }
         },
@@ -41,3 +54,6 @@ neorg.setup {
         }
     },
 }
+
+local api = vim.api
+api.nvim_set_keymap("n", "<leader>nj", ":Neorg journal today<CR>", {})

@@ -79,20 +79,10 @@ _G.packer_plugins = {
     path = "/home/archan/.local/share/nvim/site/pack/packer/start/Comment.nvim",
     url = "https://github.com/numToStr/Comment.nvim"
   },
-  ["FixCursorHold.nvim"] = {
-    loaded = true,
-    path = "/home/archan/.local/share/nvim/site/pack/packer/start/FixCursorHold.nvim",
-    url = "https://github.com/antoinemadec/FixCursorHold.nvim"
-  },
   LuaSnip = {
     loaded = true,
     path = "/home/archan/.local/share/nvim/site/pack/packer/start/LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
-  },
-  ["aerial.nvim"] = {
-    loaded = true,
-    path = "/home/archan/.local/share/nvim/site/pack/packer/start/aerial.nvim",
-    url = "https://github.com/stevearc/aerial.nvim"
   },
   ["alpha-nvim"] = {
     loaded = true,
@@ -113,11 +103,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/archan/.local/share/nvim/site/pack/packer/start/bufferline.nvim",
     url = "https://github.com/akinsho/bufferline.nvim"
-  },
-  ["chartoggle.nvim"] = {
-    loaded = true,
-    path = "/home/archan/.local/share/nvim/site/pack/packer/start/chartoggle.nvim",
-    url = "https://github.com/saifulapm/chartoggle.nvim"
   },
   ["clever-f.vim"] = {
     loaded = true,
@@ -164,11 +149,6 @@ _G.packer_plugins = {
     path = "/home/archan/.local/share/nvim/site/pack/packer/start/doom-one.nvim",
     url = "https://github.com/NTBBloodbath/doom-one.nvim"
   },
-  ["dressing.nvim"] = {
-    loaded = true,
-    path = "/home/archan/.local/share/nvim/site/pack/packer/start/dressing.nvim",
-    url = "https://github.com/stevearc/dressing.nvim"
-  },
   edge = {
     loaded = true,
     path = "/home/archan/.local/share/nvim/site/pack/packer/start/edge",
@@ -184,20 +164,10 @@ _G.packer_plugins = {
     path = "/home/archan/.local/share/nvim/site/pack/packer/start/eyeliner.nvim",
     url = "https://github.com/jinh0/eyeliner.nvim"
   },
-  ["fidget.nvim"] = {
-    loaded = true,
-    path = "/home/archan/.local/share/nvim/site/pack/packer/start/fidget.nvim",
-    url = "https://github.com/j-hui/fidget.nvim"
-  },
   ["friendly-snippets"] = {
     loaded = true,
     path = "/home/archan/.local/share/nvim/site/pack/packer/start/friendly-snippets",
     url = "https://github.com/rafamadriz/friendly-snippets"
-  },
-  ["gitsigns.nvim"] = {
-    loaded = true,
-    path = "/home/archan/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
-    url = "https://github.com/lewis6991/gitsigns.nvim"
   },
   ["gruvbox-baby"] = {
     loaded = true,
@@ -254,11 +224,6 @@ _G.packer_plugins = {
     path = "/home/archan/.local/share/nvim/site/pack/packer/start/lualine.nvim",
     url = "https://github.com/nvim-lualine/lualine.nvim"
   },
-  ["lush.nvim"] = {
-    loaded = true,
-    path = "/home/archan/.local/share/nvim/site/pack/packer/start/lush.nvim",
-    url = "https://github.com/rktjmp/lush.nvim"
-  },
   ["mason-lspconfig.nvim"] = {
     loaded = true,
     path = "/home/archan/.local/share/nvim/site/pack/packer/start/mason-lspconfig.nvim",
@@ -273,11 +238,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/archan/.local/share/nvim/site/pack/packer/start/material.nvim",
     url = "https://github.com/marko-cerovac/material.nvim"
-  },
-  neogen = {
-    loaded = true,
-    path = "/home/archan/.local/share/nvim/site/pack/packer/start/neogen",
-    url = "https://github.com/danymat/neogen"
   },
   neon = {
     loaded = true,
@@ -304,10 +264,22 @@ _G.packer_plugins = {
     path = "/home/archan/.local/share/nvim/site/pack/packer/start/nightfox.nvim",
     url = "https://github.com/EdenEast/nightfox.nvim"
   },
+  ["noice.nvim"] = {
+    loaded = false,
+    needs_bufread = false,
+    only_cond = false,
+    path = "/home/archan/.local/share/nvim/site/pack/packer/opt/noice.nvim",
+    url = "https://github.com/folke/noice.nvim"
+  },
   ["nordic.nvim"] = {
     loaded = true,
     path = "/home/archan/.local/share/nvim/site/pack/packer/start/nordic.nvim",
     url = "https://github.com/andersevenrud/nordic.nvim"
+  },
+  ["nui.nvim"] = {
+    loaded = true,
+    path = "/home/archan/.local/share/nvim/site/pack/packer/start/nui.nvim",
+    url = "https://github.com/MunifTanjim/nui.nvim"
   },
   ["null-ls.nvim"] = {
     loaded = true,
@@ -321,7 +293,7 @@ _G.packer_plugins = {
   },
   nvim = {
     loaded = true,
-    path = "/home/ishan/.local/share/nvim/site/pack/packer/start/nvim",
+    path = "/home/archan/.local/share/nvim/site/pack/packer/start/nvim",
     url = "https://github.com/catppuccin/nvim"
   },
   ["nvim-autopairs"] = {
@@ -339,11 +311,6 @@ _G.packer_plugins = {
     path = "/home/archan/.local/share/nvim/site/pack/packer/start/nvim-colorizer.lua",
     url = "https://github.com/norcalli/nvim-colorizer.lua"
   },
-  ["nvim-cursorline"] = {
-    loaded = true,
-    path = "/home/archan/.local/share/nvim/site/pack/packer/start/nvim-cursorline",
-    url = "https://github.com/yamatsum/nvim-cursorline"
-  },
   ["nvim-deus"] = {
     loaded = true,
     path = "/home/archan/.local/share/nvim/site/pack/packer/start/nvim-deus",
@@ -353,11 +320,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/archan/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
-  },
-  ["nvim-neoclip.lua"] = {
-    loaded = true,
-    path = "/home/archan/.local/share/nvim/site/pack/packer/start/nvim-neoclip.lua",
-    url = "https://github.com/AckslD/nvim-neoclip.lua"
   },
   ["nvim-notify"] = {
     loaded = true,
@@ -386,7 +348,7 @@ _G.packer_plugins = {
   },
   ["nvim-treesitter-textobjects"] = {
     loaded = true,
-    path = "/home/ishan/.local/share/nvim/site/pack/packer/start/nvim-treesitter-textobjects",
+    path = "/home/archan/.local/share/nvim/site/pack/packer/start/nvim-treesitter-textobjects",
     url = "https://github.com/nvim-treesitter/nvim-treesitter-textobjects"
   },
   ["nvim-ts-autotag"] = {
@@ -466,7 +428,7 @@ _G.packer_plugins = {
   },
   ["styler.nvim"] = {
     loaded = true,
-    path = "/home/ishan/.local/share/nvim/site/pack/packer/start/styler.nvim",
+    path = "/home/archan/.local/share/nvim/site/pack/packer/start/styler.nvim",
     url = "https://github.com/folke/styler.nvim"
   },
   ["substitute.nvim"] = {
@@ -483,11 +445,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/archan/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
-  },
-  ["tidy.nvim"] = {
-    loaded = true,
-    path = "/home/archan/.local/share/nvim/site/pack/packer/start/tidy.nvim",
-    url = "https://github.com/mcauley-penney/tidy.nvim"
   },
   ["todo-comments.nvim"] = {
     loaded = true,
@@ -509,6 +466,11 @@ _G.packer_plugins = {
     path = "/home/archan/.local/share/nvim/site/pack/packer/start/trouble.nvim",
     url = "https://github.com/folke/trouble.nvim"
   },
+  ["true-zen.nvim"] = {
+    loaded = true,
+    path = "/home/archan/.local/share/nvim/site/pack/packer/start/true-zen.nvim",
+    url = "https://github.com/Pocco81/true-zen.nvim"
+  },
   vimtex = {
     loaded = true,
     path = "/home/archan/.local/share/nvim/site/pack/packer/start/vimtex",
@@ -522,6 +484,13 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
+vim.cmd [[augroup packer_load_aucmds]]
+vim.cmd [[au!]]
+  -- Event lazy-loads
+time([[Defining lazy-load event autocommands]], true)
+vim.cmd [[au VimEnter * ++once lua require("packer.load")({'noice.nvim'}, { event = "VimEnter *" }, _G.packer_plugins)]]
+time([[Defining lazy-load event autocommands]], false)
+vim.cmd("augroup END")
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then

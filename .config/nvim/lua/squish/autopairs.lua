@@ -1,6 +1,6 @@
 local status_ok, autopairs = pcall(require, "nvim-autopairs")
 if not status_ok then
-  return
+    return
 end
 
 autopairs.setup({
@@ -16,15 +16,15 @@ autopairs.setup({
     disable_filetype = {"TelescopePrompt"},
 
     fast_wrap = {
-      map = '<M-e>',
-      chars = { '{', '[', '(', '"', "'" },
-      pattern = string.gsub([[ [%'%"%)%>%]%)%}%,] ]], '%s+', ''),
-      -- Offset from pattern match
-      offset = 0,
-      end_key = '$',
-      keys = 'qwertyuiopzxcvbnmasdfghjkl',
-      check_comma = true,
-      highlight = 'Search',
-      highlight_grey='Comment'
+        map = '<M-e>',
+        chars = { '{', '[', '(', '"', "'" },
+        pattern = string.gsub([[ [%'%"%)%>%]%)%}%,] ]], '%s+', ''),
+        -- Offset from pattern match
+        offset = 0,
+        end_key = '$',
+        keys = 'qwertyuiopzxcvbnmasdfghjkl',
+        check_comma = true,
+        highlight = 'Search',
+        highlight_grey='Comment'
     },
 })

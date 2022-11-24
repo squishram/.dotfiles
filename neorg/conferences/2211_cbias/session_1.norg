@@ -1,0 +1,36 @@
+*_Crick Talks Session 1_*
+
+* Robert Haase - User-friendly, interactive bio-image analysis workflow design in Napari
+** Napari features
+   - configured in python
+   -- you can write python functions and export them to napari with *pip install my_plugin.zip*
+   - plugin ecosystem is easy to navigate in-software
+   - Napari Assistant
+   -- DL/ML models for noise & background removal
+   -- DL/ML models for image segmentation
+   - GPU-accelerated image processing
+** Exercises to practice usnig Napari
+   - install devbio-napari
+   - go to the Napari Hub
+
+* Pradeep Rajasekhar: napari-lattice: Interactive and modular analysis of lattice lightsheet data
+** data bottleneck problem in lattice lightsheet
+   - datasets are enormous need batch processing
+   - licenses for proprietary software is expensive!
+   - make an open-source version for napari - *napari-lattice*
+
+* Josiah Lutton - MiCellAnnGELo: (microscopy and cell annotation graphical experience and labelling tool) an open-source VR tool for surface annotation in microscopy
+  - 'how do we avoid manual labelling of data in 3D movies when doing deep learning?'
+  - but also - how do we make boring 3D tasks more fun, easy, and engaging to do?
+** applications
+   - place markers to track features
+   - label surfaces for machine learning with your VR remote (mesh painting)
+** features
+   - Windows, Mac, Linux
+   - open-source
+
+* Patrice Mascalchi (FocalPlane) - AI in Image Analysis Made Easy
+
+* Helen Zenner (FocalPlane) - An introduction to FocalPlane, the microscopy community site hosted by Journal of Cell Science
+
+* David Stirling (Glencoe) - Integrated Data Management, Analysis andAnalytics with OMERO Plus
