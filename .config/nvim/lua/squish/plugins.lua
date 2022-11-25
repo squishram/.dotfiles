@@ -53,8 +53,7 @@ return packer.startup(function(use)
 	use({ "nvim-lua/popup.nvim" })
 	-- icon support
 	use({ "kyazdani42/nvim-web-devicons" })
-	-- better notifications display
-	use({ "rcarriga/nvim-notify" })
+
 	-- complete ui overhaul (cmdline, notifications, etc)
 	use({
 		"folke/noice.nvim",
@@ -154,11 +153,14 @@ return packer.startup(function(use)
 	-- spot unique characters on your current line more easily
 	use("jinh0/eyeliner.nvim")
 	-- f repeat with f instead of ;
-	use("rhysd/clever-f.vim")
+	-- use("rhysd/clever-f.vim")
 	-- quick on-screen navigation
-	use({ "ggandor/leap.nvim", commit = "e06b231" })
-	-- use({"ggandor/leap.nvim"})
+	-- use({ "ggandor/leap.nvim", commit = "e06b231" })
+	use({ "ggandor/leap.nvim"})
+	-- yank and cut from afar
 	use({ "ggandor/leap-spooky.nvim" })
+    -- multi-line f/t/F/T movements
+    use("ggandor/flit.nvim")
 	-- smooth scrolling
 	use("karb94/neoscroll.nvim")
 	-- quickfix list
