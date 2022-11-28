@@ -106,13 +106,13 @@ alias nowtime="date +"%T""
 alias nowdate="date +"%d-%m-%Y""
 
 # I'm a vim boi now
-alias vim="$HOME/nvim.appimage"
-alias nvim="$HOME/nvim.appimage"
-alias vi="$HOME/nvim.appimage"
-alias edit="$HOME/nvim.appimage"
-# alias vim="nvim"
-# alias vi="nvim"
-# alias edit="nvim"
+# alias vim="$HOME/nvim.appimage"
+# alias nvim="$HOME/nvim.appimage"
+# alias vi="$HOME/nvim.appimage"
+# alias edit="$HOME/nvim.appimage"
+alias vim="nvim"
+alias vi="nvim"
+alias edit="nvim"
 
 # update on one command
 # debian
@@ -202,7 +202,10 @@ stopwatch() {
     done
 }
 
-swal="feh --bg-fill --randomize ~/.config/wallpapers/*"
+alias swal="feh --bg-fill --randomize ~/.config/wallpapers/*"
+
+# check the power
+alias batt="upower -i /org/freedesktop/UPower/devices/battery_BAT0 | rg 'state|to full|percentage'"
 
 ##################
 # ALIAS LIST END #

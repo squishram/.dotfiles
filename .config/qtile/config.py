@@ -452,7 +452,7 @@ screens = [
                     fontsize=46
                     ),
                 widget.Wallpaper(
-                    directory="~/.config/wallpapers",
+                    directory="~/.config/wallpapers/pixelart",
                     foreground=colours[1],
                     background=colours[9],
                     label="[=]"),

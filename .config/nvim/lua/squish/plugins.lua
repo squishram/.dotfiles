@@ -55,14 +55,14 @@ return packer.startup(function(use)
 	use({ "kyazdani42/nvim-web-devicons" })
 
 	-- complete ui overhaul (cmdline, notifications, etc)
-	use({
-		"folke/noice.nvim",
-		event = "VimEnter",
-		requires = {
-			"MunifTanjim/nui.nvim",
-			"rcarriga/nvim-notify",
-		},
-	})
+	-- use({
+	-- 	"folke/noice.nvim",
+	-- 	event = "VimEnter",
+	-- 	requires = {
+	-- 		"MunifTanjim/nui.nvim",
+	-- 		"rcarriga/nvim-notify",
+	-- 	},
+	-- })
 
 	-- NOTE: REMOVED
 	-- This is needed to fix lsp doc highlight
