@@ -30,6 +30,7 @@ local modkey = user_vars.modkey
 -- 44 -- j
 -- 45 -- k
 -- 46 -- l
+-- 56 -- b
 -- 113 -- left arrow
 -- 114 -- right arrow
 
@@ -103,6 +104,10 @@ return gears.table.join(
 	awful.key({ modkey, "Shift" }, "#36", function()
 		awful.spawn("rofi -show drun -theme ~/.config/rofi/rofi.rasi")
 	end, { descripton = "Application launcher", group = "Application" }),
+
+    awful.key({ modkey } , "#56", function()
+        awful.spawn(user_vars.browser)
+    end, { description = "Launch browser", group = "Application" }),
 
 	-- awful.key({ modkey }, "#40", function()
 	-- 	awful.spawn("rofi -show drun -theme ~/.config/rofi/rofi.rasi")

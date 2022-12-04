@@ -53,6 +53,9 @@ user_vars = {
     -- This is your default Terminal
     terminal = "kitty",
 
+    -- This is your default browser
+    browser = "firefox",
+
     -- This is the modkey 'mod4' = Super/Mod/WindowsKey, 'mod3' = alt...
     modkey = "Mod4",
 

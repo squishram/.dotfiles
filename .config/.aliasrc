@@ -6,24 +6,10 @@
 alias cwd="pwd | xclip -selection clipboard"
 
 # RUST UTILS
-# improved find util in Rust
-# alias fd="fdfind"
-# alias find="fdfind"
-# improved cat util in Rust
-alias bat="batcat"
-# replace cat completely with alias
-alias cat="batcat"
-# replace grep completely with ripgrep
-alias grep ="rg"
 # rust fuzzy finder
 # ripgrep fuzzy finder
 alias skg="sk --ansi -i -c 'rga --color=always --line-number "{}" .'"
 alias skf="sk --ansi -i --color=always"
-# smart cd in Rust
-# alias z='zoxide'
-# alias zq='zoxide query'
-# alias za='zoxide add'
-# alias zr='zoxide remove'
 
 # reboot / halt / poweroff
 alias reboot="sudo /sbin/reboot"
@@ -206,6 +192,10 @@ alias swal="feh --bg-fill --randomize ~/.config/wallpapers/*"
 
 # check the power
 alias batt="upower -i /org/freedesktop/UPower/devices/battery_BAT0 | rg 'state|to full|percentage'"
+# check CPU temp
+alias temp="sensors | grep CPU"
+# open the wifi menu
+alias wifi="nm-applet"
 
 ##################
 # ALIAS LIST END #

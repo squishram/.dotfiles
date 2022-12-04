@@ -51,5 +51,3 @@ picom &
 exec awesome
 # start qtile window manager
 # qtile start
-# get the internet going
-nm-applet
