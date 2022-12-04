@@ -7,8 +7,8 @@ alias cwd="pwd | xclip -selection clipboard"
 
 # RUST UTILS
 # improved find util in Rust
-# alias fd="fdfind"
-# alias find="fdfind"
+alias fd="fdfind"
+alias find="fdfind"
 # improved cat util in Rust
 alias bat="batcat"
 # replace cat completely with alias
@@ -106,13 +106,17 @@ alias nowtime="date +"%T""
 alias nowdate="date +"%d-%m-%Y""
 
 # I'm a vim boi now
-# alias vim="$HOME/nvim.appimage"
-# alias nvim="$HOME/nvim.appimage"
-# alias vi="$HOME/nvim.appimage"
-# alias edit="$HOME/nvim.appimage"
-alias vim="nvim"
-alias vi="nvim"
-alias edit="nvim"
+
+# # ubuntu
+alias vim="$HOME/nvim.appimage"
+alias nvim="$HOME/nvim.appimage"
+alias vi="$HOME/nvim.appimage"
+alias edit="$HOME/nvim.appimage"
+
+# # arch
+# alias vim="nvim"
+# alias vi="nvim"
+# alias edit="nvim"
 
 # update on one command
 # debian
