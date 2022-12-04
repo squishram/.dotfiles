@@ -151,7 +151,7 @@ return packer.startup(function(use)
 	-- peek lines when using :<line_number> before pressing enter
 	use("nacro90/numb.nvim")
 	-- spot unique characters on your current line more easily
-	use("jinh0/eyeliner.nvim")
+	-- use("jinh0/eyeliner.nvim")
 	-- f repeat with f instead of ;
 	-- use("rhysd/clever-f.vim")
 	-- quick on-screen navigation

@@ -154,11 +154,6 @@ _G.packer_plugins = {
     path = "/home/archan/.local/share/nvim/site/pack/packer/start/everforest",
     url = "https://github.com/sainnhe/everforest"
   },
-  ["eyeliner.nvim"] = {
-    loaded = true,
-    path = "/home/archan/.local/share/nvim/site/pack/packer/start/eyeliner.nvim",
-    url = "https://github.com/jinh0/eyeliner.nvim"
-  },
   ["flit.nvim"] = {
     loaded = true,
     path = "/home/archan/.local/share/nvim/site/pack/packer/start/flit.nvim",

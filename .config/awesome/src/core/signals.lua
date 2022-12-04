@@ -95,7 +95,7 @@ client.connect_signal(
   end
 )
 
-beautiful.useless_gap = 2
+beautiful.useless_gap = 5
 beautiful.gap_single_client = true
 
 --- Takes a wibox.container.background and connects four signals to it
