@@ -6,6 +6,15 @@
 alias cwd="pwd | xclip -selection clipboard"
 
 # RUST UTILS
+# improved find util in Rust
+alias fd="fdfind"
+# alias find="fdfind"
+# improved cat util in Rust
+alias bat="batcat"
+# replace cat completely with alias
+alias cat="batcat"
+# replace grep completely with ripgrep
+alias grep ="rg"
 # rust fuzzy finder
 # ripgrep fuzzy finder
 alias skg="sk --ansi -i -c 'rga --color=always --line-number "{}" .'"
@@ -66,7 +75,8 @@ alias lg="lazygit"
 
 # what runs at every new terminal?
 # alias neofetch='/usr/bin/neofetch --ascii /home/ishan/neorg/todo.norg'
-alias neofetch="fortune|cowsay -f tux|lolcat"
+# alias neofetch="fortune|cowsay -f tux|lolcat"
+alias neofetch="bat ~/neorg/idle.norg"
 # alias neofetch='/usr/bin/neofetch --ascii "fortune|cowsay -f tux|lolcat"'
 # kitty shortcuts
 alias ims="kitty +kitten icat"
@@ -92,13 +102,17 @@ alias nowtime="date +"%T""
 alias nowdate="date +"%d-%m-%Y""
 
 # I'm a vim boi now
-# alias vim="$HOME/nvim.appimage"
-# alias nvim="$HOME/nvim.appimage"
-# alias vi="$HOME/nvim.appimage"
-# alias edit="$HOME/nvim.appimage"
-alias vim="nvim"
-alias vi="nvim"
-alias edit="nvim"
+
+# # ubuntu
+alias vim="$HOME/nvim.appimage"
+alias nvim="$HOME/nvim.appimage"
+alias vi="$HOME/nvim.appimage"
+alias edit="$HOME/nvim.appimage"
+
+# # arch
+# alias vim="nvim"
+# alias vi="nvim"
+# alias edit="nvim"
 
 # update on one command
 # debian
@@ -200,3 +214,8 @@ alias wifi="nm-applet"
 ##################
 # ALIAS LIST END #
 ##################
+
+fr() {
+  # Replace all instances of $1 with $2 recursively in the current directory
+  rg -l "$1" | xargs sed -i "s/$1/$2/g"
+}
