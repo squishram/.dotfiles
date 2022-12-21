@@ -121,7 +121,7 @@ return function()
 
         local notify_connected = function(essid)
             local message = "You are now connected to " .. essid
-            local title = "Connection successfull"
+            local title = "Connection successful"
             local app_name = "System Notification"
             local icon = icondir .. "wifi-strength-4.svg"
             network_notify(message, title, app_name, icon)

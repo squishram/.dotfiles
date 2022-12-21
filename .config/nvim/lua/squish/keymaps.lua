@@ -97,6 +97,11 @@ keymap("n", "<leader><space>", ":noh<CR>", opts)
 -- fix last spelling mistake
 keymap("i", "<C-p>", "<C-l> <c-g>u<Esc>[s1z=`]a<c-g>u", opts)
 
+if vim.g.neovide == true then
+  vim.api.nvim_set_keymap("n", "<C-+>", ":lua vim.g.neovide_scale_factor = vim.g.neovide_scale_factor + 0.1<CR>", opts)
+  vim.api.nvim_set_keymap("n", "<C-->", ":lua vim.g.neovide_scale_factor = vim.g.neovide_scale_factor - 0.1<CR>", opts)
+  vim.api.nvim_set_keymap("n", "<C-0>", ":lua vim.g.neovide_scale_factor = 1<CR>", { silent = true })
+end
 
 -- toggle wrap for writing prose
 -- vim.keymap.set("n", "<leader>w",
