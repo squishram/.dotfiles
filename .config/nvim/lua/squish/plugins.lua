@@ -162,7 +162,7 @@ return packer.startup(function(use)
     -- multi-line f/t/F/T movements
     use("ggandor/flit.nvim")
 	-- smooth scrolling
-	use("karb94/neoscroll.nvim")
+	-- use("karb94/neoscroll.nvim")
 	-- quickfix list
 	use({ "folke/trouble.nvim" })
 	-- escape with kj or jk without typing delays

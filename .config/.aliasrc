@@ -8,7 +8,7 @@ alias cwd="pwd | xclip -selection clipboard"
 # RUST UTILS
 # improved find util in Rust
 alias fd="fdfind"
-alias find="fdfind"
+# alias find="fdfind"
 # improved cat util in Rust
 alias bat="batcat"
 # replace cat completely with alias
@@ -75,7 +75,8 @@ alias lg="lazygit"
 
 # what runs at every new terminal?
 # alias neofetch='/usr/bin/neofetch --ascii /home/ishan/neorg/todo.norg'
-alias neofetch="fortune|cowsay -f tux|lolcat"
+# alias neofetch="fortune|cowsay -f tux|lolcat"
+alias neofetch="bat ~/neorg/idle.norg"
 # alias neofetch='/usr/bin/neofetch --ascii "fortune|cowsay -f tux|lolcat"'
 # kitty shortcuts
 alias ims="kitty +kitten icat"
@@ -213,3 +214,8 @@ alias wifi="nm-applet"
 ##################
 # ALIAS LIST END #
 ##################
+
+fr() {
+  # Replace all instances of $1 with $2 recursively in the current directory
+  rg -l "$1" | xargs sed -i "s/$1/$2/g"
+}
