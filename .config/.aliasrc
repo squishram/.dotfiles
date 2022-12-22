@@ -10,9 +10,9 @@ alias cwd="pwd | xclip -selection clipboard"
 alias fd="fdfind"
 # alias find="fdfind"
 # improved cat util in Rust
-alias bat="batcat"
+#alias bat="batcat"
 # replace cat completely with alias
-alias cat="batcat"
+#alias cat="batcat"
 # replace grep completely with ripgrep
 alias grep ="rg"
 # rust fuzzy finder
@@ -105,14 +105,8 @@ alias nowdate="date +"%d-%m-%Y""
 
 # # ubuntu
 alias vim="$HOME/nvim.appimage"
-alias nvim="$HOME/nvim.appimage"
 alias vi="$HOME/nvim.appimage"
 alias edit="$HOME/nvim.appimage"
-
-# # arch
-# alias vim="nvim"
-# alias vi="nvim"
-# alias edit="nvim"
 
 # update on one command
 # debian
@@ -219,3 +213,9 @@ fr() {
   # Replace all instances of $1 with $2 recursively in the current directory
   rg -l "$1" | xargs sed -i "s/$1/$2/g"
 }
+
+if [[ $(uname -rv) == *"arch"* ]]; then
+    alias vim="nvim"
+    alias vi="nvim"
+    alias edit="nvim"
+fi
