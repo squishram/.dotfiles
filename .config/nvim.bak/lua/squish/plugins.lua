@@ -46,7 +46,7 @@ return packer.startup(function(use)
 	-------------
 	-- makes neovim load faster (might be merged into main eventually)
 	use({ "lewis6991/impatient.nvim" })
-	-- Have packer manage itself
+	-- Have packer itself
 	use({ "wbthomason/packer.nvim" })
 	-- Useful lua functions used by lots of plugins
 	use({ "nvim-lua/plenary.nvim" })
@@ -161,8 +161,6 @@ return packer.startup(function(use)
 	use({ "ggandor/leap-spooky.nvim" })
     -- multi-line f/t/F/T movements
     use("ggandor/flit.nvim")
-	-- smooth scrolling
-    use("gen740/SmoothCursor.nvim")
 	-- quickfix list
 	use({ "folke/trouble.nvim" })
 	-- escape with kj or jk without typing delays

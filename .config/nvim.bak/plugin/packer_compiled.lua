@@ -84,11 +84,6 @@ _G.packer_plugins = {
     path = "/home/archan/.local/share/nvim/site/pack/packer/start/LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
-  ["SmoothCursor.nvim"] = {
-    loaded = true,
-    path = "/home/archan/.local/share/nvim/site/pack/packer/start/SmoothCursor.nvim",
-    url = "https://github.com/gen740/SmoothCursor.nvim"
-  },
   ["alpha-nvim"] = {
     loaded = true,
     path = "/home/archan/.local/share/nvim/site/pack/packer/start/alpha-nvim",
