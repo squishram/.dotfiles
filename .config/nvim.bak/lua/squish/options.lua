@@ -87,7 +87,7 @@ for k, v in pairs(options) do
 end
 
 -- vim.opt.guifont = { "Caskaydia Cove Nerd Font Complete", ":h12" }
-vim.cmd [[let g:neovide_scale_factor=0.5]]
+-- vim.cmd [[let g:neovide_scale_factor=0.5]]
 
 -- this doesn't work but it's supposed to enable syntax highlighting for ijm files as java
 if vim.bo.filetype == "ijm" then
