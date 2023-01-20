@@ -107,8 +107,5 @@ vim.keymap.set("n", "J", "mzJ'z")
 -- remap : to ; so you don't need to hold shift
 vim.keymap.set("n", ";", ":")
 
--- clear search highlights function
-vim.keymap.set("n", "<leader><space>", ":noh<CR>")
-
 -- fix last spelling mistake
 vim.keymap.set("i", "<C-p>", "<C-l> <c-g>u<Esc>[s1z=`]a<c-g>u")
