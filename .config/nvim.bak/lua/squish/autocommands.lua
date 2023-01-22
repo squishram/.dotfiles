@@ -126,3 +126,6 @@ vim.api.nvim_create_autocmd({ "CursorHold" }, {
     end
   end,
 })
+
+-- auto-highlight ijm files as java
+vim.api.nvim_command("autocmd BufRead,BufNewFile *.".. 'ijm' .. " setfiletype java")
