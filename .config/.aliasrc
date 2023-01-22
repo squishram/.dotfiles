@@ -10,9 +10,7 @@ alias cwd="pwd | xclip -selection clipboard"
 # alias fd="fdfind"
 # alias find="fdfind"
 # improved cat util in Rust
-#alias bat="batcat"
-# replace cat completely with alias
-#alias cat="batcat"
+alias bat="batcat"
 # replace grep completely with ripgrep
 alias grep ="rg"
 # rust fuzzy finder
@@ -72,14 +70,6 @@ alias .5="cd ../../../../.."
 
 # git stuff
 alias lg="lazygit"
-
-# what runs at every new terminal?
-# alias neofetch='/usr/bin/neofetch --ascii /home/ishan/neorg/todo.norg'
-# alias neofetch="fortune|cowsay -f tux|lolcat"
-alias neofetch="bat ~/neorg/idle.norg"
-# alias neofetch='/usr/bin/neofetch --ascii "fortune|cowsay -f tux|lolcat"'
-# kitty shortcuts
-alias ims="kitty +kitten icat"
 
 # clear the terminal with c
 alias c="clear"
@@ -218,4 +208,15 @@ if [[ $(uname -rv) == *"arch"* ]]; then
     alias vim="nvim"
     alias vi="nvim"
     alias edit="nvim"
+    alias batcat="bat"
 fi
+
+# what runs at every new terminal?
+# alias neofetch='/usr/bin/neofetch --ascii /home/ishan/neorg/todo.norg'
+# alias neofetch="fortune|cowsay -f tux|lolcat"
+alias neofetch="bat ~/neorg/idle.norg"
+# alias neofetch='/usr/bin/neofetch --ascii "fortune|cowsay -f tux|lolcat"'
+#
+# kitty shortcuts
+alias ims="kitty +kitten icat"
+

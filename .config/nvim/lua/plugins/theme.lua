@@ -1,5 +1,11 @@
 -- available colorschemes - pick one!
 return {
+  {
+    "LazyVim/LazyVim",
+    opts = {
+      colorscheme = "kanagawa",
+    },
+  },
 
   {
     "rebelot/kanagawa.nvim",

@@ -1,7 +1,7 @@
 -- bootstrap lazy.nvim, LazyVim and your plugins
 require("config.lazy")
 
-local colorscheme = "gruvbox"
+local colorscheme = "everforest"
 
 -- set it boi
 vim.cmd.colorscheme(colorscheme)
