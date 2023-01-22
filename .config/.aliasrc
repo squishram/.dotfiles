@@ -31,7 +31,6 @@ alias rl="source ~/.config/fish/conf.d/omf.fish"
 alias hdmi="/home/archan/documents/code/shell_scripts/flip_hdmi.sh"
 # launch ranger file manager
 alias rr="env TERM=xterm-kitty ranger"
-
 # starting daemons:
 # spotifyd
 alias spot="systemctl --user stop spotifyd && systemctl --user start spotifyd"
@@ -143,35 +142,9 @@ alias tn="task context none"
 # LATEX ALIASES
 alias texclean="rm *.aux *.bbl *.bcf *.blg *.fdb_latexmk *.fls *.lof *.log *.out *.run.xml *.synctex.gz *.toc"
 
-# make a new task and add it to a project
-# function tap --a task_name project
-#   task add $task_name project:$project
-# end
-
-# make a new task and add tags to it
-# function tat --a task_name tag1 tag2 tag3
-#   task add $task_name +$tag1 +$tag2 +$tag3
-# end
-
-# check all tasks with a tag
-# function tc --a tag
-#   task +$tag
-# end
-
-# move into a context
-# function tcon --a context
-#   task context $context
-# end
-
-# put task $1 in project $2
-# function tp --a task_id proj_name
-#   task $task_id modify project:$proj_name
-# end
-
-# add tags $2 $3 $4 to task $1
-# function tt --a task_id tag1 tag2 tag3
-#   task $task_id modify tag:$tag1 $tag2 $tag3
-# end
+# PERIPHERALS
+# force usb keyboard to be gb, with caplock=ctrl
+alias gbkb="setxkbmap -layout gb -option ctrl:nocaps"
 
 # use vdirsyncer to sync khal calendar
 alias vdirsyncer="~/vdirsyncer_env/bin/vdirsyncer"

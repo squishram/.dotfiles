@@ -114,4 +114,12 @@ return {
     lazy = true,
     name = "gruvbox",
   },
+
+  -- This is where you configure the colourscheme
+  {
+    "LazyVim/LazyVim",
+    opts = {
+      colorscheme = "gruvbox",
+    },
+  },
 }
