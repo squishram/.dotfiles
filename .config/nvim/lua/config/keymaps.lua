@@ -103,9 +103,7 @@ vim.keymap.set("n", "<leader><tab>[", "<cmd>tabprevious<cr>", { desc = "Previous
 
 -- keep the cursor centred when pulling up a line
 vim.keymap.set("n", "J", "mzJ'z")
-
 -- remap : to ; so you don't need to hold shift
 vim.keymap.set("n", ";", ":")
-
 -- fix last spelling mistake
 vim.keymap.set("i", "<C-p>", "<C-l> <c-g>u<Esc>[s1z=`]a<c-g>u")
