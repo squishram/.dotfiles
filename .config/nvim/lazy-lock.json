@@ -20,7 +20,8 @@
   "gruvbox": { "branch": "main", "commit": "e863942494d7c72a7c8d2c54cf651f28fc5a76ab" },
   "indent-blankline.nvim": { "branch": "master", "commit": "c4c203c3e8a595bc333abaf168fcb10c13ed5fb7" },
   "kanagawa": { "branch": "master", "commit": "4c8d48726621a7f3998c7ed35b2c2535abc22def" },
-  "lazy.nvim": { "branch": "main", "commit": "cab4682d22a0451bc36a648694235621b5dd808e" },
+  "lazy.nvim": { "branch": "main", "commit": "7674ee6254279cd5df7db92b41d3a2ca027bde55" },
+  "leap-spooky.nvim": { "branch": "main", "commit": "748b2614e859704d8004e86be97401c9f3e28e80" },
   "leap.nvim": { "branch": "main", "commit": "ff4c3663e5a0a0ecbb3fffbc8318825def35d2aa" },
   "lualine.nvim": { "branch": "master", "commit": "0050b308552e45f7128f399886c86afefc3eb988" },
   "mason-lspconfig.nvim": { "branch": "main", "commit": "5b388c0de30f1605671ebfb9a20a620cda50ffce" },
@@ -66,10 +67,11 @@
   "tokyonight.nvim": { "branch": "main", "commit": "4071f7fa984859c5de7a1fd27069b99c3a0d802a" },
   "trouble.nvim": { "branch": "main", "commit": "b2a0afac2c319a481f0f0318963a74d672ba5766" },
   "true-zen.nvim": { "branch": "main", "commit": "98740c76254c65576ec294551028b65081053588" },
-  "tundra": { "branch": "main", "commit": "8ce30a99d72d56cb97f225dd6ac9b9841c9c13a4" },
+  "tundra": { "branch": "main", "commit": "9b32f7aa841d3ffe1bd51929068ac2a75a852a5c" },
   "vim-illuminate": { "branch": "master", "commit": "da80f3877896adcf77f59fb0bf74e9601615d372" },
   "vim-repeat": { "branch": "master", "commit": "24afe922e6a05891756ecf331f39a1f6743d3d5a" },
   "vim-startuptime": { "branch": "master", "commit": "cb4c112b9e0f224236ee4eab6bf5153406b3f88b" },
   "vimtex": { "branch": "master", "commit": "c77ec4e15768ffcb97a96d1bf2df1ef58e94acdd" },
   "which-key.nvim": { "branch": "main", "commit": "e4fa445065a2bb0bbc3cca85346b67817f28e83e" },
   "zephyr": { "branch": "main", "commit": "7fd86b7164442d3b5ec2c81b2694d040e716b5cf" }
+}
