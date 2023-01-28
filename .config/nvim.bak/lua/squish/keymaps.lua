@@ -90,7 +90,7 @@ keymap("i", "?", "?<C-g>u", opts)
 
 -- stick a comma/ semicolon at the end of the line
 keymap("i", ";;", "<Esc>A;<Esc>", opts)
-keymap("i", ",,", "<Esc>A,<Esc>",  opts)
+keymap("i", ",,", "<Esc>A,<Esc>", opts)
 
 -- clear search highlights function
 keymap("n", "<leader><space>", ":noh<CR>", opts)
@@ -98,9 +98,19 @@ keymap("n", "<leader><space>", ":noh<CR>", opts)
 keymap("i", "<C-p>", "<C-l> <c-g>u<Esc>[s1z=`]a<c-g>u", opts)
 
 if vim.g.neovide == true then
-  vim.api.nvim_set_keymap("n", "<C-+>", ":lua vim.g.neovide_scale_factor = vim.g.neovide_scale_factor + 0.1<CR>", opts)
-  vim.api.nvim_set_keymap("n", "<C-->", ":lua vim.g.neovide_scale_factor = vim.g.neovide_scale_factor - 0.1<CR>", opts)
-  vim.api.nvim_set_keymap("n", "<C-0>", ":lua vim.g.neovide_scale_factor = 1<CR>", { silent = true })
+	vim.api.nvim_set_keymap(
+		"n",
+		"<C-+>",
+		":lua vim.g.neovide_scale_factor = vim.g.neovide_scale_factor + 0.1<CR>",
+		opts
+	)
+	vim.api.nvim_set_keymap(
+		"n",
+		"<C-->",
+		":lua vim.g.neovide_scale_factor = vim.g.neovide_scale_factor - 0.1<CR>",
+		opts
+	)
+	vim.api.nvim_set_keymap("n", "<C-0>", ":lua vim.g.neovide_scale_factor = 1<CR>", { silent = true })
 end
 
 -- toggle wrap for writing prose

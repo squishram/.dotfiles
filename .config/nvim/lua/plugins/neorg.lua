@@ -1,7 +1,11 @@
 return {
   -- neorg
-  {
-    "nvim-neorg/neorg",
-    config = true,
+  "nvim-neorg/neorg",
+
+  ft = "norg",
+  opts = {
+    load = {
+      ["core.defaults"] = {},
+    },
   },
 }
