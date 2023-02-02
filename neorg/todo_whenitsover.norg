@@ -1,0 +1,17 @@
+@document.meta
+title: todo_whenitsover
+description: list of things to do when I've finished writing the thesis
+authors: ishan
+categories: todo
+created: 2023-01-26
+updated: 2023-01-26
+version: 1.0.0
+@end
+
+* Todo when it's all over:
+  - [ ] presents & dinner for Lu
+  - [ ] buy a pump
+  - [ ] contact Jeremy about the piping in our room
+  - [ ] book trip to france 
+  - [ ] buy ma n da xmas presents & bday presents
+  - [ ] backup data & install EndeavourOS on laptop

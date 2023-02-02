@@ -1,5 +1,6 @@
 return {
   "nvim-telescope/telescope.nvim",
+
   keys = {
     -- disable double space keymap
     { "<leader><space>", false },

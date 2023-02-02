@@ -107,3 +107,9 @@ vim.keymap.set("n", "J", "mzJ'z")
 vim.keymap.set("n", ";", ":")
 -- fix last spelling mistake
 vim.keymap.set("i", "<C-p>", "<C-l> <c-g>u<Esc>[s1z=`]a<c-g>u")
+
+-- Better terminal navigation
+vim.keymap.set("t", "<C-h>", "<C-\\><C-N><C-w>h", { silent = true })
+vim.keymap.set("t", "<C-j>", "<C-\\><C-N><C-w>j", { silent = true })
+vim.keymap.set("t", "<C-k>", "<C-\\><C-N><C-w>k", { silent = true })
+vim.keymap.set("t", "<C-l>", "<C-\\><C-N><C-w>l", { silent = true })
