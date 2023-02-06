@@ -8,45 +8,13 @@ version: 0.0.11
 @end
 
 * WORK
-** Thesis Writing
-   - [x] stop writing the introduction!
-   - [ ] write chapter 2 & chapter 3 - 2000 words per day
-   - [ ] make a weekly schedule about how to work
-   - [ ] read Dblink
-   - [ ] read Sian's papers that she sent on slack
-** AFFIRM3D
-   - [ ] use a seed to create the isotropic simulated data
-   - [ ] try getting rid of batchnorm??
-   - [ ] try residual learning - add U to G before doing everything else
-   - [ ] try Lanczos upsampling (in opencv) instead of trilinear upsampling
-   - [ ] try looking at what the gaussian z-blur actually does in Fiji (might not be much)
-   - [x] try making your code a bit more streamlined
-   - [x] look at your images with projections, not 3D-project
-   - [x] save the actual generated image not just the output one
-   - [x] try with only L1 loss
-   - [x] try with a little bit of adversarial loss
-** 3D HAWK
-   - [ ] download all of Richard's video files for the supplementary information
-** Crick Biosymposium
-   - [ ] you need to submit a poster
-   - [x] you need to submit a flash talk
-** Conferences to Apply to
-   - [ ] Seeing is believing
-   - [ ] The one in January, image analysis
-   - [ ] make a notebook of the loss graphs for Susan
-** Misc
-   - [ ] ask Susan about the AFM thing and get back to Jody
-   - [ ] ask Susan about contacting KCL payroll so I gets me damned money
-
-* figure out how to spend money (~15000?)
-  - virtual services to make things go faster?
-  - hard drive cloud backups?
-  - microscope parts?
-  -- a water objective???
-  - conferences
-
-* NON-WORK
   - [ ] call up the french language exam place
+  - [ ] presents & dinner for Lu
+  - [ ] buy a pump
+  - [ ] contact Jeremy about the piping in our room
+  - [ ] book trip to france 
+  - [ ] buy ma n da xmas presents & bday presents
+  - [ ] backup data & install EndeavourOS on laptop
 
 * EXTRA
   - [ ] diary entry
@@ -58,13 +26,10 @@ version: 0.0.11
 
 * TO BUY
   - [ ] piano
-  - [ ] bands for band assisted pullups
   - [ ] harness for climbing
   - [ ] suit (informal)
   - [ ] 'proper' shoes (padror? expensive)
   - [ ] muay thai boxing gloves
-  - [ ] muay thai hand wraps
-  - [ ] climbing harness
   - [ ] climbing chalk
   - [ ] jabra elite 7 active
 
