@@ -8,12 +8,6 @@ return {
   },
 
   {
-    "rmehri01/onenord.nvim",
-    lazy = true,
-    name = "onenord",
-  },
-
-  {
     "rafamadriz/neon",
     lazy = true,
     name = "neon",

@@ -1,0 +1,83 @@
+@document.meta
+title: endeavouros_guide
+description: 
+authors: archan
+categories: 
+created: 2023-02-03
+updated: 2023-02-03
+version: 1.0.0
+@end
+
+* Answer 1
+  - Boot from an EndeavourOS live ISO: Download the EndeavourOS ISO from the official website and burn it to a USB drive.
+    Then, boot your laptop from the USB drive.
+  - Wipe the SSD: In the EndeavourOS live environment, open a terminal and run the following commands to wipe your SSD:
+  @code bash
+  sudo lsblk
+  @end
+  This will display a list of your disk drives.
+  Identify your SSD, then, run the following command to wipe the disk:
+  @code bash
+  /dev/sda
+  sudo dd if=/dev/zero of=/dev/sda bs=1M status=progress
+  @end
+
+  - Create partitions: Use the cgdisk tool to create a new partition table on the wiped SSD.
+    Create a root partition (/) of at least 30 GB and a boot partition (/) of at least 500 MB.
+  - Format the partitions: Run the following commands to format the partitions:
+  @code bash
+  sudo mkfs.ext4 /dev/sda1
+  sudo mkfs.fat -F32 /dev/sda2
+  @end
+
+  - Mount the partitions: Run the following commands to mount the partitions:
+  @code bash
+  sudo mount /dev/sda1 /mnt
+  sudo mkdir /mnt/boot
+  sudo mount /dev/sda2 /mnt/boot
+  @end
+
+  - Install EndeavourOS: Run the following command to install EndeavourOS:
+  @code bash
+  sudo endeavour-installer
+  @end
+
+  - Install AwesomeWM: After the EndeavourOS installation is complete, restart your laptop and log in. Then, run the following commands to install AwesomeWM:
+  @code bash
+  sudo pacman -S awesome
+  @end
+
+  - Set AwesomeWM as default: Run the following command to set AwesomeWM as your default window manager:
+  @code bash
+  echo "exec awesome" > ~/.xinitrc
+  @end
+
+
+* Answer 2
+  - Use the cgdisk tool to create a new partition table on the disk. Create two partitions: one for / with a size of at least 30 GB, and one for /boot with a size of at least 500 MB. Make sure to set the boot partition as bootable.
+  - Format the partitions:
+  @code bash
+  sudo mkfs.ext4 /dev/nvme0n1p1
+  sudo mkfs.fat -F32 /dev/nvme0n1p2
+  @end
+
+  - Mount the partitions:
+  @code bash
+  sudo mount /dev/nvme0n1p1 /mnt
+  sudo mkdir /mnt/boot
+  sudo mount /dev/nvme0n1p2 /mnt/boot
+  @end
+
+  - Install EndeavourOS using the endeavour-installer command.
+  - After the installation is complete, restart your computer and log in to your new EndeavourOS installation.
+  - Install AwesomeWM by running:
+  @code bash
+  sudo pacman -S awesome
+  @end
+
+  - Set AwesomeWM as your default window manager by running 
+  @code bash
+  echo "exec awesome" > ~/.xinitrc
+  @end
+
+  - Restart your computer and log in to your new EndeavourOS installation with AwesomeWM.
