@@ -1,0 +1,3 @@
+* troubleshoot hardware interactions relating to systemctl
+** see what packages you've got!
+pacman -Qql package | grep -Fe .service -e .socket
