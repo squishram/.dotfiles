@@ -10,7 +10,7 @@ The Fourier transform converts a signal from the time domain to the frequency do
 
 The mathematical formula for the Fourier transform is as follows:
 
-F(ω) = ∫f(t)e^-iωtdt
+  $F(ω) = ∫f(t)e^-iωtdt$
 
 In this formula, F(ω) is the Fourier transform of the function f(t), and ω is the frequency of the sinusoidal component of the transform. The symbol ∫ represents an integral, which is a mathematical operation that calculates the sum of the values of a function over a specified range.
 

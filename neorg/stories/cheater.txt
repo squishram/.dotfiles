@@ -1,3 +1,0 @@
-I wrote it in 50 minutes but full disclosure: I cheated.
-Did a python script to count the words as I went.
-Cheater, cheater, shit eater.

@@ -20,50 +20,49 @@ awful.screen.connect_for_each_screen(
 		require("src.modules.volume_controller")(s)
 
 		-- Widgets
-        -- left bar
+		-- left bar
 		s.layoutlist = require("src.widgets.layout_list")(s)
 		s.taglist = require("src.widgets.taglist")(s)
 		s.tasklist = require("src.widgets.tasklist")(s)
 
-        -- right bar
-        s.battery = require("src.widgets.battery")()
-        s.audio = require("src.widgets.audio")(s)
-        s.date = require("src.widgets.date")()
-        s.clock = require("src.widgets.clock")()
-        s.bluetooth = require("src.widgets.bluetooth")()
-        s.powerbutton = require("src.widgets.power")()
-        s.cpu_freq = require("src.widgets.cpu_info")("freq", "average")
-        s.network = require("src.widgets.network")()
-        s.ram_info = require("src.widgets.ram_info")()
-        s.systray = require("src.widgets.systray")(s)
-        s.cpu_usage = require("src.widgets.cpu_info")("usage")
-        s.cpu_temp = require("src.widgets.cpu_info")("temp")
-        -- s.kblayout = require("src.widgets.kblayout")(s)
-        -- s.gpu_usage = require("src.widgets.gpu_info")("usage")
-        -- s.gpu_temp = require("src.widgets.gpu_info")("temp")
+		-- right bar
+		s.battery = require("src.widgets.battery")()
+		s.audio = require("src.widgets.audio")(s)
+		s.date = require("src.widgets.date")()
+		s.clock = require("src.widgets.clock")()
+		s.bluetooth = require("src.widgets.bluetooth")()
+		s.powerbutton = require("src.widgets.power")()
+		s.cpu_freq = require("src.widgets.cpu_info")("freq", "average")
+		s.network = require("src.widgets.network")()
+		s.ram_info = require("src.widgets.ram_info")()
+		s.systray = require("src.widgets.systray")(s)
+		s.cpu_usage = require("src.widgets.cpu_info")("usage")
+		s.cpu_temp = require("src.widgets.cpu_info")("temp")
+		-- s.kblayout = require("src.widgets.kblayout")(s)
+		-- s.gpu_usage = require("src.widgets.gpu_info")("usage")
+		-- s.gpu_temp = require("src.widgets.gpu_info")("temp")
 
+		-- s.index = which screen you are on for multi-screen setup
+		-- in this case just put some things in s == 1, and some in s == 2, etc
+		-- (my setup only has one screen so only this one matters)
+		if s.index == 1 then
+			require("crylia_bar.left_bar")(s, { s.layoutlist, s.systray, s.taglist })
+			require("crylia_bar.center_bar")(s, { s.tasklist })
+			require("crylia_bar.right_bar")(
+				s,
+				{ s.battery, s.network, s.cpu_usage, s.bluetooth, s.audio, s.date, s.clock, s.powerbutton }
+			)
+			-- require("crylia_bar.dock")(s, user_vars.dock_programs)
+		end
 
-        -- s.index = which screen you are on for multi-screen setup
-        -- in this case just put some things in s == 1, and some in s == 2, etc
-        -- (my setup only has one screen so only this one matters)
-        if s.index == 1 then
-            require("crylia_bar.left_bar")(s, { s.layoutlist, s.systray, s.taglist })
-            require("crylia_bar.center_bar")(s, { s.tasklist })
-            require("crylia_bar.right_bar")(
-                s,
-                { s.battery, s.network, s.cpu_usage, s.bluetooth, s.audio, s.date, s.clock, s.powerbutton }
-            )
-            -- require("crylia_bar.dock")(s, user_vars.dock_programs)
-        end
-
-        -- if s.index == 2 then
-        --
-        --     require("crylia_bar.left_bar")(s, { s.layoutlist, s.taglist })
-        --     require("crylia_bar.center_bar")(s, { s.tasklist })
-        --     require("crylia_bar.right_bar")(
-        --         s,
-        --         { s.ram_info, s.audio, s.kblayout, s.network, s.date, s.clock, s.powerbutton }
-        --     )
-        -- end
-    end
+		-- if s.index == 2 then
+		--
+		--     require("crylia_bar.left_bar")(s, { s.layoutlist, s.taglist })
+		--     require("crylia_bar.center_bar")(s, { s.tasklist })
+		--     require("crylia_bar.right_bar")(
+		--         s,
+		--         { s.ram_info, s.audio, s.kblayout, s.network, s.date, s.clock, s.powerbutton }
+		--     )
+		-- end
+	end
 )

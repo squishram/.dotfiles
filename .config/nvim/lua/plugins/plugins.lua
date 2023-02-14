@@ -5,14 +5,6 @@ end
 
 return {
 
-  -- -- easier focus
-  -- {
-  --   "Pocco81/true-zen.nvim",
-  --   -- keys = { "<leader>we", "<cmd>lua require('true-zen').ataraxis", mode = "n" },
-  --   keys = { "<leader>we", "<cmd>lua require('true-zen').ataraxis", mode = "n" },
-  --   config = true,
-  -- },
-
   -- -- required for bettter folding
   -- { "kevinhwang91/promise-async" },
 

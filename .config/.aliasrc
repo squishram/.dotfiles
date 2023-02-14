@@ -34,6 +34,8 @@ alias rr="env TERM=xterm-kitty ranger"
 # starting daemons:
 # spotifyd
 alias spot="systemctl --user stop spotifyd && systemctl --user start spotifyd"
+# make lf run with image and document previewers
+alias lf="lfrun"
 
 ##############
 # CORE UTILS #
@@ -165,8 +167,14 @@ alias swal="feh --bg-fill --randomize ~/.config/wallpapers/*"
 alias batt="upower -i /org/freedesktop/UPower/devices/battery_BAT0 | rg 'state|to full|percentage'"
 # check CPU temp
 alias temp="sensors | grep CPU"
-# open the wifi menu
-alias wifi="nm-applet"
+# list available wifi networks
+alias wifi="nmcli device wifi list"
+# connect to a wifi network
+wificonn(){
+  arg1=$1
+  arg2=$2
+  nmcli device wifi connect $arg1 password $arg2
+}
 
 ##################
 # ALIAS LIST END #
@@ -187,7 +195,7 @@ fi
 # what runs at every new terminal?
 # alias neofetch='/usr/bin/neofetch --ascii /home/ishan/neorg/todo.norg'
 # alias neofetch="fortune|cowsay -f tux|lolcat"
-alias neofetch="bat ~/neorg/idle.norg"
+# alias neofetch="bat ~/documents/notes/idle.norg"
 # alias neofetch='/usr/bin/neofetch --ascii "fortune|cowsay -f tux|lolcat"'
 #
 # kitty shortcuts

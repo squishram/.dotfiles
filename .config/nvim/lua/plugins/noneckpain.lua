@@ -1,5 +1,6 @@
 return {
   "shortcuts/no-neck-pain.nvim",
+  keys = { "<leader>np", ":NoNeckPain<CR>", mode = "n" },
   opts = {
     buffers = {
       scratchPad = {
@@ -7,10 +8,10 @@ return {
         enabled = true,
         -- set to `nil` to default to current working directory
         -- or a string to set a directory
-        location = nil,
+        location = "./notes",
       },
       bo = {
-        filetype = "md",
+        filetype = "norg",
       },
     },
   },

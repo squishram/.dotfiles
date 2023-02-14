@@ -1,7 +1,6 @@
 --------------------------------
 -- This is the battery widget --
 --------------------------------
-
 -- Awesome Libs
 local awful = require("awful")
 local color = require("src.theme.colors")
@@ -67,23 +66,19 @@ return function()
 		margins = dpi(10),
 	})
 
-	-- time to empty
 	local get_battery_info = function()
 		awful.spawn.easy_async_with_shell([[ upower -i $(upower -e | grep BAT) | grep "time to " ]], function(stdout)
 			if stdout == nil or stdout == "" then
 				battery_tooltip:set_text("No Battery Found")
 				return
 			end
-
 			local rem_time = ""
 			if stdout:match("hour") then
 				rem_time = "Hours"
 			else
 				rem_time = "Minutes"
 			end
-
 			local bat_time = stdout:match("%d+,%d") or stdout:match("%d+.%d") or ""
-
 			if stdout:match("empty") then
 				battery_tooltip:set_text("Remaining battery time: " .. bat_time .. " " .. rem_time)
 			elseif stdout:match("time to full") then
@@ -96,7 +91,6 @@ return function()
 	local last_battery_check = os.time()
 	local notify_critical_battery = true
 
-	-- send an alert if the battery is empty
 	local battery_warning = function()
 		naughty.notification({
 			icon = gears.color.recolor_image(icondir .. "battery-alert.svg", color["White"]),
@@ -107,9 +101,8 @@ return function()
 		})
 	end
 
-	-- check the battery level
 	local update_battery = function(status)
-		awful.spawn.easy_async_with_shell([[sh -c "upower -i $(upower -e | grep BAT) | grep percentage | awk '{print \$2}' |tr -d '\n%'"]], function(stdout)
+		awful.spawn.easy_async_with_shell([[acpi -b | awk '{ print $4 }' | tr -d ',' | tr -d '%']], function(stdout)
 			local battery_percentage = tonumber(stdout)
 
 			if not battery_percentage then
@@ -122,7 +115,6 @@ return function()
 
 			local icon = "battery"
 
-			-- set the icon if the battery is fully charged & plugged in
 			if status == "fully-charged" or status == "charging" and battery_percentage == 100 then
 				icon = icon .. "-" .. "charging"
 				battery_widget.container.battery_layout.icon_margin.icon_layout.icon:set_image(
@@ -131,7 +123,6 @@ return function()
 				return
 			end
 
-			-- set the icon if the battery is nearly empty & not plugged in
 			if battery_percentage > 0 and battery_percentage < 10 and status == "discharging" then
 				icon = icon .. "-" .. "alert"
 				if os.difftime(os.time(), last_battery_check) > 300 or notify_critical_battery then
@@ -145,8 +136,6 @@ return function()
 				return
 			end
 
-			-- set the battery icon depending on the current charge level
-			-- and whether it is charging or discharging ("status", presumably)
 			if battery_percentage > 0 and battery_percentage < 10 then
 				icon = icon .. "-" .. status .. "-" .. "outline"
 			elseif battery_percentage >= 10 and battery_percentage < 20 then

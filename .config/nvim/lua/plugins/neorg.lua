@@ -1,17 +1,22 @@
 return {
-  -- neorg
   "nvim-neorg/neorg",
-
+  build = ":Neorg sync-parsers",
   ft = "norg",
+  keys = {
+    { "<leader>no", ":Neorg workspace notes<CR>", mode = "n" },
+  },
   opts = {
     load = {
       ["core.defaults"] = {},
-      ["core.norg.dirman"] = {},
-      ["core.norg.completion"] = {},
       ["core.norg.concealer"] = {},
-      ["core.norg.journal"] = {},
-      ["core.norg.qol.toc"] = {},
-      ["core.presenter"] = {},
+      ["core.norg.dirman"] = {
+        config = {
+          workspaces = {
+            notes = "~/documents/notes/",
+          },
+        },
+      },
     },
   },
+  dependencies = { { "nvim-lua/plenary.nvim" } },
 }

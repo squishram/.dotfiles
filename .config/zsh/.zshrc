@@ -1,8 +1,3 @@
-# Rust
-export PATH="~/.cargo/bin:$PATH"
-# Julia
-export PATH="$PATH:/home/sammy/julia-1.8.1/bin"
-
 # enable colours fgs
 autoload -U colors
 colors
@@ -53,11 +48,6 @@ bindkey '^e' edit-command-line
 # bind to up arrow and down arrow
 bindkey '^[[A' up-line-or-search
 bindkey '^[[B' down-line-or-search
-
-# "compile slow, run fast."
-export CFLAGS="-Ofast -march=native -pipe -flto -fuse-linker-plugin"
-export CXXFLAGS=${CFLAGS}
-export LDFLAGS=${CFLAGS}
 
 # aliases!
 source ~/.config/.aliasrc

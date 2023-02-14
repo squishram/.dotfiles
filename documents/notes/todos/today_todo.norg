@@ -1,0 +1,31 @@
+@document.meta
+title: today_todo
+description:
+authors: ishan
+categories:
+created: 2022-07-05
+version: 0.0.11
+@end
+
+* WORK
+  - [ ] buy a pump
+  - [-] contact Jeremy about the piping in our room
+  - [ ] call up the french language exam place
+  - [ ] make the recipe book
+  - [ ] book trip to france 
+  - [ ] buy ma n da xmas presents & bday presents
+  - [ ] get protonmail bridge and neomutt going
+  - [x] backup data & install EndeavourOS on laptop
+
+* EXTRA
+  - [ ] autism diagnosis
+  - [ ] rust practice
+
+* TO BUY
+  - [ ] piano
+  - [ ] harness for climbing
+  - [ ] suit (informal)
+  - [ ] 'proper' shoes (padror? expensive)
+  - [ ] muay thai boxing gloves
+  - [ ] climbing chalk
+  - [ ] jabra elite 7 active
