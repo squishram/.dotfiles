@@ -3,103 +3,103 @@ return {
 
   {
     "rebelot/kanagawa.nvim",
-    lazy = true,
+    lazy = false,
     name = "kanagawa",
   },
 
   {
     "rafamadriz/neon",
-    lazy = true,
+    lazy = false,
     name = "neon",
   },
 
   {
-    "sainnhe/everforest",
-    lazy = true,
+    "neanias/everforest-nvim",
+    lazy = false,
     name = "everforest",
   },
 
   {
     "sainnhe/edge",
-    lazy = true,
+    lazy = false,
     name = "edge",
   },
 
   {
     "sainnhe/sonokai",
-    lazy = true,
+    lazy = false,
     name = "sonokai",
   },
 
   {
     "EdenEast/nightfox.nvim",
-    lazy = true,
+    lazy = false,
     name = "nightfox",
   },
 
   {
     "marko-cerovac/material.nvim",
-    lazy = true,
+    lazy = false,
     name = "material",
   },
 
   {
     "folke/tokyonight.nvim",
-    lazy = true,
+    lazy = false,
     name = "tokyonight",
   },
 
   {
     "glepnir/zephyr-nvim",
-    lazy = true,
+    lazy = false,
     name = "zephyr",
   },
 
   {
     "theniceboy/nvim-deus",
-    lazy = true,
+    lazy = false,
     name = "deus",
   },
 
   {
     "Th3Whit3Wolf/one-nvim",
-    lazy = true,
+    lazy = false,
     name = "one",
   },
 
   {
     "andersevenrud/nordic.nvim",
-    lazy = true,
+    lazy = false,
     name = "nordic",
   },
 
   {
     "NTBBloodbath/doom-one.nvim",
-    lazy = true,
+    lazy = false,
     name = "doomone",
   },
 
   {
     "cpea2506/one_monokai.nvim",
-    lazy = true,
+    lazy = false,
     name = "monokai",
   },
 
   {
     "sam4llis/nvim-tundra",
-    lazy = true,
+    lazy = false,
     name = "tundra",
   },
 
   {
     "catppuccin/nvim",
-    lazy = true,
+    lazy = false,
     name = "catppuccin",
   },
 
   {
     "ellisonleao/gruvbox.nvim",
-    lazy = true,
+    lazy = false,
     name = "gruvbox",
   },
 
@@ -107,7 +107,7 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "gruvbox",
+      colorscheme = "everforest",
     },
   },
 }

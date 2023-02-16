@@ -74,6 +74,8 @@ local options = {
   spelllang = "en_gb",
   -- default shell used by toggleterm etc.
   shell = "/bin/zsh",
+  -- set font to be terminal font
+  guifont = "",
 }
 
 for k, v in pairs(options) do
