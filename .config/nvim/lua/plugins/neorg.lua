@@ -3,7 +3,9 @@ return {
   build = ":Neorg sync-parsers",
   ft = "norg",
   keys = {
-    { "<leader>no", ":Neorg workspace notes<CR>", mode = "n" },
+    { "<leader>no", ":Neorg workspace notes<CR>", mode = "n", desc = "open notes index file" },
+    { "<leader>nr", ":Neorg return<CR>", mode = "n", desc = "closes all open norg buffers" },
+    { "<leader>ni", ":Neorg index<CR>", mode = "n", desc = "open the index for the current Neorg workspace" },
   },
   opts = {
     load = {
@@ -14,6 +16,7 @@ return {
           workspaces = {
             notes = "~/documents/notes/",
           },
+          default_workspace = "notes",
         },
       },
     },

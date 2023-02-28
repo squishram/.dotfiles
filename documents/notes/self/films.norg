@@ -2,12 +2,12 @@
 title: films_2022
 description:
 authors: archan
-categories:
+categories: lists
 created: 2022-08-09
 version: 0.0.11
 @end
 
-* FILMS 2021 - 2022
+* FILMS
   - [ ] American Honey
   - [ ] American Utopia
   - [ ] Angel's Share
@@ -29,7 +29,9 @@ version: 0.0.11
   - [ ] Goodfellas
   - [ ] Gremlins
   - [ ] Harold and Moord
-  - [ ] Holy Motors
+  - [x] Holy Motors
+  - [x] Puss in Boots: The Last Wish
+  - [x] The Hunt
   - [ ] I'm No Longer Here
   - [ ] Jesus Christ Vampire Hunter
   - [ ] La Dolce Vita

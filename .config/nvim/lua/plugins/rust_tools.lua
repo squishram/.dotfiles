@@ -1,7 +1,19 @@
 return {
   "simrat39/rust-tools.nvim",
+  ft = { ".rs", "rust" },
+
   keys = {
-    { "<leader>rh", "rt.hover_actions.hover_actions", mode = "n", desc = "rust hover" },
-    { "<leader>ra", "rt.code_action_group.code_action_group", mode = "n", desc = "rust code actions" },
+    {
+      "<leader>rh",
+      "<cmd> lua require('rust-tools').hover_actions.hover_actions<cr>",
+      mode = "n",
+      desc = "rust hover",
+    },
+    {
+      "<leader>ra",
+      "<cmd> lua require('rust-tools').code_action_group.code_action_group<cr>",
+      mode = "n",
+      desc = "rust code actions",
+    },
   },
 }

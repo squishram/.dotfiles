@@ -1,4 +1,6 @@
 local options = {
+  autoindent = true,
+  smartindent = true,
   -- creates a backup file
   backup = false,
   -- allows neovim to access the system clipboard
@@ -26,8 +28,6 @@ local options = {
   showmode = false,
   -- always show tabs
   showtabline = 2,
-  -- make indenting smarter again
-  smartindent = true,
   -- force all horizontal splits to go below current window
   splitbelow = true,
   -- force all vertical splits to go to the right of current window

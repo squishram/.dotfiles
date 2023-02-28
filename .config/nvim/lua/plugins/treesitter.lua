@@ -15,7 +15,7 @@ return {
       enable = true,
     },
 
-    indent = { enable = true, disable = { "yaml" } },
+    indent = { enable = true, disable = { "yaml", "python" } },
     context_commentstring = {
       enable = true,
       enable_autocmd = false,

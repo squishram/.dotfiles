@@ -1,0 +1,53 @@
+@document.meta
+title: books
+  description:
+  authors: ishan
+  categories:
+  created: 2022-01-14
+  version: 0.0.9
+@end
+
+* links to years
+  {# 2023}
+  {# 2022}
+
+* 2023
+** FICTION
+   - (x) Siddhartha - Hermann Hesse
+   - (-) Remains of the Day - Kazuo Ishiguro
+   - (-) Age is a Feeling - 
+   - ( ) Half of a Yellow Sun - Chimamanda Ngoze Adiche
+   - ( ) Dead Souls - Nikolai Gogol
+   - ( ) Minor Detail - Adania Shibli
+   - ( ) Native - Akala
+** NON-FICTION
+   - ( ) Feminist City - Leslie Kern
+   - ( ) Estates - Lunsey Hanley
+
+* 2022
+** FICTION
+   - (x) 08.0 - Artist of the Floating World - Kazuo Ishiguro
+   - (x) 07.5 - Viper's Daughter - Michelle Paver
+   - (x) 07.5 - Skin Taker - Michelle Paver
+   - (x) 09.0 - Never Let Me Go - Kazuo Ishiguro
+   - (x) 07.5 - Your Fathers, Where are They? And the Prophets, do They Live Forever? - Dave Eggers
+   - (x) 09.0 - The Story of a New Name - Elena Ferrante
+   - (x) 09.5 - Those Who Leave and Those Who Stay - Elena Ferrante
+   - (x) 08.5 - Butter Honey Pig Bread - Francesca Ekwuyasi
+   - (x) 09.5 - Berlin - Jason Lutes
+   - (x) 09.0 - The Story of The Lost Child - Elena Ferrante
+   - (x) 08.0 - The Master and Margharita - Bulgakov
+   - (x) 09.0 - Build Your House Around My Body - Violet Kupersmith
+   - (x) 08.5 - Lincoln in the Bardo - George Saunders
+   - (x) 09.0 - A Pale View of Hills - Kazuo Ishiguro
+   - (x) 08.5 - Paradais - Fernanda Melchor
+   - (x) 10.0 - Morvern Callar - Alan Warnar
+   - (x) 08.5 - Calamity - Harry Alston
+   - (x) 09.0 - The Discomfort of Evening - Marieke Lucas Rijneveld
+
+** NON-FICTION
+   - (x) 08.0 - Lovingkindness - Sharon Salzberg
+   - (x) 09.0 - The Secret to Superhuman Strength - Allison Bechdel
+   - (x) 09.5 - The Argonauts - Maggie Nelson
+   - (x) 08.0 - Notes on Suicide - Simon Critchley
+

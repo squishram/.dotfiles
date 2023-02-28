@@ -167,24 +167,46 @@ alias swal="feh --bg-fill --randomize ~/.config/wallpapers/*"
 alias batt="upower -i /org/freedesktop/UPower/devices/battery_BAT0 | rg 'state|to full|percentage'"
 # check CPU temp
 alias temp="sensors | grep CPU"
+
+# WIFI
 # list available wifi networks
 alias wifi="nmcli device wifi list"
-# connect to a wifi network
+# connect to a wifi network with a password
 wificonn(){
   arg1=$1
   arg2=$2
   nmcli device wifi connect $arg1 password $arg2
 }
+# connect to a wifi network without a password
+wificonnpub(){
+    arg1=$1
+    nmcli device wifi connect $arg1
+  }
 
-##################
-# ALIAS LIST END #
-##################
+# look search for available timezone by continent or city
+tzfd(){
+  arg1=$1
+  timedatectl list-timezones | rg $arg1
+}
+
+# change to a given timezone in the format Zone/SubZone (usually Continent/City)
+tzch(){
+  arg1=$1
+  arg2=$2
+  sudo timedatectl set-timezone $arg1/$arg2
+}
+
+# EMAIL
+# alias to put mbsync config file in .config
+alias mbsync="mbsync -c \"/home/squish/.config/isync/mbsyncrc\""
+# alias mbsync="mbsync -c \"$XDG_CONFIG_HOME/isync/mbsyncrc\""
 
 fr() {
   # Replace all instances of $1 with $2 recursively in the current directory
   rg -l "$1" | xargs sed -i "s/$1/$2/g"
 }
 
+# Arch-specific (non-ubuntu) aliases only go here
 if [[ $(uname -rv) == *"arch"* ]]; then
     alias vim="nvim"
     alias vi="nvim"

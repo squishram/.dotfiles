@@ -1,0 +1,19 @@
+* remove these if install fails:
+
+** packages
+   - (_) offlineimap
+   - (=) mutt-wizard
+   - (=) msmtp - email sender
+   - ( ) abook - for saving addresses
+   - ( ) notmuch - for email indexing and searching
+   - ( ) urlview - for urls
+   - ( ) w3m - text-based web browser
+   - ( ) davmail - for exchange
+   - ( ) imapfilter - for email filtering
+   - (x) neomutt - for browsing emails
+   - (x) mbsync/ isync - for reading mail offline
+
+** files & directories
+   - ~/.config/mutt/
+   - ~/.config/mbsync/
+
