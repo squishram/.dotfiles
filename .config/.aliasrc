@@ -116,7 +116,9 @@ alias cpuinfo="lscpu"
 alias gpumeminfo="grep -i --color memory /var/log/Xorg.0.log"
 # activate your virtual environment
 # provided there is a venv_activate.sh executable in the project directory
+alias cenv="conda create -n cenv"
 alias ve="source venv/bin/activate"
+alias ce="conda activate cenv"
 # What's yer network speed?
 alias speed="speedtest-cli --server 6513 --simple"
 
