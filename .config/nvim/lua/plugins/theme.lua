@@ -2,18 +2,6 @@
 return {
 
   {
-    "rebelot/kanagawa.nvim",
-    lazy = false,
-    name = "kanagawa",
-  },
-
-  {
-    "rafamadriz/neon",
-    lazy = false,
-    name = "neon",
-  },
-
-  {
     "neanias/everforest-nvim",
     lazy = false,
     name = "everforest",
@@ -32,69 +20,15 @@ return {
   },
 
   {
-    "EdenEast/nightfox.nvim",
-    lazy = false,
-    name = "nightfox",
-  },
-
-  {
-    "marko-cerovac/material.nvim",
-    lazy = false,
-    name = "material",
-  },
-
-  {
-    "folke/tokyonight.nvim",
-    lazy = false,
-    name = "tokyonight",
-  },
-
-  {
-    "glepnir/zephyr-nvim",
-    lazy = false,
-    name = "zephyr",
-  },
-
-  {
-    "theniceboy/nvim-deus",
-    lazy = false,
-    name = "deus",
-  },
-
-  {
     "Th3Whit3Wolf/one-nvim",
     lazy = false,
     name = "one",
   },
 
   {
-    "andersevenrud/nordic.nvim",
-    lazy = false,
-    name = "nordic",
-  },
-
-  {
-    "NTBBloodbath/doom-one.nvim",
-    lazy = false,
-    name = "doomone",
-  },
-
-  {
     "cpea2506/one_monokai.nvim",
     lazy = false,
     name = "monokai",
-  },
-
-  {
-    "sam4llis/nvim-tundra",
-    lazy = false,
-    name = "tundra",
-  },
-
-  {
-    "catppuccin/nvim",
-    lazy = false,
-    name = "catppuccin",
   },
 
   {
@@ -122,7 +56,7 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "bluloco",
+      colorscheme = "one_monokai",
     },
   },
 }
