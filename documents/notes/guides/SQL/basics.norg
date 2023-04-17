@@ -1,0 +1,17 @@
+@document.meta
+title: basics
+description: 
+authors: squish
+categories: 
+created: 2023-03-25
+updated: 2023-03-25
+version: 1.0.0
+@end
+
+Structured Query Language
+
+* two types of SQL
+  ~ Data Manipulation Language (DML)
+  -- manipulate the data in the tables with *select*, *insert*, *update*, *delete*
+  ~ Data Definition Language (DDL)
+  -- create objects in the datastore, like *tables* and *databases*

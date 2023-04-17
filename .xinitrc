@@ -45,9 +45,5 @@ setxkbmap -layout gb -option ctrl:nocaps
 unclutter --jitter 10 --ignore-scrolling --sart-hidden --fork
 # cleaner graphics using compositer
 picom &
-# start with random images in each workspace from .wallpapers folder
-# feh --bg-fill --randomize ~/.config/wallpapers/pixelart/ &
 # start awesome window manager
 exec awesome
-# start qtile window manager
-# qtile start

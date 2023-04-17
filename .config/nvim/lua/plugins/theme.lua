@@ -8,24 +8,6 @@ return {
   },
 
   {
-    "sainnhe/edge",
-    lazy = false,
-    name = "edge",
-  },
-
-  {
-    "sainnhe/sonokai",
-    lazy = false,
-    name = "sonokai",
-  },
-
-  {
-    "Th3Whit3Wolf/one-nvim",
-    lazy = false,
-    name = "one",
-  },
-
-  {
     "cpea2506/one_monokai.nvim",
     lazy = false,
     name = "monokai",
@@ -38,18 +20,27 @@ return {
   },
 
   {
-    "uloco/bluloco.nvim",
+    "olimorris/onedarkpro.nvim",
     lazy = false,
     priority = 1000,
-    dependencies = { "rktjmp/lush.nvim" },
+    name = "onedarkpro",
     opts = {
-      style = "dark", -- "auto" | "dark" | "light"
-      transparent = false,
-      italics = true,
-      terminal = vim.fn.has("gui_running") == 1, -- bluoco colors are enabled in gui terminals per default.
-      guicursor = true,
+      styles = {
+        types = "NONE",
+        methods = "NONE",
+        numbers = "NONE",
+        strings = "NONE",
+        comments = "italic",
+        keywords = "bold,italic",
+        constants = "NONE",
+        functions = "italic",
+        operators = "NONE",
+        variables = "NONE",
+        parameters = "NONE",
+        conditionals = "italic",
+        virtual_text = "NONE",
+      },
     },
-    name = "bluloco",
   },
 
   -- This is where you configure the colourscheme
@@ -57,6 +48,9 @@ return {
     "LazyVim/LazyVim",
     opts = {
       colorscheme = "one_monokai",
+      -- colorscheme = function()
+      --   require("one_monokai").load()
+      -- end,
     },
   },
 }

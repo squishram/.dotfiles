@@ -8,15 +8,17 @@ version: 0.0.11
 @end
 
 * IMPORTANT, URGENT
-  - (!) stuff to do with Sophie!!
+  - ( ) book the dentist
+  - (x) study for my driving theory exam
   - ( ) call up the french language exam place
-  - ( ) find somewhere to live
-  - ( ) sort out the flat stuff
-  -- ( ) ask the flooring place in crouch end for a quote
-  -- ( ) look for a toilet
-  -- ( ) look for a sink unit with cupboard (not MDF)
-  -- (-) contact Jeremy about the piping in our room
-  -- ( ) buy a pump
+** ( ) sort out the flat stuff
+   - ( ) ask the flooring place in crouch end for a quote
+   - ( ) look for a toilet
+   - ( ) look for a sink unit with cupboard (not MDF)
+   - (x) contact Jeremy about the piping in our room
+   - (-) get a plumber in and buy a pump
+   - (x) clean the carpets
+   - (x) fix the lights
 
 * NOT IMPORTANT, URGENT
   - ( ) make the recipe book
@@ -24,6 +26,10 @@ version: 0.0.11
 * IMPORTANT, NOT URGENT
   - ( ) autism diagnosis
   - (-) career plans/ find a job
+  - ( ) find somewhere to live
+** ( ) update linkedin
+   - ( ) include thesis & dissertation
+   - ( ) add a description of PhD
 
 * NOT IMPORTANT, NOT URGENT
   - (-) rust practice

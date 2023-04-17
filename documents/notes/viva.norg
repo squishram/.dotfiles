@@ -1,0 +1,49 @@
+@document.meta
+title: viva
+description: 
+authors: squish
+categories: 
+created: 2023-03-17
+updated: 2023-03-19
+version: 1.0.0
+@end
+
+* Susan's version of AFFIRM3D
+** Questions:
+   - they will probably ask me about implementation -- any guesses at what they might ask me wrt this?
+   - noise
+   - in the LossComputer() class, why did you multiply the highpass fourier loss by itself, twice?
+   - in the figure, why is there a weird noise pattern
+   - did you not apply a sampling window in the end? no
+   - why are we taking the square root of the reconstruction? because the original import is squared to make them positive
+   - the learning rate is 0.1, which is quite high -- was there a reason for this, or just trial and error?
+   - what is the `save_thresholded_as_ply()` function?? you said it's a hack, how does it manage the background? The plotstuff() function seems to include this too, what is it?
+** How it works differently (step by step):
+   - it has a preliminary optimisation step?
+   - it optimises the image directly, without using a discriminator?
+
+
+* Sian Fake Viva
+** Broadly
+   - future work
+   - prepare a powerpoint with all the figures for easy access, especially videos!
+** Chapter 1 (Introduction)
+   - Equation 1.4 -- parameters
+   - Particle tracking with GANs -- how does it work? What components are needed?
+** Chapter 2 (HAWKMAN)
+   - Make sure you have cluster analysis knowledge: check Dylan's newest paper on cluster analysis
+   - Figure 2.9 Make sure you have cluster analysis knowledge: check Dylan's newest paper on cluster analysis
+** Chapter 4 (AFFIRM3D)
+   - go through and look for things that are missing 
+   -- make a diagram for the new architecture
+
+* To Do list:
+  ~ go through every metnion of HAWK and make sure you can explain how it works in full mathematical detail
+  ~ chapter 4: check each figure and make sure you can explain what's happening in them
+  ~ Go through Susan's code and make sure you understand what is happening
+  ~ other chapters: check each figure and make sure you can explain what's happening in them
+  ~ double-check the references, particularly in _Chapter 4_
+  ~ check Dylan Owen's work and make a wee shortlist of stuff he might ask
+  ~ check Virginie Uhlmann's work and make a wee shortlist of stuff she might ask
+  ~ prepare a powerpoint with the figures
+

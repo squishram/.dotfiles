@@ -46,10 +46,10 @@ alias lf="lfrun"
 alias fde="fd --extension"
 
 # directory contents in Rust
-alias ls="exa -al --color=always --group-directories-first"
-alias sl="exa -a --color=always --group-directories-first"
-alias ll="exa -l --color=always --group-directories-first"
-alias lt="exa -aT --color=always --group-directories-first"
+alias ls="exa -a --color=always --group-directories-first"
+alias sl="exa -a --oneline --color=always --group-directories-first"
+alias ll="exa -la --header --icons --git --color=always --group-directories-first"
+alias lt="exa -laT --level=3 --header --color=always --group-directories-first"
 alias ld="exa -lad */ --color=always"
 
 # colorisation
@@ -57,20 +57,16 @@ alias dir="dir --color=auto"
 alias vdir="vdir --color=auto"
 
 # 'go tos'
-alias cod="cd / && cd /mnt/linux_data/code"
-alias hdd="cd / && cd /mnt/linux_data"
-alias ssd="cd ~"
-alias cd..="cd .."
 alias ..="cd .."
 alias ...="cd ../../"
 alias ....="cd ../../../"
-alias .....="cd ../../../"
+alias .....="cd ../../../../"
 alias .2="cd ../../"
 alias .3="cd ../../../"
 alias .4="cd ../../../../"
 alias .5="cd ../../../../.."
 
-# git stuff
+# git
 alias lg="lazygit"
 
 # clear the terminal with c
@@ -170,6 +166,8 @@ alias swal="feh --bg-fill --randomize ~/.config/wallpapers/*"
 alias batt="upower -i /org/freedesktop/UPower/devices/battery_BAT0 | rg 'state|to full|percentage'"
 # check CPU temp
 alias temp="sensors | grep CPU"
+# activate nightlight
+alias nightlight="redshift -l 51.509865:-0.118092"
 
 # WIFI
 # list available wifi networks
@@ -186,6 +184,19 @@ wificonnpub(){
     nmcli device wifi connect $arg1
   }
 
+# wificonn() {
+#   arg1=$1
+#   # connect to a wifi network without a password
+#   if [ -z "$2" ]; then
+#     nmcli device wifi connect $arg1
+#   # connect to a wifi network without a password
+#   else
+#     $arg2=$2
+#     nmcli device wifi connect $arg1 password $arg2
+#   fi
+#   # rest of the function code that uses my_optional_arg
+# }
+
 # look search for available timezone by continent or city
 tzfd(){
   arg1=$1
@@ -197,6 +208,12 @@ tzch(){
   arg1=$1
   arg2=$2
   sudo timedatectl set-timezone $arg1/$arg2
+}
+
+# convert docx to markdown
+docx2md(){
+  arg1=$1
+  pandoc -s $arg1.docx --wrap=none --reference-links -t markdown -o $arg1.md
 }
 
 # EMAIL
