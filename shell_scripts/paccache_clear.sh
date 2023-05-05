@@ -6,7 +6,7 @@
 # https://gist.github.com/luukvbaal/2c697b5e068471ee989bff8a56507142
 
 # The location of the cache for your aur helper
-AUR_CACHE_DIR=/home/archan/.cache/yay
+AUR_CACHE_DIR=/home/squish/.cache/yay
 
 # Get all cache directories for AUR helper
 AUR_CACHE_REMOVED="$(find "$AUR_CACHE_DIR" -maxdepth 1 -type d | awk '{ print "-c " $1 }' | tail -n +2)"

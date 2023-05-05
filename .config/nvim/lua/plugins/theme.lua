@@ -48,9 +48,6 @@ return {
     "LazyVim/LazyVim",
     opts = {
       colorscheme = "one_monokai",
-      -- colorscheme = function()
-      --   require("one_monokai").load()
-      -- end,
     },
   },
 }

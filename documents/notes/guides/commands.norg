@@ -1,0 +1,17 @@
+@document.meta
+title: commands
+description: 
+authors: squish
+categories: 
+created: 2023-04-29
+updated: 2023-05-02
+version: 1.1.1
+@end
+
+
+* Downloaded
+  - eva -- calculator -- eva to open REPL or eva "expression to evaluate"
+  - tv -- csv viewer -- tv filename.csv
+  - rg -- better grep -- rg PATTERN
+  - fd -- better find -- fd PATTERN or fd -a PATTERN (to include hidden files)
+  - 

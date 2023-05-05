@@ -1,3 +1,15 @@
+# This config utilises several plugins:
+# zoxide
+# starship
+# zsh-history-substring-search
+# zsh-autosuggestions
+# zsh-syntax-highlighting
+# neofetch
+
+######################
+# OPTIONS / SETTINGS #
+######################
+
 # enable colours fgs
 autoload -U colors
 colors
@@ -7,47 +19,42 @@ HISTSIZE=1000
 SAVEHIST=1000
 HISTFILE=~/.cache/zsh/history
 
-# stop highlighting pasted text
-zle_highlight+=(paste:none)
 # tab complete
 autoload -U compinit
 zstyle ':completion:*' menu select
 zmodload zsh/complist
 compinit
-# tabcomplete hidden/dot files
+# tabcomplete includes hidden/dot files
 _comp_options+=(globdots)
 
 # append to the history list, don't replace old entries!
-setopt appendhistory
-# allows for advanced pattern matching
-setopt extendedglob
+# advanced pattern matching
+setopt appendhistory extendedglob
 # don't assume a precedent 'cd' if omitted
-unsetopt autocd
-# no beeping whose idea even was this
-unsetopt beep
-# don't tell me when there's no match - I'll figure it out somehow
-unsetopt nomatch
+# no beeping noise (whose idea even was this)
+# don't tell me when there's no match
 # don't notify me of background processes
-unsetopt notify
+unsetopt autocd beep nomatch notify
+# don't highlight pasted-in text
+zle_highlight=('paste:none')
 # disable ctrl-s to freeze terminal
 stty stop undef
-# don't highlight pasted in stuff
-zle_highlight=('paste:none')
+
+#################################
+# NEO(VIM) COMMAND LINE EDITING #
+#################################
 
 # use vim keybinds
 bindkey -v
 bindkey -M menuselect 'h' vi-backward-char
-bindkey -M menuselect 'k' vi-up-line-or-history
 bindkey -M menuselect 'l' vi-forward-char
-bindkey -M menuselect 'j' vi-down-line-or-history
 # use ctrl-e to edit command line in neovim
 autoload edit-command-line; zle -N edit-command-line
 bindkey '^e' edit-command-line
 
-# match current input to history items
-# bind to up arrow and down arrow
-bindkey '^[[A' up-line-or-search
-bindkey '^[[B' down-line-or-search
+################################
+# PLUGINS & OTHER CONFIG FILES #
+################################
 
 # aliases!
 source ~/.config/.aliasrc
@@ -55,8 +62,16 @@ source ~/.config/.aliasrc
 eval "$(starship init zsh)"
 # zoxide is a smart cd command
 eval "$(zoxide init zsh)"
-# status for every terminal
-neofetch
 # syntax highlighting plugin
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
+# suggest shell prompts based in first characters
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh 2>/dev/null
+# scroll back through command history after typing substring (and create associated keymaps)
+source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh 2>/dev/null
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
+bindkey -M vicmd 'k' history-substring-search-up
+bindkey -M vicmd 'j' history-substring-search-down
+
+# status for every terminal
+neofetch

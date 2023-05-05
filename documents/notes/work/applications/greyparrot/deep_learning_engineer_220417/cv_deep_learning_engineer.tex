@@ -1,0 +1,105 @@
+% ----------------------------------------------------------------------------------------
+% PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+% ----------------------------------------------------------------------------------------
+
+% Font sizes: 10, 11, or 12; paper sizes: a4paper, letterpaper, a5paper, legalpaper, executivepaper or landscape; font families: sans or roman
+\documentclass[11pt, a4paper, sans]{moderncv}
+
+% CV theme - options include: 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvstyle{casual}
+% CV color - options include: 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+\moderncvcolor{purple}
+
+% Reduce document margins
+% \usepackage[scale=0.6]{geometry}
+\usepackage[a4paper, total={410pt, 610pt}]{geometry}
+% Uncomment to change the width of the dates column
+% \setlength{\hintscolumnwidth}{3cm}
+% % For the 'classic'
+% \setlength{\makecvtitlenamewidth}{10cm}
+
+% ----------------------------------------------------------------------------------------
+% NAME AND CONTACT INFORMATION SECTION
+% ----------------------------------------------------------------------------------------
+
+\firstname{Ishan}
+\familyname{Costello}
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+% Print the CV title
+\makecvtitle
+
+%-----------------
+%   Contact Information
+%-----------------
+
+\section{contact information}
+
+\cvitem{\textbf{}email:}{icostello@pm.me \textit{} }
+\cvitem{\textbf{}Phone:}{+44(0)7999717524 \textit{} }
+
+% Changes the symbol used for lists
+\renewcommand{\listitemsymbol}{}
+% \renewcommand{\listitemsymbol}{~~~~}
+
+
+%----------------------------------------------------------------------------------------
+% EDUCATION SECTION
+%----------------------------------------------------------------------------------------
+
+\section{education}
+
+\cvitem{2018--present}
+{\textbf{PhD: Maximising effectiveness of 3D single-molecule localisation microscopy}}
+\cvlistitem{King's College London, London | \textit{underway}}
+% \cvlistdoubleitem{CGPA: 7.63}{Highest SGPA: 8.2}
+
+\cvitem{2017--18}{\textbf{MRes Molecular Biophysics} King's College London, London | \textit{Distinction}}
+
+\cvitem{2013--17}{\textbf{BSc Joint Honours Physics \& Philosophy} King's College London, London | \textit{2:1}}
+
+\cvitem{2015--16}{\textbf{Year Abroad} University of British Colombia, Vancouver | \textit{completed}}
+
+\cvitem{2001--2013}{\textbf{European Baccalaureate} European School of Brussels III}
+
+% --------------------------------------
+%   SKILLS
+% --------------------------------------
+
+
+\section{technical skills}
+
+\cvitem{programming languages}
+{\textbf{image analysis:} highly experienced with \underline{MATLAB} and \underline{Python} (including \underline{os}, \underline{matplotlib}, \underline{tifffile}, and \underline{NumPy} libraries) for image analysis including masking, thresholding, edge detection, convolution, histograms etc.}
+\cvlistitem{\textbf{machine learning:} experienced with using \underline{pytorch} and \underline{torchvision} libraries to write advanced discriminative and generative neural networks with deep learning \& convolutional architectures as part of my doctoral research project.}
+\cvlistitem{\textbf{markup:} high \underline{{\LaTeX}} competency for drafting various document formats including articles, r\'esum\'es, and my thesis; some competency in \underline{Markdown} for note-taking coupled with \underline{pandoc}.}
+\cvlistitem{\textbf{workflow:} touch typist adept with \underline{(neo)vim} in combination with terminal multiplexing in a customised shell in \underline{Linux}-based OS distributions; \textit{venv} virtual environment management in Python; work and document sharing/ project management with \underline{SSH} and \underline{GitHub}}
+\cvlistitem{\textbf{currently learning:} \underline{Julia} to future-proof my skillset in machine learning and data processing; \underline{Rust} to gain a deeper understanding of memory management and code performance optimisation.}
+
+\cvitem{languages}
+{\textbf{mothertongue} English}
+\cvlistitem{\textbf{fluent:} French}
+% \cvlistitem{\textbf{basic comprehension:} Dutch, German, Spanish}
+
+\section{relevant experience}
+
+\cvitem{2018--present}{\textbf{PhD Research Project:}
+  over the course of my PhD I used Python and ImageJ to conduct quantitative image analysis on large datasets of super-resolved single-molecule localisation microscopy images.
+  Additionally, I developed a type of hybrid super-resolution generative adversarial network for achieving resolution isometry in 3D microscope images using PyTorch and torchvision (GitHub link available on request).
+  This technology was designed to address the relatively poor axial resolution typical of these types of images, while avoiding classic GAN pitfalls such as structure hallucination.
+}
+
+\cvitem{2020--2021}{\textbf{TA: Introduction to Programming for Bioscientists}
+  my first experience of Python was being enlisted to teach it to undergraduate students as a teaching assistant.
+  This took place during the Covid-19 lockdown and we had to manage the various groups under our supervision on MS Teams.
+  My students did well on their exams, and multiple students who were initially unenthusiastic about coding came to enjoy it and continue to pursue it years later.
+}
+
+\cvitem{2017--2018}{\textbf{MRes Research Project:}
+  development of an algorithm for acquiring and aggregating sarcomeric doublet separation measurements in large datasets of myofibrils.
+  I collected large volumes of localisation microscopy images of different sarcomeric epitopes, and developed an image analysis pipeline in MATLAB to aggregate data about the doublet separation, allowing for a high-throughput, high-resolution and information-rich analysis of myofibrillar structures.
+}
+
+\end{document}

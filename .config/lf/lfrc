@@ -121,7 +121,6 @@ map md mkdir
 map bg setwallpaper
 map C clear
 map br bulk-rename
-
 map dd trash
 map dr restore_trash
 

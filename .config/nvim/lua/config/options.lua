@@ -1,5 +1,7 @@
 local options = {
+  -- auto-indent when you make a new line
   autoindent = true,
+  -- indent according to syntactic context
   smartindent = true,
   -- creates a backup file
   backup = false,
@@ -65,7 +67,7 @@ local options = {
   -- cursor never <8 from bottom/top
   scrolloff = 8,
   -- sidescrolloff = 8,
-  -- don't redraw macros (improves performance)
+  -- don't redraw macros (improves performance, particularly for like @100q)
   lazyredraw = false,
   -- single status line if multiple splits open
   laststatus = 3,

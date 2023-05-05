@@ -45,9 +45,9 @@ alias lf="lfrun"
 # better find function in Rust
 alias fde="fd --extension"
 
-# directory contents in Rust
-alias ls="exa -a --color=always --group-directories-first"
-alias sl="exa -a --oneline --color=always --group-directories-first"
+# list directory contents in Rust
+alias ls="exa --color=always --group-directories-first"
+alias sl="exa -a --color=always --group-directories-first"
 alias ll="exa -la --header --icons --git --color=always --group-directories-first"
 alias lt="exa -laT --level=3 --header --color=always --group-directories-first"
 alias ld="exa -lad */ --color=always"
@@ -213,7 +213,7 @@ tzch(){
 # convert docx to markdown
 docx2md(){
   arg1=$1
-  pandoc -s $arg1.docx --wrap=none --reference-links -t markdown -o $arg1.md
+  pandoc -s $arg1 --wrap=none --reference-links -t markdown -o $arg1.md
 }
 
 # EMAIL
@@ -243,3 +243,8 @@ fi
 # kitty shortcuts
 alias ims="kitty +kitten icat"
 
+# for viewing csv files
+tv(){
+  arg1=$1
+  tidy-viewer $arg1
+}
