@@ -2,6 +2,12 @@
 return {
 
   {
+    "ribru17/bamboo.nvim",
+    lazy = false,
+    name = "bamboo",
+  },
+
+  {
     "neanias/everforest-nvim",
     lazy = false,
     name = "everforest",
@@ -43,7 +49,7 @@ return {
     },
   },
 
-  -- This is where you configure the colourscheme
+  -- This is where you enable the colourscheme
   {
     "LazyVim/LazyVim",
     opts = {

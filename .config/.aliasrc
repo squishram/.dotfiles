@@ -49,6 +49,7 @@ alias fde="fd --extension"
 alias ls="exa --color=always --group-directories-first"
 alias sl="exa -a --color=always --group-directories-first"
 alias ll="exa -la --header --icons --git --color=always --group-directories-first"
+alias la="exa -la --header --icons --git --color=always --group-directories-first"
 alias lt="exa -laT --level=3 --header --color=always --group-directories-first"
 alias ld="exa -lad */ --color=always"
 
@@ -148,7 +149,8 @@ alias texclean="rm *.aux *.bbl *.bcf *.blg *.fdb_latexmk *.fls *.lof *.log *.out
 alias gbkb="setxkbmap -layout gb -option ctrl:nocaps"
 
 # use vdirsyncer to sync khal calendar
-alias vdirsyncer="~/vdirsyncer_env/bin/vdirsyncer"
+# alias vdirsyncer="~/vdirsyncer_env/bin/vdirsyncer"
+alias ikhal="vdirsyncer sync;ikhal"
 
 # a stopwatch
 stopwatch() {
@@ -160,7 +162,11 @@ stopwatch() {
     done
 }
 
-alias swal="feh --bg-fill --randomize ~/.config/wallpapers/*"
+# alias swal="feh --bg-fill --randomize ~/.config/wallpapers/*"
+
+# connect to bluetooth devices
+alias headphones="bluetoothctl connect 38:18:4C:7D:6E:57"
+alias flatspeaker="bluetoothctl connect EC:81:93:5B:DD:29"
 
 # check the power
 alias batt="upower -i /org/freedesktop/UPower/devices/battery_BAT0 | rg 'state|to full|percentage'"
@@ -168,6 +174,8 @@ alias batt="upower -i /org/freedesktop/UPower/devices/battery_BAT0 | rg 'state|t
 alias temp="sensors | grep CPU"
 # activate nightlight
 alias nightlight="redshift -l 51.509865:-0.118092"
+
+alias bt="bluetoothctl"
 
 # WIFI
 # list available wifi networks

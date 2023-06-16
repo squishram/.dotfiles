@@ -41,10 +41,6 @@ cmd mkfile ${{
 
 cmd setwallpaper %cp "$f" ~/.config/wall.jpg && xwallpaper --zoom "$f"
 
-cmd trash ${{
-  trash-put "$f"
-}}
-
 cmd unarchive ${{
   case "$f" in
       *.zip) unzip "$f" ;;
@@ -110,7 +106,6 @@ map d
 map au unarchive
 map ae execute
 map . set hidden!
-map DD trash
 map p paste
 map x cut
 map y copy
@@ -121,8 +116,9 @@ map md mkdir
 map bg setwallpaper
 map C clear
 map br bulk-rename
-map dd trash
+map dd delete
 map dr restore_trash
+map V invert-below
 
 # Movement
 map gd cd ~/documents

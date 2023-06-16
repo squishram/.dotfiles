@@ -96,7 +96,7 @@ vim.keymap.set("n", "<leader><tab>d", "<cmd>tabclose<cr>", { desc = "Close" })
 vim.keymap.set("n", "<leader><tab>[", "<cmd>tabprevious<cr>", { desc = "Previous" })
 
 -- keep the cursor centred when pulling up a line
-vim.keymap.set("n", "J", "mzJ'z")
+vim.keymap.set("n", "J", "mzJ'z", { desc = "Pull up and append a line" } )
 -- remap : to ; so you don't need to hold shift
 vim.keymap.set("n", ";", ":")
 -- fix last spelling mistake
@@ -107,3 +107,9 @@ vim.keymap.set("t", "<C-h>", "<C-\\><C-N><C-w>h", { silent = true })
 vim.keymap.set("t", "<C-j>", "<C-\\><C-N><C-w>j", { silent = true })
 vim.keymap.set("t", "<C-k>", "<C-\\><C-N><C-w>k", { silent = true })
 vim.keymap.set("t", "<C-l>", "<C-\\><C-N><C-w>l", { silent = true })
+
+-- delete a word with <C-BS>
+vim.keymap.set("i", "<C-BS>", "<esc>cvb", { })
+
+-- don't move the cursor when yanking visual selection
+vim.keymap.set("v", "y", "ygv<esc>", { })

@@ -75,3 +75,6 @@ bindkey -M vicmd 'j' history-substring-search-down
 
 # status for every terminal
 neofetch
+
+# Created by `pipx` on 2023-06-09 10:56:40
+export PATH="$PATH:/home/squish/.local/bin"

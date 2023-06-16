@@ -21,3 +21,6 @@ export LDFLAGS=${CFLAGS}
 [ -f ~/.config/lf/lf_icons ] && {
 	export LF_ICONS="$HOME/.config/lf/lf_icons"
 }
+
+# Created by `pipx` on 2023-06-09 10:56:40
+export PATH="$PATH:/home/squish/.local/bin"
