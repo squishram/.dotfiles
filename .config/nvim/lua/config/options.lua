@@ -1,4 +1,7 @@
 local options = {
+
+  -- set blinking cursor
+  -- guicursor = "n-v-c-sm-i-ci-ve:block,r-cr-o:hor20,a:blinkwait700-blinkoff400-blinkon250-Cursor/lCursor.",
   -- auto-indent when you make a new line
   autoindent = true,
   -- indent according to syntactic context
@@ -12,7 +15,7 @@ local options = {
   -- mostly just for cmp
   completeopt = { "menuone", "noselect" },
   -- so that `` is visible in markdown files
-  conceallevel = 0,
+  conceallevel = 2,
   -- the encoding written to a file
   fileencoding = "utf-8",
   -- highlight all matches on previous search pattern
@@ -78,6 +81,9 @@ local options = {
   shell = "/bin/zsh",
   -- set font to be terminal font
   guifont = "",
+  -- set the fold level so that there is no auto-folding
+  foldlevel = 99,
+  foldlevelstart = -1,
 }
 
 for k, v in pairs(options) do

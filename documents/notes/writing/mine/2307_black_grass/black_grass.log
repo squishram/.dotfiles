@@ -1,0 +1,315 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.7.7)  15 JUL 2023 20:03
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**black_grass.tex
+(./black_grass.tex
+LaTeX2e <2022-11-01> patch level 1
+L3 programming layer <2023-02-22> (/usr/share/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2022/07/02 v1.4n Standard LaTeX document class
+(/usr/share/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2022/07/02 v1.4n Standard LaTeX file (size option)
+)
+\c@part=\count185
+\c@section=\count186
+\c@subsection=\count187
+\c@subsubsection=\count188
+\c@paragraph=\count189
+\c@subparagraph=\count190
+\c@figure=\count191
+\c@table=\count192
+\abovecaptionskip=\skip48
+\belowcaptionskip=\skip49
+\bibindent=\dimen140
+) (/usr/share/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
+Package: fancyhdr 2022/11/09 v4.1 Extensive control of page headers and footers
+\f@nch@headwidth=\skip50
+\f@nch@O@elh=\skip51
+\f@nch@O@erh=\skip52
+\f@nch@O@olh=\skip53
+\f@nch@O@orh=\skip54
+\f@nch@O@elf=\skip55
+\f@nch@O@erf=\skip56
+\f@nch@O@olf=\skip57
+\f@nch@O@orf=\skip58
+) (/usr/share/texmf-dist/tex/latex/poemscol/poemscol.sty
+Package: poemscol 2020/06/12 v3.1415926 poemscol file
+\verseindentamount=\skip59
+\l@@pcounter=\count193
+\indentedstanzaamount=\skip60
+\variablestanzaamount=\skip61
+\titleindentamount=\skip62
+\titleindenttwoamount=\skip63
+\titleindentthreeamount=\skip64
+\volumetitleindentamount=\skip65
+\volumetitlesecondlineindentamount=\skip66
+\volumesubtitleindentamount=\skip67
+\volumesubtitlesecondlineindentamount=\skip68
+\volumesectiontitleindentamount=\skip69
+\volumesectiontitlesecondlineindentamount=\skip70
+\poemtitleindentamount=\skip71
+\poemtitlesecondlineindentamount=\skip72
+\poemsubtitleindentamount=\skip73
+\poemsectiontitleindentamount=\skip74
+\poemsectiontitlesecondlineindentamount=\skip75
+\poemsubsectiontitleindentamount=\skip76
+\sequencetitleindentamount=\skip77
+\sequencetitlesecondlineindentamount=\skip78
+\sequencesubtitleindentamount=\skip79
+\sequencesubtitlesecondlineindentamount=\skip80
+\sequencesectiontitleindentamount=\skip81
+\sequencesectiontitlesecondlineindentamount=\skip82
+\sequencesectionsubtitleindentamount=\skip83
+\sequencesectionsubtitlesecondlineindentamount=\skip84
+\sequencesubsectiontitleindentamount=\skip85
+\sequencesubsubsectiontitleindentamount=\skip86
+\appendixtitleindentamount=\skip87
+\subappendixtitleindentamount=\skip88
+\forewordtitleindentamount=\skip89
+\notestitleindentamount=\skip90
+\volumetitleshiftamount=\dimen141
+\voladditionalamount=\dimen142
+\contentsindentoneamount=\dimen143
+\contentsindenttwoamount=\dimen144
+\contentsindentthreeamount=\dimen145
+\contentsindentfouramount=\dimen146
+\contentsindentfiveamount=\dimen147
+\contentsvolumetitleindentamount=\skip91
+\contentsvolumetitlesecondlineindentamount=\skip92
+\contentsvolumesubtitleindentamount=\skip93
+\contentsvolumesubtitlesecondlineindentamount=\skip94
+\contentsvolumesectiontitleindentamount=\skip95
+\contentsvolumesectiontitlesecondlineindentamount=\skip96
+\contentspoemtitleindentamount=\skip97
+\contentspoemtitlesecondlineindentamount=\skip98
+\contentspoemsubtitleindentamount=\skip99
+\contentspoemsectiontitleindentamount=\skip100
+\contentspoemsectiontitlesecondlineindentamount=\skip101
+\contentspoemsubsectiontitleindentamount=\skip102
+\contentssequencetitleindentamount=\skip103
+\contentssequencetitlesecondlineindentamount=\skip104
+\contentssequencesubtitleindentamount=\skip105
+\contentssequencesubtitlesecondlineindentamount=\skip106
+\contentssequencesectiontitleindentamount=\skip107
+\contentssequencesectiontitlesecondlineindentamount=\skip108
+\contentssequencesectionsubtitleindentamount=\skip109
+\contentssequencesectionsubtitlesecondlineindentamount=\skip110
+\contentssequencesubsectiontitleindentamount=\skip111
+\contentssequencesubsubsectiontitleindentamount=\skip112
+\poemtitlewidth=\skip113
+\lefttitleaddition=\skip114
+\marginparsepmin=\skip115
+\versemarginadjust=\skip116
+\c@verselinenumber=\count194
+\c@printlineindex=\count195
+\c@verselinenumberscratch=\count196
+\c@printlineindexscratch=\count197
+\c@lineindexrepeat=\count198
+\c@lemmalines=\count199
+\c@lemmaend=\count266
+\c@poemnumber=\count267
+\c@notepageholdertitle=\count268
+\c@notepageholdernote=\count269
+\fulltitleholder=\toks16
+\titlesofar=\toks17
+\titleincrement=\toks18
+\@indexfile=\write3
+\openout3 = `black_grass.idx'.
+
+
+Writing index file black_grass.idx
+\headoffsetlength=\skip117
+
+Package fancyhdr Warning: \fancyhfoffset's `E' option without twoside option is useless.
+(fancyhdr)                Please consider using the `twoside' option on input line 489.
+
+
+Package fancyhdr Warning: \fancyhead's `E' option without twoside option is useless.
+(fancyhdr)                Please consider using the `twoside' option on input line 491.
+
+
+Package fancyhdr Warning: \fancyhead's `E' option without twoside option is useless.
+(fancyhdr)                Please consider using the `twoside' option on input line 493.
+
+
+Package fancyhdr Warning: \fancyfoot's `E' option without twoside option is useless.
+(fancyhdr)                Please consider using the `twoside' option on input line 494.
+
+\singlelineabbrev=\toks19
+\multiplelineabbrev=\toks20
+\singlepageabbrev=\toks21
+\multiplepageabbrev=\toks22
+\contentsentryoverrun=\skip118
+\titleentryoverrun=\skip119
+\versewidth=\skip120
+\@memcnta=\count270
+\c@cp@cntr=\count271
+\pmclsideparvshift=\skip121
+\pmclcontentsname=\toks23
+\pmclcontentsheader=\toks24
+\noteindentation=\skip122
+\pmclnotesname=\toks25
+\notesheadername=\toks26
+\textnotescontentsname=\toks27
+\emendationsname=\toks28
+\emendationsheadername=\toks29
+\emendationscontentsname=\toks30
+\explanationsname=\toks31
+\explanationsheadername=\toks32
+\explanationscontentsname=\toks33
+\lefttitlemargin=\skip123
+\JHtextwidth=\skip124
+\JHmarginparsep=\skip125
+\JHmarginparvshift=\skip126
+\JHmarginparwidth=\skip127
+\JHmarginparsepmin=\skip128
+\JHtitlemarginparsep=\skip129
+\c@margrefnumber=\count272
+\margrefmarker=\toks34
+\titlemargrefmarker=\toks35
+\centerepigraphindentation=\skip130
+\normalepigraphindentation=\skip131
+\dateindent=\skip132
+\poemattributionindent=\skip133
+\c@proselinenumber=\count273
+\c@prosemodulo=\count274
+\pmnoteheader=\toks36
+\c@pmsentencenumber=\count275
+\c@pmmodulo=\count276
+\c@pmindexcount=\count277
+\c@pmparagraph=\count278
+\pmrangeend=\toks37
+\pmclsavsk=\dimen148
+\pmclsavsf=\count279
+\c@rectolinecounter=\count280
+\c@rectoindexscratch=\count281
+\c@versolinecounter=\count282
+\c@versoindexscratch=\count283
+\versotitleholder=\toks38
+\rectotitleholder=\toks39
+\synchroflag=\toks40
+\versotextnotesname=\toks41
+\versotextnotesheadername=\toks42
+\versotextnotescontentsname=\toks43
+\rectotextnotesname=\toks44
+\rectotextnotesheadername=\toks45
+\rectotextnotescontentsname=\toks46
+\versoemendationsname=\toks47
+\versoemendationsheadername=\toks48
+\versoemendationscontentsname=\toks49
+\rectoemendationsname=\toks50
+\rectoemendationsheadername=\toks51
+\rectoemendationscontentsname=\toks52
+\versoexplanationsname=\toks53
+\versoexplanationsheadername=\toks54
+\versoexplanationscontentsname=\toks55
+\rectoexplanationsname=\toks56
+\rectoexplanationsheadername=\toks57
+\rectoexplanationscontentsname=\toks58
+\c@prosepage=\count284
+\c@versoproselinecounter=\count285
+\c@rectoproselinecounter=\count286
+\poemindexname=\toks59
+\poemindexheadername=\toks60
+\poemindexcontentsname=\toks61
+\poemindexlabelname=\toks62
+\epigraphquoteleftmargin=\skip134
+\epigraphquoterightmargin=\skip135
+) (/usr/share/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+ (/usr/share/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
+\KV@toks@=\toks63
+) (/usr/share/texmf-dist/tex/generic/iftex/ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+ (/usr/share/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2022/02/03 v1.0f TeX engine tests
+))
+\Gm@cnth=\count287
+\Gm@cntv=\count288
+\c@Gm@tempcnt=\count289
+\Gm@bindingoffset=\dimen149
+\Gm@wd@mp=\dimen150
+\Gm@odd@mp=\dimen151
+\Gm@even@mp=\dimen152
+\Gm@layoutwidth=\dimen153
+\Gm@layoutheight=\dimen154
+\Gm@layouthoffset=\dimen155
+\Gm@layoutvoffset=\dimen156
+\Gm@dimlist=\toks64
+) (/usr/share/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2023-01-16 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count290
+\l__pdf_internal_box=\box51
+) (./black_grass.aux)
+\openout1 = `black_grass.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: <default>
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(93.75183pt, 426.79134pt, 93.75183pt)
+* v-part:(T,H,B)=(85.35826pt, 624.25346pt, 85.35826pt)
+* \paperwidth=614.295pt
+* \paperheight=794.96999pt
+* \textwidth=426.79134pt
+* \textheight=624.25346pt
+* \oddsidemargin=21.48184pt
+* \evensidemargin=21.48184pt
+* \topmargin=-23.91173pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=10.0pt
+* \footskip=30.0pt
+* \marginparwidth=18.0pt
+* \marginparsep=18.0pt
+* \columnsep=15.0pt
+* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
+
+] (./black_grass.aux) ) 
+Here is how much of TeX's memory you used:
+ 2619 strings out of 477985
+ 48815 string characters out of 5840059
+ 1860388 words of memory out of 5000000
+ 22874 multiletter control sequences out of 15000+600000
+ 513229 words of font info for 35 fonts, out of 8000000 for 9000
+ 14 hyphenation exceptions out of 8191
+ 57i,12n,62p,250b,317s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb>
+Output written on black_grass.pdf (1 page, 45022 bytes).
+PDF statistics:
+ 28 PDF objects out of 1000 (max. 8388607)
+ 16 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+

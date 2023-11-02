@@ -11,7 +11,7 @@ return {
       },
       bo = {
         -- filetype of scratchpad notes
-        filetype = "norg",
+        filetype = "md",
       },
     },
   },

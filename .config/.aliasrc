@@ -28,8 +28,6 @@ alias sx="startx"
 # reload the fish shell
 alias rl="source ~/.config/fish/conf.d/omf.fish"
 
-# check for an hdmi, if there is one plugged in, flip over to it
-alias hdmi="/home/archan/documents/code/shell_scripts/flip_hdmi.sh"
 # launch ranger file manager
 alias rr="env TERM=xterm-kitty ranger"
 # starting daemons:
@@ -41,6 +39,15 @@ alias lf="lfrun"
 ##############
 # CORE UTILS #
 ##############
+
+# replacement for top/ htop (TUI task manager)
+alias top="btm"
+alias htop="btm"
+alias bottom="btm"
+
+# replacement for df in rust
+alias df="rdf"
+alias disk="rdf"
 
 # better find function in Rust
 alias fde="fd --extension"
@@ -77,7 +84,7 @@ alias c="clear"
 alias up="mv * .."
 
 # opens calculator
-alias bc="bc -l"
+alias bc="eva"
 # handy short cuts #
 alias h="history"
 alias j="jobs -l"
@@ -166,7 +173,7 @@ stopwatch() {
 
 # connect to bluetooth devices
 alias headphones="bluetoothctl connect 38:18:4C:7D:6E:57"
-alias flatspeaker="bluetoothctl connect EC:81:93:5B:DD:29"
+alias speaker="bluetoothctl connect EC:81:93:5B:DD:29"
 
 # check the power
 alias batt="upower -i /org/freedesktop/UPower/devices/battery_BAT0 | rg 'state|to full|percentage'"
@@ -229,9 +236,8 @@ docx2md(){
 alias mbsync="mbsync -c \"/home/squish/.config/isync/mbsyncrc\""
 # alias mbsync="mbsync -c \"$XDG_CONFIG_HOME/isync/mbsyncrc\""
 
-fr() {
-  # Replace all instances of $1 with $2 recursively in the current directory
-  rg -l "$1" | xargs sed -i "s/$1/$2/g"
+fr(){
+  rg -l --files-with-matches "$1" . | xargs -I {} sd "$1" "$2" {}
 }
 
 # Arch-specific (non-ubuntu) aliases only go here
@@ -241,6 +247,20 @@ if [[ $(uname -rv) == *"arch"* ]]; then
     alias edit="nvim"
     alias batcat="bat"
 fi
+
+hdmi() {
+  if xrandr --listactivemonitors | grep "HDMI"; then
+    xrandr --output 'HDMI-A-0' --off
+    echo "HDMI turned off"
+  else
+    xrandr --output 'HDMI-A-0' --auto
+    echo "HDMI turned on"
+  fi
+}
+
+alias hdmiext="xrandr --output 'eDP' --auto --output 'HDMI-A-0' --right-of 'eDP'"
+
+alias clean="find . -size 0c -delete"
 
 # what runs at every new terminal?
 # alias neofetch='/usr/bin/neofetch --ascii /home/ishan/neorg/todo.norg'

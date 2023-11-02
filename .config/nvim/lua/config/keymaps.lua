@@ -1,3 +1,7 @@
+-- remap : to ; so you don't need to hold shift
+vim.keymap.set("n", "<CR>", ":")
+vim.keymap.set("n", ";", ":")
+
 -- set mapleader before anything else!
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
@@ -21,8 +25,6 @@ vim.keymap.set("n", "<C-Up>", "<cmd>resize +2<cr>", { desc = "Increase window he
 vim.keymap.set("n", "<C-Down>", "<cmd>resize -2<cr>", { desc = "Decrease window height" })
 vim.keymap.set("n", "<C-Left>", "<cmd>vertical resize -2<cr>", { desc = "Decrease window width" })
 vim.keymap.set("n", "<C-Right>", "<cmd>vertical resize +2<cr>", { desc = "Increase window width" })
-
-vim.keymap.set({ "n", "v" }, "<C-Right>", "<cmd>s ", { desc = "Increase window width" })
 
 -- Clear search with <esc>
 vim.keymap.set({ "i", "n" }, "<esc>", "<cmd>noh<cr><esc>", { desc = "Escape and clear hlsearch" })
@@ -97,8 +99,6 @@ vim.keymap.set("n", "<leader><tab>[", "<cmd>tabprevious<cr>", { desc = "Previous
 
 -- keep the cursor centred when pulling up a line
 vim.keymap.set("n", "J", "mzJ'z", { desc = "Pull up and append a line" } )
--- remap : to ; so you don't need to hold shift
-vim.keymap.set("n", ";", ":")
 -- fix last spelling mistake
 vim.keymap.set("i", "<C-p>", "<C-l> <c-g>u<Esc>[s1z=`]a<c-g>u")
 
@@ -113,3 +113,20 @@ vim.keymap.set("i", "<C-BS>", "<esc>cvb", { })
 
 -- don't move the cursor when yanking visual selection
 vim.keymap.set("v", "y", "ygv<esc>", { })
+
+-- new text objects
+-- [r]ectangular bracket
+vim.keymap.set("o", "ar", "a]")
+vim.keymap.set("o", "ir", "i]")
+-- [c]urly brace
+vim.keymap.set("o", "ac", "a}")
+vim.keymap.set("o", "ic", "i}")
+-- [m]assive word (= no shift needed)
+vim.keymap.set("o", "am", "aW")
+vim.keymap.set("o", "im", "iW")
+-- [q]uote
+vim.keymap.set("o", "aq", 'a"')
+vim.keymap.set("o", "iq", 'i"')
+-- [z]ingle quote
+vim.keymap.set("o", "az", "a'")
+vim.keymap.set("o", "iz", "i'")

@@ -105,9 +105,9 @@ return gears.table.join(
 		awful.spawn("rofi -show drun -theme ~/.config/rofi/rofi.rasi")
 	end, { descripton = "Application launcher", group = "Application" }),
 
-    awful.key({ modkey } , "#56", function()
-        awful.spawn(user_vars.browser)
-    end, { description = "Launch browser", group = "Application" }),
+	awful.key({ modkey }, "#56", function()
+		awful.spawn(user_vars.browser)
+	end, { description = "Launch browser", group = "Application" }),
 
 	-- awful.key({ modkey }, "#40", function()
 	-- 	awful.spawn("rofi -show drun -theme ~/.config/rofi/rofi.rasi")
@@ -117,9 +117,9 @@ return gears.table.join(
 		awful.layout.inc(1)
 	end, { description = "Select next layout", group = "Layout" }),
 
-	awful.key({ "Mod1" }, "#23", function()
-		awful.spawn("rofi -show window -theme ~/.config/rofi/window.rasi")
-	end, { descripton = "Client switcher (alt+tab)", group = "Application" }),
+	-- awful.key({ "Mod1" }, "#23", function()
+	-- 	awful.spawn("rofi -show window -theme ~/.config/rofi/window.rasi")
+	-- end, { descripton = "Client switcher (alt+tab)", group = "Application" }),
 
 	awful.key({ modkey }, "#41", function()
 		awful.spawn(user_vars.file_manager)

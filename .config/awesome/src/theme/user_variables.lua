@@ -51,7 +51,8 @@ user_vars = {
 	},
 
 	-- This is your default Terminal
-	terminal = "kitty",
+	-- terminal = "kitty",
+	terminal = "wezterm",
 
 	-- This is your default browser
 	browser = "firefox",
