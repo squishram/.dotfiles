@@ -1,8 +1,0 @@
-* Audio Troubleshoot Options
-** Reset pulseaudio
-- remove config files
-  rm -rf ~/.config/pulse
-- reset pulse
-  pulseaudio -k
-- boot it back up
-  pulseaudio --start

@@ -1,5 +1,0 @@
-Five little jars, pickled and forgotten. Forgotten by who? Not by life, not by God; life can't have forgotten, God can't have forgotten. The choosing has forgotten, the choosing has and will.
-My five little jars, she croons. My five little jars, life has found a way. They will have to see you now, they will have to see what they lost, lost to the cold. Five little jars, pickled and remembered.
-She thought she saved them, before, her little jars - she found them in the cold. She can see now: they took her in from the cold. They carressing her little hands. Another chance, thank God, another chance at her little life.
-What were they choosing before you, my little jars? What did they see in life, and not in you? She is carressing them now, jars against her cold hands: thank God! She found you before you were forgotten. Is choosing not forfeit, to they who forfeit you? What did they see, what can't she see?
-They have found you now, my little jars, she croons. She knows she is forfeit. Her hands against the jars. God, she is cold. Her hands carressing her little pickled life.
