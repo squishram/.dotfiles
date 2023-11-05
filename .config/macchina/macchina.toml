@@ -1,0 +1,44 @@
+# Name of aesthetics .toml config file in ./themes/
+theme = "Squish"
+
+# Specifies the network interface to use for the LocalIP readout
+interface = "wlan0"
+# Lengthen uptime output
+long_uptime = true
+# Lengthen shell output
+long_shell = false
+# Lengthen kernel output
+long_kernel = false
+# Display current or default shell?
+current_shell = true
+# Display #physical or #logical cores of your processor?
+physical_cores = true
+
+# THESE DON'T WORK
+# Display percentage next to memory usage
+# memory_percentage = true
+# Display percentage next to disk space usage
+# disk_space_percentage = true
+
+# Readouts to Display:
+show = [
+  "Machine",
+  "Distribution",
+  "Uptime",
+  "Packages",
+  "Shell",
+  "ProcessorLoad",
+  "Memory",
+  # "Host",
+  # "Kernel",
+  # "OperatingSystem",
+  # "DesktopEnvironment",
+  # "WindowManager",
+  # "Resolution",
+  # "Backlight",
+  # "LocalIP",
+  # "Terminal",
+  # "Processor",
+  # "Battery",
+  # "GPU",
+]

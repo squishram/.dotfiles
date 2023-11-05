@@ -12,7 +12,8 @@ end
 
 -- set the colour scheme and font
 config.font = wezterm.font("CaskaydiaCove Nerd Font")
-config.color_scheme = "EverforestDark (Gogh)"
+-- config.color_scheme = "EverforestDarr (Gogh)"
+config.color_scheme = "Catppuccin Frappé (Gogh)"
 config.font_size = 11.5
 config.line_height = 1.4
 -- don't show the tab bar unless there is >1 tab

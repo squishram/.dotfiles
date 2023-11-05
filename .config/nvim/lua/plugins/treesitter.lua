@@ -20,10 +20,10 @@ return {
 
       indent = {
         enable = true,
-        disable = {
-          "yaml",
-          "python",
-        },
+        -- disable = {
+        --   "yaml",
+        --   "python",
+        -- },
       },
 
       context_commentstring = {

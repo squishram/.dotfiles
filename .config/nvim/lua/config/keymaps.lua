@@ -1,5 +1,5 @@
 -- remap : to ; so you don't need to hold shift
-vim.keymap.set("n", "<CR>", ":")
+-- vim.keymap.set("n", "<CR>", ":")
 vim.keymap.set("n", ";", ":")
 
 -- set mapleader before anything else!

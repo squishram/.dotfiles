@@ -4,6 +4,7 @@
 # zsh-history-substring-search
 # zsh-autosuggestions
 # zsh-syntax-highlighting
+# zsh-vi-mode
 # neofetch
 
 ######################
@@ -39,15 +40,6 @@ unsetopt autocd beep nomatch notify
 zle_highlight=('paste:none')
 # disable ctrl-s to freeze terminal
 stty stop undef
-
-#################################
-# NEO(VIM) COMMAND LINE EDITING #
-#################################
-
-# use vim keybinds
-bindkey -v
-bindkey -M menuselect 'h' vi-backward-char
-bindkey -M menuselect 'l' vi-forward-char
 # use ctrl-e to edit command line in neovim
 autoload edit-command-line; zle -N edit-command-line
 bindkey '^e' edit-command-line
@@ -70,11 +62,22 @@ source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh 2>/dev
 source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh 2>/dev/null
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
-bindkey -M vicmd 'k' history-substring-search-up
-bindkey -M vicmd 'j' history-substring-search-down
+
+# better vi mode, set kj to escape
+function zvm_config() {
+  ZVM_LINE_INIT_MODE=$ZVM_MODE_INSERT
+  ZVM_VI_ESCAPE_BINDKEY=kj
+  ZVM_VI_INSERT_ESCAPE_BINDKEY=$ZVM_VI_ESCAPE_BINDKEY
+  ZVM_VI_VISUAL_ESCAPE_BINDKEY=$ZVM_VI_ESCAPE_BINDKEY
+  ZVM_VI_OPPEND_ESCAPE_BINDKEY=$ZVM_VI_ESCAPE_BINDKEY
+}
+source /usr/share/zsh/plugins/zsh-vi-mode/zsh-vi-mode.plugin.zsh 2>/dev/null
+
+# use keychain to ensure SSH keys are remembered
+eval $(keychain --eval --quiet --agents ssh id_rsa)
 
 # status for every terminal
-neofetch
+macchina
 
 # Created by `pipx` on 2023-06-09 10:56:40
 export PATH="$PATH:/home/squish/.local/bin"
