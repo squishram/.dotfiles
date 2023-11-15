@@ -23,7 +23,7 @@ physical_cores = true
 # Readouts to Display:
 show = [
   "Machine",
-  "Distribution",
+  # "Distribution",
   "Uptime",
   "Packages",
   "Shell",
@@ -39,6 +39,6 @@ show = [
   # "LocalIP",
   # "Terminal",
   # "Processor",
-  # "Battery",
+  "Battery",
   # "GPU",
 ]

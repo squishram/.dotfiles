@@ -1,36 +1,21 @@
-theme "catppuccin-frappe"
-pane_frames true
-// default_mode "locked"
-ui {
-    pane_frames {
-        rounded_corners true
-    }
+// list of plugins
+plugins {
+  // adds a tab bar
+  compact-bar { path "tab-bar"; }
+  // allows hopping between sessions, mid-session
+  session-manager { path "session-manager"; }
 }
 
-// keybinds {
-//   // keybinds are divided into modes
-//   normal {
-//     // bind instructions can include one or more keys (both keys will be bound separately)
-//     // bind keys can include one or more actions (all actions will be performed with no sequential guarantees)
-//     bind "Alt g" { SwitchToMode "locked"; }
-//     bind "Alt p" { SwitchToMode "pane"; }
-//     bind "Alt t" { SwitchToMode "tab"; }
-//     bind "Alt o" { SwitchToMode "session"; }
-//     bind "Alt s" { SwitchToMode "search"; }
-//     bind "Alt m" { SwitchToMode "move"; }
-//     bind "Alt n" { NewPane; }
-// 
-//     bind "Alt h" "Alt Left" { MoveFocusOrTab "Left"; }
-//     bind "Alt l" "Alt Right" { MoveFocusOrTab "Right"; }
-//     bind "Alt k" "Alt Up" { MoveFocusOrTab "Up"; }
-//     bind "Alt j" "Alt Down" { MoveFocusOrTab "Down"; }
-//   }
-// }
-// locked {
-//   bind "Alt g" { SwitchToMode "normal"; }
-//   bind "Alt h" "Alt Left" { MoveFocusOrTab "Left"; }
-//   bind "Alt l" "Alt Right" { MoveFocusOrTab "Right"; }
-//   bind "Alt k" "Alt Up" { MoveFocusOrTab "Up"; }
-//   bind "Alt j" "Alt Down" { MoveFocusOrTab "Down"; }
-// }
-// }
+//  Send a request for a simplified ui (without arrow fonts) to plugins
+simplified_ui false
+// keep pane frames?
+pane_frames true
+// use predefined pane layouts?
+auto_layout true
+// do multiple people in one session share a cursor?
+mirror_session true
+
+// theme
+theme "catppuccin-frappe"
+// default layout
+default_layout "simple"

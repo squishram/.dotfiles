@@ -53,7 +53,7 @@ alias ls="exa --color=always --group-directories-first"
 alias sl="exa -a --color=always --group-directories-first"
 alias ll="exa -la --no-permissions --no-user --header --icons --git --color=always --group-directories-first"
 alias la="exa -la --no-permissions --no-user --header --icons --git --color=always --group-directories-first"
-alias lt="exa -laT --level=3 --header --color=always --group-directories-first"
+alias lt="exa -laT --no-permissions --no-user --level=3 --header --color=always --group-directories-first"
 alias ld="exa -lad */ --color=always"
 
 # colorisation
@@ -175,6 +175,8 @@ alias bt="bluetoothctl"
 alias headphones="bluetoothctl connect 38:18:4C:7D:6E:57"
 alias speaker="bluetoothctl connect EC:81:93:5B:DD:29"
 
+# ZELLIJ
+alias za="zellij a"
 
 # WIFI
 # list available wifi networks
@@ -257,9 +259,6 @@ csv(){
   arg1=$1
   tidy-viewer $arg1
 }
-
-# ZELLIJ
-alias za="zellij attach"
 
 # start a new zellij session if there isn't one, or connect to your most recent one
 # za() {
