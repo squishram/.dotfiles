@@ -12,7 +12,7 @@ end
 
 -- set the colour scheme and font
 config.font = wezterm.font("CaskaydiaCove Nerd Font")
--- config.color_scheme = "EverforestDarr (Gogh)"
+-- config.color_scheme = "EverforestDark (Gogh)"
 config.color_scheme = "Catppuccin Frappé (Gogh)"
 config.font_size = 11.5
 config.line_height = 1.4
@@ -25,6 +25,13 @@ config.cursor_blink_ease_in = "Constant"
 config.cursor_blink_ease_out = "Constant"
 -- stops the window shrinking when I shrink the font
 config.adjust_window_size_when_changing_font_size = false
+-- the "fancy" tab bar is kinda uggo
+config.use_fancy_tab_bar = false
+-- dim inactive panes (useless atm since I don't use panes, but just in case)
+config.inactive_pane_hsb = {
+	saturation = 0.25,
+	brightness = 0.5,
+}
 
 -- keymaps
 config.keys = {

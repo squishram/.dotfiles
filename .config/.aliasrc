@@ -96,11 +96,6 @@ alias nowdate="date +"%d-%m-%Y""
 
 # I'm a vim boi now
 
-# # ubuntu
-alias vim="$HOME/nvim.appimage"
-alias vi="$HOME/nvim.appimage"
-alias edit="$HOME/nvim.appimage"
-
 # update on one command
 # debian
 alias update="sudo apt-get update && sudo apt-get upgrade"
@@ -225,6 +220,18 @@ docx2md(){
   pandoc -s $arg1 --wrap=none --reference-links -t markdown -o $arg1.md
 }
 
+# open .docx file as .txt in vim
+docx2txt(){
+  arg1=$1
+  docx2txt $arg1 - | nvim -
+}
+
+# open .doc file as .txt in vim
+doc2txt(){
+  arg1=$1
+  antiword $arg1 | nvim -
+}
+
 # recursive find and replace
 fr(){
   rg -l --files-with-matches "$1" . | xargs -I {} sd "$1" "$2" {}
@@ -232,32 +239,39 @@ fr(){
 
 # Arch-specific (non-ubuntu) aliases only go here
 if [[ $(uname -rv) == *"arch"* ]]; then
-    alias vim="nvim"
-    alias vi="nvim"
-    alias edit="nvim"
-    alias batcat="bat"
+  alias vim="nvim"
+  alias vi="nvim"
+  alias edit="nvim"
+  alias batcat="bat"
+fi
+
+# ubuntu
+if [[ $(uname -rv) == *"debian"* ]]; then
+  alias vim="$HOME/nvim.appimage"
+  alias vi="$HOME/nvim.appimage"
+  alias edit="$HOME/nvim.appimage"
 fi
 
 # hdmi output toggle
 hdmi() {
   if xrandr --listactivemonitors | grep "HDMI"; then
     xrandr --output 'HDMI-A-0' --off
-    echo "HDMI turned off"
+      echo "HDMI turned off"
   else
     xrandr --output 'HDMI-A-0' --auto
-    echo "HDMI turned on"
-  fi
+      echo "HDMI turned on"
+      fi
 }
 
 # tidy-viewer -- for viewing csv files
 tv(){
   arg1=$1
-  tidy-viewer $arg1
+    tidy-viewer $arg1
 }
 
 csv(){
   arg1=$1
-  tidy-viewer $arg1
+    tidy-viewer $arg1
 }
 
 # start a new zellij session if there isn't one, or connect to your most recent one

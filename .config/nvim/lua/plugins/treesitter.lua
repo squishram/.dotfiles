@@ -6,7 +6,34 @@ return {
 
     opts = {
       -- one of "all", "maintained" (parsers with maintainers), or a list of languages
-      -- ensure_installed = { "maintained" },
+      ensure_installed = {
+        "bash",
+        "c",
+        "diff",
+        "html",
+        "javascript",
+        "java",
+        "jsdoc",
+        "json",
+        "jsonc",
+        "julia",
+        "lua",
+        "luadoc",
+        "luap",
+        "markdown",
+        "markdown_inline",
+        "python",
+        "query",
+        "regex",
+        "rust",
+        "toml",
+        "tsx",
+        "kdl",
+        "typescript",
+        "vim",
+        "vimdoc",
+        "yaml",
+      },
 
       -- auto install for current file if you don't have it
       auto_install = true,

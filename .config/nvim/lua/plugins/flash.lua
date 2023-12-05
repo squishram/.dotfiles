@@ -13,6 +13,8 @@ return {
   },
 
   keys = {
+    -- use normal search with "/"
+    { "/", mode = { "n", "x", "o" }, false },
     {
       "s",
       mode = { "n", "x", "o" },

@@ -6,6 +6,26 @@ plugins {
   session-manager { path "session-manager"; }
 }
 
+keybinds {
+  unbind "Ctrl g"
+  unbind "Ctrl h"
+
+  normal {
+    unbind "Ctrl h"
+    bind "Ctrl u" { SwitchToMode "Locked"; }
+    bind "Ctrl f" { SwitchToMode "Move"; }
+  }
+
+  move {
+    unbind "Ctrl h"
+    bind "Ctrl f" { SwitchToMode "Normal"; }
+  }
+
+  locked {
+    bind "Ctrl u" { SwitchToMode "Normal"; }
+  }
+}
+
 //  Send a request for a simplified ui (without arrow fonts) to plugins
 simplified_ui false
 // keep pane frames?
