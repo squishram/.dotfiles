@@ -19,6 +19,7 @@ return {
       function()
         require("mini.files").open()
       end,
+      silent = true,
       desc = "Open Filetree",
     },
   },

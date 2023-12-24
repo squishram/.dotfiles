@@ -1,0 +1,69 @@
+- [x] barbecue 17.68ms  start
+- [ ] bufferline.nvim 9.9ms  VeryLazy
+- [x] catppuccin 3.04ms colorscheme catppuccin  onedarkpro
+- [ ] cmp-nvim-lsp 1.88ms 󰢱 cmp_nvim_lsp  nvim-lspconfig
+- [ ] dashboard-nvim 1.95ms  VimEnter
+- [x] flash.nvim 5.2ms  VeryLazy
+- [ ] gitsigns.nvim 2.3ms 󰢱 gitsigns  nougat.nvim
+- [ ] indent-blankline.nvim 19.27ms  LazyFile
+- [x] lazy.nvim 79.86ms  init.lua
+- [ ] mason-lspconfig.nvim 0.3ms  nvim-lspconfig
+- [ ] mason.nvim 41.03ms  nvim-lspconfig
+- [ ] mini.ai 2.41ms  VeryLazy
+- [x] mini.bracketed 0.33ms  start
+- [ ] mini.comment 2.95ms  VeryLazy
+- [ ] mini.indentscope 3.33ms  LazyFile
+- [-] mini.move 0.09ms  start
+- [-] monokai 0.43ms  start
+- [ ] neoconf.nvim 0.49ms  nvim-lspconfig
+- [ ] neodev.nvim 3.32ms  nvim-lspconfig
+- [ ] noice.nvim 5.96ms  VeryLazy
+- [x] nougat.nvim 36.26ms  start
+- [ ] nui.nvim 0.28ms 󰢱 nui.object  noice.nvim
+- [ ] numb.nvim 1.63ms  start
+- [ ] nvim-lint 1.37ms  LazyFile
+- [ ] nvim-lspconfig 97.9ms  LazyFile
+- [ ] nvim-navic 0.36ms  barbecue
+- [ ] nvim-notify 6.44ms 󰢱 notify  noice.nvim
+- [ ] nvim-treesitter 26.63ms  start
+- [ ] nvim-treesitter-context 3.28ms  LazyFile
+- [ ] nvim-treesitter-textobjects 14.85ms  nvim-treesitter
+- [ ] nvim-ts-autotag 2.67ms  LazyFile
+- [ ] nvim-web-devicons 0.78ms  barbecue
+- [ ] onedarkpro 15.87ms  start
+- [ ] persistence.nvim 1.72ms  BufReadPre
+- [ ] rust-tools.nvim 1.38ms 󰢱 rust-tools.dap  nvim-lspconfig
+- [ ] todo-comments.nvim 7.95ms  LazyFile
+- [ ] tokyonight.nvim 3.33ms 󰢱 tokyonight  LazyVim
+- [ ] vim-illuminate 3.13ms  LazyFile
+- [ ] vimtex 2.53ms  start
+- [ ] which-key.nvim 28.12ms  VeryLazy
+- [ ] cmp-buffer  nvim-cmp 
+- [ ] cmp-emoji  nvim-cmp 
+- [ ] cmp-path  nvim-cmp 
+- [ ] cmp_luasnip  nvim-cmp 
+- [ ] conform.nvim  ConformInfo  <leader>cF (v)  <leader>cF 
+- [ ] crates.nvim  BufRead Cargo.toml  nvim-cmp 
+- [ ] dressing.nvim 
+- [ ] friendly-snippets  LuaSnip 
+- [ ] headlines.nvim  org  norg  markdown  rmd 
+- [x] jupynium.nvim  python 
+- [ ] LuaSnip 
+- [ ] markdown-preview.nvim  MarkdownPreviewToggle  MarkdownPreview  MarkdownPreviewStop  <leader>cp 
+- [ ] mini.bufremove  <leader>bd  <leader>bD 
+- [x] mini.files  <leader>fm  <leader>fM  - 
+- [ ] mini.surround  gsa (v)  gsf  gsn  gsa  gsF  gsr  gsh  gsd 
+- [ ] no-neck-pain.nvim  <leader>np 
+- [ ] nvim-cmp  InsertEnter  obsidian.nvim 
+- [ ] nvim-spectre  Spectre  <leader>sr 
+- [ ] nvim-ts-context-commentstring 
+- [ ] obsidian.nvim  BufReadPre /home/squish/documents/notes/**.md  <leader>ob  <leader>on  <leader>of  <leader>o/  <leader>ot 
+- [ ] plenary.nvim  obsidian.nvim 
+- [ ] SchemaStore.nvim 
+- [ ] telescope-fzf-native.nvim  telescope.nvim 
+- [ ] telescope.nvim  Telescope  <leader>,  <leader>/  <leader>:  <leader>fb  <leader>fc  <leader>ff  <leader>fF  <leader>fr  <leader>fR  <leader>gc  <leader>gs  <leader>sh  <leader>sa  <leader>sk  <leader>sM  <leader>sm  <leader>so  <leader>sR  <leader>sw  <leader>sW  <leader>sw (v)  <leader>sW (v)  <leader>uC  <leader>ss  <leader>sS  <leader>sb  <leader>s"  <leader>sc  <leader>sC  <leader>sd  <leader>sD  <leader>sg  <leader>sG  <leader>sH  obsidian.nvim 
+- [ ] treesj  g, 
+- [ ] trouble.nvim  TroubleToggle  Trouble  [q  <leader>xx  <leader>xX  <leader>xL  <leader>xQ  ]q 
+- [x] ultimate-autopair.nvim  CmdlineEnter  InsertEnter 
+- [ ] venv-selector.nvim  VenvSelect  <leader>cv 
+- [ ] vim-startuptime  StartupTime 

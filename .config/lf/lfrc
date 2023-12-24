@@ -1,31 +1,62 @@
-# Basic Settings
-set ratios 1:2:3
-set cleaner ~/.config/lf/cleaner
-set previewer ~/.config/lf/preview
-set hidden true
-set ignorecase true
-set icons true
+#  ██   ████
+# ░██  ░██░
+# ░██ ██████ ██████  █████
+# ░██░░░██░ ░░██░░█ ██░░░██
+# ░██  ░██   ░██ ░ ░██  ░░
+# ░██  ░██   ░██   ░██   ██
+# ███  ░██  ░███   ░░█████
+#░░░   ░░   ░░░     ░░░░░
 
-# Custom Functions
-cmd yank-dirname $dirname -- "$f" | head -c-1 | xclip -i -selection clipboard
-cmd yank-path $printf '%s' "$fx" | xclip -i -selection clipboard
-cmd yank-basename $basename -a -- $fx | head -c-1 | xclip -i -selection clipboard
-cmd yank-basename-without-extension &basename -a -- $fx | rev | cut -d. -f2- | rev | head -c-1 | xclip -i -selection clipboard
+# To get image previews, you need these 4 steps:
+# 1. Install ueberzug
+# 2. The previewer file (~/.config/lf/previewer for me), must have a command
+#    similar to mine to generate ueberzug images.
+# 3. A `set cleaner` line as below is a cleaner script.
+# 4. lf should be started through a wrapper script (~/.local/bin/lfub for me)
+#    that creates the environment for ueberzug. This command can be be aliased
+#    in your shellrc (`alias lf="lfub").
 
-cmd open &{{
-	mimetype=$(file --brief --dereference --mime-type $f)
-	defapp=$(xdg-mime query default $mimetype)
-	case "$defapp" in 
-	nvim.desktop)
-        lf -remote "send $id \$nvim $f"
-		;;
-	vim.desktop)
-        lf -remote "send $id \$vim $f"
-		;;
-	*)
-		xdg-open $f
-	esac
-}}
+# Main options
+set icons
+set period 1
+#set relativenumber
+#set number
+set hidden!
+set hiddenfiles ".*:*.aux:*.log:*.bbl:*.bcf:*.blg:*.run.xml"
+set cleaner '~/.config/lf/cleaner'
+set previewer '~/.config/lf/previewer'
+set promptfmt "
+\033[48;2;35;38;39;38;2;28;220;156m  
+\033[38;2;35;38;39;48;2;202;31;31m
+\033[38;2;202;31;31;48;2;40;47;62m
+\033[38;2;255;255;255m %w 
+\033[38;2;40;47;62;48;2;58;67;89m
+\033[38;2;255;255;255m %f 
+\033[;38;2;58;67;89;49m\033[m"
+set incsearch
+set incfilter
+#set globsearch on
+set ratios 2:3:4 # 2:3:7:7
+set truncatechar "…"
+set waitmsg "\033[1;31m⏎\033[m"
+set timefmt "02/01/2006 15:04:05 "
+set infotimefmtnew '02/01 15:04'
+set infotimefmtold '02/01/06'
+set errorfmt "\033[1;31m"
+set numberfmt "\033[38;2;75;87;116m"
+set dircounts
+set tabstop 4
+set scrolloff 5
+set wrapscroll
+set shellopts '-eu'
+set ifs "\n"
+set shell "bash"
+set ruler 'df:acc:progress:selection:filter:ind'
+set cursorpreviewfmt "\033[7m"
+
+source '~/.config/lf/opener'
+
+%test $LF_LEVEL -eq 1 || >&2 printf "Warning: You're in a nested lf instance!"
 
 cmd mkdir ${{
   printf "Directory Name: "
@@ -39,33 +70,23 @@ cmd mkfile ${{
   $EDITOR $ans
 }}
 
-cmd setwallpaper %cp "$f" ~/.config/wall.jpg && xwallpaper --zoom "$f"
+cmd trash %trash-put $fx
 
-cmd unarchive ${{
-  case "$f" in
-      *.zip) unzip "$f" ;;
-      *.tar.gz) tar -xzvf "$f" ;;
-      *.tar.bz2) tar -xjvf "$f" ;;
-      *.tar) tar -xvf "$f" ;;
-      *) echo "Unsupported format" ;;
-  esac
-}}
+# Custom Functions
+cmd yank-dirname $dirname -- "$f" | head -c-1 | xclip -i -selection clipboard
+cmd yank-path $printf '%s' "$fx" | xclip -i -selection clipboard
+cmd yank-basename $basename -a -- $fx | head -c-1 | xclip -i -selection clipboard
+cmd yank-basename-without-extension &basename -a -- $fx | rev | cut -d. -f2- | rev | head -c-1 | xclip -i -selection clipboard
 
-cmd trash ${{
-  files=$(printf "$fx" | tr '\n' ';')
-  while [ "$files" ]; do
-    file=${files%%;*}
-    trash-put "$(basename "$file")"
-    if [ "$files" = "$file" ]; then
-      files=''
-    else
-      files="${files#*;}"
-    fi
-  done
-}}
-
-cmd restore_trash ${{
-  trash-restore
+cmd delete ${{
+	clear; tput cup $(($(tput lines)/3)); tput bold
+	set -f
+	printf -- "%s\n" $fx | sed 's|'"$HOME"'||'
+	printf "\t\033[1;33m¿Remover? \033[37m[\033[32ms\033[37m/\033[31mN\033[37m]\033[m "
+	read -r REPLY
+	case "$REPLY" in
+		[yYsS]) rm -rf -- $fx ;;
+	esac
 }}
 
 cmd bulk-rename ${{
@@ -107,7 +128,7 @@ map au unarchive
 map ae execute
 map . set hidden!
 map p paste
-map x cut
+map dd cut
 map y copy
 map <enter> open
 map R reload
@@ -116,7 +137,7 @@ map md mkdir
 map bg setwallpaper
 map C clear
 map br bulk-rename
-map dd delete
+map DD delete
 map dr restore_trash
 map V invert-below
 

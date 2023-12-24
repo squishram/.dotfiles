@@ -5,7 +5,7 @@
 # zsh-autosuggestions
 # zsh-syntax-highlighting
 # zsh-vi-mode
-# neofetch
+# macchina
 
 ######################
 # OPTIONS / SETTINGS #
@@ -63,6 +63,8 @@ source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 
+# helps get a blinking cursor in wezterm (vi-mode breaks blinking cursor without this)
+ZVM_CURSOR_STYLE_ENABLED=false
 # better vi mode, set kj to escape
 function zvm_config() {
   ZVM_LINE_INIT_MODE=$ZVM_MODE_INSERT
@@ -78,6 +80,7 @@ eval $(keychain --eval --quiet --agents ssh id_rsa)
 
 # status for every terminal
 macchina
+task list due.before:eow
 
 # Created by `pipx` on 2023-06-09 10:56:40
 export PATH="$PATH:/home/squish/.local/bin"

@@ -1,1 +1,0 @@
--- toggles wrapping for text vs code writing

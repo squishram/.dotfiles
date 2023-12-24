@@ -2,27 +2,10 @@
 return {
 
   {
-    "ribru17/bamboo.nvim",
-    lazy = false,
-    name = "bamboo",
-  },
-
-  {
-    "neanias/everforest-nvim",
-    lazy = false,
-    name = "everforest",
-  },
-
-  {
     "cpea2506/one_monokai.nvim",
     lazy = false,
     name = "monokai",
-  },
-
-  {
-    "ellisonleao/gruvbox.nvim",
-    lazy = false,
-    name = "gruvbox",
+    priority = 1000,
   },
 
   {
@@ -51,7 +34,7 @@ return {
         strings = {},
         variables = {},
         numbers = {},
-        booleans = {},
+        booleans = { "bold" },
         properties = {},
         types = {},
         operators = {},
@@ -94,13 +77,18 @@ return {
         virtual_text = "NONE",
       },
     },
+
+    -- block to enable colourscheme
+    config = function()
+      vim.cmd([[colorscheme catppuccin]])
+    end,
   },
 
-  -- This is where you enable the colourscheme
-  {
-    "LazyVim/LazyVim",
-    opts = {
-      colorscheme = "catppuccin",
-    },
-  },
+  -- -- This is where you enable the colourscheme
+  -- {
+  --   "LazyVim/LazyVim",
+  --   opts = {
+  --     colorscheme = "catppuccin",
+  --   },
+  -- },
 }

@@ -10,11 +10,23 @@ return {
   },
 
   keys = {
-    { "<leader>ob", ":ObsidianBacklinks<CR>", mode = "n", desc = "get a location list of Obsidian backlinks" },
-    { "<leader>on", ":ObsidianToday<CR>", mode = "n", desc = "create a new Obsidian daily note" },
-    { "<leader>of", ":ObsidianQuickSwitch<CR>", mode = "n", desc = "search the vault using Telescope" },
-    { "<leader>o/", ":ObsidianSearch<CR>", mode = "n", desc = "grep the vault using Telescope" },
-    { "<leader>ot", ":ObsidianTemplate<CR>", mode = "n", desc = "insert a template from templates directory" },
+    {
+      "<leader>ob",
+      ":ObsidianBacklinks<CR>",
+      mode = "n",
+      silent = true,
+      desc = "get a location list of Obsidian backlinks",
+    },
+    { "<leader>on", ":ObsidianToday<CR>", mode = "n", silent = true, desc = "create a new Obsidian daily note" },
+    { "<leader>of", ":ObsidianQuickSwitch<CR>", mode = "n", silent = true, desc = "search the vault using Telescope" },
+    { "<leader>o/", ":ObsidianSearch<CR>", mode = "n", silent = true, desc = "grep the vault using Telescope" },
+    {
+      "<leader>ot",
+      ":ObsidianTemplate<CR>",
+      mode = "n",
+      silent = true,
+      desc = "insert a template from templates directory",
+    },
   },
 
   opts = {

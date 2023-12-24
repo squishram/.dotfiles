@@ -12,6 +12,7 @@ end
 
 -- set the colour scheme and font
 config.font = wezterm.font("CaskaydiaCove Nerd Font")
+
 -- config.color_scheme = "EverforestDark (Gogh)"
 config.color_scheme = "Catppuccin Frappé (Gogh)"
 config.font_size = 11.5
@@ -20,7 +21,7 @@ config.line_height = 1.4
 config.hide_tab_bar_if_only_one_tab = true
 -- I like a blinking cursor
 config.default_cursor_style = "BlinkingBlock"
-config.cursor_blink_rate = 500
+config.cursor_blink_rate = 1000
 config.cursor_blink_ease_in = "Constant"
 config.cursor_blink_ease_out = "Constant"
 -- stops the window shrinking when I shrink the font
@@ -48,6 +49,13 @@ config.keys = {
 	{ key = "q", mods = wezmod, action = act.CloseCurrentTab({ confirm = false }) },
 	-- decreases font size
 	{ key = "-", mods = wezmod, action = act.DecreaseFontSize },
+}
+
+config.colors = {
+	-- colour of text under cursor
+	cursor_fg = "black",
+	-- colour of selected text
+	selection_fg = "black",
 }
 
 return config

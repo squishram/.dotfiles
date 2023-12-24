@@ -13,12 +13,12 @@ keybinds {
   normal {
     unbind "Ctrl h"
     bind "Ctrl u" { SwitchToMode "Locked"; }
-    bind "Ctrl f" { SwitchToMode "Move"; }
+    bind "Ctrl z" { SwitchToMode "Move"; }
   }
 
   move {
     unbind "Ctrl h"
-    bind "Ctrl f" { SwitchToMode "Normal"; }
+    bind "Ctrl z" { SwitchToMode "Normal"; }
   }
 
   locked {
@@ -27,9 +27,9 @@ keybinds {
 }
 
 //  Send a request for a simplified ui (without arrow fonts) to plugins
-simplified_ui false
+simplified_ui true
 // keep pane frames?
-pane_frames true
+pane_frames false
 // use predefined pane layouts?
 auto_layout true
 // do multiple people in one session share a cursor?
