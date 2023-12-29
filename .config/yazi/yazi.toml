@@ -1,0 +1,11 @@
+[manager]
+# hide symlinks in filename
+show_symlink = false
+layout = [2, 3, 4]
+sort_by = "natural"
+sort_dir_first = true
+linemode = "size"
+
+[plugins]
+# show symlinks in status bar (instead)
+preload = ["~/.config/yazi/plugins/symlink_in_status_bar.lua"]

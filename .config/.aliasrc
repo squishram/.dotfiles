@@ -29,8 +29,11 @@ alias halt="sudo /sbin/halt"
 # boot up your display
 alias sx="startx"
 
-# make lf run with image and document previewers
-alias lf="lfub"
+# open TUI file browser/ manager
+alias files="yazi"
+alias ya="yazi"
+alias fm="yazi"
+alias lf="yazi"
 
 ##############
 # CORE UTILS #
