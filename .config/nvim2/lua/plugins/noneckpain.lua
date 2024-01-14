@@ -8,6 +8,8 @@ return {
         enabled = true,
         -- set to `nil` for cwd, or a string to set a directory
         location = "./scratchpad",
+        -- the filenames of the scratchpads will be fileName-left & right
+        fileName = "notes",
       },
       bo = {
         -- filetype of scratchpad notes

@@ -1,10 +1,10 @@
--- remap : to ; so you don't need to hold shift
--- vim.keymap.set("n", "<CR>", ":")
-vim.keymap.set("n", ";", ":")
-
 -- set mapleader before anything else!
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
+
+-- remap : to ; so you don't need to hold shift
+-- vim.keymap.set("n", "<CR>", ":")
+vim.keymap.set("n", ";", ":")
 
 -- Press jk fast to exit insert mode
 vim.keymap.set("i", "jk", "<ESC>")
@@ -58,9 +58,6 @@ vim.keymap.set("o", "N", "'nN'[v:searchforward]", { expr = true, desc = "Prev se
 vim.keymap.set("i", ",", ",<c-g>u")
 vim.keymap.set("i", ".", ".<c-g>u")
 vim.keymap.set("i", ";", ";<c-g>u")
-
--- save file
-vim.keymap.set({ "i", "v", "n", "s" }, "<C-s>", "<cmd>w<cr><esc>", { desc = "Save file" })
 
 -- better indenting
 vim.keymap.set("v", "<", "<gv")

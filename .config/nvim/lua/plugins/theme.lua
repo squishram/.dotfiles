@@ -1,94 +1,81 @@
--- available colorschemes - pick one!
 return {
+  "catppuccin/nvim",
+  name = "catppuccin",
+  priority = 1000,
 
-  {
-    "cpea2506/one_monokai.nvim",
-    lazy = false,
-    name = "monokai",
-    priority = 1000,
-  },
-
-  {
-    "catppuccin/nvim",
-    name = "catppuccin",
-    priority = 1000,
-    opts = {
-      flavour = "frappe", -- latte, frappe, macchiato, mocha
-      transparent_background = false,
-      show_end_of_buffer = false,
-      term_colors = false,
-      dim_inactive = {
+  opts = {
+ -- latte, frappe, macchiato, mocha
+    flavour = "frappe",
+    transparent_background = false,
+    show_end_of_buffer = false,
+    term_colors = false,
+    dim_inactive = {
+      enabled = true,
+      shade = "dark",
+      percentage = 0.15,
+    },
+    no_italic = false,
+    no_bold = false,
+    no_underline = false,
+    styles = {
+      comments = { "italic" },
+      conditionals = { "italic" },
+      loops = { "italic" },
+      functions = {},
+      keywords = {},
+      strings = {},
+      variables = {},
+      numbers = {},
+      booleans = { "bold" },
+      properties = {},
+      types = {},
+      operators = {},
+    },
+    color_overrides = {},
+    custom_highlights = {},
+    integrations = {
+      aerial = true,
+      alpha = true,
+      cmp = true,
+      dashboard = true,
+      flash = true,
+      gitsigns = true,
+      headlines = true,
+      illuminate = true,
+      indent_blankline = { enabled = true },
+      leap = true,
+      lsp_trouble = true,
+      mason = true,
+      markdown = true,
+      native_lsp = {
         enabled = true,
-        shade = "dark",
-        percentage = 0.15,
-      },
-      no_italic = false,
-      no_bold = false,
-      no_underline = false,
-      styles = {
-        comments = { "italic" },
-        conditionals = { "italic" },
-        loops = { "italic" },
-        functions = {},
-        keywords = {},
-        strings = {},
-        variables = {},
-        numbers = {},
-        booleans = { "bold" },
-        properties = {},
-        types = {},
-        operators = {},
-      },
-      color_overrides = {},
-      custom_highlights = {},
-      integrations = {
-        cmp = true,
-        gitsigns = true,
-        nvimtree = true,
-        treesitter = true,
-        notify = false,
-        mini = {
-          enabled = true,
-          indentscope_color = "",
+        underlines = {
+          errors = { "undercurl" },
+          hints = { "undercurl" },
+          warnings = { "undercurl" },
+          information = { "undercurl" },
         },
       },
-    },
-  },
-
-  {
-    "olimorris/onedarkpro.nvim",
-    lazy = false,
-    priority = 1000,
-    name = "onedarkpro",
-    opts = {
-      styles = {
-        types = "NONE",
-        methods = "NONE",
-        numbers = "NONE",
-        strings = "NONE",
-        comments = "italic",
-        keywords = "bold,italic",
-        constants = "NONE",
-        functions = "italic",
-        operators = "NONE",
-        variables = "NONE",
-        parameters = "NONE",
-        conditionals = "italic",
-        virtual_text = "NONE",
+      navic = { enabled = true, custom_bg = "lualine" },
+      neotest = true,
+      neotree = true,
+      noice = true,
+      semantic_tokens = true,
+      telescope = true,
+      treesitter_context = true,
+      which_key = true,
+      nvimtree = true,
+      treesitter = true,
+      notify = true,
+      mini = {
+        enabled = true,
+        indentscope_color = "",
       },
     },
-
-    -- block to enable colourscheme
-    config = function()
-      vim.cmd([[colorscheme catppuccin]])
-    end,
   },
 
-  -- -- This is where you enable the colourscheme
-  -- {
-  --   "LazyVim/LazyVim",
-  --   opts = {
-  --     colorscheme = "catppuccin",
-  --   },
-  -- },
+  -- enable colourscheme
+  init = function()
+    vim.cmd([[colorscheme catppuccin]])
+  end,
 }

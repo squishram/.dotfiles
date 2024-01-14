@@ -1,6 +1,10 @@
 return {
   "echasnovski/mini.pick",
   version = "*",
+  keys = {
+    { "<leader>ff", "<cmd>Pick files<cr>", desc = "Find Files" },
+    { "<leader>/", "<cmd>Pick grep_live<cr>", desc = "Find Files" },
+  },
 
   opts = {
     -- Delays (in ms; should be at least 1)

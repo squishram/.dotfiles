@@ -6,6 +6,8 @@ local options = {
   autoindent = true,
   -- indent according to syntactic context
   smartindent = true,
+  -- indent size
+  shiftwidth = 2,
   -- creates a backup file
   backup = false,
   -- allows neovim to access the system clipboard
@@ -25,6 +27,8 @@ local options = {
   showmatch = true,
   -- ignore case in search patterns
   ignorecase = true,
+  -- how to grep?
+  grepprg = "rg --vimgrep",
   -- allow the mouse to be used in neovim
   mouse = "a",
   -- pop up menu height
@@ -84,6 +88,43 @@ local options = {
   -- set the fold level so that there is no auto-folding
   foldlevel = 99,
   foldlevelstart = -1,
+
+
+  -- Enable auto write
+  autowrite = true,
+  -- Confirm to save changes before exiting modified buffer
+  confirm = true,
+  -- Ignore case
+  -- preview incremental substitute
+  inccommand = "nosplit",
+  -- Show some invisible characters (tabs...
+  list = true,
+  -- Popup blend
+  pumblend = 10,
+  sessionoptions = {
+    "buffers",
+    "curdir",
+    "tabpages",
+    "winsize",
+    "help",
+    "globals",
+    "skiprtp",
+    "folds",
+  },
+  -- Round indent
+  shiftround = true,
+  -- Columns of context
+  sidescrolloff = 8,
+  splitkeep = "screen",
+  -- Number of spaces tabs count for
+  tabstop = 2,
+  undolevels = 10000,
+  -- Allow cursor to move where there is no text in visual block mode
+  virtualedit = "block",
+  -- Command-line completion mode
+  wildmode = "longest:full,full",
+  -- Minimum window width
+  winminwidth = 5,
 }
 
 for k, v in pairs(options) do

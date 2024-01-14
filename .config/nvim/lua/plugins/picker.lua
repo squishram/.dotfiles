@@ -1,9 +1,34 @@
 return {
+
   "echasnovski/mini.pick",
   version = "*",
+  dependencies = {
+    "echasnovski/mini.extra",
+    version = "*",
+    config = true,
+  },
+
   keys = {
-    { "<leader>ff", "<cmd>Pick files<cr>", desc = "Find Files" },
-    { "<leader>/", "<cmd>Pick grep_live<cr>", desc = "Find Files" },
+    {
+      "<leader>ff",
+      ":Pick files<CR>",
+      silent = true,
+      desc = "search files (fuzzy)",
+    },
+
+    {
+      "<leader>/",
+      ":Pick grep_live<CR>",
+      silent = true,
+      desc = "live grep (fuzzy)",
+    },
+
+    {
+      "<leader>,",
+      ":Pick buffers<CR>",
+      silent = true,
+      desc = "search buffers (fuzzy)",
+    },
   },
 
   opts = {

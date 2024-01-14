@@ -37,8 +37,11 @@ config.inactive_pane_hsb = {
 -- keymaps
 config.keys = {
 	-- move between tabs
-	{ key = "h", mods = wezmod, action = act.ActivateTabRelative(-1) },
-	{ key = "l", mods = wezmod, action = act.ActivateTabRelative(1) },
+	-- { key = "h", mods = wezmod, action = act.ActivateTabRelative(-1) },
+	-- { key = "l", mods = wezmod, action = act.ActivateTabRelative(1) },
+	{ key = "h", mods = wezmod, action = act.ActivatePaneDirection("Left") },
+	{ key = "l", mods = wezmod, action = act.ActivatePaneDirection("Right") },
+	{ key = "p", mods = wezmod, action = act.SplitHorizontal({ domain = "CurrentPaneDomain" }) },
 	-- paste from the clipboard
 	{ key = "V", mods = "CTRL", action = act.PasteFrom("Clipboard") },
 	-- paste from the primary selection
