@@ -12,7 +12,6 @@ return {
     },
 
     config = function()
-
       -- keymaps that only activate when LSP attaches to current buffer
       vim.api.nvim_create_autocmd("LspAttach", {
         callback = function()
@@ -56,7 +55,7 @@ return {
       require("mason-lspconfig").setup_handlers({
         -- default handler
         function(server_name)
-          require("lspconfig")[server_name].setup({ })
+          require("lspconfig")[server_name].setup({})
         end,
       })
     end,
@@ -66,7 +65,7 @@ return {
       update_in_insert = false,
       virtual_text = false,
       severity_sort = true,
-    })
+    }),
   },
 
   {
@@ -90,7 +89,7 @@ return {
     "williamboman/mason.nvim",
     cmd = "Mason",
     keys = {
-      { "<leader>m", "<cmd>Mason<cr>", desc = "Mason" },
+      { "<leader>ma", "<cmd>Mason<cr>", desc = "Mason" },
     },
     build = ":MasonUpdate",
     config = true,

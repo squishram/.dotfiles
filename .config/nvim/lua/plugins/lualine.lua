@@ -70,6 +70,7 @@ return {
   dependencies = {
     "f-person/git-blame.nvim",
   },
-  lazy = false,
+  -- lazy = false,
+  event = { "BufReadPre", "BufNewFile" },
   opts = lualineConfig,
 }

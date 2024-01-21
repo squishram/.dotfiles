@@ -43,6 +43,7 @@ return {
   {
     -- find key words in your comments like "TODO" or "FIX"
     "folke/todo-comments.nvim",
+    dependencies = { "nvim-lua/plenary.nvim" },
     cmd = { "TodoTrouble", "TodoTelescope" },
     config = true,
     -- stylua: ignore

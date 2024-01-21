@@ -1,7 +1,6 @@
 return {
   {
     "nvim-treesitter/nvim-treesitter",
-    lazy = false,
     event = { "BufReadPre", "BufNewFile" },
     -- use "build" version (stable version is too old)
     version = false,
@@ -101,7 +100,7 @@ return {
     -- show function context
     "nvim-treesitter/nvim-treesitter-context",
     dependencies = { "echasnovski/mini.ai" },
-    lazy = false,
+    event = { "BufReadPre", "BufNewFile" },
     opts = { mode = "cursor", max_lines = 3 },
   },
 

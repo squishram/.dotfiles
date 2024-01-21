@@ -4,7 +4,7 @@ return {
   priority = 1000,
 
   opts = {
- -- latte, frappe, macchiato, mocha
+    -- latte, frappe, macchiato, mocha
     flavour = "frappe",
     transparent_background = false,
     show_end_of_buffer = false,
