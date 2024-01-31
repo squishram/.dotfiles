@@ -41,12 +41,11 @@ return {
     -- levels defined by "vim.log.levels.*" or nil, which is equivalent to DEBUG (1).
     log_level = vim.log.levels.DEBUG,
 
-    -- daily_notes = {
-    --   -- Optional, if you keep daily notes in a separate directory.
-    --   folder = "notes/dailies",
-    --   -- Optional, if you want to change the date format for daily notes.
-    --   date_format = "%Y-%m-%d",
-    -- },
+    daily_notes = {
+      folder = "~/documents/notes/Journal/Daily/",
+      date_format = "%Y-%m-%d",
+      template = "~/documents/notes/Templates/Daily.md",
+    },
 
     -- Optional, completion.
     completion = {
@@ -118,9 +117,10 @@ return {
   },
 
   config = function(_, opts)
-    require("obsidian").setup(opts)
+    local obsidian = require("obsidian")
+    obsidian.setup(opts)
     vim.keymap.set("n", "gf", function()
-      if require("obsidian").util.cursor_on_markdown_link() then
+      if obsidian.util.cursor_on_markdown_link() then
         return "<cmd>ObsidianFollowLink<CR>"
       else
         return "gf"

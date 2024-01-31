@@ -13,7 +13,7 @@ local options = {
   -- allows neovim to access the system clipboard
   clipboard = "unnamedplus",
   -- space in the neovim command line for displaying messages
-  cmdheight = 1,
+  cmdheight = 0,
   -- mostly just for cmp
   completeopt = { "menuone", "noselect" },
   -- so that `` is visible in markdown files
@@ -88,7 +88,6 @@ local options = {
   -- set the fold level so that there is no auto-folding
   foldlevel = 99,
   foldlevelstart = -1,
-
 
   -- Enable auto write
   autowrite = true,

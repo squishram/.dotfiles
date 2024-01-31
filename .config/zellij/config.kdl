@@ -12,7 +12,7 @@ keybinds {
 
   normal {
     unbind "Ctrl h"
-    bind "Ctrl u" { SwitchToMode "Locked"; }
+    bind "Ctrl #" { SwitchToMode "Locked"; }
     bind "Ctrl z" { SwitchToMode "Move"; }
   }
 

@@ -66,6 +66,7 @@ return {
                 augroup END
               ]])
           end,
+          -- auto_focus = true,
         },
       }
     end,

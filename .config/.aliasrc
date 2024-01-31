@@ -169,7 +169,11 @@ alias iws="ssh -i ~/documents/keys/AWS/IWS/IWSqui.pem ec2-user@ec2-16-16-185-244
 
 # Arch Utils
 # replace yay with paru
-alias yay="paru"
+# alias yay="paru"
+# Use eos-update to upgrade all me packages
+alias Syu="eos-update"
+# remove orphaned packages
+alias Rorph="paru -Qtdq | paru -Rns -"
 
 # WIFI
 # list available wifi networks

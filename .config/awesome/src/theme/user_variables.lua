@@ -55,7 +55,8 @@ user_vars = {
 	terminal = "wezterm",
 
 	-- This is your default browser
-	browser = "firefox",
+	-- browser = "firefox",
+	browser = "floorp",
 
 	-- This is the modkey 'mod4' = Super/Mod/WindowsKey, 'mod3' = alt...
 	modkey = "Mod4",
@@ -70,7 +71,7 @@ user_vars = {
 	kblayout = { "gb" },
 
 	-- Your filemanager that opens with super+e
-	file_manager = "nemo",
+	file_manager = "thunar",
 
 	-- Screenshot program to make a screenshot when print is hit
 	screenshot_program = "flameshot gui",

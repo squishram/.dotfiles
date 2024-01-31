@@ -24,6 +24,13 @@ return {
     },
 
     {
+      "<leader>fk",
+      ":Pick keymaps<CR>",
+      silent = true,
+      desc = "search files (fuzzy)",
+    },
+
+    {
       "<leader>,",
       ":Pick buffers<CR>",
       silent = true,

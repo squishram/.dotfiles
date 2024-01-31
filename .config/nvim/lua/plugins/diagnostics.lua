@@ -45,6 +45,7 @@ return {
     "folke/todo-comments.nvim",
     dependencies = { "nvim-lua/plenary.nvim" },
     cmd = { "TodoTrouble", "TodoTelescope" },
+    event = { "InsertEnter" },
     config = true,
     -- stylua: ignore
     keys = {
