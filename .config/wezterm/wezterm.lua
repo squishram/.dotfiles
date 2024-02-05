@@ -43,11 +43,11 @@ config.keys = {
 	{ key = "l", mods = wezmod, action = act.ActivatePaneDirection("Right") },
 	{ key = "p", mods = wezmod, action = act.SplitHorizontal({ domain = "CurrentPaneDomain" }) },
 	-- paste from the clipboard
-	{ key = "V", mods = "CTRL", action = act.PasteFrom("Clipboard") },
+	{ key = "v", mods = wezmod, action = act.PasteFrom("Clipboard") },
 	-- paste from the primary selection
-	{ key = "V", mods = "CTRL", action = act.PasteFrom("PrimarySelection") },
+	{ key = "v", mods = wezmod, action = act.PasteFrom("PrimarySelection") },
 	-- copy to the primary selection
-	{ key = "C", mods = "CTRL", action = act.CopyTo("ClipboardAndPrimarySelection") },
+	{ key = "c", mods = wezmod, action = act.CopyTo("ClipboardAndPrimarySelection") },
 	-- close current tab
 	{ key = "q", mods = wezmod, action = act.CloseCurrentTab({ confirm = false }) },
 	-- decreases font size

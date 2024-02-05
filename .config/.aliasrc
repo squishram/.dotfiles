@@ -8,60 +8,12 @@ alias cwd="pwd | xclip -selection clipboard"
 # remove empty files
 alias clean="find . -size 0c -delete"
 
-# RUST UTILS
-# improved find util in Rust
-# alias fd="fdfind -H"
-alias fd="fd -H"
-# alias find="fdfind"
-# improved cat util in Rust
-alias bat="batcat"
-# replace grep completely with ripgrep
-# alias grep ="rg"
-# rust fuzzy finder
-# ripgrep fuzzy finder
-alias skg="sk --ansi -i -c 'rga --color=always --line-number "{}" .'"
-alias skf="sk --ansi -i --color=always"
-
 # reboot / halt / poweroff
 alias reboot="sudo /sbin/reboot"
 alias pdown="systemctl poweroff"
 alias halt="sudo /sbin/halt"
 # boot up your display
 alias sx="startx"
-
-# open TUI file browser/ manager
-alias files="yazi"
-alias ya="yazi"
-alias fm="yazi"
-alias lf="yazi"
-
-##############
-# CORE UTILS #
-##############
-
-# replacement for top/ htop (TUI task manager)
-alias top="btm"
-alias htop="btm"
-alias bottom="btm"
-
-# replacement for df in rust
-alias df="duf"
-alias disk="duf"
-
-# better find function in Rust
-alias fde="fd --extension"
-
-# list directory contents in Rust
-alias ls="eza --color=always --icons=always --group-directories-first"
-alias sl="eza -a --color=always --icons=always --group-directories-first"
-alias ll="eza -la --no-permissions --no-user --header --icons=always --git --color=always --group-directories-first"
-alias la="eza -la --header --icons=always --git --color=always --group-directories-first"
-alias lt="eza -laT --icons=always --no-permissions --no-user --level=3 --header --color=always --group-directories-first"
-alias ld="eza -lad */ --color=always --icons=always"
-
-# colorisation
-alias dir="dir --color=auto"
-alias vdir="vdir --color=auto"
 
 # 'go tos'
 alias ..="cd .."
@@ -73,35 +25,16 @@ alias .3="cd ../../../"
 alias .4="cd ../../../../"
 alias .5="cd ../../../../.."
 
-# git
-# alias lg="lazygit"
-alias gt="gitui"
-
-# clear the terminal with c
-alias c="clear"
-# move all to the parent directory
-# (up = 'unpack' or '(move) up')
-alias up="mv * .."
-
-# opens calculator
-alias bc="eva"
 # handy short cuts #
 alias h="history"
 alias j="jobs -l"
-
-# tell me the path
-# alias path='echo -e ${PATH//:/\\n}'
 
 # check date/time
 alias now="date +"%T""
 alias nowtime="date +"%T""
 alias nowdate="date +"%d-%m-%Y""
 
-# I'm a vim boi now
-
 # update on one command
-# debian
-alias update="sudo apt-get update && sudo apt-get upgrade"
 ## pass options to free ##
 alias meminfo="free -m -l -t"
 ## get top process eating memory
@@ -119,16 +52,13 @@ alias gpumeminfo="grep -i --color memory /var/log/Xorg.0.log"
 alias cenv="conda create -n cenv"
 alias ve="source venv/bin/activate"
 alias ce="conda activate cenv"
-# What's yer network speed?
-alias speed="speedtest-cli --server 6513 --simple"
 
 # BLUETOOTH ALIASES
-# start bluetooth (hardware)
 alias bluon="sudo systemctl enable bluetooth && sudo systemctl start bluetooth"
 alias blustat="sudo systemctl status bluetooth"
-
-# Taskwarrior TUI
-alias tt="taskwarrior-tui"
+alias bt="bluetoothctl"
+alias headphones="bluetoothctl connect 38:18:4C:7D:6E:57"
+alias speaker="bluetoothctl connect EC:81:93:5B:DD:29"
 
 # LATEX ALIASES
 alias texclean="rm *.aux *.bbl *.bcf *.blg *.fdb_latexmk *.fls *.lof *.log *.out *.run.xml *.synctex.gz *.toc"
@@ -137,39 +67,12 @@ alias texclean="rm *.aux *.bbl *.bcf *.blg *.fdb_latexmk *.fls *.lof *.log *.out
 # force usb keyboard to be gb, with caplock=ctrl
 alias gbkb="setxkbmap -layout gb -option ctrl:nocaps"
 
-# a stopwatch
-stopwatch() {
-    start=$(date +%s)
-    while true; do
-        time="$(( $(date +%s) - $start))"
-        printf '%s\r' "$(date -u -d "@$time" +%H:%M:%S)"
-        sleep 0.2
-    done
-}
-
 # check the power
 alias batt="upower -i /org/freedesktop/UPower/devices/battery_BAT0 | rg 'state|to full|percentage'"
 # check CPU temp
 alias temp="sensors | grep CPU"
 
-# activate nightlight
-alias nightlight="redshift -l 51.509865:-0.118092"
-
-alias bt="bluetoothctl"
-# connect to bluetooth devices
-alias headphones="bluetoothctl connect 38:18:4C:7D:6E:57"
-alias speaker="bluetoothctl connect EC:81:93:5B:DD:29"
-
-# ZELLIJ
-alias za="zellij a"
-alias zl="zellij ls"
-
-# AWS EC2 Instances
-alias iws="ssh -i ~/documents/keys/AWS/IWS/IWSqui.pem ec2-user@ec2-16-16-185-244.eu-north-1.compute.amazonaws.com"
-
 # Arch Utils
-# replace yay with paru
-# alias yay="paru"
 # Use eos-update to upgrade all me packages
 alias Syu="eos-update"
 # remove orphaned packages
@@ -184,30 +87,12 @@ wificonn(){
   arg2=$2
   nmcli device wifi connect $arg1 password $arg2
 }
+
 # connect to a wifi network without a password
 wificonnpub(){
     arg1=$1
     nmcli device wifi connect $arg1
   }
-
-# wificonn() {
-#   arg1=$1
-#   # connect to a wifi network without a password
-#   if [ -z "$2" ]; then
-#     nmcli device wifi connect $arg1
-#   # connect to a wifi network with a password
-#   else
-#     $arg2=$2
-#     nmcli device wifi connect $arg1 password $arg2
-#   fi
-#   # rest of the function code that uses my_optional_arg
-# }
-
-# # look search for available timezone by continent or city
-# tzfd(){
-#   arg1=$1
-#   timedatectl list-timezones | rg $arg1
-# }
 
 # change to a given timezone in the format Zone/SubZone (usually Continent/City), simply write a city
 tzch(){
@@ -253,8 +138,6 @@ if [[ $(uname -rv) == *"debian"* ]]; then
   alias edit="$HOME/nvim.appimage"
 fi
 
-
-
 # hdmi output toggle
 hdmi() {
   if xrandr --listactivemonitors | grep "HDMI"; then
@@ -277,11 +160,51 @@ csv(){
     tidy-viewer $arg1
 }
 
-# start a new zellij session if there isn't one, or connect to your most recent one
-# za() {
-#   if zellij a | grep "No active zellij sessions found."; then
-#     zellij
-#   else
-#     zellij a
-#   fi
-# }
+# activate nightlight
+  alias nightlight="redshift -l 51.509865:-0.118092"
+
+# Zellij Terminal Session Manager
+  alias za="zellij a"
+  alias zl="zellij ls"
+
+# Yazi TUI File Browser in Rust
+  alias files="yazi"
+  alias ya="yazi"
+  alias fm="yazi"
+  alias lf="yazi"
+
+# TUI Processes Interface (like top) in Rust
+  alias top="btm"
+  alias htop="btm"
+  alias bottom="btm"
+
+# Disk Space in Rust
+  alias df="duf"
+  alias disk="duf"
+
+# Better find util in Rust
+  alias fde="fd --extension"
+  alias fd="fd -H"
+
+# use jaq to parse json files if available (Rust replacement for jq)
+    alias jq="jaq"
+
+# ls Replacement in Rust
+  alias ls="eza --color=always --icons=always --group-directories-first"
+  alias sl="eza -a --color=always --icons=always --group-directories-first"
+  alias ll="eza -la --no-permissions --no-user --header --icons=always --git --color=always --group-directories-first"
+  alias la="eza -la --header --icons=always --git --color=always --group-directories-first"
+  alias lt="eza -laT --icons=always --no-permissions --no-user --level=3 --header --color=always --group-directories-first"
+  alias ld="eza -lad */ --color=always --icons=always"
+
+# git (you only need one of these)
+  alias lg="lazygit"
+
+  alias gt="gitui"
+
+# opens calculator
+  alias bc="eva"
+
+# Taskwarrior TUI
+  alias tt="taskwarrior-tui"
+

@@ -1,0 +1,34 @@
+(deflisten launch2 "scripts/layout")
+(deflisten launch3 "scripts/media_info")
+
+;; (include "music.yuck")
+
+(
+  defwindow bar
+  :geometry (
+    geometry
+    :x "0.5%"
+    :y "1.5%"
+    ;; :width "15%"
+    :height "4%"
+    :anchor "top left"
+  )
+  :stacking "bg"
+  :reserve (
+    struts
+    :distance "6%"
+    :side "top"
+  )
+  :windowtype "dock"
+  :wm-ignore false
+
+  (
+    box
+    :class: "status"
+    :valign "center"
+    :halign "center"
+    (label :text "${time.hour}:${time.min}")
+    (network)
+    (battery)
+  )
+)

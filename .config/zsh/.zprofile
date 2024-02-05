@@ -1,8 +1,11 @@
-# default programs
+# default text editor (important for sudoedit)
 export EDITOR="nvim"
-export BROWSER="firefox"
+# default browser
+export BROWSER="floorp"
+# default pdf reader
 export READER="zathura"
-
+# location of ripgrep config
+export RIPGREP_CONFIG_PATH="$HOME/.config/.ripgreprc"
 # where zsh config files are located
 export ZDOTDIR="$HOME/.config/zsh"
 
@@ -16,11 +19,6 @@ export PATH="$PATH:/home/sammy/julia-1.8.1/bin"
 export CFLAGS="-Ofast -march=native -pipe -flto -fuse-linker-plugin"
 export CXXFLAGS=${CFLAGS}
 export LDFLAGS=${CFLAGS}
-
-# icons for lf file browser
-[ -f ~/.config/lf/lf_icons ] && {
-	export LF_ICONS="$HOME/.config/lf/lf_icons"
-}
 
 # Created by `pipx` on 2023-06-09 10:56:40
 export PATH="$PATH:/home/squish/.local/bin"

@@ -1,0 +1,23 @@
+#!/bin/bash
+
+# Run leftwm-state in the background and capture its output
+status_output=$(leftwm-state &)
+
+# Get the process ID of the background command
+pid=$!
+
+# Wait for a short moment to ensure leftwm-state has a chance to print the output
+sleep 1
+
+# Kill the leftwm-state process
+kill $pid
+
+# Extract the index with "mine"=true using jq
+current_index=$(echo "$status_output" | jq -r '.[] | select(.mine == true) | .index')
+
+# Print the result
+if [ "$current_index" != "null" ]; then
+  echo "The index currently in use is $current_index"
+else
+  echo "No index in use found."
+fi

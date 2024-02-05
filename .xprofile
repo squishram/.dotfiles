@@ -1,0 +1,16 @@
+#!/bin/sh
+
+# Disable beep
+xset -b
+
+# Set keyboard with capslock -> crtl
+setxkbmap -layout gb -option ctrl:nocaps
+
+# Settings for hiding the mouse cursor
+unclutter --jitter 10 --ignore-scrolling --sart-hidden --fork
+
+# source this file to set the mouse cursor & size
+xrdb $HOME/.Xresources
+
+# cleaner graphics using compfy compositer
+compfy --daemon

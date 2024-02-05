@@ -50,6 +50,16 @@ local lualineConfig = {
           return count[ft] ~= nil
         end,
       },
+      {
+        function()
+          local recording_register = vim.fn.reg_recording()
+          if recording_register == "" then
+            return ""
+          else
+            return "Recording @" .. recording_register
+          end
+        end,
+      },
     },
 
     lualine_y = {

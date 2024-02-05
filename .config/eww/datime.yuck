@@ -1,0 +1,66 @@
+(defpoll time
+  :interval "5s"
+  `date +'{"hour":"%H","min":"%M"}'`
+)
+
+;; ;; Calendar (not yet implemented)
+;; (defwindow calendar
+;;   :geometry
+;; (geometry
+;;     :x "1465px"
+;;     :y "65px"
+;;     :width "415px"
+;;     :height "100px")
+;;   :stacking "fg"
+;;   :windowtype "dock"
+;;   :wm-ignore "false"
+;; (box
+;;     :class "cal"
+;;     :orientation "h"
+;;     :valign "fill"
+;;     :halign "fill"
+;;   (calendar
+;;       :day day
+;;       :month month
+;;       :year year
+;;       :show-details true
+;;       :show-heading true
+;;       :show-day-names true
+;;     )
+;;   )
+;; )
+;;
+;; (defwidget time []
+;; (eventbox
+;;     :tooltip "Current time"
+;;     :onhover "eww update date_reveal=true"
+;;     :onhoverlost "eww update date_reveal=false"
+;;     :cursor "pointer"
+;;   (button 
+;;       :onclick "scripts/popup_calendar"
+;;     (box
+;;         :class "time_box"
+;;         :space-evenly "false"
+;;         :orientation "h"
+;;         :valign "center"
+;;         :halign "fill"
+;;       (label 
+;;           :valign "center"
+;;           :class "time"
+;;           :markup "<span font-weight=\"heavy\">${hour}</span><span font-weight=\"heavy\">:${minutes}</span><span font-size=\"xx-small\">${type}</span>"
+;;         )
+;;       (revealer
+;;           :reveal date_reveal
+;;           :transition "slideright"
+;;           :duration "350ms"
+;;           :valign "fill"
+;;         (label
+;;             :valign "fill"
+;;             :class "date"
+;;             :markup "<span font-size=\"xx-small\">${date}</span>"
+;;           )
+;;         )
+;;       )
+;;     )
+;;   )
+;; )

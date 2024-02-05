@@ -1,0 +1,14 @@
+#!/bin/bash
+
+SCRIPTPATH="$( cd "$(dirname "$0")" ; pwd -P )"
+
+leftwm command "UnloadTheme"
+
+eww close-all
+eww kill
+
+# pkill eww
+# pkill compfy
+# pkill picom
+# pkill conky
+# pkill uhrwerk
