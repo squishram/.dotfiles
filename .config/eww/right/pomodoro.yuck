@@ -1,0 +1,15 @@
+(defvar timer "00:00")
+
+(defwidget pomodoro [] 
+  (box
+    :class "pomodoro_box"
+    :halign "center"
+    :valign "center"
+    (button
+      :onclick "uair"
+    (
+      label :text "${timer}"
+    )
+    )
+  )
+)

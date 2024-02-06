@@ -5,7 +5,7 @@ export BROWSER="floorp"
 # default pdf reader
 export READER="zathura"
 # location of ripgrep config
-export RIPGREP_CONFIG_PATH="$HOME/.config/.ripgreprc"
+export RIPGREP_CONFIG_PATH="$HOME/.config/ripgrep/ripgrep.config"
 # where zsh config files are located
 export ZDOTDIR="$HOME/.config/zsh"
 

@@ -29,7 +29,6 @@ $crust: #232634;
 // GLOBAL
 * {
   all: unset;
-  // font-size: 16px;
   font-family: "CaskaydiaCove Nerd Font",
 }
 
@@ -42,13 +41,31 @@ window {
 // LEFT BAR
 .workspaces{
   color: $rosewater;
+  font-size: 15px;
 }
 .workspaces button {
-  font-size: 15px;
   padding: 6px;
 }
 .workspaces button:hover {
   color: $red;
+}
+.ws-button-mine {
+  background-color: $rosewater;
+  color: $mantle;
+}
+.ws-button-urgent {
+  color: $rosewater;
+  background-color: $red;
+}
+.ws-button-busy {
+  color: $sky;
+}
+// .ws-button-visible {
+//   color: #D35D6E;
+//   background-color: #4e4e4e;
+// }
+.ws-button {
+  color: $subtext0;
 }
 
 // CENTRE BAR
@@ -59,9 +76,12 @@ window {
 
 // RIGHT BAR
 .battery_box {
+  font-size: 18px;
   color: $green;
 }
+
 .network {
+  color: $rosewater;
   font-size: 22px
 }
 

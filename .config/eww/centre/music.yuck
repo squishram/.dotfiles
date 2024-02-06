@@ -6,11 +6,10 @@
 (defwidget music []
   (box
     :class "music"
+    :limit_width "20px"
     :orientation "h"
     :space-evenly false
     :halign "center"
   {music != "" ? "󰝚  ${music}" : ""}
   )
 )
-
-

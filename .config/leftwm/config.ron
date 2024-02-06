@@ -15,10 +15,6 @@
     "3",
     "4",
     "5",
-    "6",
-    "7",
-    "8",
-    "9",
   ],
 
   max_window_width: None,
@@ -30,7 +26,6 @@
 
 
   layout_mode: Tag,
-  insert_behavior: Bottom,
   window_rules: [],
   disable_current_tag_swap: false,
   disable_tile_drag: false,
@@ -43,36 +38,27 @@
   auto_derive_workspaces: true,
   disable_cursor_reposition_on_resize: false,
 
-
-  // window_rules: [
-  // ( window_title: "wezterm", spawn_floating: false ),
-  // ( window_title: "floorp", spawn_on_tag: 9, spawn_floating: false ),
-    // windows whose WM_CLASS matches "*.app_2.*" regular expression will be spawn on tag 2
-  // ( window_class: "*.app_2*", spawn_on_tag: 2 ),
-  // ],
-
   scratchpad: [
 
-    (
-      name: "terminal",
+    (name: "terminal",
       value: "wezterm",
-      x: 50,
-      y: 50,
-      height: 100,
-      width: 100,
+      x: 10, y: 70, height: 1000, width: 1000
     ),
 
-    // (
-    //   name: "keybindings",
-    //   value: "glow -p ~/documents/notes/LeftWM Keybinds.md",
-    //   x: 60,
-    //   width: 1800,
-    // ),
+    (name: "tasks",
+      value: "wezterm -e taskwarrior-tui",
+      x: 10, y: 70, height: 100, width: 1900
+    ),
 
-    // (
-    //   name: "tasks",
-    //   value: "taskwarrior-tui"
-    // ),
+    (name: "spotify",
+      value: "spotify-launcher",
+      x: 10, y: 70, height: 1400, width: 1900
+    ),
+
+    // (name: "keybinds",
+    //   value: "wezterm -e glow -p ~/documents/notes/LeftWM Keybinds.md",
+    //   x: 50.0, y: 10.0, height: 90.0, width: 100.0
+    // )
 
   ],
 
@@ -99,9 +85,15 @@
 
     // open program
   (command: Execute,
-      value: "rofi -show drun -theme ~/.config/rofi/rofi.rasi -matching fuzzy",
+      value: "rofi -show drun -theme ~/.config/rofi/drun.rasi -matching fuzzy",
       modifier: ["modkey", "Shift"],
       key: "Return"),
+
+    // power menu
+  (command: Execute,
+      value: "rofi -show power-menu -modi power-menu:rofi-power-menu -theme ~/.config/rofi/logout.rasi -matching fuzzy",
+      modifier: ["modkey"],
+      key: "q"),
 
     // switch window
   (command: Execute,
@@ -118,23 +110,19 @@
     // screenshot!
   (command: Execute,
       value: "flameshot gui",
-      modifier: "",
       key: "Print"),
 
     // volume
   (command: Execute,
       value: "pactl set-sink-volume @DEFAULT_SINK@ -2%",
-      modifier: "",
       key: "XF86AudioLowerVolume",),
 
   (command: Execute,
       value: "pactl set-sink-volume @DEFAULT_SINK@ +2%",
-      modifier: "",
       key: "XF86AudioRaiseVolume",),
 
   (command: Execute,
       value: "pactl set-sink-mute @DEFAULT_SINK@ toggle",
-      modifier: "",
       key: "XF86AudioMute",),
 
     // control window size
@@ -179,12 +167,17 @@
       modifier: ["modkey"],
       key: "j"),
 
-    // switching window layout (one or split)
+    // switching window layout 
   (command: NextLayout,
       value: "",
       modifier: ["modkey"],
       key: "Tab"),
 
+  // scroll through tags, ignoring empty ones
+  (command: FocusNextTag, value: "goto_used", modifier: ["modkey"], key: "l"),
+  (command: FocusPreviousTag, value: "goto_used", modifier: ["modkey"], key: "h"),
+
+  // go to specific tag
   (command: GotoTag, value: "1", modifier: ["modkey"], key: "1"),
   (command: GotoTag, value: "2", modifier: ["modkey"], key: "2"),
   (command: GotoTag, value: "3", modifier: ["modkey"], key: "3"),
@@ -208,12 +201,17 @@
   (command: ToggleScratchPad,
       value: "terminal",
       modifier: ["modkey"],
-      key: "p"),
+      key: "o"),
 
   (command: ToggleScratchPad,
-      value: "keybindings",
+      value: "spotify",
       modifier: ["modkey"],
       key: "s"),
+
+  // (command: ToggleScratchPad,
+  //     value: "keybindings",
+  //     modifier: ["modkey"],
+  //     key: "s"),
 
   (command: ToggleScratchPad,
       value: "tasks",
@@ -221,5 +219,4 @@
       key: "t"),
 
   ],
-  state_path: None,
 )
