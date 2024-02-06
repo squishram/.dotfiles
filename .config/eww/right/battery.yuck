@@ -1,11 +1,9 @@
-(
-  defpoll battery_percentage
+(defpoll battery_percentage
   :interval "100s"
   `echo $(acpi | awk -F ',|%' '{print $2}' | tr -d ' ')`
 )
 
-(
-  defpoll battery_status
+(defpoll battery_status
   :interval "10s"
   `echo $(acpi | awk '{print $3}' | tr -d ',')`
 )
@@ -51,18 +49,7 @@
         battery < 60 ? icon_06_chg :
         battery < 70 ? icon_07_chg :
         battery < 80 ? icon_08_chg :
-        battery < 90 ? icon_09_chg :
-        icon_10_chg :
-        ;; status == 'Charging' && battery < 10 ? icon_01_chg :
-        ;; status == 'Charging' && battery < 20 ? icon_02_chg :
-        ;; status == 'Charging' && battery < 30 ? icon_03_chg :
-        ;; status == 'Charging' && battery < 40 ? icon_04_chg :
-        ;; status == 'Charging' && battery < 50 ? icon_05_chg :
-        ;; status == 'Charging' && battery < 60 ? icon_06_chg :
-        ;; status == 'Charging' && battery < 70 ? icon_07_chg :
-        ;; status == 'Charging' && battery < 80 ? icon_08_chg :
-        ;; status == 'Charging' && battery < 90 ? icon_09_chg :
-        ;; status == 'Charging' ? icon_10_chg :
+        battery < 90 ? icon_09_chg : icon_10_chg :
         battery < 10 ? icon_01_drn :
         battery < 20 ? icon_02_drn :
         battery < 30 ? icon_03_drn :

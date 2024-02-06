@@ -99,7 +99,7 @@
 
     // open program
   (command: Execute,
-      value: "rofi -show drun -theme ~/.config/rofi/rofi.rasi",
+      value: "rofi -show drun -theme ~/.config/rofi/rofi.rasi -matching fuzzy",
       modifier: ["modkey", "Shift"],
       key: "Return"),
 

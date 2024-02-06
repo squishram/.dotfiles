@@ -1,18 +1,16 @@
-;; (include "revealer.yuck")
-;; (include "hoverswitch.yuck")
+;; ==== WIDGET BARS FOR EWW ====
 
-(include "top_left_bar.yuck")
-(include "top_centre_bar.yuck")
-(include "top_right_bar.yuck")
+;; left bar includes:
+;; workspace layout
+;; TODO: music info
+(include "left/left_bar.yuck")
 
-;; class: string CSS class name.
-;; valign: string how to align this vertically. Possible values: "fill", "baseline", "center", "start", "end".
-;; halign: string how to align this horizontally. Possible values: "fill", "baseline", "center", "start", "end".
-;; vexpand: bool should this container expand vertically. Default: false.
-;; hexpand: bool should this widget expand horizontally. Default: false.
-;; width: int width of this element. Note that this can not restrict the size if the contents stretch it.
-;; height: int height of this element. Note that this can not restrict the size if the contents stretch it.
-;; active: bool If this widget can be interacted with.
-;; tooltip: string tooltip text (on hover).
-;; visible: bool visibility of the widget.
-;; style: string inline CSS style applied to the widget.
+;; centre bar includes:
+;; TODO: WIP
+(include "centre/centre_bar.yuck")
+
+;; right bar includes
+;; WiFi strength
+;; Time & Date
+;; Battery
+(include "right/right_bar.yuck")

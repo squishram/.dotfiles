@@ -3,6 +3,11 @@
   `date +'{"hour":"%H","min":"%M"}'`
 )
 
+;; (defpoll time
+;;   :interval "10s"
+;;   "date '+%H:%M %d %b %Y'"
+;; )
+
 ;; ;; Calendar (not yet implemented)
 ;; (defwindow calendar
 ;;   :geometry
@@ -29,7 +34,7 @@
 ;;     )
 ;;   )
 ;; )
-;;
+
 ;; (defwidget time []
 ;; (eventbox
 ;;     :tooltip "Current time"

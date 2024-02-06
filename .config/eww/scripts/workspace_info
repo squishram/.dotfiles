@@ -1,23 +1,27 @@
 #!/bin/bash
 
-# Run leftwm-state in the background and capture its output
-status_output=$(leftwm-state &)
+total="xdotool get_num_desktops"
+icon1=○
+icon2=◎
+icon3=●
 
-# Get the process ID of the background command
-pid=$!
+leftwm-state 2> /dev/null | while true read line; do
+  currwp=$((`xdotool get_desktop`))
+  for i = 0..$total
+  # Run jaq command on the output and print the result
+  echo "$line" | jaq -r '.workspaces[0].tags[] | select(.mine == true) | .index'
+done
 
-# Wait for a short moment to ensure leftwm-state has a chance to print the output
-sleep 1
-
-# Kill the leftwm-state process
-kill $pid
-
-# Extract the index with "mine"=true using jq
-current_index=$(echo "$status_output" | jq -r '.[] | select(.mine == true) | .index')
-
-# Print the result
-if [ "$current_index" != "null" ]; then
-  echo "The index currently in use is $current_index"
-else
-  echo "No index in use found."
-fi
+bspc subscribe desktop_focus node_add node_remove 2> /dev/null | while read line; do
+currwp=$((`xdotool get_desktop`))
+for (( i = 0; i < $total; i++));
+do
+  if [[ $i -eq $currwp ]]
+  then
+    $eww update wp$i=$icon3
+  else
+    [[ `bspc query -N -d $i | wc -l` -gt 0 ]] && $eww update wp$i=$icon2 || $eww update wp$i=$icon1 
+  fi;
+done
+echo cycle
+done

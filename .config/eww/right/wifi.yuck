@@ -16,11 +16,11 @@
     icon_wifi3
     icon_wifi4
   ]
-;; (
-;;     box
-;;     :class "net-box"
-;;     :space-evenly false
-;;     :spacing 8
+(
+    box
+    :class "network"
+    :space-evenly true
+    :spacing 8
   (
       label
       :text {
@@ -29,7 +29,7 @@
         strength < 51 ? icon_wifi2 :
         strength < 76 ? icon_wifi3 : icon_wifi4
       }
-    ;; )
+    )
   )
 )
 

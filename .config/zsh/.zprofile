@@ -10,6 +10,8 @@ export RIPGREP_CONFIG_PATH="$HOME/.config/.ripgreprc"
 export ZDOTDIR="$HOME/.config/zsh"
 
 # programming languages
+# Created by `pipx` on 2023-06-09 10:56:40
+export PATH="$PATH:/home/squish/.local/bin"
 # Rust
 export PATH="~/.cargo/bin:$PATH"
 # Julia
@@ -19,6 +21,3 @@ export PATH="$PATH:/home/sammy/julia-1.8.1/bin"
 export CFLAGS="-Ofast -march=native -pipe -flto -fuse-linker-plugin"
 export CXXFLAGS=${CFLAGS}
 export LDFLAGS=${CFLAGS}
-
-# Created by `pipx` on 2023-06-09 10:56:40
-export PATH="$PATH:/home/squish/.local/bin"

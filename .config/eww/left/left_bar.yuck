@@ -1,16 +1,12 @@
-(include "datime.yuck")
-(include "wifi.yuck")
-(include "battery.yuck")
+(include "left/workspaces.yuck")
 
-(
-  defwindow bar
-  :geometry (
-    geometry
-    :x "-0.5%"
+(defwindow left_bar
+  :geometry (geometry
+    :x "0.5%"
     :y "1.5%"
     :width "15%"
     :height "4%"
-    :anchor "top right"
+    :anchor "top left"
   )
   :stacking "bg"
   :reserve (
@@ -26,8 +22,6 @@
     :class: "status"
     :valign "center"
     :halign "center"
-    (label :text "${time.hour}:${time.min}")
-    (network)
-    (battery)
+    (workspaces)
   )
 )

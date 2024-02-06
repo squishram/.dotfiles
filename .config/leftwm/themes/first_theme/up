@@ -18,4 +18,4 @@ fi
 
 # start eww and open windows
 eww daemon &
-eww open-many bar powermenu
+eww open-many left_bar centre_bar right_bar

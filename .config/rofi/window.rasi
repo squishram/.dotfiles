@@ -1,5 +1,5 @@
 configuration {
-	font:							"JetBrainsMono NF 12";
+	font:							"CaskaydiaCove Nerd Font 12";
     show-icons:                     true;
 	icon-theme: 					"Papirus-Dark";
     display-drun: 					"";
