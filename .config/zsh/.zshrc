@@ -2,7 +2,6 @@
 # zoxide
 # starship
 # zsh-history-substring-search
-# zsh-autosuggestions
 # zsh-syntax-highlighting
 # zsh-vi-mode
 # macchina
@@ -57,7 +56,6 @@ eval "$(zoxide init zsh)"
 # syntax highlighting plugin
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
 # suggest shell prompts based in first characters
-source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh 2>/dev/null
 # scroll back through command history after typing substring (and create associated keymaps)
 source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh 2>/dev/null
 bindkey '^[[A' history-substring-search-up

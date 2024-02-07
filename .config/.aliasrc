@@ -84,38 +84,38 @@ alias wifi="nmcli device wifi list"
 # connect to a wifi network with a password
 wificonn(){
   arg1=$1
-  arg2=$2
-  nmcli device wifi connect $arg1 password $arg2
+    arg2=$2
+    nmcli device wifi connect $arg1 password $arg2
 }
 
 # connect to a wifi network without a password
 wificonnpub(){
-    arg1=$1
+  arg1=$1
     nmcli device wifi connect $arg1
-  }
+}
 
 # change to a given timezone in the format Zone/SubZone (usually Continent/City), simply write a city
 tzch(){
   arg1=$1
-  sudo timedatectl set-timezone $(timedatectl list-timezones | rg $arg1)
+    sudo timedatectl set-timezone $(timedatectl list-timezones | rg $arg1)
 }
 
 # convert docx to markdown
 docx2md(){
   arg1=$1
-  pandoc -s $arg1 --wrap=none --reference-links -t markdown -o $arg1.md
+    pandoc -s $arg1 --wrap=none --reference-links -t markdown -o $arg1.md
 }
 
 # open .docx file as .txt in vim
 docx2txt(){
   arg1=$1
-  docx2txt $arg1 - | nvim -
+    docx2txt $arg1 - | nvim -
 }
 
 # open .doc file as .txt in vim
 doc2txt(){
   arg1=$1
-  antiword $arg1 | nvim -
+    antiword $arg1 | nvim -
 }
 
 # recursive find and replace
@@ -125,17 +125,17 @@ fr(){
 
 # Arch-specific (non-ubuntu) aliases only go here
 if [[ $(uname -rv) == *"arch"* ]]; then
-  alias vim="nvim"
-  alias vi="nvim"
-  alias edit="nvim"
-  alias batcat="bat"
+alias vim="nvim"
+alias vi="nvim"
+alias edit="nvim"
+alias batcat="bat"
 fi
 
 # ubuntu
 if [[ $(uname -rv) == *"debian"* ]]; then
-  alias vim="$HOME/nvim.appimage"
-  alias vi="$HOME/nvim.appimage"
-  alias edit="$HOME/nvim.appimage"
+alias vim="$HOME/nvim.appimage"
+alias vi="$HOME/nvim.appimage"
+alias edit="$HOME/nvim.appimage"
 fi
 
 # hdmi output toggle
@@ -160,51 +160,47 @@ csv(){
     tidy-viewer $arg1
 }
 
-# activate nightlight
-  alias nightlight="redshift -l 51.509865:-0.118092"
-
 # Zellij Terminal Session Manager
-  alias za="zellij a"
-  alias zl="zellij ls"
+alias za="zellij a"
+alias zl="zellij ls"
 
 # Yazi TUI File Browser in Rust
-  alias files="yazi"
-  alias ya="yazi"
-  alias fm="yazi"
-  alias lf="yazi"
+alias files="yazi"
+alias ya="yazi"
+alias fm="yazi"
+alias lf="yazi"
 
 # TUI Processes Interface (like top) in Rust
-  alias top="btm"
-  alias htop="btm"
-  alias bottom="btm"
+alias top="btm"
+alias htop="btm"
+alias bottom="btm"
 
 # Disk Space in Rust
-  alias df="duf"
-  alias disk="duf"
+alias df="duf"
+alias disk="duf"
 
 # Better find util in Rust
-  alias fde="fd --extension"
-  alias fd="fd -H"
+alias fde="fd --extension"
+alias fd="fd -H"
 
 # use jaq to parse json files if available (Rust replacement for jq)
-    alias jq="jaq"
+alias jq="jaq"
 
 # ls Replacement in Rust
-  alias ls="eza --color=always --icons=always --group-directories-first"
-  alias sl="eza -a --color=always --icons=always --group-directories-first"
-  alias ll="eza -la --no-permissions --no-user --header --icons=always --git --color=always --group-directories-first"
-  alias la="eza -la --header --icons=always --git --color=always --group-directories-first"
-  alias lt="eza -laT --icons=always --no-permissions --no-user --level=3 --header --color=always --group-directories-first"
-  alias ld="eza -lad */ --color=always --icons=always"
+alias ls="eza --color=always --icons=always --group-directories-first"
+alias sl="eza -a --color=always --icons=always --group-directories-first"
+alias ll="eza -la --no-permissions --no-user --header --icons=always --git --color=always --group-directories-first"
+alias la="eza -la --header --icons=always --git --color=always --group-directories-first"
+alias lt="eza -laT --icons=always --no-permissions --no-user --level=3 --header --color=always --group-directories-first"
+alias ld="eza -lad */ --color=always --icons=always"
 
 # git (you only need one of these)
-  alias lg="lazygit"
+alias lg="lazygit"
 
-  alias gt="gitui"
+alias gt="gitui"
 
 # opens calculator
-  alias bc="eva"
+alias bc="eva"
 
 # Taskwarrior TUI
-  alias tt="taskwarrior-tui"
-
+alias tt="taskwarrior-tui"
