@@ -40,19 +40,19 @@
 
   scratchpad: [
 
-    (name: "terminal",
-      value: "wezterm",
-      x: 10, y: 70, height: 1000, width: 1000
-    ),
+    // (name: "terminal",
+    //   value: "wezterm",
+    //   x: 10, y: 70, height: 1000, width: 1000
+    // ),
 
-    (name: "tasks",
-      value: "wezterm -e taskwarrior-tui",
-      x: 10, y: 70, height: 100, width: 1900
-    ),
+    // (name: "tasks",
+    //   value: "wezterm -e taskwarrior-tui",
+    //   x: 10, y: 70, height: 100, width: 1900
+    // ),
 
     (name: "spotify",
       value: "spotify-launcher",
-      x: 10, y: 70, height: 1400, width: 1900
+      x: 10, y: 70, height: 1000, width: 1900
     ),
 
     // (name: "keybinds",
@@ -79,7 +79,7 @@
 
     // open terminal
   (command: Execute,
-      value: "wezterm",
+      value: "kitty",
       modifier: ["modkey"],
       key: "Return"),
 

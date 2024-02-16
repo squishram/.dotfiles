@@ -30,12 +30,13 @@ $crust: #232634;
 * {
   all: unset;
   font-family: "CaskaydiaCove Nerd Font",
+  // font-family: "ComicShannsMono Nerd Font",
 }
 
 window {
-  background: $crust;
-  border: 3px solid $maroon;
-  border-radius: 20px;
+  background: $mantle;
+  // border: 2px solid $maroon;
+  // border-radius: 20px;
 }
 
 // LEFT BAR
@@ -50,20 +51,20 @@ window {
   color: $red;
 }
 .ws-button-mine {
-  background-color: $rosewater;
-  color: $mantle;
+  // background-color: $rosewater;
+  // color: $sky;
+  // color: $green;
+  color: $sapphire;
 }
 .ws-button-urgent {
-  color: $rosewater;
-  background-color: $red;
+  // color: $rosewater;
+  // background-color: $red;
+  color: $red;
 }
 .ws-button-busy {
-  color: $sky;
+  // color: $sky;
+  color: $mauve;
 }
-// .ws-button-visible {
-//   color: #D35D6E;
-//   background-color: #4e4e4e;
-// }
 .ws-button {
   color: $subtext0;
 }
@@ -75,13 +76,38 @@ window {
 }
 
 // RIGHT BAR
-.battery_box {
-  font-size: 18px;
+
+.wifi_box{
+  color: $lavender;
+}
+.wifi{
+  color:$lavender;
+}
+
+.volume_box{
+  color: $yellow;
+}
+.volume{
+  color:$yellow;
+}
+
+.battery_chg_box {
   color: $green;
 }
-
-.network {
-  color: $rosewater;
-  font-size: 22px
+.battery_chg {
+  color: $green;
+}
+.battery_dis_box {
+  color: $sky;
+}
+.battery_dis {
+  color: $sky;
 }
 
+
+.pomodoro_box {
+  color: $red;
+}
+.pomodoro {
+  color: $red;
+}

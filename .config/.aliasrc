@@ -46,7 +46,7 @@ alias pscpu10="ps auxf | sort -nr -k 3 | head -10"
 ## Get server cpu info ##
 alias cpuinfo="lscpu"
 ## get GPU ram on desktop / laptop##
-alias gpumeminfo="grep -i --color memory /var/log/Xorg.0.log"
+alias gpumeminfo="rg -i --color memory /var/log/Xorg.0.log"
 # activate your virtual environment
 # provided there is a venv_activate.sh executable in the project directory
 alias cenv="conda create -n cenv"
@@ -70,7 +70,7 @@ alias gbkb="setxkbmap -layout gb -option ctrl:nocaps"
 # check the power
 alias batt="upower -i /org/freedesktop/UPower/devices/battery_BAT0 | rg 'state|to full|percentage'"
 # check CPU temp
-alias temp="sensors | grep CPU"
+alias temp="sensors | rg CPU"
 
 # Arch Utils
 # Use eos-update to upgrade all me packages
@@ -128,7 +128,6 @@ if [[ $(uname -rv) == *"arch"* ]]; then
 alias vim="nvim"
 alias vi="nvim"
 alias edit="nvim"
-alias batcat="bat"
 fi
 
 # ubuntu
@@ -140,7 +139,7 @@ fi
 
 # hdmi output toggle
 hdmi() {
-  if xrandr --listactivemonitors | grep "HDMI"; then
+  if xrandr --listactivemonitors | rg "HDMI"; then
     xrandr --output 'HDMI-A-0' --off
       echo "HDMI turned off"
   else
@@ -180,27 +179,34 @@ alias df="duf"
 alias disk="duf"
 
 # Better find util in Rust
-alias fde="fd --extension"
+# include hidden files
 alias fd="fd -H"
+# search for particular file extension
+alias fde="fd --extension"
 
 # use jaq to parse json files if available (Rust replacement for jq)
 alias jq="jaq"
 
 # ls Replacement in Rust
 alias ls="eza --color=always --icons=always --group-directories-first"
-alias sl="eza -a --color=always --icons=always --group-directories-first"
-alias ll="eza -la --no-permissions --no-user --header --icons=always --git --color=always --group-directories-first"
-alias la="eza -la --header --icons=always --git --color=always --group-directories-first"
-alias lt="eza -laT --icons=always --no-permissions --no-user --level=3 --header --color=always --group-directories-first"
-alias ld="eza -lad */ --color=always --icons=always"
+alias sl="eza -ar --color=always --icons=always --group-directories-first"
+alias ll="eza -lar --no-permissions --no-user --header --icons=always --git --color=always --group-directories-first"
+alias la="eza -lar --header --icons=always --git --color=always --group-directories-first"
+alias lt="eza -larT --icons=always --no-permissions --no-user --level=3 --header --color=always --group-directories-first"
+alias ld="eza -lard */ --color=always --icons=always"
 
 # git (you only need one of these)
-alias lg="lazygit"
-
 alias gt="gitui"
-
 # opens calculator
-alias bc="eva"
-
+alias calc="eva"
 # Taskwarrior TUI
 alias tt="taskwarrior-tui"
+# cat replacement in rust with syntax highlighting
+alias cat="bat"
+
+# # fzf
+# # recursive fuzzy search, open file
+# fvim="nvim $(find . | fzf)"
+# # recursive fuzzy grep, open file
+# gvim="nvim $(rg . | fzf | cut -d ":" -f 1)"
+

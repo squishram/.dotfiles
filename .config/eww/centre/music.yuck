@@ -6,7 +6,7 @@
 (defwidget music []
   (box
     :class "music"
-    :limit_width "20px"
+    :limit_width 20
     :orientation "h"
     :space-evenly false
     :halign "center"

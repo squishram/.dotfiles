@@ -1,5 +1,5 @@
 configuration {
-  font: "Caskaydia Cove Nerd Font 8";
+  font: "Caskaydia Cove Nerd Font 14";
   modi: "window,run,drun";
   location: 3;
   xoffset: -40;
@@ -60,8 +60,8 @@ inputbar {
 listview {
   padding: 15 15 15 15;
   background-color: #00000000;
-  columns: 5;
-  lines: 1;
+  columns: 1;
+  lines: 6;
   fixed-lines: true;
   //fixed-columns: true;
 }

@@ -1,7 +1,7 @@
 configuration {
   display-drun: "Run app";
   drun-display-format: "{name}";
-  font: "Iosevka Curly Bold 13";
+  font: "CaskaydiaCove Nerd Font Bold 14";
   modi: "window,run,drun";
   show-icons: true;
   location: 2;
@@ -51,7 +51,7 @@ element-icon {
 entry {
   background-color: @bg-alt;
   padding: 12;
-  margin: 0 0 0 -15;
+  margin: 0 0 0 0;
   text-color: @fg;
 }
 
@@ -63,9 +63,9 @@ listview {
   padding: 0 15 15 15;
   background-color: #00000000;
   columns: 5;
-  lines: 1;
+  lines: 2;
   fixed-lines: true;
-  //fixed-columns: true;
+  fixed-columns: false;
 }
 
 mainbox {

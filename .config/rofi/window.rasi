@@ -1,7 +1,7 @@
 configuration {
   display-windowcd: "Focus window";
   window-format: "{t}";
-  font: "CaskaydiaCove Nerd Font 12";
+  font: "CaskaydiaCove Nerd Font 14";
   modi: "window,run,drun";
   show-icons: true;
   location: 1;
@@ -67,9 +67,9 @@ listview {
   padding: 15 15 15 15;
   background-color: #00000000;
   columns: 1;
-  lines: 1;
+  lines: 6;
   fixed-lines: false;
-  //fixed-columns: true;
+  fixed-columns: false;
 }
 
 mainbox {

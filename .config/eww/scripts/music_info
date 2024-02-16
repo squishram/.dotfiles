@@ -1,0 +1,49 @@
+#!/bin/bash
+
+# Function to format time in mm:ss format
+format_time() {
+    local seconds=$1
+    printf "%02d:%02d" $((seconds / 60)) $((seconds % 60))
+}
+
+# Get the metadata of the currently playing media
+metadata=$(playerctl metadata)
+
+# Retrieve individual pieces of information
+title=$(echo "$metadata" | grep -oP "(?<=xesam:title': ')(.*?)(?=')" | head -n 1)
+artist=$(echo "$metadata" | grep -oP "(?<=xesam:artist': \[')(.*?)(?=')" | head -n 1)
+album=$(echo "$metadata" | grep -oP "(?<=xesam:album': ')(.*?)(?=')" | head -n 1)
+status=$(playerctl status)
+elapsed=$(playerctl position)
+duration=$(playerctl metadata mpris:length)
+
+# Format elapsed and remaining time
+elapsed_formatted=$(format_time ${elapsed%.*})
+duration_seconds=$((duration / 1000000))
+remaining_seconds=$((duration_seconds - elapsed))
+remaining_formatted=$(format_time $remaining_seconds)
+
+# Get the thumbnail (album cover)
+thumbnail=$(playerctl metadata --format "{{mpris:artUrl}}" | sed 's/file:\/\///')
+
+# Determine if the song is paused or playing
+case "$status" in
+    "Playing")
+        state="Playing"
+        ;;
+    "Paused")
+        state="Paused"
+        ;;
+    *)
+        state="Unknown"
+        ;;
+esac
+
+# Print the retrieved information
+echo "Title: $title"
+echo "Artist: $artist"
+echo "Album: $album"
+echo "Status: $state"
+echo "Elapsed: $elapsed_formatted"
+echo "Remaining: $remaining_formatted"
+echo "Thumbnail: $thumbnail"

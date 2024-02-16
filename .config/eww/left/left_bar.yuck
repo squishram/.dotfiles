@@ -2,26 +2,25 @@
 
 (defwindow left_bar
   :geometry (geometry
-    :x "8px"
+    :x "0.5%"
     :y "10px"
     :width "500px"
     :height "50px"
     :anchor "top left"
   )
+
   :stacking "bg"
-  :reserve (
-    struts
+  :reserve (struts
     :distance "6%"
     :side "top"
   )
   :windowtype "dock"
   :wm-ignore false
 
-  (
-    box
+  (box
     :class: "status"
     :valign "center"
     :halign "center"
-    (workspaces)
+    (music)
   )
 )

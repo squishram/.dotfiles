@@ -1,0 +1,27 @@
+(defwidget metric [value metric class icon ?onclick]
+  (box
+    :orientation "h"
+    :class "${class}_box"
+    :space-evenly false
+    ;; :vexpand false
+    ;; :hexpand false
+    (circular-progress
+      :class "${class}"
+      :orientation "h"
+      :start-at 50
+      :thickness 2.5
+      :clockwise true
+      :value value
+      :tooltip "${metric} ${value}%"
+      :halign "center"
+      :valign "center"
+      :height 40
+      :width 40
+      (label
+        :halign "centre"
+        :hexpand true
+        :text "${icon}"
+      )
+    )
+  )
+)

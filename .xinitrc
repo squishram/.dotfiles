@@ -33,6 +33,9 @@ fi
 # Disable beep
 xset -b
 
+# lock the screen on hibernate
+xss-lock slock &
+
 # Set keyboard with capslock -> crtl
 setxkbmap -layout gb -option ctrl:nocaps
 

@@ -1,12 +1,44 @@
-(defpoll time
+;; Time vars
+(defpoll TIME
   :interval "5s"
-  `date +'{"hour":"%H","min":"%M"}'`
+  `date +\"%I:%M %p\"`
 )
 
-;; (defpoll time
-;;   :interval "10s"
-;;   "date '+%H:%M %d %b %Y'"
-;; )
+(defpoll DATE
+  :interval "5s"
+  `date +\"%A, %B %d\"`
+)
+
+;; weather
+(defwidget datime []
+  ;; (box
+  ;;   :class "dockbox"
+    (box
+      :class "clockbox"
+      :orientation "v"
+      :spacing 0
+      :valign "center"
+      :halign "start"
+      :space-evenly false
+      :vexpand false
+      :hexpand true
+      (label
+        :class "time"
+        :halign "start"
+        :wrap true
+        :limit-width 25
+        :text TIME
+      )
+      (label
+        :class "date"
+        :halign "start"
+        :wrap "true"
+        :limit-width 25
+        :text DATE
+      ;; )
+    )
+  )
+)
 
 ;; ;; Calendar (not yet implemented)
 ;; (defwindow calendar

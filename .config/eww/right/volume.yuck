@@ -1,0 +1,13 @@
+(defpoll get_volume
+  :interval "1s"
+  :initial "50"
+  "amixer -D pulse sget Master | rg 'Left:' | awk -F'[][]' '{ print $2 }' | tr -d '%' | head -1")
+
+(defwidget volume []
+  (metric
+    :value get_volume
+    :metric "Volume"
+    :class "volume"
+    :icon ""
+  )
+)

@@ -1,15 +1,14 @@
-(defvar timer "00:00")
+(defpoll get_pomodoro
+  :interval "1s"
+  :initial "50"
+  "uairctl listen")
 
-(defwidget pomodoro [] 
-  (box
-    :class "pomodoro_box"
-    :halign "center"
-    :valign "center"
-    (button
-      :onclick "uair"
-    (
-      label :text "${timer}"
-    )
-    )
+
+(defwidget pomodoro []
+  (metric
+    :value get_pomodoro
+    :metric "Time Left"
+    :class "pomodoro"
+    :icon ""
   )
 )

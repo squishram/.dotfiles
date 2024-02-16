@@ -1,5 +1,5 @@
 [defaults]
-format = "{time}\n"
+format = "\r{time}\n"
 
 [[sessions]]
 id = "work"
@@ -11,4 +11,4 @@ command = "notify-send 'Work Done!'"
 id = "rest"
 name = "Rest"
 duration = "5m"
-command = "notify-send 'Rest Done!'"
+command = "notify-send 'Back to Work!'"
