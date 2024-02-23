@@ -10,7 +10,7 @@
   };
 
   # remember to add `home-manager` to this list if you start using it
-  outputs = { self, nixpkgs, ... }:
+  outputs = { self, nixpkgs, home-manager, ... }:
 
   let
     system = "x86_64-linux";
