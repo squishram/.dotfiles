@@ -5,17 +5,17 @@
     [
       # essential to include the results of the hardware scan
       ./hardware-configuration.nix
-      <home-manager/nixos>
+#      <home-manager/nixos>
     ];
 
 
-  fonts.fonts = with pkgs; [
+  fonts.packages = with pkgs; [
     # don't use all of the nerdfonts; pick your faves
     (nerdfonts.override {fonts = [ "CascadiaCode" "ComicShannsMono" ];})
-  ]
+  ];
 
   environment.systemPackages = with pkgs; [
-  home-manager
+ # home-manager
     keychain
     pavucontrol
     git
@@ -36,13 +36,16 @@
     kernelPackages = pkgs.linuxPackages_latest;
     loader = {
       timeout = 20;
-      # systemd-boot.enable = true;
-      # efi.canTouchEfiVariables = true;
-      grub = {
+      systemd-boot = {
         enable = true;
-        version = 2;
         configurationLimit = 10;
       };
+      efi.canTouchEfiVariables = true;
+      #grub = {
+      #  enable = true;
+      #  version = 2;
+      #  configurationLimit = 10;
+      #};
     };
   };
 
@@ -52,11 +55,11 @@
       auto-optimise-store = true;
       experimental-features = [ "nix-command" "flakes" ];
       # garbage collection to remove old builds
-      gc = {
-        automatic = true;
-        dates = "weekly";
-        options = "--delete-older-than 14d"
-      };
+#      gc = {
+#        automatic = true;
+#        dates = "weekly";
+#        options = "--delete-older-than 14d";
+#      };
     };
   };
 
@@ -82,8 +85,8 @@
     };
     windowManager.leftwm.enable = true;
     videoDrivers = ["nvidia"];
-    # NOTE: change to true for laptop
-    libinput = false;
+    # NOTE: change to true for laptop teehee
+    # libinput = false;
   };
 
   # Configure console keymap (for tty)
@@ -120,8 +123,8 @@
     settings = {
       PermitRootLogin = "no";
       PasswordAuthentication = false;
-    }
-  }
+    };
+  };
 
   # zsh is where it's at
   environment.shells = with pkgs; [ zsh ];
@@ -149,7 +152,7 @@
     opengl = {
       enable = true;
       driSupport = true;
-      driSupport32bit = true;
+#      driSupport32bit = true;
     };
 
     nvidia = {
@@ -163,7 +166,7 @@
       # Disable these if they cause trouble
       powerManagement = {
         enable = true;
-        finegrained = true;
+        #finegrained = true;
       };
     };
 

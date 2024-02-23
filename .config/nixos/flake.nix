@@ -3,10 +3,10 @@
 
   inputs = {
     nixpkgs.url = "nixpkgs/nixos-unstable";
-    home-manager = {
-      url = "github:nix-community/home-manager";
-      inputs.nixpkgs.follows = "nixpkgs";
-      };
+    # home-manager = {
+    #   url = "github:nix-community/home-manager";
+    #   inputs.nixpkgs.follows = "nixpkgs";
+    #   };
   };
 
   # remember to add `home-manager` to this list if you start using it
@@ -27,12 +27,12 @@
       };
     };
 
-    homeConfigurations = {
-      squish = home-manager.lib.homeManagerConfiguration {
-        inherit system;
-        modules = [ ./home.nix ];
-      };
-    };
+    # homeConfigurations = {
+    #   squish = home-manager.lib.homeManagerConfiguration {
+    #     inherit system;
+    #     modules = [ ./home.nix ];
+    #   };
+    # };
 
   };
 
