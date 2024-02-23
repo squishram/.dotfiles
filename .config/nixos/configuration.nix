@@ -8,11 +8,16 @@
       <home-manager/nixos>
     ];
 
+
+  fonts.fonts = with pkgs; [
+    # don't use all of the nerdfonts; pick your faves
+    (nerdfonts.override {fonts = [ "CascadiaCode" "ComicShannsMono" ];})
+  ]
+
   environment.systemPackages = with pkgs; [
-    home-manager
+  home-manager
     keychain
     pavucontrol
-    neovim
     git
     stow
     zoxide
@@ -97,12 +102,17 @@
   nixpkgs.config.allowUnfree = true;
 
 
+  programs.neovim = {
+    enable = true;
+    defaultEditor = true;
+  };
+
   # Some programs need SUID wrappers, can be configured further or are started in user sessions.
-  # programs.mtr.enable = true;
-  # programs.gnupg.agent = {
-  #   enable = true;
-  #   enableSSHSupport = true;
-# };
+  programs.mtr.enable = true;
+  programs.gnupg.agent = {
+    enable = true;
+    enableSSHSupport = true;
+  };
 
   # Enable the OpenSSH daemon.
   services.openssh = {
