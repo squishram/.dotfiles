@@ -78,6 +78,20 @@ alias Syu="eos-update"
 # remove orphaned packages
 alias Rorph="paru -Qtdq | paru -Rns -"
 
+# Nix Utils
+# edit config file, copy over to home
+nixit(){
+  sudoedit /etc/nixos/configuration.nix
+  cp -rf /etc/nixos/* ~/.nixys/
+}
+
+# rebuild system
+renix(){
+  cd ~/.nixys
+  nix flake update
+  sudo nixos-rebuild switch --flake .
+}
+
 # WIFI
 # list available wifi networks
 alias wifi="nmcli device wifi list"
@@ -124,11 +138,9 @@ fr(){
 }
 
 # Arch-specific (non-ubuntu) aliases only go here
-if [[ $(uname -rv) == *"arch"* ]]; then
 alias vim="nvim"
 alias vi="nvim"
 alias edit="nvim"
-fi
 
 # ubuntu
 if [[ $(uname -rv) == *"debian"* ]]; then
@@ -195,7 +207,7 @@ alias la="eza -lar --header --icons=always --git --color=always --group-director
 alias lt="eza -larT --icons=always --no-permissions --no-user --level=3 --header --color=always --group-directories-first"
 alias ld="eza -lard */ --color=always --icons=always"
 
-# git (you only need one of these)
+# git
 alias gt="gitui"
 # opens calculator
 alias calc="eva"
