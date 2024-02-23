@@ -212,7 +212,7 @@ nixit(){
 # rebuild system
 renix(){
   cd ~/.dotfiles/.config/nixos/
-  nix flake update
+  sudo nix flake update
   sudo nixos-rebuild switch --flake .
 }
 
