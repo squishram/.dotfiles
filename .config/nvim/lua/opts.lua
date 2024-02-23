@@ -82,7 +82,7 @@ local options = {
   spell = false,
   spelllang = "en_gb",
   -- default shell used by toggleterm etc.
-  shell = "/bin/zsh",
+  shell = "/bin/sh",
   -- set font to be terminal font
   guifont = "",
   -- set the fold level so that there is no auto-folding

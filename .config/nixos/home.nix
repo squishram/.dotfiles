@@ -31,8 +31,6 @@
     starship
     gitui
     kitty
-    # don't use all of the nerdfonts; pick your faves
-    (.nerdfonts.override {fonts = [ "CascadiaCode" "ComicShannsMono" ];})
 
     # # add executable shell scripts to your environment!
     # (pkgs.writeShellScriptBin "my-hello" ''

@@ -78,20 +78,6 @@ alias Syu="eos-update"
 # remove orphaned packages
 alias Rorph="paru -Qtdq | paru -Rns -"
 
-# Nix Utils
-# edit config file, copy over to home
-nixit(){
-  sudoedit /etc/nixos/configuration.nix
-  cp -rf /etc/nixos/* ~/.nixys/
-}
-
-# rebuild system
-renix(){
-  cd ~/.nixys
-  nix flake update
-  sudo nixos-rebuild switch --flake .
-}
-
 # WIFI
 # list available wifi networks
 alias wifi="nmcli device wifi list"
@@ -215,6 +201,20 @@ alias calc="eva"
 alias tt="taskwarrior-tui"
 # cat replacement in rust with syntax highlighting
 alias cat="bat"
+
+# Nix Utils
+# edit config file, copy over to home
+nixit(){
+  sudoedit /etc/nixos/configuration.nix
+  cp -rf /etc/nixos/* ~/.dotfiles/.config/nixos/
+}
+
+# rebuild system
+renix(){
+  cd ~/.dotfiles/.config/nixos/
+  nix flake update
+  sudo nixos-rebuild switch --flake .
+}
 
 # # fzf
 # # recursive fuzzy search, open file
