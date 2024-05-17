@@ -11,11 +11,42 @@
 (defwidget battery []
   (metric
     :value battery_percentage
-    :metric "Battery"
+    :metric {battery_status}
     :class {battery_status == "Discharging" ? "battery_dis" : "battery_chg"}
-    :icon {battery_status == "Discharging" ? "󰁹" :  "󰂄"}
+    :icon {
+      battery_status == "Charging" ? "󰂄" :
+      battery_percentage < 20 ? "󰁺" :
+      battery_percentage < 30 ? "󰁻" :
+      battery_percentage < 40 ? "󰁽" :
+      battery_percentage < 50 ? "󰁾" :
+      battery_percentage < 60 ? "󰁿" :
+      battery_percentage < 70 ? "󰂀" :
+      battery_percentage < 80 ? "󰂁" :
+      battery_percentage < 90 ? "󰂂" : "󰁹"
+    }
   )
 )
+
+;;     :icon_01_drn "󰂃"
+;;     :icon_02_drn "󰁺"
+;;     :icon_03_drn "󰁻"
+;;     :icon_04_drn "󰁽"
+;;     :icon_05_drn "󰁾"
+;;     :icon_06_drn "󰁿"
+;;     :icon_07_drn "󰂀"
+;;     :icon_08_drn "󰂁"
+;;     :icon_09_drn "󰂂"
+;;     :icon_10_drn "󰁹"
+;;     :icon_01_chg "󰢜"
+;;     :icon_02_chg "󰂆"
+;;     :icon_03_chg "󰂇"
+;;     :icon_04_chg "󰂈"
+;;     :icon_05_chg "󰢝"
+;;     :icon_06_chg "󰂉"
+;;     :icon_07_chg "󰢞"
+;;     :icon_08_chg "󰂊"
+;;     :icon_09_chg "󰂋"
+;;     :icon_10_chg "󰂅"
 
 
 ;; (

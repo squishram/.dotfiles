@@ -16,7 +16,8 @@ return {
           },
         },
       },
-      "echasnovski/mini.pick",
+      -- "echasnovski/mini.pick",
+      "ibhagwan/fzf-lua",
     },
 
     config = function()
@@ -38,9 +39,15 @@ return {
           keyopts.desc = "Previous diagnostic"
           key.set("n", "[d", vim.diagnostic.goto_prev, keyopts)
           keyopts.desc = "Search LSP references (fuzzy)"
-          key.set("n", "gr", "<cmd>Pick lsp scope='references'<cr>", keyopts)
+          key.set("n", "gr", "<cmd>lua require('fzf-lua').lsp_references()<cr>", keyopts)
           keyopts.desc = "Search LSP definitions (fuzzy)"
-          key.set("n", "gd", "<cmd>Pick lsp scope='definition'<cr>", keyopts)
+          key.set("n", "gr", "<cmd>lua require('fzf-lua').lsp_definitions()<cr>", keyopts)
+          keyopts.desc = "Search LSP implementations (fuzzy)"
+          key.set("n", "gi", "<cmd>lua require('fzf-lua').lsp_implementations()<cr>", keyopts)
+          -- keyopts.desc = "Search LSP references (fuzzy)"
+          -- key.set("n", "gr", "<cmd>Pick lsp scope='references'<cr>", keyopts)
+          -- keyopts.desc = "Search LSP definitions (fuzzy)"
+          -- key.set("n", "gd", "<cmd>Pick lsp scope='definition'<cr>", keyopts)
           -- keyopts.desc = "Search LSP implementations (fuzzy)"
           -- key.set("n", "gi", "<cmd>Pick lsp scope='implementation'<cr>", keyopts)
         end,

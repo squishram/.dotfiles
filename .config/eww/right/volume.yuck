@@ -3,11 +3,18 @@
   :initial "50"
   "amixer -D pulse sget Master | rg 'Left:' | awk -F'[][]' '{ print $2 }' | tr -d '%' | head -1")
 
+(defpoll get_muted
+  :interval "1s"
+  :initial "[on]"
+  "amixer -D pulse sget Master | rg 'Left:' | awk '{print $NF}'"
+)
+
 (defwidget volume []
   (metric
     :value get_volume
     :metric "Volume"
     :class "volume"
-    :icon ""
+    :icon "󰕾"
+    :icon {get_muted == "[on]" ? "󰕾" : "󰝟"}
   )
 )

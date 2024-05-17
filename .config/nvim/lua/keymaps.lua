@@ -74,9 +74,6 @@ vim.keymap.set("n", "<leader>xq", "<cmd>copen<cr>", { desc = "Open Quickfix List
 
 -- stylua: ignore start
 
--- quit
-vim.keymap.set("n", "<leader>qq", "<cmd>qa<cr>", { desc = "Quit all" })
-
 -- highlights under cursor
 if vim.fn.has("nvim-0.9.0") == 1 then
   vim.keymap.set("n", "<leader>ui", vim.show_pos, { desc = "Inspect Pos" })
@@ -89,14 +86,6 @@ vim.keymap.set("n", "<leader>w-", "<C-W>s", { desc = "Split window below" })
 vim.keymap.set("n", "<leader>w|", "<C-W>v", { desc = "Split window right" })
 vim.keymap.set("n", "<leader>-", "<C-W>s", { desc = "Split window below" })
 vim.keymap.set("n", "<leader>|", "<C-W>v", { desc = "Split window right" })
-
--- tabs
-vim.keymap.set("n", "<leader><tab>l", "<cmd>tablast<cr>", { desc = "Last" })
-vim.keymap.set("n", "<leader><tab>f", "<cmd>tabfirst<cr>", { desc = "First" })
-vim.keymap.set("n", "<leader><tab><tab>", "<cmd>tabnew<cr>", { desc = "New Tab" })
-vim.keymap.set("n", "<leader><tab>]", "<cmd>tabnext<cr>", { desc = "Next" })
-vim.keymap.set("n", "<leader><tab>d", "<cmd>tabclose<cr>", { desc = "Close" })
-vim.keymap.set("n", "<leader><tab>[", "<cmd>tabprevious<cr>", { desc = "Previous" })
 
 -- keep the cursor centred when pulling up a line
 vim.keymap.set("n", "J", "mzJ'z", { desc = "Pull up and append a line" } )

@@ -17,7 +17,7 @@ colors
 # keep command history!
 HISTSIZE=1000
 SAVEHIST=1000
-HISTFILE=~/.cache/zsh/history
+HISTFILE=~/.config/zsh/.zsh_history
 
 # tab complete
 autoload -U compinit
@@ -53,6 +53,8 @@ source ~/.config/.aliasrc
 eval "$(starship init zsh)"
 # zoxide is a smart cd command
 eval "$(zoxide init zsh)"
+# atuin is a better history search
+eval "$(atuin init zsh)"
 # syntax highlighting plugin
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
 # suggest shell prompts based in first characters
@@ -73,12 +75,9 @@ function zvm_config() {
 }
 source /usr/share/zsh/plugins/zsh-vi-mode/zsh-vi-mode.plugin.zsh 2>/dev/null
 
-# use keychain to ensure SSH keys are remembered
+# use keychain to ensure SSH keys are remembered (must type on login)
 eval $(keychain --eval --quiet --agents ssh id_rsa)
 
 # status for every terminal
 macchina
-task list due.before:eow
-
-# Created by `pipx` on 2023-06-09 10:56:40
-export PATH="$PATH:/home/squish/.local/bin"
+# task list due.before:eow

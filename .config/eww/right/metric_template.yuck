@@ -8,7 +8,7 @@
     (circular-progress
       :class "${class}"
       :orientation "h"
-      :start-at 50
+      :start-at 75
       :thickness 2.5
       :clockwise true
       :value value

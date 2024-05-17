@@ -36,7 +36,7 @@ return {
   },
 
   {
-    -- yo who did that change in lualine
+    -- "yo who did that change" in lualine
     "f-person/git-blame.nvim",
     opts = {
       -- enable gitblame

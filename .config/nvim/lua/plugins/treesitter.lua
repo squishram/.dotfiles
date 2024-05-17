@@ -27,7 +27,7 @@ return {
           "markdown",
           "markdown_inline",
           "python",
-          "query",
+          -- "query",
           "regex",
           "rust",
           "toml",
@@ -42,10 +42,29 @@ return {
         ignore_install = {},
         sync_install = false,
         auto_install = true,
-        highlight = { enable = true },
-        indent = { enable = true },
+        highlight = {
+          enable = true,
+          disable = {
+            "latex",
+          },
+          additional_vim_regex_highlighting = {
+            "latex",
+            "markdown",
+          },
+        },
+        indent = {
+          enable = true,
+          disable = {
+            "latex",
+            "markdown",
+          },
+        },
         incremental_selection = {
           enable = true,
+          disable = {
+            "latex",
+            "markdown",
+          },
           keymaps = {
             init_selection = "<C-space>",
             node_incremental = "<C-space>",
@@ -58,6 +77,10 @@ return {
         textobjects = {
           select = {
             enable = true,
+            disable = {
+              "latex",
+              "markdown",
+            },
             lookahead = true,
             keymaps = {
               ["aa"] = { query = "@parameter.outer", desc = "Select parameter/ argument (inc. comma)" },
@@ -75,6 +98,10 @@ return {
 
           swap = {
             enable = true,
+            disable = {
+              "latex",
+              "markdown",
+            },
             swap_next = {
               ["<leader>a"] = "@parameter.inner",
             },
@@ -85,6 +112,10 @@ return {
 
           move = {
             enable = true,
+            disable = {
+              "latex",
+              "markdown",
+            },
             set_jumps = true,
             goto_next_start = { ["]f"] = "@function.outer", ["]c"] = "@class.outer" },
             goto_next_end = { ["]F"] = "@function.outer", ["]C"] = "@class.outer" },

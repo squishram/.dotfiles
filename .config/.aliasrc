@@ -125,16 +125,16 @@ fr(){
 
 # Arch-specific (non-ubuntu) aliases only go here
 if [[ $(uname -rv) == *"arch"* ]]; then
-alias vim="nvim"
-alias vi="nvim"
-alias edit="nvim"
+  alias vim="nvim"
+  alias vi="nvim"
+  alias edit="nvim"
 fi
 
 # ubuntu
 if [[ $(uname -rv) == *"debian"* ]]; then
-alias vim="$HOME/nvim.appimage"
-alias vi="$HOME/nvim.appimage"
-alias edit="$HOME/nvim.appimage"
+  alias vim="$HOME/nvim.appimage"
+  alias vi="$HOME/nvim.appimage"
+  alias edit="$HOME/nvim.appimage"
 fi
 
 # hdmi output toggle
@@ -195,7 +195,7 @@ alias la="eza -lar --header --icons=always --git --color=always --group-director
 alias lt="eza -larT --icons=always --no-permissions --no-user --level=3 --header --color=always --group-directories-first"
 alias ld="eza -lard */ --color=always --icons=always"
 
-# git (you only need one of these)
+# git TUI
 alias gt="gitui"
 # opens calculator
 alias calc="eva"

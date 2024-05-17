@@ -1,6 +1,11 @@
 (include "left/workspaces.yuck")
 
 (defwindow left_bar
+
+  :windowtype "dock"
+  :wm-ignore false
+  :stacking "bg"
+
   :geometry (geometry
     :x "0.5%"
     :y "10px"
@@ -9,18 +14,17 @@
     :anchor "top left"
   )
 
-  :stacking "bg"
   :reserve (struts
     :distance "6%"
     :side "top"
   )
-  :windowtype "dock"
-  :wm-ignore false
 
   (box
     :class: "status"
     :valign "center"
     :halign "center"
-    (music)
+    :hexpand false
+    :width "500px"
+    ;; (music)
   )
 )

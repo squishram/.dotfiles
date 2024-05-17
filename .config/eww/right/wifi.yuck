@@ -1,54 +1,28 @@
 ;; WIFI STRENGTH CHECKER
-(defpoll net
+(defpoll wifi_strength
   :interval "100s"
   :initial `N/A`
-  `nmcli -t -f SIGNAL,ACTIVE device wifi | awk -F':' '{if($2=="yes")print$1}'`
+  `nmcli -t -f SIGNAL,ACTIVE device wifi | awk -F':' '{if($2=="yes"){print$1}}'`
 )
+
+;; name of current wifi host
+(defpoll wifi_host
+  :interval "100s"
+  :initial `N/A`
+  `nmcli -t -f active,ssid dev wifi | grep '^yes' | cut -d ':' -f 2`
+)
+
 
 (defwidget network []
   (metric
-    :value net
-    :metric "Internet"
+    :value wifi_strength
+    :metric wifi_host
     :class "wifi"
-    :icon "󰤨"
+    :icon {
+      wifi_strength > 80 ? "󰤨" :
+      wifi_strength > 60 ? "󰤥" :
+      wifi_strength > 40 ? "󰤢" :
+      wifi_strength > 20 ? "󰤟" : "󰤯"
+    }
   )
 )
-
-;; RETURN ICON
-;; (
-;;   defwidget _network [
-;;     strength
-;;     icon_wifi0
-;;     icon_wifi1
-;;     icon_wifi2
-;;     icon_wifi3
-;;     icon_wifi4
-;;   ]
-;; (
-;;     box
-;;     :class "network"
-;;     :space-evenly true
-;;     :spacing 8
-;;   (
-;;       label
-;;       :text {
-;;         strength == "" ? icon_wifi0 :
-;;         strength < 26 ? icon_wifi1 :
-;;         strength < 51 ? icon_wifi2 :
-;;         strength < 76 ? icon_wifi3 : icon_wifi4
-;;       }
-;;     )
-;;   )
-;; )
-;;
-;; ;; ASSEMBLY INTO WIFI WIDGET
-;; (defwidget network []
-;;   (_network
-;;     :strength net
-;;     :icon_wifi0 "󰤭"
-;;     :icon_wifi1 "󰤟"
-;;     :icon_wifi2 "󰤢"
-;;     :icon_wifi3 "󰤥"
-;;     :icon_wifi4 "󰤨"
-;;   )
-;; )

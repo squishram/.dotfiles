@@ -1,5 +1,6 @@
-;; circle is the template for all metrics
+;; template for all metrics
 (include "right/metric_template.yuck")
+;; these just implement the obove model
 (include "right/volume.yuck")
 (include "right/battery.yuck")
 (include "right/wifi.yuck")
@@ -8,6 +9,11 @@
 (include "right/datime.yuck")
 
 (defwindow right_bar
+
+  :windowtype "dock"
+  :wm-ignore false
+  :stacking "bg"
+
   :geometry (geometry
     :x "-0.5%"
     :y "10px"
@@ -16,23 +22,21 @@
     :anchor "top right"
   )
 
-  :stacking "bg"
   :reserve (struts
     :distance "6%"
     :side "top"
   )
-  :windowtype "dock"
-  :wm-ignore false
 
   (box
     :class: "status"
     :valign "center"
     :halign "center"
-    ;; :hexpand false
-    :spacing 10
+    :spacing 20
+    :space-evenly false
     (volume)
     (pomodoro)
     (network)
     (battery)
+    (datime)
   )
 )

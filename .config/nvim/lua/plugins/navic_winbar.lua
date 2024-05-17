@@ -1,28 +1,26 @@
+-- NOTE: Switch to dropbar when we get neovim 0.10
+
 return {
-  "utilyre/barbecue.nvim",
-  name = "barbecue",
-  version = "*",
+  "Bekaboo/dropbar.nvim",
+  name = "dropbar",
   event = { "BufReadPre", "BufNewFile" },
-  dependencies = {
-    "SmiteshP/nvim-navic",
-    "nvim-tree/nvim-web-devicons",
+  keys = {
+    "<leader>e",
+    "<cmd>require('dropbar.api').pick()<cr>",
+    silent = true,
+    desc = "open dropbar",
   },
-  opts = {},
+  config = true,
 }
 
 -- return {
---   "SmiteshP/nvim-navic",
+--   "utilyre/barbecue.nvim",
+--   name = "barbecue",
+--   version = "*",
 --   event = { "BufReadPre", "BufNewFile" },
 --   dependencies = {
+--     "SmiteshP/nvim-navic",
 --     "nvim-tree/nvim-web-devicons",
---     "neovim/nvim-lspconfig",
 --   },
---   opts = {
---     lsp = {
---       auto_attach = true,
---     },
---     highlight = true,
---     icon = "  ",
---     click = true,
---   },
+--   opts = {},
 -- }

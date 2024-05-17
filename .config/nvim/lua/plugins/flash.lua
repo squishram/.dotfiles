@@ -1,8 +1,6 @@
 return {
   {
     "folke/flash.nvim",
-    -- event = "VeryLazy",
-    ---@type Flash.Config
     opts = {
       -- labels: compared to the defaults, I have omitted:
       -- None

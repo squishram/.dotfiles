@@ -1,6 +1,11 @@
 (include "centre/music.yuck")
 
 (defwindow centre_bar
+
+  :windowtype "dock"
+  :wm-ignore false
+  :stacking "bg"
+
   :geometry (geometry
     :x "0px"
     :y "10px"
@@ -9,19 +14,15 @@
     :anchor "top center"
   )
 
-  :stacking "bg"
   :reserve (struts
     :distance "60px"
     :side "top"
   )
-  :windowtype "dock"
-  :wm-ignore false
 
   (box
     :class: "music"
     :valign "center"
     :halign "center"
     (workspaces)
-    (datime)
   )
 )

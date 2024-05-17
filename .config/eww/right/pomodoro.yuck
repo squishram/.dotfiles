@@ -1,8 +1,11 @@
+;; run `uair` on script boot
+;; run `uairctl toggle` on click
+;; run `uairctl listen` to get the actual values on the circle
+
 (defpoll get_pomodoro
   :interval "1s"
-  :initial "50"
+  :initial "100"
   "uairctl listen")
-
 
 (defwidget pomodoro []
   (metric

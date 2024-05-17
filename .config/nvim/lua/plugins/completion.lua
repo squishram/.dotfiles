@@ -2,7 +2,7 @@ return {
   {
     "L3MON4D3/LuaSnip",
     build = (not jit.os:find("Windows"))
-        and "echo 'NOTE: jsregexp is optional, so not a big deal if it fails to build'; make install_jsregexp"
+        and "echo 'Note: jsregexp is optional, so not a big deal if it fails to build'; make install_jsregexp"
       or nil,
     dependencies = {
       "rafamadriz/friendly-snippets",
@@ -96,12 +96,13 @@ return {
         }),
 
         sources = cmp.config.sources({
+          { name = "otter" },
           { name = "nvim_lsp" },
           { name = "luasnip" },
           { name = "path" },
-        }, {
+          -- }, {
           { name = "buffer" },
-          { name = "rg" },
+          -- { name = "rg" },
         }),
 
         formatting = {
