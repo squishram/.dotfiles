@@ -3,8 +3,7 @@ return {
     "Wansmer/treesj",
     dependencies = { "nvim-treesitter/nvim-treesitter" },
 
-    -- for some reason this needs a table-of-tables to work
-    -- despite having only one entry(?)
+    -- this needs a table-of-tables to work despite having only one entry
     keys = {
       {
         "g,",

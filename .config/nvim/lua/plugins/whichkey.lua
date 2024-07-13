@@ -25,6 +25,7 @@ return {
       ["<leader>w"] = { name = "+windows" },
       ["<leader>x"] = { name = "+diagnostics/quickfix" },
       ["<leader>o"] = { name = "+markdown" },
+      ["<leader>r"] = { name = "+REPL" },
     },
   },
   config = function(_, opts)

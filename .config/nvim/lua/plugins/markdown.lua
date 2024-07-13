@@ -26,25 +26,6 @@ return {
   },
 
   {
-    "iamcco/markdown-preview.nvim",
-    cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
-    build = function()
-      vim.fn["mkdp#util#install"]()
-    end,
-    keys = {
-      {
-        "<leader>op",
-        ft = "markdown",
-        "<cmd>MarkdownPreviewToggle<cr>",
-        desc = "Markdown Preview",
-      },
-    },
-    config = function()
-      vim.cmd([[do FileType]])
-    end,
-  },
-
-  {
     "lukas-reineke/headlines.nvim",
     opts = function()
       local opts = {}
@@ -67,5 +48,32 @@ return {
         require("headlines").refresh()
       end)
     end,
+  },
+
+  {
+    "mfussenegger/nvim-lint",
+    config = function()
+      require("lint").linters = {
+        markdownlint = {
+          args = {
+            { "--disable", "MD013", "--" },
+            { "--disable", "MD014", "--" },
+            { "--disable", "MD029", "--" },
+          },
+        },
+      }
+    end,
+
+    -- opts = {
+    --   linters = {
+    --     markdownlint = {
+    --       args = {
+    --         { "--disable", "MD013", "--" },
+    --         { "--disable", "MD014", "--" },
+    --         { "--disable", "MD029", "--" },
+    --       },
+    --     },
+    --   },
+    -- },
   },
 }

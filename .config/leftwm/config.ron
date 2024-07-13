@@ -125,6 +125,14 @@
       value: "pactl set-sink-mute @DEFAULT_SINK@ toggle",
       key: "XF86AudioMute",),
 
+  (command: Execute,
+      value: "light -U 2",
+      key: "XF86XK_MonBrightnessDown",),
+
+  (command: Execute,
+      value: "light -A 2",
+      key: "XF86XK_MonBrightnessUp",),
+
     // control window size
   (command: IncreaseMainWidth,
       value: "5",
@@ -167,7 +175,7 @@
       modifier: ["modkey"],
       key: "j"),
 
-    // switching window layout 
+    // switching window layout
   (command: NextLayout,
       value: "",
       modifier: ["modkey"],
@@ -198,10 +206,10 @@
   (command: MoveToTag, value: "8", modifier: ["modkey", "Shift"], key: "8"),
   (command: MoveToTag, value: "9", modifier: ["modkey", "Shift"], key: "9"),
 
-  (command: ToggleScratchPad,
-      value: "terminal",
-      modifier: ["modkey"],
-      key: "o"),
+  // (command: ToggleScratchPad,
+  //     value: "terminal",
+  //     modifier: ["modkey"],
+  //     key: "o"),
 
   (command: ToggleScratchPad,
       value: "spotify",
@@ -213,10 +221,10 @@
   //     modifier: ["modkey"],
   //     key: "s"),
 
-  (command: ToggleScratchPad,
-      value: "tasks",
-      modifier: ["modkey"],
-      key: "t"),
+  // (command: ToggleScratchPad,
+  //     value: "tasks",
+  //     modifier: ["modkey"],
+  //     key: "t"),
 
   ],
 )

@@ -197,12 +197,6 @@ return {
   },
 
   {
-    -- autopair for treesitter
-    "windwp/nvim-ts-autotag",
-    opts = {},
-  },
-
-  {
     "echasnovski/mini.surround",
     keys = function(_, keys)
       -- Populate the keys based on the user's options

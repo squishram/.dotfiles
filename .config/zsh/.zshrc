@@ -14,10 +14,22 @@
 autoload -U colors
 colors
 
-# keep command history!
+# HISTORY
 HISTSIZE=1000
-SAVEHIST=1000
+SAVEHIST=$HISTSIZE
 HISTFILE=~/.config/zsh/.zsh_history
+HISTDUP=erase
+# append to the history list, don't replace old entries!
+setopt appendhistory
+# share command history accross zsh sessions
+setopt sharehistory
+setopt hist_ignore_space
+setopt hist_ignore_all_dups
+setopt hist_save_no_dups
+setopt hist_find_no_dups
+setopt hist_ignore_dups
+bindkey '^p' history-search-backward
+bindkey '^n' history-search-forward
 
 # tab complete
 autoload -U compinit
@@ -27,9 +39,8 @@ compinit
 # tabcomplete includes hidden/dot files
 _comp_options+=(globdots)
 
-# append to the history list, don't replace old entries!
 # advanced pattern matching
-setopt appendhistory extendedglob
+setopt extendedglob
 # don't assume a precedent 'cd' if omitted
 # no beeping noise (whose idea even was this)
 # don't tell me when there's no match
@@ -40,8 +51,8 @@ zle_highlight=('paste:none')
 # disable ctrl-s to freeze terminal
 stty stop undef
 # use ctrl-e to edit command line in neovim
-autoload edit-command-line; zle -N edit-command-line
-bindkey '^e' edit-command-line
+autoload -z edit-command-line; zle -N edit-command-line
+bindkey "^X^E" edit-command-line
 
 ################################
 # PLUGINS & OTHER CONFIG FILES #

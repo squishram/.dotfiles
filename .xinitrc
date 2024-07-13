@@ -31,7 +31,7 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
 fi
 
 # Disable beep
-xset -b
+xset b off
 
 # # lock the screen on hibernate
 # xss-lock slock &
@@ -44,9 +44,6 @@ unclutter --jitter 10 --ignore-scrolling --sart-hidden --fork
 
 # source this file to set the mouse cursor & size
 xrdb $HOME/.Xresources
-
-# cleaner graphics using compfy compositer
-compfy --daemon
 
 # window manager
 exec leftwm

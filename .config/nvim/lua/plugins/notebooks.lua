@@ -60,17 +60,17 @@ return {
       },
     },
 
-    -- init = function()
-    --   require("otter").activate(
-    --     -- table of embedded languages to look for (no default)
-    --     { "python", "lua" },
-    --     -- enable completion (default = true)
-    --     true,
-    --     -- enable diagnostics (default = true)
-    --     true,
-    --     -- treesitter query to look for embedded languages (uses injections if nil)
-    --     nil
-    --   )
-    -- end,
+    init = function()
+      require("otter").activate(
+        -- table of embedded languages to look for (no default)
+        { "python", "lua" },
+        -- enable completion (default = true)
+        true,
+        -- enable diagnostics (default = true)
+        true,
+        -- treesitter query to look for embedded languages (uses injections if nil)
+        nil
+      )
+    end,
   },
 }

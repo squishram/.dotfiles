@@ -31,7 +31,7 @@ return {
     },
 
     formatters_by_ft = {
-      python = { "black", "isort" },
+      python = { "ruff" },
       markdown = { "markdownlint" },
       javascript = { "prettier" },
       typescript = { "prettier" },

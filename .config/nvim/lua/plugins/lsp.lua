@@ -91,7 +91,7 @@ return {
         "julials",
         "lua_ls",
         "marksman",
-        "pyright",
+        -- "pyright",
         "ruff_lsp",
         "rust_analyzer",
         "taplo",

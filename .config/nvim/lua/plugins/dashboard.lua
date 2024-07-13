@@ -27,9 +27,9 @@ return {
         evaluate_single = true,
         header = logo,
         items = {
-          -- new_section("Find Files", [[Pick files]], "Picker"),
-          -- new_section("Live Grep", [[Pick grep_live]], "Picker"),
-          -- new_section("Session restore", [[lua require("persistence").load()]], "Session"),
+          new_section("Find Files", [[FzfLua files]], "Picker"),
+          new_section("Live Grep", [[FzfLua grep]], "Picker"),
+          new_section("Session restore", [[lua require("persistence").load()]], "Session"),
           new_section("New File", "enew", "Built-in"),
           new_section("Quit", "qa", "Built-in"),
         },
