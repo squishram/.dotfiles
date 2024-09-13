@@ -74,7 +74,7 @@ source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 
-# helps get a blinking cursor in wezterm (vi-mode breaks blinking cursor without this)
+# vi-mode breaks blinking cursor without this in WezTerm
 ZVM_CURSOR_STYLE_ENABLED=false
 # better vi mode, set kj to escape
 function zvm_config() {
@@ -89,6 +89,6 @@ source /usr/share/zsh/plugins/zsh-vi-mode/zsh-vi-mode.plugin.zsh 2>/dev/null
 # use keychain to ensure SSH keys are remembered (must type on login)
 eval $(keychain --eval --quiet --agents ssh id_rsa)
 
-# status for every terminal
+# speedy system status
 macchina
 # task list due.before:eow
