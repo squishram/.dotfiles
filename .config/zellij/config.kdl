@@ -9,6 +9,7 @@ plugins {
 keybinds {
   unbind "Ctrl g"
   unbind "Ctrl h"
+  unbind "Ctrl o"
 
   normal {
     unbind "Ctrl h"

@@ -1,0 +1,37 @@
+* {
+  border: none;
+  /* `otf-font-awesome` is required to be installed for icons */
+  font-family: 'CaskaydiaCove Nerd Font', Roboto, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-feature-settings: '"zero", "ss01", "ss02", "ss03", "ss04", "ss05", "cv31"';
+  min-height: 30px;
+}
+
+window#waybar {
+  background-color: transparent;
+}
+
+#custom-arch, #workspaces {
+  border-radius: 10px;
+  background-color: #24273a;
+  font-size: 20px;
+  margin-left: 6px;
+  color: #eceff4;
+  margin-top: 6px;
+}
+
+#workspaces button {
+  background-color: #24273a;
+  color: #eceff4;
+}
+
+#custom-spotify, #battery, #clock, #custom-updates, #network, #pulseaudio, #cpu, #memory, #window {
+  border-radius: 10px;
+  background-color: #24273a;
+  color: #cad3f5;
+  margin-top: 6px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-right: 6px;
+}
+

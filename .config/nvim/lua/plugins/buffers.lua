@@ -48,7 +48,8 @@ return {
 
     keys = {
       {
-        "<C-w>",
+        -- "<leader>ww",
+        "<C-W>",
         function()
           local bd = require("mini.bufremove").delete
           if vim.bo.modified then
@@ -64,7 +65,24 @@ return {
           end
         end,
         desc = "Delete Buffer",
+        noremap = true,
+        silent = true,
+        nowait = true,
       },
     },
+  },
+
+  {
+    "leath-dub/snipe.nvim",
+    keys = {
+      {
+        "<leader>s",
+        function()
+          require("snipe").open_buffer_menu()
+        end,
+        desc = "Open Snipe buffer menu",
+      },
+    },
+    opts = {},
   },
 }

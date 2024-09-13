@@ -35,12 +35,11 @@ return {
 
   {
     "folke/which-key.nvim",
-    optional = true,
-    opts = {
-      defaults = {
-        ["<localLeader>l"] = { name = "+vimtex" },
-      },
-    },
+    config = function()
+      require("which-key").add({
+        { "<leader>l", group = "+VimTeX" },
+      })
+    end,
   },
 
   {

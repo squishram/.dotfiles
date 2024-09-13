@@ -41,18 +41,16 @@ return {
     -- levels defined by "vim.log.levels.*" or nil, which is equivalent to DEBUG (1).
     log_level = vim.log.levels.DEBUG,
 
-    daily_notes = {
-      folder = "~/documents/notes/Journal/Daily/",
-      date_format = "%Y-%m-%d",
-      template = "~/documents/notes/Templates/Daily.md",
-    },
-
     -- Optional, completion.
     completion = {
       -- If using nvim-cmp, otherwise set to false
       nvim_cmp = true,
       -- Trigger completion at 2 chars
       min_chars = 2,
+    },
+
+    ui = {
+      enable = false,
     },
 
     -- Where to put new notes created from completion. Valid options are

@@ -1,0 +1,354 @@
+// catppuccin colours
+// bg "#626880"
+// fg "#c6d0f5"
+// red "#e78284"
+// green "#a6d189"
+// blue "#8caaee"
+// yellow "#e5c890"
+// magenta "#f4b8e4"
+// orange "#ef9f76"
+// cyan "#99d1db"
+// black "#292c3c"
+// white "#c6d0f5"
+
+input {
+  keyboard {
+    xkb {
+      layout "gb"
+      options "grp:win_space_toggle,compose:ralt,ctrl:nocaps"
+    }
+  }
+
+  touchpad {
+    tap
+    natural-scroll
+    scroll-method "two-finger"
+    accel-speed 0.2
+    accel-profile "adaptive"
+  }
+
+  mouse {
+  }
+
+  // mouse warps to the center of newly focused windows
+  warp-mouse-to-focus
+  // focus follows mouse to window
+  focus-follows-mouse max-scroll-amount="50%"
+}
+
+// run `niri msg outputs` to see available monitors
+output "eDP-1" {
+  // "<width>x<height>" or "<width>x<height>@<refresh rate>" (max refresh rate is default)
+  mode "1920x1080"
+  // zoom quotient (2 = twice as zoomed)
+  scale 1
+  // normal, 90, 180, 270, flipped, flipped-90, flipped-180 and flipped-270.
+  transform "normal"
+  // relative location of the monitor(?)
+  position x=0 y=0
+}
+
+layout {
+  // Set gaps around windows in logical pixels.
+  gaps 16
+  // When to center a column when changing focus
+  center-focused-column "never"
+  // You can customize the widths that "switch-preset-column-width" (Mod+R) toggles between.
+  preset-column-widths {
+    proportion 0.5
+    proportion 0.66667
+  }
+
+  // If you leave the brackets empty, the program will decide its initial width
+  default-column-width { proportion 0.5; }
+
+  // ring to help visualise focussed window
+  focus-ring {
+    // size of ring
+    width 3
+    // Color of the ring on the active monitor.
+    active-gradient from="#8caaee" to="#f4b8e4" angle=135
+    // Color of the ring on inactive monitors.
+    inactive-gradient from="#626880" to="#808080" angle=135 relative-to="workspace-view"
+  }
+
+  // more blank space
+  struts {
+    // left 32
+    // right 32
+    // top 32
+    // bottom 32
+  }
+}
+
+// ---------- //
+// WORKSPACES //
+// ---------- //
+
+workspace "comms"
+workspace "scratch"
+workspace "browser"
+
+// --------- //
+// AUTOSTART //
+// --------- //
+
+// toolbar
+spawn-at-startup "/home/squish/config/waybar/launch.sh"
+// idle daemon
+spawn-at-startup "swayidle"
+// wallpaper
+spawn-at-startup "swaybg" "-i" "/home/squish/.config/wallpapers/catppuccin/catppuccin_01.jpg"
+// notification daemon
+spawn-at-startup "mako"
+// dims screen at sunset
+spawn-at-startup "wlsunset" "-l" "53.480759" "-L" "-2.242631"
+// needed to run some X programs on niri NOTE: installation not working right now
+// spawn-at-startup "xwayland-satellite"
+
+// email
+spawn-at-startup "protonmail-bridge"
+spawn-at-startup "thunderbird"
+// browser
+spawn-at-startup "floorp"
+
+// the path where screenshots are saved
+screenshot-path " /home/squish/documents/pictures/screenshot_%Y-%m-%d_%H-%M-%S.png"
+
+// needed for any kind of transparency on windows
+prefer-no-csd
+
+// --------- //
+// ANIMATION //
+// --------- //
+
+animations {
+  // Slow down all animations by this factor; values below 1 speed them up
+  slowdown 1.5
+
+  workspace-switch {
+    spring damping-ratio=1.0 stiffness=1000 epsilon=0.0001
+  }
+
+  window-open {
+    duration-ms 150
+    curve "ease-out-expo"
+  }
+
+  window-close {
+    duration-ms 150
+    curve "ease-out-quad"
+  }
+
+  horizontal-view-movement {
+    spring damping-ratio=1.0 stiffness=800 epsilon=0.0001
+  }
+
+  window-movement {
+    spring damping-ratio=1.0 stiffness=800 epsilon=0.0001
+  }
+
+  window-resize {
+    spring damping-ratio=1.0 stiffness=800 epsilon=0.0001
+  }
+
+  config-notification-open-close {
+    spring damping-ratio=0.6 stiffness=1000 epsilon=0.001
+  }
+
+  screenshot-ui-open {
+    duration-ms 200
+    curve "ease-out-quad"
+  }
+}
+
+// ------------ //
+// WINDOW RULES //
+// ------------ //
+
+window-rule {
+  geometry-corner-radius 12
+  clip-to-geometry true
+}
+
+window-rule {
+  match app-id="floorp"
+  match app-id="chromium"
+  match app-id="thunderbird"
+  open-maximized true
+}
+
+window-rule {
+  match app-id="protonmail-bridge"
+  match app-id="thunderbird"
+  open-on-workspace "comms"
+}
+
+window-rule {
+  match app-id="floorp"
+  open-on-workspace "browser"
+}
+
+
+// -------- //
+// KEYBINDS //
+// -------- //
+
+binds {
+
+  // help menu
+  Mod+Shift+Slash { show-hotkey-overlay; }
+  // terminal
+  Mod+Return { spawn "foot"; }
+  // app launcher
+  Mod+Shift+Return { spawn "fuzzel"; }
+  // browser
+  Mod+B { spawn "floorp"; }
+  // screenshot
+  Print { screenshot; }
+  Ctrl+Print { screenshot-screen; }
+  Alt+Print { screenshot-window; }
+  // Quit
+  Mod+Q { spawn "wlogout"; }
+
+
+  // Volume
+  XF86AudioRaiseVolume allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.1+"; }
+  XF86AudioLowerVolume allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.1-"; }
+  XF86AudioMute        allow-when-locked=true { spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SINK@" "toggle"; }
+  XF86AudioMicMute     allow-when-locked=true { spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SOURCE@" "toggle"; }
+
+  // Brightness
+  XF86MonBrightnessUp allow-when-locked=true { spawn "brightnessctl" "set" "10%+"; }
+  XF86MonBrightnessDown allow-when-locked=true { spawn "brightnessctl" "set" "10%-"; }
+
+  // ------- //
+  // Windows //
+  // ------- //
+
+  // close window
+  Mod+W { close-window; }
+
+  // shift window focus
+  Mod+H     { focus-column-left; }
+  Mod+J     { focus-window-or-workspace-down; }
+  Mod+K     { focus-window-or-workspace-up; }
+  Mod+L     { focus-column-right; }
+  Mod+Home { focus-column-first; }
+  Mod+End  { focus-column-last; }
+
+  // move windows around
+  Mod+Ctrl+H     { move-column-left; }
+  Mod+Ctrl+J     { move-window-down; }
+  Mod+Ctrl+K     { move-window-up; }
+  Mod+Ctrl+L     { move-column-right; }
+  Mod+Ctrl+Home { move-column-to-first; }
+  Mod+Ctrl+End  { move-column-to-last; }
+
+  // shift monitor focus
+  Mod+Shift+H     { focus-monitor-left; }
+  Mod+Shift+J     { focus-monitor-down; }
+  Mod+Shift+K     { focus-monitor-up; }
+  Mod+Shift+L     { focus-monitor-right; }
+
+  // move windows between monitors
+  Mod+Shift+Ctrl+H     { move-column-to-monitor-left; }
+  Mod+Shift+Ctrl+J     { move-column-to-monitor-down; }
+  Mod+Shift+Ctrl+K     { move-column-to-monitor-up; }
+  Mod+Shift+Ctrl+L     { move-column-to-monitor-right; }
+
+  // moving between single workspaces
+  Mod+N              { focus-workspace-down; }
+  Mod+P              { focus-workspace-up; }
+
+  // moving columns between single workspaces
+  Mod+Ctrl+N         { move-column-to-workspace-down; }
+  Mod+Ctrl+P         { move-column-to-workspace-up; }
+
+  // moving the workspaces themselves
+  Mod+Shift+N         { move-workspace-down; }
+  Mod+Shift+P         { move-workspace-up; }
+
+  Mod+WheelScrollDown      cooldown-ms=150 { focus-workspace-down; }
+  Mod+WheelScrollUp        cooldown-ms=150 { focus-workspace-up; }
+  Mod+Ctrl+WheelScrollDown cooldown-ms=150 { move-column-to-workspace-down; }
+  Mod+Ctrl+WheelScrollUp   cooldown-ms=150 { move-column-to-workspace-up; }
+
+  Mod+WheelScrollRight      { focus-column-right; }
+  Mod+WheelScrollLeft       { focus-column-left; }
+  Mod+Ctrl+WheelScrollRight { move-column-right; }
+  Mod+Ctrl+WheelScrollLeft  { move-column-left; }
+
+  // Usually scrolling up and down with Shift in applications results in
+  // horizontal scrolling; these binds replicate that.
+  Mod+Shift+WheelScrollDown      { focus-column-right; }
+  Mod+Shift+WheelScrollUp        { focus-column-left; }
+  Mod+Ctrl+Shift+WheelScrollDown { move-column-right; }
+  Mod+Ctrl+Shift+WheelScrollUp   { move-column-left; }
+
+  // Similarly, you can bind touchpad scroll "ticks".
+  // Touchpad scrolling is continuous, so for these binds it is split into
+  // discrete intervals.
+  // These binds are also affected by touchpad's natural-scroll, so these
+  // example binds are "inverted", since we have natural-scroll enabled for
+  // touchpads by default.
+  // Mod+TouchpadScrollDown { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.02+"; }
+  // Mod+TouchpadScrollUp   { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.02-"; }
+
+  // focussing workspaces
+  // with 2 workspaces + 1 empty, indices >3 will all refer to the 3rd workspace
+  Mod+1 { focus-workspace 1; }
+  Mod+2 { focus-workspace 2; }
+  Mod+3 { focus-workspace 3; }
+  Mod+4 { focus-workspace 4; }
+  Mod+5 { focus-workspace 5; }
+  Mod+6 { focus-workspace 6; }
+  Mod+7 { focus-workspace 7; }
+  Mod+8 { focus-workspace 8; }
+  Mod+9 { focus-workspace 9; }
+
+  // moving window "columns" around (this can be done with single windows, too)
+  Mod+Ctrl+1 { move-column-to-workspace 1; }
+  Mod+Ctrl+2 { move-column-to-workspace 2; }
+  Mod+Ctrl+3 { move-column-to-workspace 3; }
+  Mod+Ctrl+4 { move-column-to-workspace 4; }
+  Mod+Ctrl+5 { move-column-to-workspace 5; }
+  Mod+Ctrl+6 { move-column-to-workspace 6; }
+  Mod+Ctrl+7 { move-column-to-workspace 7; }
+  Mod+Ctrl+8 { move-column-to-workspace 8; }
+  Mod+Ctrl+9 { move-column-to-workspace 9; }
+
+  // Switches focus between the current and the previous workspace.
+  Mod+Tab { focus-workspace-previous; }
+
+  // stacking windows by "eating" them
+  Mod+BracketLeft  { consume-or-expel-window-left; }
+  Mod+BracketRight { consume-or-expel-window-right; }
+
+  // controlling window size using presets
+  Mod+S { switch-preset-column-width; }
+  Mod+Shift+S { reset-window-height; }
+  Mod+F { maximize-column; }
+  Mod+Shift+F { fullscreen-window; }
+  Mod+C { center-column; }
+
+  // width adjustment
+  Mod+Minus { set-column-width "-10%"; }
+  Mod+Equal { set-column-width "+10%"; }
+  // height adjustment
+  Mod+Shift+Minus { set-window-height "-10%"; }
+  Mod+Shift+Equal { set-window-height "+10%"; }
+
+  // Actions to switch layouts.
+  // Note: if you uncomment these, make sure you do NOT have
+  // a matching layout switch hotkey configured in xkb options above.
+  // Having both at once on the same hotkey will break the switching,
+  // since it will switch twice upon pressing the hotkey (once by xkb, once by niri).
+  // Mod+Space       { switch-layout "next"; }
+  // Mod+Shift+Space { switch-layout "prev"; }
+
+}
+
+hotkey-overlay {
+  skip-at-startup
+}

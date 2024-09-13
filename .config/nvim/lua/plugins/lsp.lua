@@ -16,7 +16,6 @@ return {
           },
         },
       },
-      -- "echasnovski/mini.pick",
       "ibhagwan/fzf-lua",
     },
 

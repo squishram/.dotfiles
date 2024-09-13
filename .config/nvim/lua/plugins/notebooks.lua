@@ -63,7 +63,7 @@ return {
     init = function()
       require("otter").activate(
         -- table of embedded languages to look for (no default)
-        { "python", "lua" },
+        { "python", "lua", "julia" },
         -- enable completion (default = true)
         true,
         -- enable diagnostics (default = true)

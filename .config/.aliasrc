@@ -2,8 +2,11 @@
 # ALIAS LIST START #
 ###################
 
+# Start Hyprland
+alias boot="Hyprland"
+
 # copy working directory
-alias cwd="pwd | xclip -selection clipboard"
+alias cwd="pwd | wl-copy"
 
 # remove empty files
 alias clean="find . -size 0c -delete"
@@ -12,8 +15,6 @@ alias clean="find . -size 0c -delete"
 alias reboot="sudo /sbin/reboot"
 alias pdown="systemctl poweroff"
 alias halt="sudo /sbin/halt"
-# boot up your display
-alias sx="startx"
 
 # 'go tos'
 alias ..="cd .."
@@ -56,7 +57,7 @@ alias ce="conda activate cenv"
 # BLUETOOTH ALIASES
 alias bluon="sudo systemctl enable bluetooth && sudo systemctl start bluetooth"
 alias blustat="sudo systemctl status bluetooth"
-alias bt="bluetoothctl"
+alias bt="bluetui"
 alias headphones="bluetoothctl connect 38:18:4C:7D:6E:57"
 alias speaker="bluetoothctl connect EC:81:93:5B:DD:29"
 
@@ -80,7 +81,7 @@ alias Rorph="paru -Qtdq | paru -Rns -"
 
 # WIFI
 # list available wifi networks
-alias wifi="nmcli device wifi list"
+alias wifi="impala"
 # connect to a wifi network with a password
 wificonn(){
   arg1=$1
@@ -124,18 +125,9 @@ fr(){
 }
 
 # Arch-specific (non-ubuntu) aliases only go here
-if [[ $(uname -rv) == *"arch"* ]]; then
-  alias vim="nvim"
-  alias vi="nvim"
-  alias edit="nvim"
-fi
-
-# ubuntu
-if [[ $(uname -rv) == *"debian"* ]]; then
-  alias vim="$HOME/nvim.appimage"
-  alias vi="$HOME/nvim.appimage"
-  alias edit="$HOME/nvim.appimage"
-fi
+alias vim="nvim"
+alias vi="nvim"
+alias edit="nvim"
 
 # hdmi output toggle
 hdmi() {
@@ -148,20 +140,26 @@ hdmi() {
       fi
 }
 
+# --- DATA SCIENCE --- #
+
 # tidy-viewer -- for viewing csv files
 tv(){
   arg1=$1
     tidy-viewer $arg1
 }
 
-csv(){
+# peek at the first 20 lines of a large dataset with tidy-viewer
+pcsv(){
   arg1=$1
-    tidy-viewer $arg1
+  head -n 20 $arg1 | tv
 }
 
-# Zellij Terminal Session Manager
-alias za="zellij a"
-alias zl="zellij ls"
+# browse at the first n lines of a large dataset with visidata
+bcsv(){
+  arg1=$1
+  arg2=$2
+  head -n $arg2 $arg1 | vd
+}
 
 # Yazi TUI File Browser in Rust
 alias files="yazi"
@@ -195,7 +193,7 @@ alias la="eza -lar --header --icons=always --git --color=always --group-director
 alias lt="eza -larT --icons=always --no-permissions --no-user --level=3 --header --color=always --group-directories-first"
 alias ld="eza -lard */ --color=always --icons=always"
 
-# git TUI
+# git
 alias gt="gitui"
 # opens calculator
 alias calc="eva"
@@ -203,6 +201,30 @@ alias calc="eva"
 alias tt="taskwarrior-tui"
 # cat replacement in rust with syntax highlighting
 alias cat="bat"
+
+###########
+# WAYLAND #
+###########
+
+# chromium doesn't work on niri without this (wayland teething issues)
+alias chromium="chromium --ozone-platform=wayland"
+
+# lynx with vim keybindings
+alias lynx='lynx -vikeys'
+# Nix Utils
+# edit config file, copy over to home
+
+# nixit(){
+#   sudoedit /etc/nixos/configuration.nix
+#   cp -rf /etc/nixos/* ~/.dotfiles/.config/nixos/
+# }
+
+# # rebuild system
+# renix(){
+#   cd ~/.dotfiles/.config/nixos/
+#   sudo nix flake update
+#   sudo nixos-rebuild switch --flake .
+# }
 
 # # fzf
 # # recursive fuzzy search, open file

@@ -51,6 +51,7 @@ return {
             "markdown",
           },
         },
+
         indent = {
           enable = true,
           disable = {
@@ -58,6 +59,7 @@ return {
             "markdown",
           },
         },
+
         incremental_selection = {
           enable = true,
           disable = {
@@ -121,6 +123,16 @@ return {
             goto_previous_start = { ["[f"] = "@function.outer", ["[c"] = "@class.outer" },
             goto_previous_end = { ["[F"] = "@function.outer", ["[C"] = "@class.outer" },
           },
+        },
+      })
+
+      vim.filetype.add({
+        extension = { rasi = "rasi" },
+        pattern = {
+          [".*/waybar/config"] = "jsonc",
+          [".*/mako/config"] = "dosini",
+          [".*/kitty/*.conf"] = "bash",
+          [".*/hypr/.*%.conf"] = "hyprlang",
         },
       })
     end,
