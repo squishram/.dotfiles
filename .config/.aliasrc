@@ -81,7 +81,7 @@ alias Rorph="paru -Qtdq | paru -Rns -"
 
 # WIFI
 # list available wifi networks
-alias wifi="impala"
+alias wifi="nmcli device wifi list"
 # connect to a wifi network with a password
 wificonn(){
   arg1=$1
@@ -201,19 +201,22 @@ alias calc="eva"
 alias tt="taskwarrior-tui"
 # cat replacement in rust with syntax highlighting
 alias cat="bat"
+# look at picture
+alias img="swayimg"
 
 ###########
 # WAYLAND #
 ###########
 
 # chromium doesn't work on niri without this (wayland teething issues)
-alias chromium="chromium --ozone-platform=wayland"
+alias chromium="chromium --ozone-platform=wayland > /dev/null 2>&1"
+alias obsidian="obsidian --ozone-platform=wayland > /dev/null 2>&1"
 
-# lynx with vim keybindings
-alias lynx='lynx -vikeys'
-# Nix Utils
-# edit config file, copy over to home
+#############
+# Nix Utils #
+#############
 
+# # edit config file, copy over to home
 # nixit(){
 #   sudoedit /etc/nixos/configuration.nix
 #   cp -rf /etc/nixos/* ~/.dotfiles/.config/nixos/

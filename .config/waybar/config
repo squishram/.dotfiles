@@ -12,13 +12,13 @@
   "spacing": 4,
   // --- MODULES --- //
   // --- LEFT --- //
-  // "modules-left": ["custom/spotify"],
   "modules-left": [
-    "hyprland/window"
+    // "custom/spotify",
+    "niri/window"
   ],
   // --- CENTRE --- //
   "modules-center": [
-    "hyprland/workspaces"
+    "niri/workspaces"
   ],
   // --- RIGHT --- //
   "modules-right": [
@@ -26,45 +26,25 @@
     "battery",
     "cpu",
     "memory",
-    // "hardware",
     "network",
-    "clock",
-    "custom/updates"
+    "clock"
   ],
-  "hyprland/window": {
-    // on {string} the current window title is displayed
-    "format": {},
-    // custom format for specific windows, if you like
+  "niri/window": {
+    "format": "{}",
+    "separate-outputs": true,
+    "icon": true,
+    "icon-size": 16,
     "rewrite": {
-      "(.*) - Mozilla Thunderbird": "📧 $1",
-      "(.*) — Ablaze Floorp": "🌐 $1",
-      "(.*)foot": " $1"
-    },
-    // if two monitors, show the name of the window the bar is in (instead of the active window)
-    "separate-outputs": false,
-    // disable application icon
-    "icon": false,
-    "icon-size": 24
+      // "(.*) — Ablaze Floorp": "🌎 $1",
+      "(.*) - Mozilla Thunderbird": "󰇮 $1"
+    }
   },
-  "hyprland/workspaces": {
-    "active-only": false,
-    "disable-scroll": true,
-    "all-outputs": true,
-    "warp-on-scroll": true,
+  "niri/workspaces": {
     "format": "{icon}",
-    "sort-by-number": true,
     "format-icons": {
-      "1": "1",
-      "2": "2",
-      "3": "3",
-      "4": "4",
-      "5": "5",
-      "6": "6",
-      "7": "7",
-      "8": "8",
-      "9": "9",
-      "active": "",
-      "default": ""
+      "focused": "",
+      "active": "",
+      "default": "◦"
     }
   },
   "keyboard-state": {
@@ -76,29 +56,37 @@
       "unlocked": ""
     }
   },
-  "hyprland/mode": {
-    "format": "<span style=\"italic\">{}</span>"
-  },
-  "tray": {
-    // "icon-size": 21,
-    "spacing": 10
-  },
+  // "tray": {
+  //   "icon-size": 21,
+  //   "spacing": 10
+  // },
   "clock": {
-    "timezone": "Europe/London",
-    "format": "<span color='#8bd5ca'> </span>{:%H:%M}",
-    "tooltip": true,
-    "tooltip-format": "{:%d %B %Y}"
-  },
-  "custom/calendar": {
-    "timezone": "Europe/London",
-    "format": "{:%Y-%m-%d}"
+    "format": " {:%H:%M}",
+    "format-alt": " {:%A %d %B %Y (%R)}",
+    "tooltip-format": "<tt><big>{calendar}</big></tt>",
+    "calendar": {
+      "mode": "month",
+      "mode-mon-col": 3,
+      "weeks-pos": "right",
+      "on-scroll": 1,
+      "format": {
+        "months": "<span color='#c6d0f5'><b>{}</b></span>",
+        "days": "<span color='#f4b8e4'><b>{}</b></span>",
+        "weeks": "<span color='#99d1db'><b>W{}</b></span>",
+        "weekdays": "<span color='#e5c890'><b>{}</b></span>",
+        "today": "<span color='#e78284'><b><u>{}</u></b></span>"
+      }
+    },
+    "actions": {
+      "on-click-right": "mode"
+    }
   },
   "cpu": {
-    "format": "{usage}% <span color='#f5a97f'></span>",
+    "format": "{usage}% <span color='#ef9f76'></span>",
     "tooltip": false
   },
   "memory": {
-    "format": "{}% <span color='#eed49f'></span>"
+    "format": "{}% <span color='#e5c890'></span>"
   },
   "temperature": {
     // "thermal-zone": 2,
@@ -114,21 +102,22 @@
   },
   "network": {
     // "interface": "wlp2*", // (Optional) To force the use of this interface
-    "format-wifi": "{essid} ({signalStrength}%) ",
-    "format-ethernet": "<span color='#a6da95'>󰢾</span>",
+    "format-wifi": "{essid} <span color='#99d1db'>{signalStrength}% </span>",
+    "format-ethernet": "<span color='#99d1db'>󰢾</span>",
     "tooltip-format": "{ifname} via {gwaddr} ",
     "format-linked": "{ifname} (No IP) ",
-    "format-disconnected": "<span color='#ed8796'>󰢿</span>",
-    "format-alt": "{ifname}: {ipaddr}/{cidr}"
+    "format-disconnected": "<span color='#e78284'>󰢿</span>",
+    "format-alt": "{ifname}: {ipaddr}/{cidr}",
+    "on-click": "nm-connection-editor"
   },
   "pulseaudio": {
     "scroll-step": 3, // %, can be a float
-    "format": "{icon} {volume}%",
+    "format": "<span color='#8caaee'>{icon}</span> {volume}%",
     "format-muted": "󰖁 {volume}%",
     "format-icons": {
       "headphone": "",
-      "hands-free": "",
-      "headset": "",
+      "hands-free": "",
+      "headset": "",
       "phone": "",
       "portable": "",
       "car": "",
@@ -140,16 +129,16 @@
     },
     "on-click": "pavucontrol"
   },
-  "custom/updates": {
-    "format": "{} {icon}",
-    "return-type": "json",
-    "format-icons": {
-      "has-updates": "󱍷",
-      "updated": "󰂪"
-    },
-    "exec-if": "which waybar-module-pacman-updates",
-    "exec": "waybar-module-pacman-updates"
-  },
+  // "custom/updates": {
+  //   "format": "{} {icon}",
+  //   "return-type": "json",
+  //   "format-icons": {
+  //     "has-updates": "󱍷",
+  //     "updated": "󰂪"
+  //   },
+  //   "exec-if": "which waybar-module-pacman-updates",
+  //   "exec": "waybar-module-pacman-updates"
+  // },
   "battery": {
     "bat": "BAT0",
     "interval": 60,
@@ -157,7 +146,7 @@
       "warning": 30,
       "critical": 15
     },
-    "format": "{capacity}% {icon}",
+    "format": "{capacity}% <span color='#a6d189'>{icon}</span>",
     "format-icons": [
       "󰁺",
       "󰁻",

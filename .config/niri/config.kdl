@@ -48,6 +48,18 @@ output "eDP-1" {
   position x=0 y=0
 }
 
+// run `niri msg outputs` to see available monitors
+output "HDMI-A-1" {
+  // "<width>x<height>" or "<width>x<height>@<refresh rate>" (max refresh rate is default)
+  // mode "1920x1080"
+  // zoom quotient (2 = twice as zoomed)
+  scale 1
+  // normal, 90, 180, 270, flipped, flipped-90, flipped-180 and flipped-270.
+  transform "normal"
+  // relative location of the monitor(?)
+  position x=0 y=0
+}
+
 layout {
   // Set gaps around windows in logical pixels.
   gaps 16
@@ -81,36 +93,30 @@ layout {
   }
 }
 
-// ---------- //
-// WORKSPACES //
-// ---------- //
-
-workspace "comms"
-workspace "scratch"
-workspace "browser"
-
 // --------- //
 // AUTOSTART //
 // --------- //
 
+// PROCESSES
 // toolbar
-spawn-at-startup "/home/squish/config/waybar/launch.sh"
+spawn-at-startup "/home/squish/.config/waybar/launch.sh"
 // idle daemon
 spawn-at-startup "swayidle"
 // wallpaper
 spawn-at-startup "swaybg" "-i" "/home/squish/.config/wallpapers/catppuccin/catppuccin_01.jpg"
-// notification daemon
+// notification daemon (I think I might already have the systemd going)
 spawn-at-startup "mako"
 // dims screen at sunset
 spawn-at-startup "wlsunset" "-l" "53.480759" "-L" "-2.242631"
 // needed to run some X programs on niri NOTE: installation not working right now
 // spawn-at-startup "xwayland-satellite"
 
+// APPLICATIONS
 // email
 spawn-at-startup "protonmail-bridge"
 spawn-at-startup "thunderbird"
 // browser
-spawn-at-startup "floorp"
+// spawn-at-startup "floorp"
 
 // the path where screenshots are saved
 screenshot-path " /home/squish/documents/pictures/screenshot_%Y-%m-%d_%H-%M-%S.png"
@@ -178,18 +184,6 @@ window-rule {
   open-maximized true
 }
 
-window-rule {
-  match app-id="protonmail-bridge"
-  match app-id="thunderbird"
-  open-on-workspace "comms"
-}
-
-window-rule {
-  match app-id="floorp"
-  open-on-workspace "browser"
-}
-
-
 // -------- //
 // KEYBINDS //
 // -------- //
@@ -213,8 +207,8 @@ binds {
 
 
   // Volume
-  XF86AudioRaiseVolume allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.1+"; }
-  XF86AudioLowerVolume allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.1-"; }
+  XF86AudioRaiseVolume allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.05+"; }
+  XF86AudioLowerVolume allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.05-"; }
   XF86AudioMute        allow-when-locked=true { spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SINK@" "toggle"; }
   XF86AudioMicMute     allow-when-locked=true { spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SOURCE@" "toggle"; }
 
@@ -239,23 +233,21 @@ binds {
 
   // move windows around
   Mod+Ctrl+H     { move-column-left; }
-  Mod+Ctrl+J     { move-window-down; }
-  Mod+Ctrl+K     { move-window-up; }
   Mod+Ctrl+L     { move-column-right; }
+  Mod+Ctrl+J     { move-window-down-or-to-workspace-down; }
+  Mod+Ctrl+K     { move-window-up-or-to-workspace-up; }
   Mod+Ctrl+Home { move-column-to-first; }
   Mod+Ctrl+End  { move-column-to-last; }
 
   // shift monitor focus
   Mod+Shift+H     { focus-monitor-left; }
-  Mod+Shift+J     { focus-monitor-down; }
-  Mod+Shift+K     { focus-monitor-up; }
-  Mod+Shift+L     { focus-monitor-right; }
+  Mod+Shift+l     { focus-monitor-right; }
 
   // move windows between monitors
   Mod+Shift+Ctrl+H     { move-column-to-monitor-left; }
+  Mod+Shift+Ctrl+L     { move-column-to-monitor-right; }
   Mod+Shift+Ctrl+J     { move-column-to-monitor-down; }
   Mod+Shift+Ctrl+K     { move-column-to-monitor-up; }
-  Mod+Shift+Ctrl+L     { move-column-to-monitor-right; }
 
   // moving between single workspaces
   Mod+N              { focus-workspace-down; }
@@ -268,6 +260,8 @@ binds {
   // moving the workspaces themselves
   Mod+Shift+N         { move-workspace-down; }
   Mod+Shift+P         { move-workspace-up; }
+  Mod+Shift+J     { move-workspace-down; }
+  Mod+Shift+K     { move-workspace-up; }
 
   Mod+WheelScrollDown      cooldown-ms=150 { focus-workspace-down; }
   Mod+WheelScrollUp        cooldown-ms=150 { focus-workspace-up; }

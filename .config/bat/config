@@ -1,13 +1,16 @@
-# This is `bat`s configuration file.
-# Each line either contains a comment or a command-line option that you want to pass to `bat` by default.
-# You can run `bat --help` to get a list of all possible configuration options.
+##############
+# BAT CONFIG #
+##############
+
+# bat is a cat substitute with a bunch of other features
+# you can pass it flags to control the output
+# these are the flags I've got on by default
 
 # Run `bat --list-themes` for a list of all available themes
 --theme="Catppuccin-frappe"
-
 --number
 --color=always
 --decorations=always
 
-# disable automatic paging
+# disable automatic paging (if I want a pages, just pipe through `less`)
 --paging=never
