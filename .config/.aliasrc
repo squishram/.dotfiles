@@ -2,14 +2,11 @@
 # ALIAS LIST START #
 ###################
 
-# Start Hyprland
-alias boot="Hyprland"
-
 # copy working directory
 alias cwd="pwd | wl-copy"
 
-# remove empty files
-alias clean="find . -size 0c -delete"
+# remove empty files & pacman cache shite
+alias clean="find . -size 0c -delete & paccache -rk1"
 
 # reboot / halt / poweroff
 alias reboot="sudo /sbin/reboot"
@@ -57,9 +54,12 @@ alias ce="conda activate cenv"
 # BLUETOOTH ALIASES
 alias bluon="sudo systemctl enable bluetooth && sudo systemctl start bluetooth"
 alias blustat="sudo systemctl status bluetooth"
-alias bt="bluetui"
+alias bt="bluetoothctl"
+alias btui="bluetui"
+# BLUETOOTH DEVICES
 alias headphones="bluetoothctl connect 38:18:4C:7D:6E:57"
 alias speaker="bluetoothctl connect EC:81:93:5B:DD:29"
+alias ellies="bluetoothctl connect 00:02:9A:0C:20:88"
 
 # LATEX ALIASES
 alias texclean="rm *.aux *.bbl *.bcf *.blg *.fdb_latexmk *.fls *.lof *.log *.out *.run.xml *.synctex.gz *.toc"
@@ -208,13 +208,16 @@ alias img="swayimg"
 # WAYLAND #
 ###########
 
-# chromium doesn't work on niri without this (wayland teething issues)
-alias chromium="chromium --ozone-platform=wayland > /dev/null 2>&1"
-alias obsidian="obsidian --ozone-platform=wayland > /dev/null 2>&1"
+# wayland teething issues
+alias obsidian="obsidian --ozone-platform=wayland"
+alias signal="signal-desktop --use-tray-icon --enable-features=UseOzonePlatform --ozone-platform=wayland"
+alias thorium="thorium-browser --use-tray-icon --enable-features=UseOzonePlatform --ozone-platform=wayland"
+alias ferdium="ferdium --use-tray-icon --enable-features=UseOzonePlatform --ozone-platform=wayland"
+alias beeper="beeper --use-tray-icon --enable-features=UseOzonePlatform --ozone-platform=wayland"
 
-#############
-# Nix Utils #
-#############
+#######
+# NIX #
+#######
 
 # # edit config file, copy over to home
 # nixit(){

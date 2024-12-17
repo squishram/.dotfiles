@@ -25,6 +25,7 @@ input {
     scroll-method "two-finger"
     accel-speed 0.2
     accel-profile "adaptive"
+    tap-button-map "left-right-middle"
   }
 
   mouse {
@@ -104,17 +105,21 @@ spawn-at-startup "/home/squish/.config/waybar/launch.sh"
 spawn-at-startup "swayidle"
 // wallpaper
 spawn-at-startup "swaybg" "-i" "/home/squish/.config/wallpapers/catppuccin/catppuccin_01.jpg"
-// notification daemon (I think I might already have the systemd going)
+// notification daemon
 spawn-at-startup "mako"
+// notifications about low power
+spawn-at-startup "poweralertd"
 // dims screen at sunset
 spawn-at-startup "wlsunset" "-l" "53.480759" "-L" "-2.242631"
-// needed to run some X programs on niri NOTE: installation not working right now
+// NOTE: installation not working right now:
+// needed to run some X programs on niri
 // spawn-at-startup "xwayland-satellite"
 
 // APPLICATIONS
 // email
 spawn-at-startup "protonmail-bridge"
 spawn-at-startup "thunderbird"
+spawn-at-startup "beeper"
 // browser
 // spawn-at-startup "floorp"
 
@@ -178,7 +183,7 @@ window-rule {
 }
 
 window-rule {
-  match app-id="floorp"
+  match app-id="firefox"
   match app-id="chromium"
   match app-id="thunderbird"
   open-maximized true
@@ -197,11 +202,12 @@ binds {
   // app launcher
   Mod+Shift+Return { spawn "fuzzel"; }
   // browser
-  Mod+B { spawn "floorp"; }
+  Mod+B { spawn "firefox"; }
   // screenshot
   Print { screenshot; }
   Ctrl+Print { screenshot-screen; }
   Alt+Print { screenshot-window; }
+  Shift+Print { spawn "hyprpicker | tee -a ~/colourpicker_list"; }
   // Quit
   Mod+Q { spawn "wlogout"; }
 

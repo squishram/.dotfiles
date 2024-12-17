@@ -2,8 +2,7 @@ return {
   {
     "folke/flash.nvim",
     opts = {
-      -- labels: compared to the defaults, I have omitted:
-      -- None
+      -- labels (compared to the defaults, I have omitted none so far)
       labels = "xasdfghjklqwertyuiopzcvbnm",
       modes = {
         -- options used when flash is activated through

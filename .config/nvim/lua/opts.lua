@@ -124,6 +124,8 @@ local options = {
   wildmode = "longest:full,full",
   -- Minimum window width
   winminwidth = 5,
+  -- keep buffers hidden, don't close
+  hidden = true,
 }
 
 for k, v in pairs(options) do

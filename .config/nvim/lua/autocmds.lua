@@ -14,6 +14,16 @@ vim.api.nvim_create_autocmd({ "BufWritePre" }, {
   command = [[%s/\s\+$//e]],
 })
 
+-- -- configuration for neovim terminal
+-- vim.api.nvim_create_autocmd({ "TermOpen" }, {
+--   group = vim.api.nvim_create_augroup("custom_term_open", { clear = true }),
+--   callback = function()
+--     -- remove line numbering in terminal
+--     vim.opt.number = false
+--     vim.opt.relativenumber = false
+--   end,
+-- })
+
 -- -- auto-un-highlight after search
 -- local ns = vim.api.nvim_create_namespace("toggle_hlsearch")
 -- local function toggle_hlsearch(char)

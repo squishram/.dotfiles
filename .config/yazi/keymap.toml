@@ -1,0 +1,4 @@
+# [manager.prepend_keymap]
+# on = "o"
+# run = 'my fav commend'
+# desc = "Creates a new file"

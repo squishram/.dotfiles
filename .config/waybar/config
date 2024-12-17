@@ -143,8 +143,8 @@
     "bat": "BAT0",
     "interval": 60,
     "states": {
-      "warning": 30,
-      "critical": 15
+      "warning": 20,
+      "critical": 10
     },
     "format": "{capacity}% <span color='#a6d189'>{icon}</span>",
     "format-icons": [
