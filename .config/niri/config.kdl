@@ -1,15 +1,26 @@
 // catppuccin colours
 // bg "#626880"
 // fg "#c6d0f5"
-// red "#e78284"
-// green "#a6d189"
-// blue "#8caaee"
-// yellow "#e5c890"
-// magenta "#f4b8e4"
-// orange "#ef9f76"
-// cyan "#99d1db"
 // black "#292c3c"
 // white "#c6d0f5"
+// red "#e78284"
+// orange "#ef9f76"
+// yellow "#e5c890"
+// green "#a6d189"
+// cyan "#99d1db"
+// blue "#8caaee"
+// magenta "#f4b8e4"
+
+// gruvbox colours
+// bg #282828 #928374
+// fg #A89984 #EBDBB2
+// red #CC241D #FB4934
+// orange #D65D0E #FE8019
+// yellow #D79921 #FABD2F
+// green #98971A #B8BB26
+// cyan #689D6A #8EC07C
+// blue #458588 #83A598
+// magenta #B16286 #D3869B
 
 input {
   keyboard {
@@ -23,8 +34,9 @@ input {
     tap
     natural-scroll
     scroll-method "two-finger"
-    accel-speed 0.2
+    accel-speed 0.3
     accel-profile "adaptive"
+    tap-button-map "left-right-middle"
   }
 
   mouse {
@@ -39,9 +51,9 @@ input {
 // run `niri msg outputs` to see available monitors
 output "eDP-1" {
   // "<width>x<height>" or "<width>x<height>@<refresh rate>" (max refresh rate is default)
-  mode "1920x1080"
+  mode "2880x1920"
   // zoom quotient (2 = twice as zoomed)
-  scale 1
+  scale 2
   // normal, 90, 180, 270, flipped, flipped-90, flipped-180 and flipped-270.
   transform "normal"
   // relative location of the monitor(?)
@@ -56,17 +68,18 @@ output "HDMI-A-1" {
   scale 1
   // normal, 90, 180, 270, flipped, flipped-90, flipped-180 and flipped-270.
   transform "normal"
-  // relative location of the monitor(?)
+  // relative location of the monitor compared to other monitors
   position x=0 y=0
 }
 
 layout {
   // Set gaps around windows in logical pixels.
-  gaps 16
+  gaps 10
   // When to center a column when changing focus
   center-focused-column "never"
   // You can customize the widths that "switch-preset-column-width" (Mod+R) toggles between.
   preset-column-widths {
+    proportion 0.33333
     proportion 0.5
     proportion 0.66667
   }
@@ -77,11 +90,11 @@ layout {
   // ring to help visualise focussed window
   focus-ring {
     // size of ring
-    width 3
+    width 2
     // Color of the ring on the active monitor.
-    active-gradient from="#8caaee" to="#f4b8e4" angle=135
+    active-gradient from="#CC241D" to="#458588" angle=135
     // Color of the ring on inactive monitors.
-    inactive-gradient from="#626880" to="#808080" angle=135 relative-to="workspace-view"
+    inactive-gradient from="#928374" to="#808080" angle=135 relative-to="workspace-view"
   }
 
   // more blank space
@@ -93,6 +106,10 @@ layout {
   }
 }
 
+environment {
+    DISPLAY ":0"
+}
+
 // --------- //
 // AUTOSTART //
 // --------- //
@@ -101,25 +118,30 @@ layout {
 // toolbar
 spawn-at-startup "/home/squish/.config/waybar/launch.sh"
 // idle daemon
-spawn-at-startup "swayidle"
+spawn-at-startup "hypridle"
 // wallpaper
-spawn-at-startup "swaybg" "-i" "/home/squish/.config/wallpapers/catppuccin/catppuccin_01.jpg"
-// notification daemon (I think I might already have the systemd going)
+spawn-at-startup "swaybg" "-i" "/home/squish/.config/wallpapers/gruvbox/abstract-darkhole.png"
+// notification daemon
 spawn-at-startup "mako"
+// notification when battery low
+spawn-at-startup "/home/squish/.config/mako/battery_warning_script.sh"
+// start foot server from which to launch client instances
+spawn-at-startup "foot" "--server"
 // dims screen at sunset
 spawn-at-startup "wlsunset" "-l" "53.480759" "-L" "-2.242631"
-// needed to run some X programs on niri NOTE: installation not working right now
-// spawn-at-startup "xwayland-satellite"
+// needed to run some X (e.g. electron) programs on wayland, makes them look ugly
+spawn-at-startup "xwayland-satellite"
+// authentication daemon (for fprintd)
+// spawn-at-startup "systemctl" "--user" "start" "hyprpolkitagent"
 
 // APPLICATIONS
 // email
 spawn-at-startup "protonmail-bridge"
 spawn-at-startup "thunderbird"
-// browser
-// spawn-at-startup "floorp"
+spawn-at-startup "wasistlos"
 
 // the path where screenshots are saved
-screenshot-path " /home/squish/documents/pictures/screenshot_%Y-%m-%d_%H-%M-%S.png"
+screenshot-path "/home/squish/documents/pictures/screenshot_%Y-%m-%d_%H-%M-%S.png"
 
 // needed for any kind of transparency on windows
 prefer-no-csd
@@ -130,7 +152,7 @@ prefer-no-csd
 
 animations {
   // Slow down all animations by this factor; values below 1 speed them up
-  slowdown 1.5
+  slowdown 1.1
 
   workspace-switch {
     spring damping-ratio=1.0 stiffness=1000 epsilon=0.0001
@@ -173,14 +195,19 @@ animations {
 // ------------ //
 
 window-rule {
-  geometry-corner-radius 12
+  geometry-corner-radius 10
   clip-to-geometry true
 }
 
 window-rule {
-  match app-id="floorp"
+  match app-id="firefox"
   match app-id="chromium"
   match app-id="thunderbird"
+  match app-id="evolution"
+  match app-id="zen"
+  match app-id="wasistlos"
+  match app-id="spotify-launcher"
+  match app-id="Spotify Premium"
   open-maximized true
 }
 
@@ -192,16 +219,27 @@ binds {
 
   // help menu
   Mod+Shift+Slash { show-hotkey-overlay; }
+
   // terminal
-  Mod+Return { spawn "foot"; }
+  Mod+Return { spawn "footclient"; }
+
   // app launcher
-  Mod+Shift+Return { spawn "fuzzel"; }
+  // Mod+Shift+Return { spawn "fuzzel"; }
+  Mod+Shift+Return { spawn "anyrun"; }
+
   // browser
-  Mod+B { spawn "floorp"; }
+  // Mod+B { spawn "firefox"; }
+  Mod+B { spawn "zen-browser"; }
+
+  // internet connection manager (wifi)
+  Mod+I { spawn "nm-connection-editor"; }
+
   // screenshot
   Print { screenshot; }
   Ctrl+Print { screenshot-screen; }
   Alt+Print { screenshot-window; }
+  Shift+Print { spawn "hyprpicker | tee -a ~/colourpicker_list"; }
+
   // Quit
   Mod+Q { spawn "wlogout"; }
 
@@ -222,6 +260,9 @@ binds {
 
   // close window
   Mod+W { close-window; }
+
+  // Float Window
+  Mod+G { toggle-window-floating; }
 
   // shift window focus
   Mod+H     { focus-column-left; }

@@ -2,14 +2,17 @@
 # ALIAS LIST START #
 ###################
 
-# Start Hyprland
-alias boot="Hyprland"
-
 # copy working directory
 alias cwd="pwd | wl-copy"
 
-# remove empty files
-alias clean="find . -size 0c -delete"
+######################
+# PACKAGE MANAGEMENT #
+######################
+
+# remove empty files & pacman cache shite
+alias clean="find . -size 0c -delete & paccache -rk1"
+# show largest packages
+alias bigpac="pacman -Qi | egrep '^(Name|Installed)' | cut -f2 -d':' | tr '\nK' ' \n' | sort -nrk 2 | bat"
 
 # reboot / halt / poweroff
 alias reboot="sudo /sbin/reboot"
@@ -57,9 +60,12 @@ alias ce="conda activate cenv"
 # BLUETOOTH ALIASES
 alias bluon="sudo systemctl enable bluetooth && sudo systemctl start bluetooth"
 alias blustat="sudo systemctl status bluetooth"
-alias bt="bluetui"
+alias bt="bluetoothctl"
+alias btui="bluetui"
+# BLUETOOTH DEVICES
 alias headphones="bluetoothctl connect 38:18:4C:7D:6E:57"
 alias speaker="bluetoothctl connect EC:81:93:5B:DD:29"
+alias ellies="bluetoothctl connect 00:02:9A:0C:20:88"
 
 # LATEX ALIASES
 alias texclean="rm *.aux *.bbl *.bcf *.blg *.fdb_latexmk *.fls *.lof *.log *.out *.run.xml *.synctex.gz *.toc"
@@ -69,7 +75,7 @@ alias texclean="rm *.aux *.bbl *.bcf *.blg *.fdb_latexmk *.fls *.lof *.log *.out
 alias gbkb="setxkbmap -layout gb -option ctrl:nocaps"
 
 # check the power
-alias batt="upower -i /org/freedesktop/UPower/devices/battery_BAT0 | rg 'state|to full|percentage'"
+alias batt="upower -i /org/freedesktop/UPower/devices/battery_BAT1 | rg 'state|to full|percentage'"
 # check CPU temp
 alias temp="sensors | rg CPU"
 
@@ -80,8 +86,10 @@ alias Syu="eos-update"
 alias Rorph="paru -Qtdq | paru -Rns -"
 
 # WIFI
+# wifi TUI
+alias wifi="impala"
 # list available wifi networks
-alias wifi="nmcli device wifi list"
+alias wifilist="nmcli device wifi list"
 # connect to a wifi network with a password
 wificonn(){
   arg1=$1
@@ -161,6 +169,16 @@ bcsv(){
   head -n $arg2 $arg1 | vd
 }
 
+# make a note
+alias note="vim ~/documents/notes/Scratch.md"
+
+# launch R Shiny app port 8888
+alias shiny="R -e 'shiny::runApp(port=8888)'"
+
+# File size manager in rust
+alias du="dust"
+alias dua="dua interactive"
+
 # Yazi TUI File Browser in Rust
 alias files="yazi"
 alias ya="yazi"
@@ -200,21 +218,26 @@ alias calc="eva"
 # Taskwarrior TUI
 alias tt="taskwarrior-tui"
 # cat replacement in rust with syntax highlighting
-alias cat="bat"
+# alias cat="bat"
 # look at picture
 alias img="swayimg"
+# test mic
+alias testmic="arecord -D default -d 5 test.wav && aplay test.wav && rm test.wav"
 
 ###########
 # WAYLAND #
 ###########
 
-# chromium doesn't work on niri without this (wayland teething issues)
-alias chromium="chromium --ozone-platform=wayland > /dev/null 2>&1"
-alias obsidian="obsidian --ozone-platform=wayland > /dev/null 2>&1"
+# wayland teething issues
+alias obsidian="obsidian --ozone-platform=wayland"
+alias signal="signal-desktop --use-tray-icon --enable-features=UseOzonePlatform --ozone-platform=wayland"
+alias thorium="thorium-browser --use-tray-icon --enable-features=UseOzonePlatform --ozone-platform=wayland"
+alias ferdium="ferdium --use-tray-icon --enable-features=UseOzonePlatform --ozone-platform=wayland"
+alias beeper="beeper --use-tray-icon --enable-features=UseOzonePlatform --ozone-platform=wayland"
 
-#############
-# Nix Utils #
-#############
+#######
+# NIX #
+#######
 
 # # edit config file, copy over to home
 # nixit(){

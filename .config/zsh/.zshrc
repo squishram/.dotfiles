@@ -64,11 +64,10 @@ source ~/.config/.aliasrc
 eval "$(starship init zsh)"
 # zoxide is a smart cd command
 eval "$(zoxide init zsh)"
-# atuin is a better history search
-eval "$(atuin init zsh)"
+
 # syntax highlighting plugin
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
-# suggest shell prompts based in first characters
+
 # scroll back through command history after typing substring (and create associated keymaps)
 source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh 2>/dev/null
 bindkey '^[[A' history-substring-search-up
@@ -91,4 +90,3 @@ eval $(keychain --eval --quiet --agents ssh id_rsa)
 
 # speedy system status
 macchina
-# task list due.before:eow

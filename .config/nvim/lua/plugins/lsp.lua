@@ -38,10 +38,10 @@ return {
           keyopts.desc = "Previous diagnostic"
           key.set("n", "[d", vim.diagnostic.goto_prev, keyopts)
           keyopts.desc = "Search LSP references (fuzzy)"
-          key.set("n", "gr", "<cmd>lua require('fzf-lua').lsp_references()<cr>", keyopts)
-          keyopts.desc = "Search LSP definitions (fuzzy)"
-          key.set("n", "gr", "<cmd>lua require('fzf-lua').lsp_definitions()<cr>", keyopts)
-          keyopts.desc = "Search LSP implementations (fuzzy)"
+          -- key.set("n", "gr", "<cmd>lua require('fzf-lua').lsp_references()<cr>", keyopts)
+          -- keyopts.desc = "Search LSP definitions (fuzzy)"
+          -- key.set("n", "gr", "<cmd>lua require('fzf-lua').lsp_definitions()<cr>", keyopts)
+          -- keyopts.desc = "Search LSP implementations (fuzzy)"
           key.set("n", "gi", "<cmd>lua require('fzf-lua').lsp_implementations()<cr>", keyopts)
           -- keyopts.desc = "Search LSP references (fuzzy)"
           -- key.set("n", "gr", "<cmd>Pick lsp scope='references'<cr>", keyopts)
@@ -59,10 +59,10 @@ return {
         Hint = "󰠠 ",
         Info = " ",
       }
-      for type, icon in pairs(signs) do
-        local hl = "DiagnosticSign" .. type
-        vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
-      end
+      -- for type, icon in pairs(signs) do
+      --   local hl = "DiagnosticSign" .. type
+      --   vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
+      -- end
 
       -- This sets up servers automatically
       -- see :h mason-lspconfig.setup_handlers() for more info
@@ -91,7 +91,7 @@ return {
         "lua_ls",
         "marksman",
         -- "pyright",
-        "ruff_lsp",
+        "ruff",
         "rust_analyzer",
         "taplo",
         "texlab",

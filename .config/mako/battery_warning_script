@@ -1,0 +1,23 @@
+#!/bin/sh
+
+# Set the thresholds for low battery (in percentage)
+HIGH_THRESH=15
+LOW_THRESH=5
+
+# Get the current battery status
+BATTERY_STATUS=$(cat /sys/class/power_supply/BAT1/status)
+
+# Check if the laptop is plugged in
+if [ "$BATTERY_STATUS" = "Charging" ]; then
+  exit 0 # Exit the script if the laptop is plugged in
+fi
+
+# Get the current battery percentage directly from the sysfs
+BATTERY_PERCENT=$(cat /sys/class/power_supply/BAT1/capacity)
+
+# Check if the battery percentage is at or below the thresholds
+if [ "$BATTERY_PERCENT" -le "$LOW_THRESH" ]; then
+  notify-send -u critical -i /usr/share/icons/Adwaita/symbolic/status/battery-level-0-symbolic.svg "Critical Battery" "We're at ${BATTERY_PERCENT}% please no, not the frightening liminal space between states of being"
+elif [ "$BATTERY_PERCENT" -le "$HIGH_THRESH" ]; then
+  notify-send -i /usr/share/icons/Adwaita/symbolic/status/battery-level-10-symbolic.svg "Low Battery" "Hey, matey. We're at ${BATTERY_PERCENT}% here, buddy. Not taking me back to the dark place, are we? Pal?"
+fi

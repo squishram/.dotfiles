@@ -12,7 +12,7 @@ return {
   config = function()
     local lint = require("lint")
 
-    -- activate linter
+    -- activate linter on save
     lint.events = {
       "BufWritePost",
     }

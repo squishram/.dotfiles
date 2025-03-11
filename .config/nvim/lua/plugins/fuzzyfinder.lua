@@ -2,7 +2,6 @@ return {
   {
     "ibhagwan/fzf-lua",
     dependencies = {
-      "nvim-tree/nvim-web-devicons",
       "echasnovski/mini.icons",
     },
     keys = {
@@ -79,7 +78,7 @@ return {
           -- applies only when scrollbar = 'border'
           -- delay(ms) displaying the preview
           delay = 100,
-          default = "bat",
+          -- default = "bat",
           border = "border",
           winopts = {
             number = true,

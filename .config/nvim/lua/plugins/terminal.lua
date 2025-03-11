@@ -1,20 +1,18 @@
 return {
-  "akinsho/toggleterm.nvim",
-  version = "*",
-  -- lazy load on open
-  keys = {
-    { "<C-\\>" },
-  },
+  "jaimecgomezz/here.term",
   opts = {
-    -- key to toggle terminal
-    open_mapping = [[<c-\>]],
-    -- 'vertical' | 'horizontal' | 'tab' | 'float'
-    direction = "vertical",
-    -- size (units unknown)
-    size = 80,
-    -- shell used
-    shell = vim.o.shell,
-    -- automatically scroll to the bottom of the terminal on opening
-    auto_scroll = true,
+    mappings = {
+      enable = true,
+      toggle = "<C-\\>",
+      kill = "<C-S-\\>",
+    },
+    extra_mappings = {
+      enable = true, -- Disable them entirely
+      escape = "<C-x>", -- Escape terminal mode
+      left = "<C-h>", -- Move to the left window
+      down = "<C-j>", -- Move to the window down
+      up = "<C-k>", -- Move to the window up
+      right = "<C-l>", -- Move to right window
+    },
   },
 }

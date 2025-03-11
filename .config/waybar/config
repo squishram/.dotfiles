@@ -9,7 +9,7 @@
   // width (remove for auto width)
   // "width": 1080,
   // gaps between modules (px)
-  "spacing": 4,
+  "spacing": 3,
   // --- MODULES --- //
   // --- LEFT --- //
   "modules-left": [
@@ -35,8 +35,15 @@
     "icon": true,
     "icon-size": 16,
     "rewrite": {
-      // "(.*) — Ablaze Floorp": "🌎 $1",
-      "(.*) - Mozilla Thunderbird": "󰇮 $1"
+      "(.*) — LibreOffice Writer": "$1",
+      "(.*) — LibreOffice Base": "$1",
+      "(.*) — LibreOffice Draw": "$1",
+      "(.*) — LibreOffice Impress": "$1",
+      "(.*) — LibreOffice Math": "$1",
+      "(.*) — Mozilla Firefox": "$1",
+      "(.*) — Zen Browser": "$1",
+      "(.*) - Mozilla Thunderbird": "󰇮 $1",
+      "(.*) - Thunderbird": "󰇮 $1"
     }
   },
   "niri/workspaces": {
@@ -70,11 +77,11 @@
       "weeks-pos": "right",
       "on-scroll": 1,
       "format": {
-        "months": "<span color='#c6d0f5'><b>{}</b></span>",
-        "days": "<span color='#f4b8e4'><b>{}</b></span>",
-        "weeks": "<span color='#99d1db'><b>W{}</b></span>",
-        "weekdays": "<span color='#e5c890'><b>{}</b></span>",
-        "today": "<span color='#e78284'><b><u>{}</u></b></span>"
+        "months": "<span color='#EBDBB2'><b>{}</b></span>",
+        "days": "<span color='#D3869B'><b>{}</b></span>",
+        "weeks": "<span color='#8EC07C'><b>W{}</b></span>",
+        "weekdays": "<span color='#FABD2F'><b>{}</b></span>",
+        "today": "<span color='#FB4934'><b><u>{}</u></b></span>"
       }
     },
     "actions": {
@@ -82,11 +89,11 @@
     }
   },
   "cpu": {
-    "format": "{usage}% <span color='#ef9f76'></span>",
+    "format": "{usage}% <span color='#FE8019'></span>",
     "tooltip": false
   },
   "memory": {
-    "format": "{}% <span color='#e5c890'></span>"
+    "format": "{}% <span color='#FABD2F'></span>"
   },
   "temperature": {
     // "thermal-zone": 2,
@@ -102,17 +109,17 @@
   },
   "network": {
     // "interface": "wlp2*", // (Optional) To force the use of this interface
-    "format-wifi": "{essid} <span color='#99d1db'>{signalStrength}% </span>",
-    "format-ethernet": "<span color='#99d1db'>󰢾</span>",
+    "format-wifi": "{essid} <span color='#8EC07C'>{signalStrength}% </span>",
+    "format-ethernet": "<span color='#8EC07C'>󰢾</span>",
     "tooltip-format": "{ifname} via {gwaddr} ",
     "format-linked": "{ifname} (No IP) ",
-    "format-disconnected": "<span color='#e78284'>󰢿</span>",
-    "format-alt": "{ifname}: {ipaddr}/{cidr}",
-    "on-click": "nm-connection-editor"
+    "format-disconnected": "<span color='#FB4934'>󰢿</span>",
+    // "on-click": "nm-connection-editor"
+    "format-alt": "{ifname}: {ipaddr}/{cidr}"
   },
   "pulseaudio": {
     "scroll-step": 3, // %, can be a float
-    "format": "<span color='#8caaee'>{icon}</span> {volume}%",
+    "format": "<span color='#83A598'>{icon}</span> {volume}%",
     "format-muted": "󰖁 {volume}%",
     "format-icons": {
       "headphone": "",
@@ -140,13 +147,13 @@
   //   "exec": "waybar-module-pacman-updates"
   // },
   "battery": {
-    "bat": "BAT0",
+    "bat": "BAT1",
     "interval": 60,
     "states": {
-      "warning": 30,
-      "critical": 15
+      "warning": 20,
+      "critical": 10
     },
-    "format": "{capacity}% <span color='#a6d189'>{icon}</span>",
+    "format": "{capacity}% <span color='#B8BB26'>{icon}</span>",
     "format-icons": [
       "󰁺",
       "󰁻",

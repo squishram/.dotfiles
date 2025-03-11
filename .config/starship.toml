@@ -2,7 +2,8 @@
 add_newline = false
 # A minimal left prompt
 format = """$directory$character"""
-palette = "catppuccin_frappe"
+# palette = "catppuccin_frappe"
+palette = "gruvbox"
 # move the rest of the prompt to the right
 right_format = """$all"""
 
@@ -62,11 +63,11 @@ symbol = "🪺 "
 [python]
 symbol = " "
 [rlang]
-symbol = "ﳒ "
+symbol = " "
 [ruby]
 symbol = " "
 [rust]
-symbol = "🦀 "
+symbol = "󱘗 "
 [scala]
 symbol = " "
 [spack]
@@ -100,11 +101,40 @@ base = "#303446"
 mantle = "#292c3c"
 crust = "#232634"
 
+[palettes.gruvbox]
+rosewater = "#ffdab9"
+flamingo = "#e5b8b7"
+pink = "#d3869b"
+mauve = "#b16286"
+red = "#cc241d"
+maroon = "#af3a03"
+peach = "#d79921"
+yellow = "#fabd2f"
+green = "#8ec07c"
+teal = "#8ec07c"
+sky = "#83a598"
+sapphire = "#458588"
+blue = "#7c6f64"
+lavender = "#d3869b"
+text = "#ebdbb2"
+base = "#282828"
+mantle = "#3c3836"
+crust = "#504945"
+# note: these are just from catppuccin_frappe! fix!
+subtext1 = "#b5bfe2"
+subtext0 = "#a5adce"
+overlay2 = "#949cbb"
+overlay1 = "#838ba7"
+overlay0 = "#737994"
+surface2 = "#626880"
+surface1 = "#51576d"
+surface0 = "#414559"
+
 # [os.symbols]
 # Alpine = " "
 # Amazon = " "
 # Android = " "
-# Arch = " "
+Arch = " "
 # CentOS = " "
 # Debian = " "
 # DragonFly = " "

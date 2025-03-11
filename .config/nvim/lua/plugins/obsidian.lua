@@ -5,7 +5,7 @@ return {
   event = { "BufReadPre " .. vim.fn.expand("~") .. "/documents/notes/**.md" },
   dependencies = {
     "nvim-lua/plenary.nvim",
-    "hrsh7th/nvim-cmp",
+    -- "hrsh7th/nvim-cmp",
   },
 
   keys = {
@@ -16,14 +16,6 @@ return {
       mode = "n",
       silent = true,
       desc = "get a location list of Obsidian backlinks",
-    },
-
-    {
-      "<leader>on",
-      ":ObsidianToday<CR>",
-      mode = "n",
-      silent = true,
-      desc = "create a new Obsidian daily note",
     },
 
     {
@@ -44,7 +36,7 @@ return {
     -- Optional, completion.
     completion = {
       -- If using nvim-cmp, otherwise set to false
-      nvim_cmp = true,
+      nvim_cmp = false,
       -- Trigger completion at 2 chars
       min_chars = 2,
     },

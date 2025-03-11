@@ -7,7 +7,8 @@
 # these are the flags I've got on by default
 
 # Run `bat --list-themes` for a list of all available themes
---theme="Catppuccin-frappe"
+# --theme="Catppuccin-frappe"
+--theme="gruvbox-dark"
 --number
 --color=always
 --decorations=always
