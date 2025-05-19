@@ -92,9 +92,11 @@ layout {
     // size of ring
     width 2
     // Color of the ring on the active monitor.
-    active-gradient from="#CC241D" to="#458588" angle=135
+    // active-gradient from="#CC241D" to="#458588" angle=135
+    active-gradient from="#e78284" to="#8caaee" angle=135
     // Color of the ring on inactive monitors.
     inactive-gradient from="#928374" to="#808080" angle=135 relative-to="workspace-view"
+    // inactive-gradient from="#928374" to="#808080" angle=135 relative-to="workspace-view"
   }
 
   // more blank space
@@ -120,7 +122,7 @@ spawn-at-startup "/home/squish/.config/waybar/launch.sh"
 // idle daemon
 spawn-at-startup "hypridle"
 // wallpaper
-spawn-at-startup "swaybg" "-i" "/home/squish/.config/wallpapers/gruvbox/abstract-darkhole.png"
+spawn-at-startup "swaybg" "-i" "/home/squish/.config/wallpapers/catppuccin/catppuccin_01.jpg"
 // notification daemon
 spawn-at-startup "mako"
 // notification when battery low
@@ -129,7 +131,8 @@ spawn-at-startup "/home/squish/.config/mako/battery_warning_script.sh"
 spawn-at-startup "foot" "--server"
 // dims screen at sunset
 spawn-at-startup "wlsunset" "-l" "53.480759" "-L" "-2.242631"
-// needed to run some X (e.g. electron) programs on wayland, makes them look ugly
+// needed to run some X (e.g. electron) programs on wayland
+// n.b. makes them look ugly
 spawn-at-startup "xwayland-satellite"
 // authentication daemon (for fprintd)
 // spawn-at-startup "systemctl" "--user" "start" "hyprpolkitagent"
@@ -138,7 +141,7 @@ spawn-at-startup "xwayland-satellite"
 // email
 spawn-at-startup "protonmail-bridge"
 spawn-at-startup "thunderbird"
-spawn-at-startup "wasistlos"
+// spawn-at-startup "wasistlos"
 
 // the path where screenshots are saved
 screenshot-path "/home/squish/documents/pictures/screenshot_%Y-%m-%d_%H-%M-%S.png"
@@ -201,6 +204,7 @@ window-rule {
 
 window-rule {
   match app-id="firefox"
+  match app-id="librewolf"
   match app-id="chromium"
   match app-id="thunderbird"
   match app-id="evolution"
@@ -224,12 +228,12 @@ binds {
   Mod+Return { spawn "footclient"; }
 
   // app launcher
-  // Mod+Shift+Return { spawn "fuzzel"; }
-  Mod+Shift+Return { spawn "anyrun"; }
+  Mod+Shift+Return { spawn "fuzzel"; }
+  // Mod+Shift+Return { spawn "anyrun"; }
 
   // browser
-  // Mod+B { spawn "firefox"; }
-  Mod+B { spawn "zen-browser"; }
+  Mod+B { spawn "librewolf"; }
+  // Mod+B { spawn "zen-browser"; }
 
   // internet connection manager (wifi)
   Mod+I { spawn "nm-connection-editor"; }
@@ -244,11 +248,22 @@ binds {
   Mod+Q { spawn "wlogout"; }
 
 
+  // ---------- //
+  // MEDIA KEYS //
+  // ---------- //
+
   // Volume
   XF86AudioRaiseVolume allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.05+"; }
   XF86AudioLowerVolume allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.05-"; }
   XF86AudioMute        allow-when-locked=true { spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SINK@" "toggle"; }
   XF86AudioMicMute     allow-when-locked=true { spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SOURCE@" "toggle"; }
+
+  // play/pause/skip
+
+  XF86AudioPlay allow-when-locked=true { spawn "playerctl" "play-pause" "-p" "spotify"; }
+  XF86AudioNext allow-when-locked=true { spawn "playerctl" "next" "-p" "spotify"; }
+  XF86AudioPrev allow-when-locked=true { spawn "playerctl" "previous" "-p" "spotify"; }
+
 
   // Brightness
   XF86MonBrightnessUp allow-when-locked=true { spawn "brightnessctl" "set" "10%+"; }

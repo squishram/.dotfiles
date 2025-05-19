@@ -2,8 +2,21 @@
 # ALIAS LIST START #
 ###################
 
+# update!
+alias update="sudo pacman -Syu"
+
+# show me what you've deleted
+alias rm="rm -v"
+
 # copy working directory
 alias cwd="pwd | wl-copy"
+
+# highlight function using ripgrep (useful to pipe stuff thru)
+hl(){
+  string=$1
+  rg -i $string"|$"
+}
+
 
 ######################
 # PACKAGE MANAGEMENT #
@@ -12,7 +25,7 @@ alias cwd="pwd | wl-copy"
 # remove empty files & pacman cache shite
 alias clean="find . -size 0c -delete & paccache -rk1"
 # show largest packages
-alias bigpac="pacman -Qi | egrep '^(Name|Installed)' | cut -f2 -d':' | tr '\nK' ' \n' | sort -nrk 2 | bat"
+alias bigpac="LC_ALL=C.UTF-8 pacman -Qi | awk '/^Name/{name=$3} /^Installed Size/{print $4$5, name}' | LC_ALL=C.UTF-8 sort -h"
 
 # reboot / halt / poweroff
 alias reboot="sudo /sbin/reboot"
@@ -132,21 +145,11 @@ fr(){
   rg -l --files-with-matches "$1" . | xargs -I {} sd "$1" "$2" {}
 }
 
-# Arch-specific (non-ubuntu) aliases only go here
-alias vim="nvim"
+# vim is the only text editor
+alias v="nvim"
 alias vi="nvim"
+alias vim="nvim"
 alias edit="nvim"
-
-# hdmi output toggle
-hdmi() {
-  if xrandr --listactivemonitors | rg "HDMI"; then
-    xrandr --output 'HDMI-A-0' --off
-      echo "HDMI turned off"
-  else
-    xrandr --output 'HDMI-A-0' --auto
-      echo "HDMI turned on"
-      fi
-}
 
 # --- DATA SCIENCE --- #
 
@@ -159,7 +162,7 @@ tv(){
 # peek at the first 20 lines of a large dataset with tidy-viewer
 pcsv(){
   arg1=$1
-  head -n 20 $arg1 | tv
+  head -n 20 $arg1 | tidy-viewer
 }
 
 # browse at the first n lines of a large dataset with visidata
@@ -217,44 +220,44 @@ alias gt="gitui"
 alias calc="eva"
 # Taskwarrior TUI
 alias tt="taskwarrior-tui"
-# cat replacement in rust with syntax highlighting
-# alias cat="bat"
 # look at picture
 alias img="swayimg"
 # test mic
 alias testmic="arecord -D default -d 5 test.wav && aplay test.wav && rm test.wav"
 
-###########
-# WAYLAND #
-###########
+# ---------------- #
+# --- GET INFO --- #
+# ---------------- #
 
-# wayland teething issues
-alias obsidian="obsidian --ozone-platform=wayland"
-alias signal="signal-desktop --use-tray-icon --enable-features=UseOzonePlatform --ozone-platform=wayland"
-alias thorium="thorium-browser --use-tray-icon --enable-features=UseOzonePlatform --ozone-platform=wayland"
-alias ferdium="ferdium --use-tray-icon --enable-features=UseOzonePlatform --ozone-platform=wayland"
-alias beeper="beeper --use-tray-icon --enable-features=UseOzonePlatform --ozone-platform=wayland"
+# weather
+weather(){
+  city=$1
+  curl wttr.in/$city\?format=4
+}
 
-#######
-# NIX #
-#######
+# forecast (big weather)
+forecast(){
+  city=$1
+  curl v2.wttr.in/$city
+}
 
-# # edit config file, copy over to home
-# nixit(){
-#   sudoedit /etc/nixos/configuration.nix
-#   cp -rf /etc/nixos/* ~/.dotfiles/.config/nixos/
-# }
+# sunrise time
+sunrise(){
+  city=$1
+  curl v2.wttr.in/$city\?format="%S\n"
+}
 
-# # rebuild system
-# renix(){
-#   cd ~/.dotfiles/.config/nixos/
-#   sudo nix flake update
-#   sudo nixos-rebuild switch --flake .
-# }
+# sunset time
+sunset(){
+  city=$1
+  curl v2.wttr.in/$city\?format="%s\n"
+}
 
-# # fzf
-# # recursive fuzzy search, open file
-# fvim="nvim $(find . | fzf)"
-# # recursive fuzzy grep, open file
-# gvim="nvim $(rg . | fzf | cut -d ":" -f 1)"
+# ---------------- #
+# --- DOWNLOAD --- #
+# ---------------- #
 
+getsong(){
+  youtube_url=$1
+  yt-dlp -x --audio-format mp3 --audio-quality 0 \"$youtube_url\"
+}

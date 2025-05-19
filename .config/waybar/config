@@ -42,8 +42,11 @@
       "(.*) — LibreOffice Math": "$1",
       "(.*) — Mozilla Firefox": "$1",
       "(.*) — Zen Browser": "$1",
+      "(.*) — Zen Browser Private Browsing": "$1 (Private)",
       "(.*) - Mozilla Thunderbird": "󰇮 $1",
-      "(.*) - Thunderbird": "󰇮 $1"
+      "(.*) - Thunderbird": "󰇮 $1",
+      "(.*) — LibreWolf": "$1",
+      "(.*) — LibreWolf Private Browsing": "$1",
     }
   },
   "niri/workspaces": {
@@ -77,11 +80,11 @@
       "weeks-pos": "right",
       "on-scroll": 1,
       "format": {
-        "months": "<span color='#EBDBB2'><b>{}</b></span>",
-        "days": "<span color='#D3869B'><b>{}</b></span>",
-        "weeks": "<span color='#8EC07C'><b>W{}</b></span>",
-        "weekdays": "<span color='#FABD2F'><b>{}</b></span>",
-        "today": "<span color='#FB4934'><b><u>{}</u></b></span>"
+        "months": "<span color='#99d1db'><b>{}</b></span>",
+        "days": "<span color='#f4b8e4'><b>{}</b></span>",
+        "weeks": "<span color='#a6d189'><b>W{}</b></span>",
+        "weekdays": "<span color='#e5c890'><b>{}</b></span>",
+        "today": "<span color='#e78284'><b><u>{}</u></b></span>"
       }
     },
     "actions": {
@@ -89,11 +92,11 @@
     }
   },
   "cpu": {
-    "format": "{usage}% <span color='#FE8019'></span>",
+    "format": "{usage}% <span color='#ef9f76'></span>",
     "tooltip": false
   },
   "memory": {
-    "format": "{}% <span color='#FABD2F'></span>"
+    "format": "{}% <span color='#e5c890'></span>"
   },
   "temperature": {
     // "thermal-zone": 2,
@@ -109,17 +112,17 @@
   },
   "network": {
     // "interface": "wlp2*", // (Optional) To force the use of this interface
-    "format-wifi": "{essid} <span color='#8EC07C'>{signalStrength}% </span>",
-    "format-ethernet": "<span color='#8EC07C'>󰢾</span>",
+    "format-wifi": "{essid} <span color='#a6d189'>{signalStrength}% </span>",
+    "format-ethernet": "<span color='#a6d189'>󰢾</span>",
     "tooltip-format": "{ifname} via {gwaddr} ",
     "format-linked": "{ifname} (No IP) ",
-    "format-disconnected": "<span color='#FB4934'>󰢿</span>",
+    "format-disconnected": "<span color='#e78284'>󰢿</span>",
     // "on-click": "nm-connection-editor"
     "format-alt": "{ifname}: {ipaddr}/{cidr}"
   },
   "pulseaudio": {
     "scroll-step": 3, // %, can be a float
-    "format": "<span color='#83A598'>{icon}</span> {volume}%",
+    "format": "<span color='#99d1db'>{icon}</span> {volume}%",
     "format-muted": "󰖁 {volume}%",
     "format-icons": {
       "headphone": "",
@@ -153,7 +156,7 @@
       "warning": 20,
       "critical": 10
     },
-    "format": "{capacity}% <span color='#B8BB26'>{icon}</span>",
+    "format": "{capacity}% <span color='#a6d189'>{icon}</span>",
     "format-icons": [
       "󰁺",
       "󰁻",
