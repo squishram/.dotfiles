@@ -1,4 +1,4 @@
-[mgr]
+[manager]
 # hide symlinks in filename
 show_symlink = false
 layout = [2, 3, 4]

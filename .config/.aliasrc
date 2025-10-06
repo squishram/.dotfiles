@@ -25,7 +25,7 @@ hl(){
 # remove empty files & pacman cache shite
 alias clean="find . -size 0c -delete & paccache -rk1"
 # show largest packages
-alias bigpac="LC_ALL=C.UTF-8 pacman -Qi | awk '/^Name/{name=$3} /^Installed Size/{print $4$5, name}' | LC_ALL=C.UTF-8 sort -h"
+alias bigpac="~/.config/shell/scripts/package_by_size.sh"
 
 # reboot / halt / poweroff
 alias reboot="sudo /sbin/reboot"
@@ -195,7 +195,7 @@ alias bottom="btm"
 
 # Disk Space in Rust
 alias df="duf"
-alias disk="duf"
+alias disk="dysk"
 
 # Better find util in Rust
 # include hidden files
@@ -217,7 +217,7 @@ alias ld="eza -lard */ --color=always --icons=always"
 # git
 alias gt="gitui"
 # opens calculator
-alias calc="eva"
+alias calc="kalker"
 # Taskwarrior TUI
 alias tt="taskwarrior-tui"
 # look at picture

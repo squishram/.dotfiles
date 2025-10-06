@@ -141,10 +141,11 @@ spawn-at-startup "xwayland-satellite"
 // email
 spawn-at-startup "protonmail-bridge"
 spawn-at-startup "thunderbird"
-// spawn-at-startup "wasistlos"
+spawn-at-startup "wasistlos"
+spawn-at-startup "signal-desktop"
 
 // the path where screenshots are saved
-screenshot-path "/home/squish/documents/pictures/screenshot_%Y-%m-%d_%H-%M-%S.png"
+screenshot-path "/home/squish/documents/pictures/screenshots/%Y-%m-%d_%H-%M-%S.png"
 
 // needed for any kind of transparency on windows
 prefer-no-csd
@@ -210,6 +211,7 @@ window-rule {
   match app-id="evolution"
   match app-id="zen"
   match app-id="wasistlos"
+  match app-id="signal-desktop"
   match app-id="spotify-launcher"
   match app-id="Spotify Premium"
   open-maximized true
@@ -229,11 +231,11 @@ binds {
 
   // app launcher
   Mod+Shift+Return { spawn "fuzzel"; }
-  // Mod+Shift+Return { spawn "anyrun"; }
 
   // browser
-  Mod+B { spawn "librewolf"; }
   // Mod+B { spawn "zen-browser"; }
+  // Mod+Shift+B { spawn "librewolf"; }
+  Mod+B { spawn "librewolf"; }
 
   // internet connection manager (wifi)
   Mod+I { spawn "nm-connection-editor"; }
