@@ -1,10 +1,16 @@
 # TODO: MAKE SURE THE SCREENS TURN BACK ON AFTER RESUME
 
 # inhibit swayidle on fullscreen (e.g. watching film)
+<<<<<<< HEAD
 before-sleep 'playerctl pause; hyprlock'
 # could be this instead, if hibernation makes it stop resuming
 # before-sleep 'playerctl pause; swaylock -f'
 
+=======
+# for_window [class=".*"] inhibit_idle fullscreen
+# for_window [app_id=".*"] inhibit_idle fullscreen
+before-sleep 'playerctl pause; swaylock'
+>>>>>>> main
 # after-resume 'swaymsg "output * dpms on"'
 timeout 300 'brightnessctl -s set 10' resume 'brightnessctl -r'
 timeout 600 'hyprlock'

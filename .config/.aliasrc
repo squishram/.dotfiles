@@ -2,6 +2,7 @@
 # ALIAS LIST START #
 ###################
 
+<<<<<<< HEAD
 # update!
 alias update="sudo pacman -Syu"
 
@@ -31,6 +32,13 @@ hl(){
 alias clean="find . -size 0c -delete & paccache -rk1"
 # show largest packages
 alias bigpac="~/.config/shell/scripts/package_by_size.sh"
+=======
+# copy working directory
+alias cwd="pwd | wl-copy"
+
+# remove empty files & pacman cache shite
+alias clean="find . -size 0c -delete & paccache -rk1"
+>>>>>>> main
 
 # reboot / halt / poweroff
 alias reboot="sudo /sbin/reboot"
@@ -244,6 +252,7 @@ alias testmic="arecord -D default -d 5 test.wav && aplay test.wav && rm test.wav
 # --- GET INFO --- #
 # ---------------- #
 
+<<<<<<< HEAD
 # weather
 weather(){
   city=$1
@@ -255,6 +264,41 @@ forecast(){
   city=$1
   curl v2.wttr.in/$city
 }
+=======
+###########
+# WAYLAND #
+###########
+
+# wayland teething issues
+alias obsidian="obsidian --ozone-platform=wayland"
+alias signal="signal-desktop --use-tray-icon --enable-features=UseOzonePlatform --ozone-platform=wayland"
+alias thorium="thorium-browser --use-tray-icon --enable-features=UseOzonePlatform --ozone-platform=wayland"
+alias ferdium="ferdium --use-tray-icon --enable-features=UseOzonePlatform --ozone-platform=wayland"
+alias beeper="beeper --use-tray-icon --enable-features=UseOzonePlatform --ozone-platform=wayland"
+
+#######
+# NIX #
+#######
+
+# # edit config file, copy over to home
+# nixit(){
+#   sudoedit /etc/nixos/configuration.nix
+#   cp -rf /etc/nixos/* ~/.dotfiles/.config/nixos/
+# }
+
+# # rebuild system
+# renix(){
+#   cd ~/.dotfiles/.config/nixos/
+#   sudo nix flake update
+#   sudo nixos-rebuild switch --flake .
+# }
+
+# # fzf
+# # recursive fuzzy search, open file
+# fvim="nvim $(find . | fzf)"
+# # recursive fuzzy grep, open file
+# gvim="nvim $(rg . | fzf | cut -d ":" -f 1)"
+>>>>>>> main
 
 # sunrise time
 sunrise(){

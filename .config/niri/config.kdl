@@ -149,6 +149,7 @@ spawn-at-startup "hypridle"
 // wallpaper
 spawn-at-startup "swaybg" "-i" "/home/squish/.config/wallpapers/catppuccin/catppuccin_01.jpg"
 // notification daemon
+<<<<<<< HEAD
 // spawn-at-startup "mako"
 // notification when battery low
 spawn-at-startup "/home/squish/.config/mako/battery_warning_script.sh"
@@ -161,15 +162,31 @@ spawn-at-startup "wlsunset" "-l" "53.480759" "-L" "-2.242631"
 spawn-at-startup "xwayland-satellite"
 // authentication daemon (for fprintd)
 // spawn-at-startup "systemctl" "--user" "start" "hyprpolkitagent"
+=======
+spawn-at-startup "mako"
+// notifications about low power
+spawn-at-startup "poweralertd"
+// dims screen at sunset
+spawn-at-startup "wlsunset" "-l" "53.480759" "-L" "-2.242631"
+// NOTE: installation not working right now:
+// needed to run some X programs on niri
+// spawn-at-startup "xwayland-satellite"
+>>>>>>> main
 
 // APPLICATIONS
 // email
 spawn-at-startup "protonmail-bridge"
 spawn-at-startup "thunderbird"
+<<<<<<< HEAD
 // spawn-at-startup "whatsie"
 spawn-at-startup "whatsapp-linux-desktop"
 spawn-at-startup "slack"
 spawn-at-startup "signal-desktop"
+=======
+spawn-at-startup "beeper"
+// browser
+// spawn-at-startup "floorp"
+>>>>>>> main
 
 // the path where screenshots are saved
 screenshot-path "/home/squish/documents/pictures/screenshots/%Y-%m-%d_%H-%M-%S.png"
@@ -242,7 +259,10 @@ window-rule {
 
 window-rule {
   match app-id="firefox"
+<<<<<<< HEAD
   match app-id="librewolf"
+=======
+>>>>>>> main
   match app-id="chromium"
   match app-id="thunderbird"
   match app-id="whatsapp-linux-desktop"
@@ -267,6 +287,7 @@ binds {
 
   // help menu
   Mod+Shift+Slash { show-hotkey-overlay; }
+<<<<<<< HEAD
 
   Mod+Period { spawn-sh "qs -c noctalia-shell ipc call controlCenter toggle"; }
   Mod+Comma { spawn-sh "qs -c noctalia-shell ipc call settings toggle"; }
@@ -276,12 +297,23 @@ binds {
   // calendar
   Mod+T { spawn-sh "qs -c noctalia-shell ipc call calendar toggle"; }
 
+=======
+  // terminal
+  Mod+Return { spawn "foot"; }
+  // app launcher
+  Mod+Shift+Return { spawn "fuzzel"; }
+  // browser
+  Mod+B { spawn "firefox"; }
+>>>>>>> main
   // screenshot
   Print { screenshot; }
   Ctrl+Print { screenshot-screen; }
   Alt+Print { screenshot-window; }
   Shift+Print { spawn "hyprpicker | tee -a ~/colourpicker_list"; }
+<<<<<<< HEAD
 
+=======
+>>>>>>> main
   // Quit
   // Mod+Q { spawn "wlogout"; }
   Mod+Q { spawn-sh "qs -c noctalia-shell ipc call sessionMenu toggle"; }

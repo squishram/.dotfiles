@@ -12,6 +12,7 @@ ignore-timeout=0
 font=CaskaydiaCove Nerd Font 12
 
 # Colors
+<<<<<<< HEAD
 background-color=#282828
 text-color=#EBDBB2
 border-color=#8EC07C
@@ -25,6 +26,21 @@ border-color=#FE8019
 
 [urgency=high]
 border-color=#FB4934
+=======
+background-color=#303446
+text-color=#c6d0f5
+border-color=#8caaee
+progress-color=#414559
+
+[urgency=low]
+border-color=#cccccc
+
+[urgency=normal]
+border-color=#d08770
+
+[urgency=high]
+border-color=#ef9f76
+>>>>>>> main
 ignore-timeout=1
 
 [category=mpd]

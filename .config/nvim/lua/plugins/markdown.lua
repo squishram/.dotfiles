@@ -32,7 +32,11 @@ return {
 
     dependencies = {
       "nvim-treesitter/nvim-treesitter",
+<<<<<<< HEAD
       "echasnovski/mini.icons",
+=======
+      "nvim-tree/nvim-web-devicons",
+>>>>>>> main
     },
 
     config = function()
