@@ -47,6 +47,8 @@
       "(.*) - Thunderbird": "󰇮 $1",
       "(.*) — LibreWolf": "$1",
       "(.*) — LibreWolf Private Browsing": "$1",
+      "(.*) - Chromium": "$1",
+      "(.*) - Slack": "$1"
     }
   },
   "niri/workspaces": {

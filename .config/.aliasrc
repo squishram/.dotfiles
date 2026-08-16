@@ -11,12 +11,17 @@ alias rm="rm -v"
 # copy working directory
 alias cwd="pwd | wl-copy"
 
+# copy an image to the clipboard
+copyimg(){
+  file=$1
+  xclip -selection clipboard -t image/png -i $file
+}
+
 # highlight function using ripgrep (useful to pipe stuff thru)
 hl(){
   string=$1
   rg -i $string"|$"
 }
-
 
 ######################
 # PACKAGE MANAGEMENT #
@@ -108,6 +113,16 @@ wificonn(){
   arg1=$1
     arg2=$2
     nmcli device wifi connect $arg1 password $arg2
+}
+
+alias wif="nmcli connection delete FTTH_KC9410 && nmcli device wifi connect FTTH_KC9410 password rocDosdiwif9"
+alias wi="nmcli device wifi connect FTTH_KC9410_EXT password rocDosdiwif9"
+
+alias wifone="wificonn squishyphone ishanishan"
+
+connect(){
+  wifi=$1
+  nmcli connection up $wifi
 }
 
 # connect to a wifi network without a password
